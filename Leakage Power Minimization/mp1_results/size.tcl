@@ -30,6 +30,7 @@ foreach_in_collection cell $cellList {
     if { [regexp {[a-z][a-z][0-9][0-9]f[0-9][0-9]} $libcellName] } { 
         set newlibcellName [string replace $libcellName 4 4 m] 
         size_cell $cellName $newlibcellName
+	set size_flag = 0
         
         set newWNS [ PtWorstSlack clk ]
         if { $newWNS < 0.0 } {
