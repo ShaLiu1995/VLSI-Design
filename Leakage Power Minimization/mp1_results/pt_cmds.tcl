@@ -387,24 +387,26 @@ proc getNextSizeDown { cell } {
     }
 }
 
-proc getNextVtDown { libcellName } {
+proc getNextVtUp { libcellName } {
 	if { [regexp {[a-z][a-z][0-9][0-9]f[0-9][0-9]} $libcellName] } { 
-	        set newlibcellName [string replace $libcellName 4 4 m]
+	    set newlibcellName [string replace $libcellName 4 4 m]
 		return $newlibcellName
 	}
 	
 	if { [regexp {[a-z][a-z][0-9][0-9]m[0-9][0-9]} $libcellName] } { 
-        	set newlibcellName [string replace $libcellName 4 4 s]
+        set newlibcellName [string replace $libcellName 4 4 s]
 		return $newlibcellName
 	}
 	
 	if { [regexp {[a-z][a-z][0-9][0-9]s[0-9][0-9]} $libcellName] } { 
-		return "skip"
+		# return "skip"
+        set newlibcellName $libcellName
+		return $newlibcellName
 	}
 
 }
 
-proc getNextVtUp { libcellName } {
+proc getNextVtDown { libcellName } {
 	if { [regexp {[a-z][a-z][0-9][0-9]m[0-9][0-9]} $libcellName] } { 
         set newlibcellName [string replace $libcellName 4 4 f]
 		return $newlibcellName
