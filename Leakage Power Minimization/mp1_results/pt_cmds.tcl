@@ -399,9 +399,7 @@ proc getNextVtUp { libcellName } {
 	}
 	
 	if { [regexp {[a-z][a-z][0-9][0-9]s[0-9][0-9]} $libcellName] } { 
-		# return "skip"
-        set newlibcellName $libcellName
-		return $newlibcellName
+		return "skip"
 	}
 
 }
