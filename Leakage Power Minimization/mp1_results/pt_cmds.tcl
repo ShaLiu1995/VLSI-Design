@@ -1,3 +1,32 @@
+proc sortCells { cell_collection } { 
+    foreach_in_collection cell $cell_collection {
+        set_user_attribute $cell Sensitivity [getSensitivity $cell]
+    }
+    set new_collection [sort_collection -descending $cell_collection {Sensitivity}]
+    return $new_collection
+}
+
+
+proc updateSensitivity { cell_collection } { 
+    foreach_in_collection cell $cell_collection {
+        set_user_attribute $cell Sensitivity [getSensitivity $cell]
+    }   
+    return $cell_collection
+}
+
+proc getSensitivity { cell } {
+	set oldSlack [get_attri $cell OldCellSlack]
+    set newSlack [get_attri $cell NewCellSlack]
+    set oldLeak [get_attri $cell OldCellLeak]
+    set newLeak [get_attri $cell NewCellLeak]
+    if { $oldSlack == $newSlack} {
+        set sensitivity 0
+    } else {
+        set sensitivity [expr 1000000*($oldLeak - $newLeak)/($oldSlack - $newSlack)]
+    }
+    return $sensitivity
+} 
+
 proc PtSwapCell {cell_instance cell_master} {
     set swap_status [swap_cell $cell_instance $cell_master]
     return $swap_status
@@ -154,7 +183,7 @@ proc PtGetPinLoadCap { pin_name } {
 }
 
 proc PtCellSlack { cell_name } {
-	  set worst_slack 10000
+	set worst_slack 10000
     foreach_in_collection pin [get_pins -of $cell_name -filter "direction==out"] {
         set rise_slack [get_attribute $pin max_rise_slack] 
         set fall_slack [get_attribute $pin max_fall_slack] 
@@ -168,15 +197,16 @@ proc PtCellSlack { cell_name } {
     return $worst_slack
 }
 
-# An example to sort cells based on their slacks
-proc sortCells { cell_collection } {
+# # An example to sort cells based on their slacks
+# proc sortCells { cell_collection } {
   
-    foreach_in_collection cell $cell_collection {
-      set_user_attribute $cell CellSlack [PtCellSlack $cell]
-    }
-    set new_collection [sort_collection -descending $cell_collection {CellSlack}]
-    return $new_collection
-}
+#     foreach_in_collection cell $cell_collection {
+#       set_user_attribute $cell CellSlack [PtCellSlack $cell]
+#     }
+#     set new_collection [sort_collection -descending $cell_collection {CellSlack}]
+#     return $new_collection
+# }
+
 
 proc RecoverTiming { cell_collection } {
     
@@ -383,7 +413,9 @@ proc getNextSizeDown { cell } {
     }
 
     if { [regexp {[a-z][a-z][0-9][0-9][smf]01} $cell]} {
-	return "skip"
+	    # set newSize $cell
+        # return $newSize
+        return "skip"
     }
 }
 
@@ -399,7 +431,9 @@ proc getNextVtUp { libcellName } {
 	}
 	
 	if { [regexp {[a-z][a-z][0-9][0-9]s[0-9][0-9]} $libcellName] } { 
-		return "skip"
+		# set newlibcellName $libcellName
+		# return $newlibcellName
+        return "skip"
 	}
 
 }

@@ -1,10 +1,10 @@
 source ./pt_cmds.tcl
 #########################################################
 ### add design information here
+set design  usb_phy
+
 set power_enable_analysis TRUE
 set power_analysis_mode averaged
-
-set design  usb_phy
 
 set timing_remove_clock_reconvergence_pessimism true
 
