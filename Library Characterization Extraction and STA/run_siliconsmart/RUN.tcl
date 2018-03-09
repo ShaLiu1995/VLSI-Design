@@ -35,7 +35,7 @@ foreach temp $tempList {
     set outFile [open ./config/configure.tcl w]
     while {[gets $inFile line]>=0} {
         regsub -all _CON_ $line $con line
-	regsub -all _LIB_DIR_ $line ${lib_dir} line 
+	    regsub -all _LIB_DIR_ $line ${lib_dir} line 
         regsub -all _TEMP_DIR_ $line ${temp_dir} line
         regsub -all _VDD_ $line $volt line
         regsub -all _TEMP_ $line $temp line
