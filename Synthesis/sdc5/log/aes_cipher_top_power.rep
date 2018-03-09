@@ -1,0 +1,78 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : aes_cipher_top
+Version: K-2015.06-SP2
+Date   : Wed Jan 24 23:09:42 2018
+****************************************
+
+
+Library(s) Used:
+
+    tcbn65gpluswc (File: /home/linux/ieng6/ee260b/public/data/libraries/db/tcbn65gpluswc.db)
+
+
+Operating Conditions: WCCOM   Library: tcbn65gpluswc
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+aes_cipher_top         ZeroWireload      tcbn65gpluswc
+aes_key_expand_128     ZeroWireload      tcbn65gpluswc
+aes_sbox_19            ZeroWireload      tcbn65gpluswc
+aes_rcon               ZeroWireload      tcbn65gpluswc
+aes_sbox_0             ZeroWireload      tcbn65gpluswc
+aes_sbox_1             ZeroWireload      tcbn65gpluswc
+aes_sbox_2             ZeroWireload      tcbn65gpluswc
+aes_sbox_3             ZeroWireload      tcbn65gpluswc
+aes_sbox_4             ZeroWireload      tcbn65gpluswc
+aes_sbox_5             ZeroWireload      tcbn65gpluswc
+aes_sbox_6             ZeroWireload      tcbn65gpluswc
+aes_sbox_7             ZeroWireload      tcbn65gpluswc
+aes_sbox_8             ZeroWireload      tcbn65gpluswc
+aes_sbox_9             ZeroWireload      tcbn65gpluswc
+aes_sbox_10            ZeroWireload      tcbn65gpluswc
+aes_sbox_11            ZeroWireload      tcbn65gpluswc
+aes_sbox_12            ZeroWireload      tcbn65gpluswc
+aes_sbox_13            ZeroWireload      tcbn65gpluswc
+aes_sbox_14            ZeroWireload      tcbn65gpluswc
+aes_sbox_15            ZeroWireload      tcbn65gpluswc
+aes_sbox_16            ZeroWireload      tcbn65gpluswc
+aes_sbox_17            ZeroWireload      tcbn65gpluswc
+aes_sbox_18            ZeroWireload      tcbn65gpluswc
+
+
+Global Operating Voltage = 0.9  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =   4.6510 mW   (70%)
+  Net Switching Power  =   1.9616 mW   (30%)
+                         ---------
+Total Dynamic Power    =   6.6126 mW  (100%)
+
+Cell Leakage Power     = 163.6940 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           3.2550            0.9900        3.4912e+04            4.2799  (  63.16%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      1.3961            0.9716        1.2878e+05            2.4964  (  36.84%)
+--------------------------------------------------------------------------------------------------
+Total              4.6510 mW         1.9616 mW     1.6369e+05 nW         6.7763 mW
+1

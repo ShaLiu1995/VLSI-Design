@@ -1,0 +1,7183 @@
+check_error -reset
+
+global skew_opt_skip_ideal_clocks
+if { ([info exists skew_opt_skip_ideal_clocks] == 0) || ($skew_opt_skip_ideal_clocks == "false") } {
+  echo "--> sourcing set_clock_latency on clocks"
+  alias __scl set_clock_latency
+  set __scl_skip 0
+} else {
+  alias __scl { # }
+  set __scl_skip 1
+}
+suppress_message UID-476
+
+## clocks
+unalias __scl
+
+global skew_opt_skip_ideal_pins
+alias __scl { # }
+if { ([info exists skew_opt_skip_ideal_pins] == 0) || ($skew_opt_skip_ideal_pins == "false") } {
+  if { $__scl_skip == 0 } {
+    echo "--> sourcing set_clock_latency on pins"
+    alias __scl set_clock_latency
+  }
+}
+
+## optimized pins
+__scl 0.291939 {qnr_divider_divider_d_pipe_reg_10__8_/CP}
+__scl 0.288127 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_3_/CP}
+__scl 0.269312 {fdct_zigzag_zigzag_mod_sresult_reg_27__4_/CP}
+__scl 0.2946 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_19_/CP}
+__scl 0.293303 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_18_/CP}
+__scl 0.263602 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_coef_reg_25_/CP}
+__scl 0.277692 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_8_/CP}
+__scl 0.294196 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_coef_reg_27_/CP}
+__scl 0.27814 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_coef_reg_25_/CP}
+__scl 0.263214 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_coef_reg_22_/CP}
+__scl 0.289918 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_coef_reg_26_/CP}
+__scl 0.291943 {qnr_divider_id_reg_2_/CP}
+__scl 0.293635 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_mult_res_reg_14_/CP}
+__scl 0.268432 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_17_/CP}
+__scl 0.277936 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_13_/CP}
+__scl 0.279525 {fdct_zigzag_zigzag_mod_sresult_reg_9__1_/CP}
+__scl 0.266247 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_5_/CP}
+__scl 0.293063 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_4_/CP}
+__scl 0.287345 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_coef_reg_31_/CP}
+__scl 0.294476 {fdct_zigzag_zigzag_mod_sresult_reg_41__6_/CP}
+__scl 0.29495 {fdct_zigzag_zigzag_mod_sresult_reg_27__8_/CP}
+__scl 0.277994 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_coef_reg_31_/CP}
+__scl 0.25805 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_coef_reg_31_/CP}
+__scl 0.292236 {fdct_zigzag_zigzag_mod_sresult_reg_31__6_/CP}
+__scl 0.267948 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_mult_res_reg_12_/CP}
+__scl 0.278153 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_9_/CP}
+__scl 0.258756 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_10_/CP}
+__scl 0.266117 {fdct_zigzag_zigzag_mod_sresult_reg_48__4_/CP}
+__scl 0.275382 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_coef_reg_31_/CP}
+__scl 0.279353 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_6_macu_result_reg_3_/CP}
+__scl 0.271185 {fdct_zigzag_zigzag_mod_sresult_reg_25__4_/CP}
+__scl 0.291837 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_13_/CP}
+__scl 0.294207 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_11_/CP}
+__scl 0.263982 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_coef_reg_26_/CP}
+__scl 0.259289 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_16_/CP}
+__scl 0.294209 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_coef_reg_29_/CP}
+__scl 0.275097 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_3_/CP}
+__scl 0.279308 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_coef_reg_28_/CP}
+__scl 0.275832 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_mult_res_reg_16_/CP}
+__scl 0.263851 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_10_/CP}
+__scl 0.29304 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_5_/CP}
+__scl 0.277676 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_mult_res_reg_3_/CP}
+__scl 0.276515 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_5_/CP}
+__scl 0.291522 {fdct_zigzag_zigzag_mod_sresult_reg_51__8_/CP}
+__scl 0.27687 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_0_/CP}
+__scl 0.283381 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_coef_reg_23_/CP}
+__scl 0.279559 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_macu_result_reg_12_/CP}
+__scl 0.291544 {fdct_zigzag_zigzag_mod_sresult_reg_32__3_/CP}
+__scl 0.291363 {qnr_divider_divider_d_pipe_reg_9__4_/CP}
+__scl 0.291564 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_mult_res_reg_17_/CP}
+__scl 0.281826 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_3_/CP}
+__scl 0.263119 {qnr_dep_reg_12_/CP}
+__scl 0.276004 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_coef_reg_29_/CP}
+__scl 0.27009 {rle_rz1_ampo_reg_0_/CP}
+__scl 0.276824 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_6_/CP}
+__scl 0.277612 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_17_/CP}
+__scl 0.2788 {rle_rz4_ampo_reg_7_/CP}
+__scl 0.294777 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_mult_res_reg_15_/CP}
+__scl 0.257113 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_coef_reg_25_/CP}
+__scl 0.291712 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_17_/CP}
+__scl 0.266978 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_16_/CP}
+__scl 0.277848 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_result_reg_9_/CP}
+__scl 0.293425 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_1_/CP}
+__scl 0.289643 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_15_/CP}
+__scl 0.279786 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_coef_reg_26_/CP}
+__scl 0.277292 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_9_/CP}
+__scl 0.290779 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_mult_res_reg_8_/CP}
+__scl 0.278122 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_mult_res_reg_6_/CP}
+__scl 0.263557 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_2_/CP}
+__scl 0.263698 {qnr_divider_divider_s_pipe_reg_4__22_/CP}
+__scl 0.286507 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_coef_reg_22_/CP}
+__scl 0.294715 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_21_/CP}
+__scl 0.271698 {fdct_zigzag_zigzag_mod_sresult_reg_25__6_/CP}
+__scl 0.275741 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_18_/CP}
+__scl 0.278332 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_coef_reg_29_/CP}
+__scl 0.27832 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_3_/CP}
+__scl 0.258592 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_14_/CP}
+__scl 0.276477 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_coef_reg_23_/CP}
+__scl 0.270378 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_0_/CP}
+__scl 0.292414 {fdct_zigzag_zigzag_mod_sresult_reg_23__10_/CP}
+__scl 0.286448 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_coef_reg_27_/CP}
+__scl 0.292712 {qnr_divider_divider_s_pipe_reg_11__2_/CP}
+__scl 0.288327 {qnr_divider_divider_d_pipe_reg_7__3_/CP}
+__scl 0.270479 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_mult_res_reg_16_/CP}
+__scl 0.262955 {qnr_divider_divider_d_pipe_reg_9__12_/CP}
+__scl 0.290414 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_coef_reg_27_/CP}
+__scl 0.290435 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_coef_reg_22_/CP}
+__scl 0.287099 {fdct_zigzag_zigzag_mod_sresult_reg_21__0_/CP}
+__scl 0.294097 {dfdct_dout_reg_9_/CP}
+__scl 0.268384 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_12_/CP}
+__scl 0.279288 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_result_reg_3_/CP}
+__scl 0.292027 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_8_/CP}
+__scl 0.261627 {qnr_divider_divider_d_pipe_reg_9__20_/CP}
+__scl 0.291006 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_21_/CP}
+__scl 0.275395 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_coef_reg_31_/CP}
+__scl 0.28878 {fdct_zigzag_zigzag_mod_sresult_reg_46__10_/CP}
+__scl 0.285428 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_11_/CP}
+__scl 0.290274 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_7_/CP}
+__scl 0.292935 {fdct_zigzag_zigzag_mod_sresult_reg_41__3_/CP}
+__scl 0.276783 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_4_/CP}
+__scl 0.269778 {rle_rz2_size_reg_0_/CP}
+__scl 0.267498 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_coef_reg_24_/CP}
+__scl 0.288411 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_1_/CP}
+__scl 0.27172 {fdct_zigzag_zigzag_mod_sresult_reg_27__6_/CP}
+__scl 0.275684 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_17_/CP}
+__scl 0.285458 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_6_/CP}
+__scl 0.29339 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_20_/CP}
+__scl 0.266364 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_coef_reg_31_/CP}
+__scl 0.277976 {fdct_zigzag_zigzag_mod_sresult_reg_13__4_/CP}
+__scl 0.276713 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_mult_res_reg_13_/CP}
+__scl 0.293627 {fdct_zigzag_zigzag_mod_sresult_reg_50__9_/CP}
+__scl 0.283369 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_coef_reg_31_/CP}
+__scl 0.277622 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_mult_res_reg_2_/CP}
+__scl 0.26361 {fdct_zigzag_zigzag_mod_sresult_reg_52__3_/CP}
+__scl 0.269411 {rle_rz1_sizeo_reg_2_/CP}
+__scl 0.288668 {qnr_divider_divider_d_pipe_reg_8__6_/CP}
+__scl 0.281867 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_1_/CP}
+__scl 0.266707 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_coef_reg_23_/CP}
+__scl 0.281813 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_5_/CP}
+__scl 0.279206 {rle_rz2_amp_reg_5_/CP}
+__scl 0.278257 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_8_/CP}
+__scl 0.29342 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_15_/CP}
+__scl 0.273586 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_18_/CP}
+__scl 0.274828 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_coef_reg_30_/CP}
+__scl 0.269868 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_3_/CP}
+__scl 0.271115 {qnr_rq_reg_5_/CP}
+__scl 0.275686 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_5_/CP}
+__scl 0.27558 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_11_/CP}
+__scl 0.262661 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_7_/CP}
+__scl 0.290764 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_12_/CP}
+__scl 0.279584 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_macu_result_reg_14_/CP}
+__scl 0.291887 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_7_/CP}
+__scl 0.294689 {fdct_zigzag_zigzag_mod_sresult_reg_24__8_/CP}
+__scl 0.266683 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_mult_res_reg_11_/CP}
+__scl 0.292724 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_19_/CP}
+__scl 0.270446 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_mult_res_reg_15_/CP}
+__scl 0.264055 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_6_/CP}
+__scl 0.27802 {fdct_zigzag_zigzag_mod_sresult_reg_8__7_/CP}
+__scl 0.289611 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_result_reg_21_/CP}
+__scl 0.293392 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_coef_reg_21_/CP}
+__scl 0.288537 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_coef_reg_24_/CP}
+__scl 0.290185 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_14_/CP}
+__scl 0.275757 {fdct_zigzag_zigzag_mod_sresult_reg_13__9_/CP}
+__scl 0.277241 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_5_/CP}
+__scl 0.28993 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_coef_reg_27_/CP}
+__scl 0.268347 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_4_/CP}
+__scl 0.294499 {fdct_zigzag_zigzag_mod_sresult_reg_41__5_/CP}
+__scl 0.285678 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_coef_reg_29_/CP}
+__scl 0.25882 {fdct_zigzag_zigzag_mod_sresult_reg_16__2_/CP}
+__scl 0.263193 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_10_/CP}
+__scl 0.278453 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_macu_result_reg_18_/CP}
+__scl 0.276903 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_10_/CP}
+__scl 0.279565 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_macu_result_reg_11_/CP}
+__scl 0.294635 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_6_/CP}
+__scl 0.291309 {qnr_divider_divider_s_pipe_reg_9__3_/CP}
+__scl 0.277383 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_coef_reg_25_/CP}
+__scl 0.290512 {qnr_divider_divider_d_pipe_reg_8__2_/CP}
+__scl 0.274598 {fdct_zigzag_zigzag_mod_sresult_reg_7__10_/CP}
+__scl 0.276442 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_7_/CP}
+__scl 0.288212 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_1_/CP}
+__scl 0.286902 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_coef_reg_28_/CP}
+__scl 0.288632 {qnr_divider_divider_s_pipe_reg_6__7_/CP}
+__scl 0.273856 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_coef_reg_26_/CP}
+__scl 0.278495 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_coef_reg_24_/CP}
+__scl 0.289741 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_9_/CP}
+__scl 0.270321 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_0_/CP}
+__scl 0.263515 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_4_/CP}
+__scl 0.264009 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_coef_reg_22_/CP}
+__scl 0.26363 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_coef_reg_27_/CP}
+__scl 0.265598 {fdct_zigzag_zigzag_mod_sresult_reg_47__2_/CP}
+__scl 0.28936 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_coef_reg_31_/CP}
+__scl 0.286091 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_coef_reg_23_/CP}
+__scl 0.279633 {fdct_zigzag_zigzag_mod_sresult_reg_45__1_/CP}
+__scl 0.266617 {fdct_zigzag_zigzag_mod_sresult_reg_49__1_/CP}
+__scl 0.268795 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_coef_reg_25_/CP}
+__scl 0.258781 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_coef_reg_31_/CP}
+__scl 0.279704 {fdct_zigzag_zigzag_mod_sresult_reg_18__6_/CP}
+__scl 0.289463 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_result_reg_16_/CP}
+__scl 0.277354 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_coef_reg_23_/CP}
+__scl 0.292312 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_2_/CP}
+__scl 0.259824 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_21_/CP}
+__scl 0.290524 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_3_/CP}
+__scl 0.275731 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_19_/CP}
+__scl 0.283399 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_mult_res_reg_0_/CP}
+__scl 0.267263 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_3_/CP}
+__scl 0.294683 {fdct_zigzag_zigzag_mod_sresult_reg_25__8_/CP}
+__scl 0.275714 {fdct_zigzag_zigzag_mod_sresult_reg_61__1_/CP}
+__scl 0.294046 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_mult_res_reg_15_/CP}
+__scl 0.277107 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_7_/CP}
+__scl 0.268719 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_14_/CP}
+__scl 0.276717 {fdct_zigzag_zigzag_mod_sresult_reg_8__2_/CP}
+__scl 0.266537 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_5_/CP}
+__scl 0.275457 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_macu_result_reg_12_/CP}
+__scl 0.286501 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_12_/CP}
+__scl 0.274549 {fdct_zigzag_zigzag_mod_sresult_reg_2__9_/CP}
+__scl 0.278225 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_coef_reg_21_/CP}
+__scl 0.276915 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_11_/CP}
+__scl 0.266846 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_1_/CP}
+__scl 0.291277 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_16_/CP}
+__scl 0.292016 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_9_/CP}
+__scl 0.274694 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_result_reg_19_/CP}
+__scl 0.259185 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_coef_reg_26_/CP}
+__scl 0.277951 {rle_rle_amp_reg_11_/CP}
+__scl 0.269747 {rle_rz1_amp_reg_1_/CP}
+__scl 0.265856 {fdct_zigzag_zigzag_mod_sresult_reg_47__6_/CP}
+__scl 0.275642 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_9_/CP}
+__scl 0.29171 {qnr_divider_divider_d_pipe_reg_11__1_/CP}
+__scl 0.263626 {fdct_zigzag_zigzag_mod_sresult_reg_51__6_/CP}
+__scl 0.262231 {qnr_divider_divider_s_pipe_reg_10__21_/CP}
+__scl 0.2942 {dfdct_dout_reg_2_/CP}
+__scl 0.275629 {fdct_zigzag_zigzag_mod_sresult_reg_8__11_/CP}
+__scl 0.293284 {fdct_zigzag_zigzag_mod_sresult_reg_25__11_/CP}
+__scl 0.273837 {fdct_zigzag_zigzag_mod_sresult_reg_5__6_/CP}
+__scl 0.260435 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_16_/CP}
+__scl 0.275319 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_21_/CP}
+__scl 0.275381 {fdct_zigzag_zigzag_mod_sresult_reg_57__1_/CP}
+__scl 0.278735 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_6_macu_result_reg_19_/CP}
+__scl 0.279297 {fdct_zigzag_zigzag_mod_sresult_reg_45__0_/CP}
+__scl 0.277222 {fdct_zigzag_zigzag_mod_sresult_reg_59__6_/CP}
+__scl 0.263357 {fdct_zigzag_zigzag_mod_sresult_reg_53__1_/CP}
+__scl 0.292381 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_20_/CP}
+__scl 0.290027 {qnr_divider_divider_d_pipe_reg_8__0_/CP}
+__scl 0.276724 {fdct_zigzag_zigzag_mod_sresult_reg_61__3_/CP}
+__scl 0.27381 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_14_/CP}
+__scl 0.293389 {fdct_zigzag_zigzag_mod_sresult_reg_23__1_/CP}
+__scl 0.275443 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_coef_reg_30_/CP}
+__scl 0.289639 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_mult_res_reg_10_/CP}
+__scl 0.263493 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_coef_reg_26_/CP}
+__scl 0.289012 {fdct_zigzag_dct_mod_douten_reg/CP}
+__scl 0.273948 {fdct_zigzag_zigzag_mod_sresult_reg_5__11_/CP}
+__scl 0.274434 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_9_/CP}
+__scl 0.279339 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_6_macu_result_reg_1_/CP}
+__scl 0.269236 {rle_rz3_size_reg_3_/CP}
+__scl 0.275484 {fdct_zigzag_zigzag_mod_sresult_reg_11__7_/CP}
+__scl 0.292434 {qnr_divider_divider_s_pipe_reg_10__1_/CP}
+__scl 0.264031 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_31_/CP}
+__scl 0.263729 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_9_/CP}
+__scl 0.278436 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_coef_reg_29_/CP}
+__scl 0.293802 {fdct_zigzag_zigzag_mod_sresult_reg_22__9_/CP}
+__scl 0.262641 {qnr_divider_id_reg_5_/CP}
+__scl 0.277807 {fdct_zigzag_zigzag_mod_sresult_reg_8__0_/CP}
+__scl 0.278766 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_5_/CP}
+__scl 0.259877 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_20_/CP}
+__scl 0.291008 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_14_/CP}
+__scl 0.276846 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_mult_res_reg_13_/CP}
+__scl 0.273634 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_20_/CP}
+__scl 0.288213 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_0_/CP}
+__scl 0.276758 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_1_/CP}
+__scl 0.290848 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_9_/CP}
+__scl 0.289568 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_8_/CP}
+__scl 0.270394 {rle_rle_den_reg/CP}
+__scl 0.275149 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_16_/CP}
+__scl 0.27697 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_mult_res_reg_1_/CP}
+__scl 0.290747 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_17_/CP}
+__scl 0.277238 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_3_coef_reg_26_/CP}
+__scl 0.294616 {fdct_zigzag_zigzag_mod_sresult_reg_38__0_/CP}
+__scl 0.259122 {fdct_zigzag_zigzag_mod_sresult_reg_18__11_/CP}
+__scl 0.287055 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_coef_reg_21_/CP}
+__scl 0.260713 {qnr_divider_divider_s_pipe_reg_8__17_/CP}
+__scl 0.28998 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_coef_reg_22_/CP}
+__scl 0.286976 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_coef_reg_25_/CP}
+__scl 0.274476 {fdct_zigzag_zigzag_mod_sresult_reg_14__11_/CP}
+__scl 0.269282 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_12_/CP}
+__scl 0.278263 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_coef_reg_25_/CP}
+__scl 0.291544 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_result_reg_20_/CP}
+__scl 0.277961 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_coef_reg_30_/CP}
+__scl 0.289787 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_15_/CP}
+__scl 0.286273 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_coef_reg_21_/CP}
+__scl 0.261263 {qnr_divider_divider_d_pipe_reg_6__18_/CP}
+__scl 0.262968 {qnr_divider_divider_s_pipe_reg_9__12_/CP}
+__scl 0.276724 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_6_/CP}
+__scl 0.289259 {fdct_zigzag_dct_mod_sample_cnt_reg_0_/CP}
+__scl 0.285673 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_coef_reg_24_/CP}
+__scl 0.277943 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_10_/CP}
+__scl 0.292358 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_9_/CP}
+__scl 0.287794 {fdct_zigzag_zigzag_mod_sresult_reg_21__4_/CP}
+__scl 0.292627 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_6_/CP}
+__scl 0.263953 {qnr_divider_divider_s_pipe_reg_6__10_/CP}
+__scl 0.277978 {fdct_zigzag_zigzag_mod_sresult_reg_53__7_/CP}
+__scl 0.275201 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_20_/CP}
+__scl 0.291717 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_18_/CP}
+__scl 0.288042 {fdct_zigzag_zigzag_mod_sresult_reg_42__5_/CP}
+__scl 0.294117 {dfdct_dout_reg_6_/CP}
+__scl 0.263074 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_coef_reg_25_/CP}
+__scl 0.274631 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_17_/CP}
+__scl 0.288867 {fdct_zigzag_zigzag_mod_sresult_reg_29__0_/CP}
+__scl 0.27836 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_3_/CP}
+__scl 0.27669 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_mult_res_reg_17_/CP}
+__scl 0.276484 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_18_/CP}
+__scl 0.288262 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_14_/CP}
+__scl 0.274652 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_10_/CP}
+__scl 0.293446 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_15_/CP}
+__scl 0.287915 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_coef_reg_27_/CP}
+__scl 0.265081 {qnr_divider_divider_s_pipe_reg_9__8_/CP}
+__scl 0.278438 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_macu_result_reg_21_/CP}
+__scl 0.257315 {fdct_zigzag_zigzag_mod_sresult_reg_17__1_/CP}
+__scl 0.270914 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_mult_res_reg_12_/CP}
+__scl 0.264405 {qnr_divider_divider_s_pipe_reg_7__9_/CP}
+__scl 0.269859 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_4_/CP}
+__scl 0.281453 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_2_/CP}
+__scl 0.294429 {fdct_zigzag_zigzag_mod_sresult_reg_37__8_/CP}
+__scl 0.263836 {fdct_zigzag_zigzag_mod_sresult_reg_51__5_/CP}
+__scl 0.274102 {fdct_zigzag_zigzag_mod_sresult_reg_6__11_/CP}
+__scl 0.275852 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_coef_reg_28_/CP}
+__scl 0.275648 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_8_/CP}
+__scl 0.292216 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_1_/CP}
+__scl 0.278452 {fdct_zigzag_dct_mod_ddin_reg_2_/CP}
+__scl 0.274282 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_19_/CP}
+__scl 0.261171 {qnr_divider_divider_s_pipe_reg_7__16_/CP}
+__scl 0.294069 {dfdct_dout_reg_5_/CP}
+__scl 0.270598 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_16_/CP}
+__scl 0.266578 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_mult_res_reg_12_/CP}
+__scl 0.291592 {qnr_divider_divider_s_pipe_reg_10__3_/CP}
+__scl 0.293363 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_coef_reg_24_/CP}
+__scl 0.282008 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_17_/CP}
+__scl 0.278722 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_6_/CP}
+__scl 0.288276 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_coef_reg_29_/CP}
+__scl 0.270567 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_result_reg_11_/CP}
+__scl 0.276718 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_15_/CP}
+__scl 0.291707 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_18_/CP}
+__scl 0.278847 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_3_/CP}
+__scl 0.276728 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_14_/CP}
+__scl 0.294674 {fdct_zigzag_zigzag_mod_sresult_reg_24__9_/CP}
+__scl 0.288873 {fdct_zigzag_zigzag_mod_sresult_reg_42__2_/CP}
+__scl 0.264958 {qnr_divider_divider_s_pipe_reg_8__8_/CP}
+__scl 0.291909 {qnr_divider_divider_d_pipe_reg_10__6_/CP}
+__scl 0.276397 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_10_/CP}
+__scl 0.291558 {qnr_divider_divider_s_pipe_reg_8__4_/CP}
+__scl 0.262686 {qnr_divider_divider_d_pipe_reg_7__23_/CP}
+__scl 0.25849 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_0_/CP}
+__scl 0.285034 {fdct_zigzag_zigzag_mod_sresult_reg_21__1_/CP}
+__scl 0.278643 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_mult_res_reg_11_/CP}
+__scl 0.259125 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_19_/CP}
+__scl 0.277413 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_7_/CP}
+__scl 0.293757 {fdct_zigzag_zigzag_mod_sresult_reg_23__3_/CP}
+__scl 0.290162 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_6_/CP}
+__scl 0.291482 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_coef_reg_25_/CP}
+__scl 0.27785 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_13_/CP}
+__scl 0.265957 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_16_/CP}
+__scl 0.290117 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_coef_reg_31_/CP}
+__scl 0.275285 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_coef_reg_22_/CP}
+__scl 0.27598 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_coef_reg_21_/CP}
+__scl 0.270527 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_result_reg_13_/CP}
+__scl 0.258419 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_coef_reg_24_/CP}
+__scl 0.293159 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_0_/CP}
+__scl 0.287272 {fdct_zigzag_zigzag_mod_sresult_reg_45__8_/CP}
+__scl 0.294529 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_result_reg_21_/CP}
+__scl 0.262634 {qnr_divider_divider_d_pipe_reg_10__21_/CP}
+__scl 0.261646 {qnr_divider_divider_s_pipe_reg_10__17_/CP}
+__scl 0.291458 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_coef_reg_30_/CP}
+__scl 0.276822 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_coef_reg_24_/CP}
+__scl 0.286775 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_13_/CP}
+__scl 0.257646 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_9_/CP}
+__scl 0.289053 {qnr_divider_divider_d_pipe_reg_5__2_/CP}
+__scl 0.267952 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_0_/CP}
+__scl 0.262535 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_14_/CP}
+__scl 0.269405 {rle_rz1_sizeo_reg_3_/CP}
+__scl 0.293231 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_17_/CP}
+__scl 0.271101 {qnr_rq_reg_6_/CP}
+__scl 0.274025 {fdct_zigzag_zigzag_mod_sresult_reg_5__10_/CP}
+__scl 0.294605 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_16_/CP}
+__scl 0.28327 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_7_/CP}
+__scl 0.278115 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_15_/CP}
+__scl 0.266874 {fdct_zigzag_zigzag_mod_sresult_reg_31__2_/CP}
+__scl 0.268185 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_0_/CP}
+__scl 0.274622 {fdct_zigzag_zigzag_mod_sresult_reg_2__10_/CP}
+__scl 0.276224 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_coef_reg_22_/CP}
+__scl 0.27792 {rle_rz3_ampo_reg_10_/CP}
+__scl 0.266108 {fdct_zigzag_zigzag_mod_sresult_reg_50__3_/CP}
+__scl 0.293253 {fdct_zigzag_zigzag_mod_sresult_reg_40__7_/CP}
+__scl 0.275535 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_mult_res_reg_16_/CP}
+__scl 0.29285 {fdct_zigzag_zigzag_mod_sresult_reg_39__2_/CP}
+__scl 0.262651 {qnr_divider_divider_d_pipe_reg_11__21_/CP}
+__scl 0.292182 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_14_/CP}
+__scl 0.291503 {fdct_zigzag_zigzag_mod_sresult_reg_33__6_/CP}
+__scl 0.27452 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_20_/CP}
+__scl 0.279651 {fdct_zigzag_zigzag_mod_sresult_reg_44__0_/CP}
+__scl 0.291668 {fdct_zigzag_zigzag_mod_sresult_reg_33__8_/CP}
+__scl 0.265815 {fdct_zigzag_zigzag_mod_sresult_reg_49__0_/CP}
+__scl 0.270697 {rle_rz2_dc_reg/CP}
+__scl 0.277819 {fdct_zigzag_zigzag_mod_sresult_reg_58__3_/CP}
+__scl 0.27859 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_macu_result_reg_17_/CP}
+__scl 0.275918 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_14_/CP}
+__scl 0.293933 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_8_/CP}
+__scl 0.291676 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_19_/CP}
+__scl 0.280061 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_coef_reg_31_/CP}
+__scl 0.268935 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_10_/CP}
+__scl 0.293272 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_20_/CP}
+__scl 0.274655 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_coef_reg_29_/CP}
+__scl 0.258297 {fdct_zigzag_dct_mod_ddin_reg_6_/CP}
+__scl 0.283396 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_coef_reg_28_/CP}
+__scl 0.273851 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_15_/CP}
+__scl 0.291668 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_0_/CP}
+__scl 0.292885 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_12_/CP}
+__scl 0.269792 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_14_/CP}
+__scl 0.292198 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_10_/CP}
+__scl 0.292218 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_12_/CP}
+__scl 0.290704 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_17_/CP}
+__scl 0.295009 {fdct_zigzag_zigzag_mod_sresult_reg_37__7_/CP}
+__scl 0.267533 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_mult_res_reg_8_/CP}
+__scl 0.277314 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_coef_reg_28_/CP}
+__scl 0.270902 {qnr_rq_reg_1_/CP}
+__scl 0.293219 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_mult_res_reg_16_/CP}
+__scl 0.257594 {fdct_zigzag_zigzag_mod_sresult_reg_14__8_/CP}
+__scl 0.271357 {fdct_zigzag_zigzag_mod_sresult_reg_25__3_/CP}
+__scl 0.268001 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_mult_res_reg_18_/CP}
+__scl 0.271104 {rle_rz3_ampo_reg_1_/CP}
+__scl 0.263836 {fdct_zigzag_zigzag_mod_sresult_reg_51__2_/CP}
+__scl 0.276064 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_9_/CP}
+__scl 0.277965 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_6_/CP}
+__scl 0.290113 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_9_/CP}
+__scl 0.275436 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_2_/CP}
+__scl 0.262411 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_11_/CP}
+__scl 0.277482 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_0_/CP}
+__scl 0.263895 {fdct_zigzag_zigzag_mod_sresult_reg_51__0_/CP}
+__scl 0.258259 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_result_reg_12_/CP}
+__scl 0.277727 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_coef_reg_21_/CP}
+__scl 0.257888 {fdct_zigzag_zigzag_mod_sresult_reg_15__1_/CP}
+__scl 0.278447 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_macu_result_reg_20_/CP}
+__scl 0.293437 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_13_/CP}
+__scl 0.293417 {fdct_zigzag_zigzag_mod_sresult_reg_52__7_/CP}
+__scl 0.257309 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_coef_reg_21_/CP}
+__scl 0.277237 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_coef_reg_25_/CP}
+__scl 0.270747 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_10_/CP}
+__scl 0.291533 {fdct_zigzag_zigzag_mod_sresult_reg_43__2_/CP}
+__scl 0.278825 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_4_/CP}
+__scl 0.291306 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_12_/CP}
+__scl 0.280511 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_13_/CP}
+__scl 0.278484 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_14_/CP}
+__scl 0.289264 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_4_/CP}
+__scl 0.290099 {fdct_zigzag_zigzag_mod_sresult_reg_20__7_/CP}
+__scl 0.260473 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_17_/CP}
+__scl 0.262452 {qnr_divider_divider_s_pipe_reg_5__13_/CP}
+__scl 0.291843 {qnr_divider_divider_d_pipe_reg_9__1_/CP}
+__scl 0.275178 {fdct_zigzag_zigzag_mod_sresult_reg_5__4_/CP}
+__scl 0.278245 {rle_rz3_amp_reg_10_/CP}
+__scl 0.291806 {fdct_zigzag_zigzag_mod_sresult_reg_54__11_/CP}
+__scl 0.264031 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_coef_reg_21_/CP}
+__scl 0.286925 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_4_/CP}
+__scl 0.278082 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_coef_reg_24_/CP}
+__scl 0.277877 {fdct_zigzag_zigzag_mod_sresult_reg_19__11_/CP}
+__scl 0.27561 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_5_/CP}
+__scl 0.276066 {fdct_zigzag_zigzag_mod_sresult_reg_7__6_/CP}
+__scl 0.257744 {fdct_zigzag_zigzag_mod_sresult_reg_15__11_/CP}
+__scl 0.277627 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_coef_reg_22_/CP}
+__scl 0.268441 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_mult_res_reg_15_/CP}
+__scl 0.280653 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_15_/CP}
+__scl 0.258444 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_3_/CP}
+__scl 0.288892 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_coef_reg_21_/CP}
+__scl 0.262634 {qnr_divider_divider_d_pipe_reg_10__22_/CP}
+__scl 0.278756 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_6_macu_result_reg_20_/CP}
+__scl 0.276506 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_8_/CP}
+__scl 0.266171 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_3_/CP}
+__scl 0.278145 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_4_macu_result_reg_17_/CP}
+__scl 0.288499 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_2_/CP}
+__scl 0.258149 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_result_reg_14_/CP}
+__scl 0.277032 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_8_/CP}
+__scl 0.263868 {qnr_divider_divider_s_pipe_reg_7__10_/CP}
+__scl 0.294197 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_21_/CP}
+__scl 0.290029 {fdct_zigzag_zigzag_mod_sresult_reg_31__7_/CP}
+__scl 0.293119 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_13_/CP}
+__scl 0.25868 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_2_/CP}
+__scl 0.262374 {qnr_divider_divider_d_pipe_reg_7__15_/CP}
+__scl 0.26151 {qnr_divider_divider_d_pipe_reg_10__18_/CP}
+__scl 0.276948 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_coef_reg_31_/CP}
+__scl 0.278312 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_2_/CP}
+__scl 0.292578 {fdct_zigzag_zigzag_mod_sresult_reg_39__8_/CP}
+__scl 0.27734 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_14_/CP}
+__scl 0.289669 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_16_/CP}
+__scl 0.291482 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_coef_reg_21_/CP}
+__scl 0.289077 {qnr_divider_divider_s_pipe_reg_5__0_/CP}
+__scl 0.276896 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_coef_reg_23_/CP}
+__scl 0.289897 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_coef_reg_24_/CP}
+__scl 0.294513 {fdct_zigzag_zigzag_mod_sresult_reg_20__11_/CP}
+__scl 0.26176 {qnr_divider_divider_d_pipe_reg_11__18_/CP}
+__scl 0.289675 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_8_/CP}
+__scl 0.259464 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_16_/CP}
+__scl 0.288669 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_4_/CP}
+__scl 0.270571 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_mult_res_reg_17_/CP}
+__scl 0.274898 {fdct_zigzag_zigzag_mod_sresult_reg_6__3_/CP}
+__scl 0.263985 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_coef_reg_29_/CP}
+__scl 0.291558 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_17_/CP}
+__scl 0.2914 {fdct_zigzag_zigzag_mod_sresult_reg_34__10_/CP}
+__scl 0.277352 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_4_/CP}
+__scl 0.291976 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_15_/CP}
+__scl 0.274181 {fdct_zigzag_zigzag_mod_sresult_reg_7__0_/CP}
+__scl 0.291916 {qnr_divider_divider_d_pipe_reg_10__7_/CP}
+__scl 0.281247 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_7_/CP}
+__scl 0.258518 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_17_/CP}
+__scl 0.275038 {fdct_zigzag_zigzag_mod_sresult_reg_2__7_/CP}
+__scl 0.287155 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_2_/CP}
+__scl 0.26968 {rle_rz1_deno_reg/CP}
+__scl 0.27722 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_16_/CP}
+__scl 0.277056 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_12_/CP}
+__scl 0.29009 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_1_/CP}
+__scl 0.279325 {rle_rz1_amp_reg_10_/CP}
+__scl 0.293627 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_coef_reg_29_/CP}
+__scl 0.265053 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_mult_res_reg_14_/CP}
+__scl 0.289225 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_coef_reg_23_/CP}
+__scl 0.290079 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_18_/CP}
+__scl 0.286382 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_coef_reg_24_/CP}
+__scl 0.289666 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_17_/CP}
+__scl 0.278181 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_9_/CP}
+__scl 0.276903 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_mult_res_reg_4_/CP}
+__scl 0.292455 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_5_/CP}
+__scl 0.277573 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_coef_reg_25_/CP}
+__scl 0.288259 {qnr_divider_divider_s_pipe_reg_6__2_/CP}
+__scl 0.278043 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_result_reg_5_/CP}
+__scl 0.29272 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_mult_res_reg_9_/CP}
+__scl 0.276215 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_13_/CP}
+__scl 0.269977 {rle_rz2_rlen_reg_0_/CP}
+__scl 0.266739 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_2_/CP}
+__scl 0.288831 {fdct_zigzag_zigzag_mod_sresult_reg_42__4_/CP}
+__scl 0.289064 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_7_/CP}
+__scl 0.277247 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_coef_reg_27_/CP}
+__scl 0.268806 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_mult_res_reg_16_/CP}
+__scl 0.266211 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_5_/CP}
+__scl 0.257723 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_10_/CP}
+__scl 0.275098 {fdct_zigzag_zigzag_mod_sresult_reg_3__6_/CP}
+__scl 0.294115 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_19_/CP}
+__scl 0.287825 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_mult_res_reg_18_/CP}
+__scl 0.258067 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_coef_reg_30_/CP}
+__scl 0.275191 {fdct_zigzag_zigzag_mod_sresult_reg_11__3_/CP}
+__scl 0.278185 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_0_/CP}
+__scl 0.269602 {rle_rz1_size_reg_0_/CP}
+__scl 0.290109 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_coef_reg_30_/CP}
+__scl 0.294268 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_19_/CP}
+__scl 0.263254 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_7_/CP}
+__scl 0.292119 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_2_/CP}
+__scl 0.263975 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_coef_reg_30_/CP}
+__scl 0.278179 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_result_reg_4_/CP}
+__scl 0.27677 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_13_/CP}
+__scl 0.274561 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_12_/CP}
+__scl 0.277969 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_12_/CP}
+__scl 0.294559 {fdct_zigzag_zigzag_mod_sresult_reg_38__2_/CP}
+__scl 0.278705 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_10_/CP}
+__scl 0.278097 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_9_/CP}
+__scl 0.289584 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_11_/CP}
+__scl 0.259899 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_19_/CP}
+__scl 0.293839 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_20_/CP}
+__scl 0.277596 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_coef_reg_23_/CP}
+__scl 0.270782 {rle_rz2_rlen_reg_2_/CP}
+__scl 0.26361 {qnr_dep_reg_11_/CP}
+__scl 0.289931 {fdct_zigzag_dct_mod_sample_cnt_reg_2_/CP}
+__scl 0.293826 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_4_/CP}
+__scl 0.275417 {fdct_zigzag_zigzag_mod_sresult_reg_2__4_/CP}
+__scl 0.293106 {fdct_zigzag_zigzag_mod_sresult_reg_22__0_/CP}
+__scl 0.293839 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_coef_reg_31_/CP}
+__scl 0.258473 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_5_/CP}
+__scl 0.261922 {qnr_divider_divider_s_pipe_reg_10__19_/CP}
+__scl 0.293316 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_20_/CP}
+__scl 0.292224 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_coef_reg_31_/CP}
+__scl 0.262392 {qnr_divider_divider_s_pipe_reg_10__15_/CP}
+__scl 0.275715 {fdct_zigzag_zigzag_mod_sresult_reg_61__0_/CP}
+__scl 0.275505 {fdct_zigzag_zigzag_mod_sresult_reg_10__10_/CP}
+__scl 0.287955 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_coef_reg_24_/CP}
+__scl 0.27504 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_19_/CP}
+__scl 0.288569 {qnr_divider_divider_d_pipe_reg_7__6_/CP}
+__scl 0.291652 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_coef_reg_23_/CP}
+__scl 0.275669 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_6_/CP}
+__scl 0.279139 {rle_rz1_ampo_reg_8_/CP}
+__scl 0.269574 {rle_rz1_size_reg_2_/CP}
+__scl 0.278132 {rle_rz3_ampo_reg_11_/CP}
+__scl 0.278104 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_coef_reg_25_/CP}
+__scl 0.277026 {fdct_zigzag_zigzag_mod_sresult_reg_45__5_/CP}
+__scl 0.2934 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_17_/CP}
+__scl 0.270795 {dfdct_dout_reg_4_/CP}
+__scl 0.285565 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_16_/CP}
+__scl 0.270188 {rle_rle_rlen_reg_3_/CP}
+__scl 0.263413 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_coef_reg_22_/CP}
+__scl 0.289679 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_15_/CP}
+__scl 0.291706 {qnr_divider_divider_s_pipe_reg_11__5_/CP}
+__scl 0.287353 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_mult_res_reg_14_/CP}
+__scl 0.259854 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_coef_reg_23_/CP}
+__scl 0.275438 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_19_/CP}
+__scl 0.270482 {fdct_zigzag_zigzag_mod_sresult_reg_24__0_/CP}
+__scl 0.29151 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_12_/CP}
+__scl 0.27427 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_21_/CP}
+__scl 0.275564 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_11_/CP}
+__scl 0.292064 {fdct_zigzag_zigzag_mod_sresult_reg_30__5_/CP}
+__scl 0.275067 {fdct_zigzag_zigzag_mod_sresult_reg_4__10_/CP}
+__scl 0.25916 {fdct_zigzag_zigzag_mod_sresult_reg_17__7_/CP}
+__scl 0.289118 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_18_/CP}
+__scl 0.277571 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_16_/CP}
+__scl 0.271469 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_19_/CP}
+__scl 0.261465 {qnr_divider_divider_d_pipe_reg_6__16_/CP}
+__scl 0.279209 {rle_rz2_amp_reg_6_/CP}
+__scl 0.269836 {rle_rz2_amp_reg_1_/CP}
+__scl 0.278166 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_15_/CP}
+__scl 0.25812 {fdct_zigzag_zigzag_mod_sresult_reg_16__11_/CP}
+__scl 0.292729 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_15_/CP}
+__scl 0.27058 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_mult_res_reg_16_/CP}
+__scl 0.262026 {qnr_divider_divider_d_pipe_reg_10__19_/CP}
+__scl 0.291936 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_coef_reg_29_/CP}
+__scl 0.292542 {fdct_zigzag_zigzag_mod_sresult_reg_38__7_/CP}
+__scl 0.26167 {qnr_divider_divider_s_pipe_reg_5__16_/CP}
+__scl 0.271169 {fdct_zigzag_zigzag_mod_sresult_reg_63__8_/CP}
+__scl 0.279107 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_13_/CP}
+__scl 0.26412 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_5_/CP}
+__scl 0.28342 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_14_/CP}
+__scl 0.288908 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_0_/CP}
+__scl 0.275115 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_9_/CP}
+__scl 0.293187 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_15_/CP}
+__scl 0.276855 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_18_/CP}
+__scl 0.289606 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_13_/CP}
+__scl 0.277694 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_2_/CP}
+__scl 0.275771 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_17_/CP}
+__scl 0.274974 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_7_/CP}
+__scl 0.261802 {qnr_divider_divider_s_pipe_reg_11__17_/CP}
+__scl 0.257557 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_coef_reg_25_/CP}
+__scl 0.27513 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_coef_reg_24_/CP}
+__scl 0.273765 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_18_/CP}
+__scl 0.277017 {fdct_zigzag_zigzag_mod_sresult_reg_58__5_/CP}
+__scl 0.292361 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_12_/CP}
+__scl 0.292585 {qnr_divider_divider_s_pipe_reg_10__2_/CP}
+__scl 0.293327 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_15_/CP}
+__scl 0.275755 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_9_/CP}
+__scl 0.262437 {qnr_divider_divider_d_pipe_reg_10__15_/CP}
+__scl 0.277241 {fdct_zigzag_zigzag_mod_sresult_reg_58__7_/CP}
+__scl 0.292611 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_coef_reg_30_/CP}
+__scl 0.278538 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_8_/CP}
+__scl 0.265105 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_coef_reg_28_/CP}
+__scl 0.258594 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_4_/CP}
+__scl 0.293389 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_18_/CP}
+__scl 0.289436 {qnr_divider_divider_s_pipe_reg_4__2_/CP}
+__scl 0.276955 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_coef_reg_28_/CP}
+__scl 0.276937 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_mult_res_reg_14_/CP}
+__scl 0.291904 {fdct_zigzag_zigzag_mod_sresult_reg_54__8_/CP}
+__scl 0.263043 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_6_/CP}
+__scl 0.259338 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_20_/CP}
+__scl 0.288561 {qnr_divider_divider_s_pipe_reg_7__5_/CP}
+__scl 0.28184 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_3_/CP}
+__scl 0.267022 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_9_/CP}
+__scl 0.262558 {qnr_divider_divider_s_pipe_reg_7__20_/CP}
+__scl 0.276903 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_12_/CP}
+__scl 0.26178 {qnr_divider_divider_s_pipe_reg_9__18_/CP}
+__scl 0.275602 {fdct_zigzag_zigzag_mod_sresult_reg_12__11_/CP}
+__scl 0.275943 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_coef_reg_31_/CP}
+__scl 0.270087 {rle_rz1_rlen_reg_2_/CP}
+__scl 0.27683 {fdct_zigzag_zigzag_mod_sresult_reg_61__5_/CP}
+__scl 0.269906 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_coef_reg_24_/CP}
+__scl 0.293117 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_17_/CP}
+__scl 0.292995 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_6_/CP}
+__scl 0.288588 {qnr_divider_divider_d_pipe_reg_6__6_/CP}
+__scl 0.267371 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_11_/CP}
+__scl 0.291144 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_13_/CP}
+__scl 0.281239 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_1_/CP}
+__scl 0.258421 {fdct_zigzag_zigzag_mod_sresult_reg_16__8_/CP}
+__scl 0.260445 {fdct_zigzag_zigzag_mod_sresult_reg_0__0_/CP}
+__scl 0.274921 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_15_/CP}
+__scl 0.295036 {fdct_zigzag_zigzag_mod_sresult_reg_29__7_/CP}
+__scl 0.290633 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_12_/CP}
+__scl 0.28684 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_2_/CP}
+__scl 0.278664 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_12_/CP}
+__scl 0.26692 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_mult_res_reg_15_/CP}
+__scl 0.261101 {qnr_divider_divider_s_pipe_reg_8__19_/CP}
+__scl 0.26367 {qnr_divider_divider_d_pipe_reg_8__13_/CP}
+__scl 0.289678 {fdct_zigzag_zigzag_mod_sresult_reg_46__11_/CP}
+__scl 0.291658 {qnr_divider_divider_d_pipe_reg_10__4_/CP}
+__scl 0.27482 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_8_/CP}
+__scl 0.264902 {qnr_divider_divider_d_pipe_reg_8__9_/CP}
+__scl 0.274726 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_21_/CP}
+__scl 0.276642 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_17_/CP}
+__scl 0.286002 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_coef_reg_28_/CP}
+__scl 0.266053 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_coef_reg_23_/CP}
+__scl 0.268578 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_coef_reg_24_/CP}
+__scl 0.275912 {fdct_zigzag_zigzag_mod_sresult_reg_3__3_/CP}
+__scl 0.286365 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_coef_reg_23_/CP}
+__scl 0.290429 {qnr_divider_divider_s_pipe_reg_8__0_/CP}
+__scl 0.262868 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_8_/CP}
+__scl 0.266303 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_mult_res_reg_15_/CP}
+__scl 0.278242 {fdct_zigzag_zigzag_mod_sresult_reg_56__3_/CP}
+__scl 0.285737 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_coef_reg_26_/CP}
+__scl 0.258365 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_7_/CP}
+__scl 0.269894 {rle_rz1_dco_reg/CP}
+__scl 0.293734 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_15_/CP}
+__scl 0.276119 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_0_/CP}
+__scl 0.291465 {qnr_divider_divider_d_pipe_reg_9__2_/CP}
+__scl 0.263108 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_1_/CP}
+__scl 0.290254 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_15_/CP}
+__scl 0.275589 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_18_/CP}
+__scl 0.290184 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_coef_reg_27_/CP}
+__scl 0.290794 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_16_/CP}
+__scl 0.274428 {fdct_zigzag_zigzag_mod_sresult_reg_5__1_/CP}
+__scl 0.274335 {fdct_zigzag_zigzag_mod_sresult_reg_5__8_/CP}
+__scl 0.275436 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_13_/CP}
+__scl 0.292011 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_12_/CP}
+__scl 0.26472 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_2_/CP}
+__scl 0.278964 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_2_/CP}
+__scl 0.290613 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_9_/CP}
+__scl 0.293763 {fdct_zigzag_zigzag_mod_sresult_reg_50__7_/CP}
+__scl 0.290409 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_6_/CP}
+__scl 0.289734 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_coef_reg_26_/CP}
+__scl 0.262113 {qnr_divider_divider_s_pipe_reg_11__20_/CP}
+__scl 0.271583 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_17_/CP}
+__scl 0.289157 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_6_/CP}
+__scl 0.292716 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_10_/CP}
+__scl 0.291487 {qnr_divider_divider_d_pipe_reg_8__4_/CP}
+__scl 0.295014 {fdct_zigzag_zigzag_mod_sresult_reg_27__9_/CP}
+__scl 0.278005 {fdct_zigzag_zigzag_mod_sresult_reg_11__10_/CP}
+__scl 0.263788 {qnr_divider_divider_d_pipe_reg_7__12_/CP}
+__scl 0.259362 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_13_/CP}
+__scl 0.278809 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_coef_reg_28_/CP}
+__scl 0.278358 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_15_/CP}
+__scl 0.275593 {fdct_zigzag_zigzag_mod_sresult_reg_3__5_/CP}
+__scl 0.288309 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_mult_res_reg_17_/CP}
+__scl 0.290658 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_0_/CP}
+__scl 0.271319 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_18_/CP}
+__scl 0.281433 {rle_rz4_ampo_reg_11_/CP}
+__scl 0.288528 {fdct_zigzag_zigzag_mod_sresult_reg_30__7_/CP}
+__scl 0.294268 {fdct_zigzag_zigzag_mod_sresult_reg_29__8_/CP}
+__scl 0.295084 {fdct_zigzag_zigzag_mod_sresult_reg_27__10_/CP}
+__scl 0.27768 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_10_/CP}
+__scl 0.291285 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_19_/CP}
+__scl 0.270441 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_17_/CP}
+__scl 0.291706 {fdct_zigzag_zigzag_mod_sresult_reg_33__10_/CP}
+__scl 0.275983 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_coef_reg_30_/CP}
+__scl 0.289533 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_coef_reg_30_/CP}
+__scl 0.289632 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_12_/CP}
+__scl 0.259194 {fdct_zigzag_zigzag_mod_sresult_reg_17__2_/CP}
+__scl 0.26813 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_coef_reg_22_/CP}
+__scl 0.275573 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_3_macu_result_reg_18_/CP}
+__scl 0.260636 {fdct_zigzag_zigzag_mod_sresult_reg_0__7_/CP}
+__scl 0.289513 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_result_reg_15_/CP}
+__scl 0.259515 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_18_/CP}
+__scl 0.278033 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_11_/CP}
+__scl 0.293298 {fdct_zigzag_zigzag_mod_sresult_reg_22__11_/CP}
+__scl 0.273931 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_16_/CP}
+__scl 0.279255 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_coef_reg_27_/CP}
+__scl 0.266662 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_18_/CP}
+__scl 0.258256 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_10_/CP}
+__scl 0.293682 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_18_/CP}
+__scl 0.291447 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_9_/CP}
+__scl 0.277666 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_15_/CP}
+__scl 0.283066 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_5_/CP}
+__scl 0.258719 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_coef_reg_30_/CP}
+__scl 0.278032 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_coef_reg_22_/CP}
+__scl 0.277241 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_0_/CP}
+__scl 0.275335 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_18_/CP}
+__scl 0.289248 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_coef_reg_28_/CP}
+__scl 0.278289 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_6_macu_mult_res_reg_1_/CP}
+__scl 0.295015 {fdct_zigzag_zigzag_mod_sresult_reg_37__5_/CP}
+__scl 0.263615 {qnr_divider_divider_s_pipe_reg_5__24_/CP}
+__scl 0.286986 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_coef_reg_26_/CP}
+__scl 0.279707 {fdct_zigzag_zigzag_mod_sresult_reg_18__7_/CP}
+__scl 0.292422 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_8_/CP}
+__scl 0.264415 {qnr_divider_divider_d_pipe_reg_7__9_/CP}
+__scl 0.2781 {fdct_zigzag_zigzag_mod_sresult_reg_54__6_/CP}
+__scl 0.290505 {fdct_zigzag_zigzag_mod_sresult_reg_31__10_/CP}
+__scl 0.294538 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_2_macu_result_reg_14_/CP}
+__scl 0.277782 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_11_/CP}
+__scl 0.276655 {fdct_zigzag_zigzag_mod_sresult_reg_12__6_/CP}
+__scl 0.270777 {dfdct_dout_reg_7_/CP}
+__scl 0.291079 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_20_/CP}
+__scl 0.276679 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_7_/CP}
+__scl 0.266136 {fdct_zigzag_zigzag_mod_sresult_reg_52__1_/CP}
+__scl 0.292203 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_coef_reg_30_/CP}
+__scl 0.283434 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_16_/CP}
+__scl 0.277193 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_coef_reg_30_/CP}
+__scl 0.276123 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_1_/CP}
+__scl 0.269829 {fdct_zigzag_zigzag_mod_sresult_reg_26__4_/CP}
+__scl 0.26886 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_18_/CP}
+__scl 0.292659 {fdct_zigzag_zigzag_mod_sresult_reg_38__4_/CP}
+__scl 0.26245 {qnr_divider_divider_s_pipe_reg_6__12_/CP}
+__scl 0.289036 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_mult_res_reg_16_/CP}
+__scl 0.258271 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_coef_reg_21_/CP}
+__scl 0.260474 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_14_/CP}
+__scl 0.27553 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_12_/CP}
+__scl 0.277161 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_10_/CP}
+__scl 0.288608 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_2_/CP}
+__scl 0.291941 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_16_/CP}
+__scl 0.277993 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_result_reg_6_/CP}
+__scl 0.271173 {fdct_zigzag_zigzag_mod_sresult_reg_63__2_/CP}
+__scl 0.293591 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_mult_res_reg_17_/CP}
+__scl 0.289649 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_4_/CP}
+__scl 0.294033 {fdct_zigzag_zigzag_mod_sresult_reg_48__11_/CP}
+__scl 0.289299 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_coef_reg_31_/CP}
+__scl 0.291495 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_13_/CP}
+__scl 0.287091 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_coef_reg_21_/CP}
+__scl 0.274734 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_15_/CP}
+__scl 0.274004 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_15_/CP}
+__scl 0.261795 {qnr_divider_divider_s_pipe_reg_11__18_/CP}
+__scl 0.276983 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_16_/CP}
+__scl 0.269067 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_9_/CP}
+__scl 0.288599 {qnr_divider_divider_s_pipe_reg_7__6_/CP}
+__scl 0.292773 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_12_/CP}
+__scl 0.279218 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_6_macu_result_reg_0_/CP}
+__scl 0.289768 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_1_/CP}
+__scl 0.28955 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_mult_res_reg_11_/CP}
+__scl 0.269036 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_3_/CP}
+__scl 0.279354 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_coef_reg_27_/CP}
+__scl 0.275492 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_18_/CP}
+__scl 0.263513 {qnr_divider_divider_d_pipe_reg_6__22_/CP}
+__scl 0.276926 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_mult_res_reg_3_/CP}
+__scl 0.291838 {fdct_zigzag_zigzag_mod_sresult_reg_54__10_/CP}
+__scl 0.262172 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_11_/CP}
+__scl 0.279198 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_0_/CP}
+__scl 0.276669 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_2_/CP}
+__scl 0.266311 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_13_/CP}
+__scl 0.27865 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_7_/CP}
+__scl 0.29321 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_18_/CP}
+__scl 0.275303 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_coef_reg_24_/CP}
+__scl 0.278687 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_0_/CP}
+__scl 0.277474 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_10_/CP}
+__scl 0.27798 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_6_/CP}
+__scl 0.274463 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_13_/CP}
+__scl 0.275236 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_2_/CP}
+__scl 0.278215 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_coef_reg_25_/CP}
+__scl 0.277222 {qnr_dep_reg_14_/CP}
+__scl 0.260561 {fdct_zigzag_zigzag_mod_sresult_reg_0__2_/CP}
+__scl 0.25883 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_coef_reg_28_/CP}
+__scl 0.290892 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_11_/CP}
+__scl 0.27118 {fdct_zigzag_zigzag_mod_sresult_reg_25__5_/CP}
+__scl 0.285442 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_18_/CP}
+__scl 0.260636 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_16_/CP}
+__scl 0.292333 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_12_/CP}
+__scl 0.278148 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_coef_reg_29_/CP}
+__scl 0.288359 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_3_/CP}
+__scl 0.275471 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_14_/CP}
+__scl 0.276962 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_result_reg_11_/CP}
+__scl 0.258716 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_3_/CP}
+__scl 0.271346 {fdct_zigzag_zigzag_mod_sresult_reg_27__3_/CP}
+__scl 0.289268 {qnr_divider_divider_s_pipe_reg_5__4_/CP}
+__scl 0.263992 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_16_/CP}
+__scl 0.291798 {qnr_divider_divider_d_pipe_reg_9__6_/CP}
+__scl 0.291482 {fdct_zigzag_zigzag_mod_sresult_reg_52__9_/CP}
+__scl 0.29206 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_15_/CP}
+__scl 0.292507 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_13_/CP}
+__scl 0.279455 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_macu_result_reg_17_/CP}
+__scl 0.280021 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_result_reg_1_/CP}
+__scl 0.291998 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_10_/CP}
+__scl 0.277802 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_coef_reg_26_/CP}
+__scl 0.289463 {qnr_divider_divider_s_pipe_reg_4__3_/CP}
+__scl 0.288704 {qnr_divider_divider_s_pipe_reg_5__7_/CP}
+__scl 0.290741 {qnr_divider_divider_s_pipe_reg_8__1_/CP}
+__scl 0.263142 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_coef_reg_28_/CP}
+__scl 0.274417 {fdct_zigzag_zigzag_mod_sresult_reg_6__10_/CP}
+__scl 0.278051 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_8_/CP}
+__scl 0.262884 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_coef_reg_24_/CP}
+__scl 0.273594 {fdct_zigzag_zigzag_mod_sresult_reg_6__7_/CP}
+__scl 0.268836 {fdct_zigzag_zigzag_mod_sresult_reg_30__4_/CP}
+__scl 0.263448 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_8_/CP}
+__scl 0.294367 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_result_reg_20_/CP}
+__scl 0.288494 {qnr_divider_divider_s_pipe_reg_6__4_/CP}
+__scl 0.26366 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_28_/CP}
+__scl 0.259059 {fdct_zigzag_zigzag_mod_sresult_reg_17__10_/CP}
+__scl 0.266893 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_14_/CP}
+__scl 0.293772 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_16_/CP}
+__scl 0.279096 {rle_rz2_amp_reg_8_/CP}
+__scl 0.287303 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_result_reg_13_/CP}
+__scl 0.276773 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_mult_res_reg_16_/CP}
+__scl 0.292935 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_11_/CP}
+__scl 0.293142 {fdct_zigzag_zigzag_mod_sresult_reg_38__9_/CP}
+__scl 0.28173 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_11_/CP}
+__scl 0.292291 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_coef_reg_29_/CP}
+__scl 0.269758 {rle_rz1_amp_reg_0_/CP}
+__scl 0.286826 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_0_/CP}
+__scl 0.289738 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_9_/CP}
+__scl 0.278337 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_coef_reg_26_/CP}
+__scl 0.292375 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_13_/CP}
+__scl 0.277865 {rle_rz2_ampo_reg_11_/CP}
+__scl 0.268603 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_7_/CP}
+__scl 0.268328 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_3_/CP}
+__scl 0.293366 {fdct_zigzag_zigzag_mod_sresult_reg_42__6_/CP}
+__scl 0.289892 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_21_/CP}
+__scl 0.277811 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_10_/CP}
+__scl 0.293146 {fdct_zigzag_zigzag_mod_sresult_reg_38__6_/CP}
+__scl 0.27817 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_mult_res_reg_2_/CP}
+__scl 0.290473 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_8_/CP}
+__scl 0.257559 {fdct_zigzag_zigzag_mod_sresult_reg_15__10_/CP}
+__scl 0.277932 {rle_rz4_amp_reg_11_/CP}
+__scl 0.289036 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_17_/CP}
+__scl 0.292585 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_21_/CP}
+__scl 0.264939 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_1_/CP}
+__scl 0.278098 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_mult_res_reg_7_/CP}
+__scl 0.288156 {qnr_divider_divider_d_pipe_reg_6__3_/CP}
+__scl 0.292621 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_13_/CP}
+__scl 0.292625 {fdct_zigzag_zigzag_mod_sresult_reg_38__5_/CP}
+__scl 0.277042 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_coef_reg_26_/CP}
+__scl 0.26405 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_coef_reg_24_/CP}
+__scl 0.270048 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_20_/CP}
+__scl 0.289937 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_17_/CP}
+__scl 0.292832 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_8_/CP}
+__scl 0.275389 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_4_/CP}
+__scl 0.277636 {fdct_zigzag_zigzag_mod_sresult_reg_44__4_/CP}
+__scl 0.27575 {fdct_zigzag_zigzag_mod_sresult_reg_13__10_/CP}
+__scl 0.294067 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_coef_reg_24_/CP}
+__scl 0.259718 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_16_/CP}
+__scl 0.270069 {qnr_rq_reg_10_/CP}
+__scl 0.279294 {rle_rz1_ampo_reg_6_/CP}
+__scl 0.291253 {fdct_zigzag_zigzag_mod_sresult_reg_31__8_/CP}
+__scl 0.292787 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_16_/CP}
+__scl 0.292289 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_9_/CP}
+__scl 0.259318 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_12_/CP}
+__scl 0.279066 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_14_/CP}
+__scl 0.27835 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_16_/CP}
+__scl 0.278582 {rle_rz2_ampo_reg_10_/CP}
+__scl 0.275459 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_18_/CP}
+__scl 0.263351 {fdct_zigzag_zigzag_mod_sresult_reg_53__3_/CP}
+__scl 0.273937 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_18_/CP}
+__scl 0.262909 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_10_/CP}
+__scl 0.27902 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_2_/CP}
+__scl 0.269945 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_18_/CP}
+__scl 0.258949 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_14_/CP}
+__scl 0.270475 {fdct_zigzag_zigzag_mod_sresult_reg_26__0_/CP}
+__scl 0.289774 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_4_/CP}
+__scl 0.290594 {fdct_zigzag_zigzag_mod_sresult_reg_30__6_/CP}
+__scl 0.289149 {fdct_zigzag_zigzag_mod_sresult_reg_34__6_/CP}
+__scl 0.275598 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_11_/CP}
+__scl 0.27822 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_4_macu_result_reg_16_/CP}
+__scl 0.293289 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_10_/CP}
+__scl 0.291988 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_coef_reg_21_/CP}
+__scl 0.292702 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_11_/CP}
+__scl 0.265096 {qnr_divider_divider_d_pipe_reg_10__9_/CP}
+__scl 0.290066 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_13_/CP}
+__scl 0.275793 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_4_/CP}
+__scl 0.257512 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_coef_reg_29_/CP}
+__scl 0.274788 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_18_/CP}
+__scl 0.278794 {rle_rz3_amp_reg_6_/CP}
+__scl 0.28949 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_coef_reg_27_/CP}
+__scl 0.278239 {fdct_zigzag_zigzag_mod_sresult_reg_56__4_/CP}
+__scl 0.277814 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_5_/CP}
+__scl 0.288495 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_coef_reg_26_/CP}
+__scl 0.287085 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_coef_reg_23_/CP}
+__scl 0.277673 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_17_/CP}
+__scl 0.262018 {qnr_divider_divider_s_pipe_reg_9__16_/CP}
+__scl 0.266972 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_15_/CP}
+__scl 0.27683 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_1_/CP}
+__scl 0.275441 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_21_/CP}
+__scl 0.274209 {fdct_zigzag_zigzag_mod_sresult_reg_3__8_/CP}
+__scl 0.260548 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_17_/CP}
+__scl 0.276744 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_coef_reg_24_/CP}
+__scl 0.288441 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_0_/CP}
+__scl 0.275376 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_20_/CP}
+__scl 0.293574 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_10_/CP}
+__scl 0.289441 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_coef_reg_23_/CP}
+__scl 0.291919 {fdct_zigzag_zigzag_mod_sresult_reg_54__1_/CP}
+__scl 0.268764 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_coef_reg_22_/CP}
+__scl 0.276213 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_6_/CP}
+__scl 0.294694 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_mult_res_reg_16_/CP}
+__scl 0.258479 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_6_/CP}
+__scl 0.259523 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_coef_reg_26_/CP}
+__scl 0.26793 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_mult_res_reg_11_/CP}
+__scl 0.275377 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_12_/CP}
+__scl 0.277946 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_12_/CP}
+__scl 0.2665 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_4_/CP}
+__scl 0.291419 {qnr_divider_divider_s_pipe_reg_9__4_/CP}
+__scl 0.264656 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_3_/CP}
+__scl 0.278142 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_11_/CP}
+__scl 0.267317 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_12_/CP}
+__scl 0.278014 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_15_/CP}
+__scl 0.27422 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_3_/CP}
+__scl 0.278335 {rle_rz3_amp_reg_8_/CP}
+__scl 0.278274 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_coef_reg_26_/CP}
+__scl 0.261364 {qnr_divider_divider_s_pipe_reg_6__16_/CP}
+__scl 0.268938 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_2_/CP}
+__scl 0.263217 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_coef_reg_29_/CP}
+__scl 0.277783 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_mult_res_reg_18_/CP}
+__scl 0.291004 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_14_/CP}
+__scl 0.285129 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_19_/CP}
+__scl 0.270169 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_17_/CP}
+__scl 0.270672 {rle_rz2_sizeo_reg_1_/CP}
+__scl 0.278319 {fdct_zigzag_zigzag_mod_sresult_reg_9__2_/CP}
+__scl 0.261266 {qnr_divider_divider_s_pipe_reg_8__24_/CP}
+__scl 0.285329 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_coef_reg_30_/CP}
+__scl 0.290283 {fdct_zigzag_zigzag_mod_sresult_reg_47__10_/CP}
+__scl 0.276537 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_14_/CP}
+__scl 0.279183 {rle_rz1_ampo_reg_9_/CP}
+__scl 0.285246 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_21_/CP}
+__scl 0.26571 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_12_/CP}
+__scl 0.281443 {rle_rz4_ampo_reg_10_/CP}
+__scl 0.277196 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_16_/CP}
+__scl 0.280135 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_10_/CP}
+__scl 0.291571 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_16_/CP}
+__scl 0.287563 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_mult_res_reg_18_/CP}
+__scl 0.294208 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_12_/CP}
+__scl 0.276937 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_9_/CP}
+__scl 0.289793 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_14_/CP}
+__scl 0.25758 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_coef_reg_29_/CP}
+__scl 0.291908 {fdct_zigzag_zigzag_mod_sresult_reg_54__3_/CP}
+__scl 0.293161 {fdct_zigzag_zigzag_mod_sresult_reg_42__1_/CP}
+__scl 0.278359 {rle_rz4_amp_reg_6_/CP}
+__scl 0.274023 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_coef_reg_25_/CP}
+__scl 0.29329 {fdct_zigzag_zigzag_mod_sresult_reg_24__6_/CP}
+__scl 0.262356 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_8_/CP}
+__scl 0.265515 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_12_/CP}
+__scl 0.27733 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_coef_reg_23_/CP}
+__scl 0.277781 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_coef_reg_26_/CP}
+__scl 0.29367 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_2_macu_result_reg_18_/CP}
+__scl 0.291418 {fdct_zigzag_zigzag_mod_sresult_reg_52__8_/CP}
+__scl 0.278023 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_10_/CP}
+__scl 0.262568 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_16_/CP}
+__scl 0.274903 {fdct_zigzag_zigzag_mod_sresult_reg_7__7_/CP}
+__scl 0.287735 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_1_/CP}
+__scl 0.26084 {qnr_divider_divider_d_pipe_reg_9__19_/CP}
+__scl 0.274523 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_9_/CP}
+__scl 0.27877 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_macu_result_reg_13_/CP}
+__scl 0.267464 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_14_/CP}
+__scl 0.262778 {qnr_divider_divider_d_pipe_reg_11__14_/CP}
+__scl 0.286945 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_result_reg_12_/CP}
+__scl 0.257678 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_result_reg_19_/CP}
+__scl 0.275519 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_13_/CP}
+__scl 0.29275 {fdct_zigzag_zigzag_mod_sresult_reg_23__9_/CP}
+__scl 0.25954 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_15_/CP}
+__scl 0.271317 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_18_/CP}
+__scl 0.290257 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_coef_reg_23_/CP}
+__scl 0.293982 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_11_/CP}
+__scl 0.292111 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_11_/CP}
+__scl 0.287574 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_20_/CP}
+__scl 0.260624 {fdct_zigzag_zigzag_mod_sresult_reg_0__6_/CP}
+__scl 0.258438 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_coef_reg_23_/CP}
+__scl 0.278033 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_coef_reg_28_/CP}
+__scl 0.290038 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_0_/CP}
+__scl 0.262474 {qnr_divider_divider_q_pipe_reg_9__0_/CP}
+__scl 0.264662 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_1_/CP}
+__scl 0.277944 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_6_/CP}
+__scl 0.289371 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_mult_res_reg_13_/CP}
+__scl 0.270777 {rle_rz2_ampo_reg_0_/CP}
+__scl 0.291357 {fdct_zigzag_zigzag_mod_sresult_reg_20__6_/CP}
+__scl 0.293374 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_21_/CP}
+__scl 0.294167 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_9_/CP}
+__scl 0.292548 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_5_/CP}
+__scl 0.262173 {qnr_divider_divider_s_pipe_reg_8__15_/CP}
+__scl 0.294616 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_14_/CP}
+__scl 0.290013 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_coef_reg_23_/CP}
+__scl 0.291349 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_14_/CP}
+__scl 0.27536 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_15_/CP}
+__scl 0.292773 {fdct_zigzag_zigzag_mod_sresult_reg_34__9_/CP}
+__scl 0.291894 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_20_/CP}
+__scl 0.285477 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_5_/CP}
+__scl 0.288755 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_12_/CP}
+__scl 0.270907 {rle_rz2_deno_reg/CP}
+__scl 0.290087 {fdct_zigzag_dct_mod_sample_cnt_reg_4_/CP}
+__scl 0.277944 {fdct_zigzag_zigzag_mod_sresult_reg_56__7_/CP}
+__scl 0.274703 {fdct_zigzag_zigzag_mod_sresult_reg_8__10_/CP}
+__scl 0.293988 {dfdct_dout_reg_1_/CP}
+__scl 0.290973 {qnr_divider_divider_d_pipe_reg_8__3_/CP}
+__scl 0.289779 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_coef_reg_30_/CP}
+__scl 0.291307 {fdct_zigzag_zigzag_mod_sresult_reg_41__0_/CP}
+__scl 0.285773 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_coef_reg_30_/CP}
+__scl 0.277021 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_coef_reg_28_/CP}
+__scl 0.290767 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_18_/CP}
+__scl 0.274504 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_11_/CP}
+__scl 0.289411 {qnr_divider_divider_d_pipe_reg_4__1_/CP}
+__scl 0.262234 {qnr_divider_divider_s_pipe_reg_7__19_/CP}
+__scl 0.278675 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_3_/CP}
+__scl 0.291576 {qnr_divider_divider_d_pipe_reg_10__2_/CP}
+__scl 0.294535 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_coef_reg_23_/CP}
+__scl 0.277863 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_1_/CP}
+__scl 0.276938 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_coef_reg_27_/CP}
+__scl 0.286958 {fdct_zigzag_zigzag_mod_sresult_reg_43__11_/CP}
+__scl 0.290666 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_5_/CP}
+__scl 0.294199 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_coef_reg_25_/CP}
+__scl 0.269788 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_2_/CP}
+__scl 0.263453 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_coef_reg_25_/CP}
+__scl 0.289943 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_18_/CP}
+__scl 0.293744 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_18_/CP}
+__scl 0.262692 {qnr_divider_divider_d_pipe_reg_9__16_/CP}
+__scl 0.270204 {rle_rz1_amp_reg_3_/CP}
+__scl 0.286803 {fdct_zigzag_zigzag_mod_sresult_reg_46__2_/CP}
+__scl 0.274516 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_19_/CP}
+__scl 0.288013 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_coef_reg_25_/CP}
+__scl 0.267851 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_coef_reg_29_/CP}
+__scl 0.277179 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_5_/CP}
+__scl 0.293399 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_coef_reg_26_/CP}
+__scl 0.289332 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_11_/CP}
+__scl 0.282333 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_coef_reg_25_/CP}
+__scl 0.291709 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_18_/CP}
+__scl 0.294043 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_mult_res_reg_13_/CP}
+__scl 0.269773 {fdct_zigzag_zigzag_mod_sresult_reg_27__1_/CP}
+__scl 0.294599 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_21_/CP}
+__scl 0.266096 {fdct_zigzag_zigzag_mod_sresult_reg_48__6_/CP}
+__scl 0.275645 {fdct_zigzag_zigzag_mod_sresult_reg_13__8_/CP}
+__scl 0.275278 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_20_/CP}
+__scl 0.289929 {qnr_divider_divider_d_pipe_reg_8__1_/CP}
+__scl 0.277847 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_12_/CP}
+__scl 0.265071 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_0_/CP}
+__scl 0.266611 {fdct_zigzag_zigzag_mod_sresult_reg_48__2_/CP}
+__scl 0.263792 {fdct_zigzag_zigzag_mod_sresult_reg_53__4_/CP}
+__scl 0.261185 {qnr_divider_divider_d_pipe_reg_8__20_/CP}
+__scl 0.289746 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_14_/CP}
+__scl 0.262072 {qnr_divider_divider_s_pipe_reg_10__20_/CP}
+__scl 0.279009 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_6_macu_result_reg_18_/CP}
+__scl 0.260645 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_15_/CP}
+__scl 0.26925 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_15_/CP}
+__scl 0.294305 {fdct_zigzag_zigzag_mod_sresult_reg_56__1_/CP}
+__scl 0.276543 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_7_/CP}
+__scl 0.257553 {fdct_zigzag_zigzag_mod_sresult_reg_16__7_/CP}
+__scl 0.291653 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_13_/CP}
+__scl 0.288552 {qnr_divider_divider_s_pipe_reg_6__6_/CP}
+__scl 0.274919 {fdct_zigzag_zigzag_mod_sresult_reg_6__4_/CP}
+__scl 0.258838 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_coef_reg_27_/CP}
+__scl 0.29264 {fdct_zigzag_zigzag_mod_sresult_reg_39__1_/CP}
+__scl 0.294204 {fdct_zigzag_zigzag_mod_sresult_reg_37__10_/CP}
+__scl 0.262541 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_9_/CP}
+__scl 0.279564 {fdct_zigzag_dct_mod_ddin_reg_4_/CP}
+__scl 0.292973 {fdct_zigzag_zigzag_mod_sresult_reg_40__0_/CP}
+__scl 0.28958 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_8_/CP}
+__scl 0.275972 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_result_reg_16_/CP}
+__scl 0.291705 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_19_/CP}
+__scl 0.279609 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_6_macu_result_reg_16_/CP}
+__scl 0.291479 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_8_/CP}
+__scl 0.258678 {fdct_zigzag_zigzag_mod_sresult_reg_14__0_/CP}
+__scl 0.263015 {qnr_divider_divider_d_pipe_reg_10__12_/CP}
+__scl 0.264902 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_coef_reg_22_/CP}
+__scl 0.261727 {qnr_divider_divider_s_pipe_reg_5__18_/CP}
+__scl 0.277185 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_4_/CP}
+__scl 0.276999 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_coef_reg_25_/CP}
+__scl 0.276724 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_coef_reg_29_/CP}
+__scl 0.27871 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_3_/CP}
+__scl 0.291083 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_17_/CP}
+__scl 0.278054 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_result_reg_8_/CP}
+__scl 0.258038 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_17_/CP}
+__scl 0.275735 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_20_/CP}
+__scl 0.289035 {fdct_zigzag_zigzag_mod_sresult_reg_34__4_/CP}
+__scl 0.277495 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_11_/CP}
+__scl 0.275843 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_4_macu_result_reg_20_/CP}
+__scl 0.278842 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_4_/CP}
+__scl 0.278268 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_mult_res_reg_18_/CP}
+__scl 0.2852 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_20_/CP}
+__scl 0.293325 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_21_/CP}
+__scl 0.27867 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_4_/CP}
+__scl 0.276418 {fdct_zigzag_zigzag_mod_sresult_reg_58__1_/CP}
+__scl 0.26179 {qnr_divider_divider_d_pipe_reg_9__17_/CP}
+__scl 0.290553 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_10_/CP}
+__scl 0.270296 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_16_/CP}
+__scl 0.270389 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_mult_res_reg_13_/CP}
+__scl 0.278229 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_9_/CP}
+__scl 0.279405 {fdct_zigzag_zigzag_mod_sresult_reg_10__3_/CP}
+__scl 0.276884 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_6_/CP}
+__scl 0.285626 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_5_/CP}
+__scl 0.278541 {rle_rz4_ampo_reg_9_/CP}
+__scl 0.275801 {fdct_zigzag_zigzag_mod_sresult_reg_13__7_/CP}
+__scl 0.290141 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_4_/CP}
+__scl 0.270328 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_17_/CP}
+__scl 0.274656 {fdct_zigzag_zigzag_mod_sresult_reg_3__11_/CP}
+__scl 0.275997 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_6_/CP}
+__scl 0.275663 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_9_/CP}
+__scl 0.289668 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_coef_reg_31_/CP}
+__scl 0.277727 {fdct_zigzag_zigzag_mod_sresult_reg_19__4_/CP}
+__scl 0.267842 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_1_/CP}
+__scl 0.263937 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_25_/CP}
+__scl 0.257882 {fdct_zigzag_zigzag_mod_sresult_reg_4__0_/CP}
+__scl 0.290102 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_coef_reg_28_/CP}
+__scl 0.277574 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_6_/CP}
+__scl 0.257659 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_14_/CP}
+__scl 0.261628 {qnr_divider_divider_d_pipe_reg_11__19_/CP}
+__scl 0.275602 {fdct_zigzag_zigzag_mod_sresult_reg_4__7_/CP}
+__scl 0.259869 {fdct_zigzag_zigzag_mod_sresult_reg_0__11_/CP}
+__scl 0.285423 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_coef_reg_31_/CP}
+__scl 0.292678 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_mult_res_reg_12_/CP}
+__scl 0.268955 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_10_/CP}
+__scl 0.263389 {qnr_divider_divider_s_pipe_reg_8__13_/CP}
+__scl 0.265186 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_8_/CP}
+__scl 0.294129 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_coef_reg_29_/CP}
+__scl 0.26365 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_11_/CP}
+__scl 0.291682 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_18_/CP}
+__scl 0.291507 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_17_/CP}
+__scl 0.29323 {fdct_zigzag_zigzag_mod_sresult_reg_40__1_/CP}
+__scl 0.287692 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_coef_reg_21_/CP}
+__scl 0.277081 {fdct_zigzag_zigzag_mod_sresult_reg_11__5_/CP}
+__scl 0.269824 {rle_rle_size_reg_3_/CP}
+__scl 0.262581 {qnr_divider_divider_s_pipe_reg_7__24_/CP}
+__scl 0.276482 {fdct_zigzag_zigzag_mod_sresult_reg_8__3_/CP}
+__scl 0.259185 {fdct_zigzag_zigzag_mod_sresult_reg_17__9_/CP}
+__scl 0.275885 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_coef_reg_26_/CP}
+__scl 0.281818 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_coef_reg_21_/CP}
+__scl 0.287954 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_coef_reg_23_/CP}
+__scl 0.292121 {fdct_zigzag_zigzag_mod_sresult_reg_22__8_/CP}
+__scl 0.293367 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_coef_reg_27_/CP}
+__scl 0.290985 {fdct_zigzag_zigzag_mod_sresult_reg_32__8_/CP}
+__scl 0.270583 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_15_/CP}
+__scl 0.283262 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_coef_reg_24_/CP}
+__scl 0.288199 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_1_/CP}
+__scl 0.276607 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_8_/CP}
+__scl 0.270044 {fdct_zigzag_zigzag_mod_sresult_reg_24__1_/CP}
+__scl 0.270855 {rle_rz3_amp_reg_1_/CP}
+__scl 0.291494 {qnr_divider_divider_d_pipe_reg_10__5_/CP}
+__scl 0.279309 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_coef_reg_28_/CP}
+__scl 0.294646 {fdct_zigzag_zigzag_mod_sresult_reg_41__10_/CP}
+__scl 0.270203 {rle_rle_rlen_reg_0_/CP}
+__scl 0.291557 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_9_/CP}
+__scl 0.27543 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_16_/CP}
+__scl 0.277051 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_coef_reg_27_/CP}
+__scl 0.261918 {qnr_divider_divider_s_pipe_reg_11__14_/CP}
+__scl 0.289123 {fdct_zigzag_dct_mod_go_reg/CP}
+__scl 0.294873 {fdct_zigzag_zigzag_mod_sresult_reg_26__11_/CP}
+__scl 0.279121 {rle_rz1_ampo_reg_7_/CP}
+__scl 0.291971 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_18_/CP}
+__scl 0.288978 {fdct_zigzag_zigzag_mod_sresult_reg_34__0_/CP}
+__scl 0.295138 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_result_reg_21_/CP}
+__scl 0.273923 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_20_/CP}
+__scl 0.275956 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_mult_res_reg_18_/CP}
+__scl 0.275568 {fdct_zigzag_zigzag_mod_sresult_reg_1__8_/CP}
+__scl 0.287333 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_mult_res_reg_17_/CP}
+__scl 0.258258 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_coef_reg_26_/CP}
+__scl 0.291403 {qnr_divider_divider_s_pipe_reg_8__3_/CP}
+__scl 0.276702 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_9_/CP}
+__scl 0.289273 {qnr_divider_divider_d_pipe_reg_5__5_/CP}
+__scl 0.263472 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_15_/CP}
+__scl 0.268299 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_coef_reg_22_/CP}
+__scl 0.288162 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_result_reg_20_/CP}
+__scl 0.292105 {qnr_divider_divider_d_pipe_reg_10__1_/CP}
+__scl 0.275889 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_coef_reg_28_/CP}
+__scl 0.264849 {qnr_divider_divider_s_pipe_reg_8__9_/CP}
+__scl 0.278841 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_coef_reg_21_/CP}
+__scl 0.269932 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_19_/CP}
+__scl 0.278033 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_3_/CP}
+__scl 0.282105 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_18_/CP}
+__scl 0.292021 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_coef_reg_28_/CP}
+__scl 0.268221 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_17_/CP}
+__scl 0.294146 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_18_/CP}
+__scl 0.292747 {fdct_zigzag_zigzag_mod_sresult_reg_51__7_/CP}
+__scl 0.278427 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_12_/CP}
+__scl 0.292278 {fdct_zigzag_zigzag_mod_sresult_reg_39__10_/CP}
+__scl 0.261652 {qnr_divider_divider_s_pipe_reg_10__16_/CP}
+__scl 0.291044 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_14_/CP}
+__scl 0.280453 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_coef_reg_27_/CP}
+__scl 0.266283 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_9_/CP}
+__scl 0.270335 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_result_reg_12_/CP}
+__scl 0.289429 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_coef_reg_29_/CP}
+__scl 0.277785 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_coef_reg_25_/CP}
+__scl 0.262523 {qnr_divider_divider_s_pipe_reg_7__23_/CP}
+__scl 0.275637 {fdct_zigzag_zigzag_mod_sresult_reg_1__10_/CP}
+__scl 0.27769 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_mult_res_reg_4_/CP}
+__scl 0.291223 {qnr_divider_divider_s_pipe_reg_9__0_/CP}
+__scl 0.294019 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_9_/CP}
+__scl 0.278128 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_coef_reg_22_/CP}
+__scl 0.277613 {fdct_zigzag_zigzag_mod_sresult_reg_19__10_/CP}
+__scl 0.287669 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_3_/CP}
+__scl 0.27763 {fdct_zigzag_zigzag_mod_sresult_reg_19__8_/CP}
+__scl 0.277935 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_16_/CP}
+__scl 0.269624 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_1_/CP}
+__scl 0.275634 {fdct_zigzag_zigzag_mod_sresult_reg_4__6_/CP}
+__scl 0.277156 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_6_/CP}
+__scl 0.26212 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_coef_reg_23_/CP}
+__scl 0.276077 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_result_reg_21_/CP}
+__scl 0.261852 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_8_/CP}
+__scl 0.270205 {rle_rle_rlen_reg_1_/CP}
+__scl 0.290433 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_5_/CP}
+__scl 0.277652 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_4_/CP}
+__scl 0.274414 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_9_/CP}
+__scl 0.274524 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_mult_res_reg_11_/CP}
+__scl 0.263036 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_5_/CP}
+__scl 0.270496 {rle_rz2_sizeo_reg_3_/CP}
+__scl 0.27817 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_16_/CP}
+__scl 0.275832 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_18_/CP}
+__scl 0.292224 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_12_/CP}
+__scl 0.289248 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_15_/CP}
+__scl 0.278074 {fdct_zigzag_zigzag_mod_sresult_reg_11__11_/CP}
+__scl 0.288825 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_coef_reg_23_/CP}
+__scl 0.28781 {fdct_zigzag_zigzag_mod_sresult_reg_21__6_/CP}
+__scl 0.283374 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_coef_reg_29_/CP}
+__scl 0.264657 {qnr_divider_divider_s_pipe_reg_8__10_/CP}
+__scl 0.277697 {fdct_zigzag_zigzag_mod_sresult_reg_44__6_/CP}
+__scl 0.275634 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_13_/CP}
+__scl 0.270137 {rle_rz1_amp_reg_2_/CP}
+__scl 0.292156 {qnr_divider_divider_d_pipe_reg_10__0_/CP}
+__scl 0.29346 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_14_/CP}
+__scl 0.29485 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_16_/CP}
+__scl 0.294442 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_19_/CP}
+__scl 0.293098 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_21_/CP}
+__scl 0.263484 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_14_/CP}
+__scl 0.287325 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_coef_reg_22_/CP}
+__scl 0.276743 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_16_/CP}
+__scl 0.262428 {qnr_divider_divider_d_pipe_reg_7__13_/CP}
+__scl 0.278038 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_result_reg_7_/CP}
+__scl 0.266634 {fdct_zigzag_zigzag_mod_sresult_reg_48__0_/CP}
+__scl 0.278637 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_6_/CP}
+__scl 0.263689 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_coef_reg_23_/CP}
+__scl 0.294872 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_12_/CP}
+__scl 0.27901 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_0_/CP}
+__scl 0.278675 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_2_/CP}
+__scl 0.279273 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_coef_reg_21_/CP}
+__scl 0.268442 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_15_/CP}
+__scl 0.277236 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_12_/CP}
+__scl 0.269497 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_11_/CP}
+__scl 0.274642 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_mult_res_reg_10_/CP}
+__scl 0.289123 {qnr_divider_divider_d_pipe_reg_5__3_/CP}
+__scl 0.270338 {rle_rz2_sizeo_reg_0_/CP}
+__scl 0.276093 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_16_/CP}
+__scl 0.262523 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_13_/CP}
+__scl 0.278436 {rle_rz4_amp_reg_9_/CP}
+__scl 0.270629 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_result_reg_16_/CP}
+__scl 0.278169 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_9_/CP}
+__scl 0.28637 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_coef_reg_25_/CP}
+__scl 0.292307 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_12_/CP}
+__scl 0.27038 {fdct_zigzag_zigzag_mod_sresult_reg_26__2_/CP}
+__scl 0.292847 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_15_/CP}
+__scl 0.277432 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_2_/CP}
+__scl 0.29156 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_18_/CP}
+__scl 0.291166 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_19_/CP}
+__scl 0.278246 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_mult_res_reg_1_/CP}
+__scl 0.265733 {fdct_zigzag_zigzag_mod_sresult_reg_47__4_/CP}
+__scl 0.27757 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_5_/CP}
+__scl 0.263644 {fdct_zigzag_zigzag_mod_sresult_reg_50__2_/CP}
+__scl 0.275909 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_14_/CP}
+__scl 0.26113 {qnr_divider_divider_d_pipe_reg_7__17_/CP}
+__scl 0.294259 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_9_/CP}
+__scl 0.265062 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_13_/CP}
+__scl 0.277952 {fdct_zigzag_zigzag_mod_sresult_reg_54__7_/CP}
+__scl 0.290993 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_coef_reg_24_/CP}
+__scl 0.25911 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_0_/CP}
+__scl 0.270005 {rle_rz1_rlen_reg_0_/CP}
+__scl 0.287569 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_coef_reg_26_/CP}
+__scl 0.290755 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_result_reg_11_/CP}
+__scl 0.278034 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_4_macu_result_reg_21_/CP}
+__scl 0.277109 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_mult_res_reg_11_/CP}
+__scl 0.292417 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_16_/CP}
+__scl 0.288931 {fdct_zigzag_zigzag_mod_sresult_reg_21__9_/CP}
+__scl 0.274694 {fdct_zigzag_zigzag_mod_sresult_reg_2__11_/CP}
+__scl 0.263274 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_5_/CP}
+__scl 0.276735 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_5_/CP}
+__scl 0.262343 {qnr_divider_divider_d_pipe_reg_10__16_/CP}
+__scl 0.290613 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_coef_reg_22_/CP}
+__scl 0.28302 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_6_/CP}
+__scl 0.261424 {qnr_divider_divider_d_pipe_reg_8__21_/CP}
+__scl 0.257918 {fdct_zigzag_zigzag_mod_sresult_reg_14__7_/CP}
+__scl 0.266629 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_2_coef_reg_28_/CP}
+__scl 0.2578 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_10_/CP}
+__scl 0.257513 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_coef_reg_31_/CP}
+__scl 0.259528 {fdct_zigzag_zigzag_mod_sresult_reg_14__3_/CP}
+__scl 0.292291 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_8_/CP}
+__scl 0.286874 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_coef_reg_29_/CP}
+__scl 0.278644 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_21_/CP}
+__scl 0.275448 {fdct_zigzag_zigzag_mod_sresult_reg_12__9_/CP}
+__scl 0.267074 {fdct_zigzag_zigzag_mod_sresult_reg_31__0_/CP}
+__scl 0.294016 {dfdct_dout_reg_11_/CP}
+__scl 0.27635 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_2_/CP}
+__scl 0.258789 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_15_/CP}
+__scl 0.294366 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_7_/CP}
+__scl 0.276706 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_result_reg_3_/CP}
+__scl 0.277347 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_coef_reg_27_/CP}
+__scl 0.295004 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_15_/CP}
+__scl 0.27464 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_coef_reg_24_/CP}
+__scl 0.289117 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_15_/CP}
+__scl 0.292994 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_20_/CP}
+__scl 0.267329 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_14_/CP}
+__scl 0.275387 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_17_/CP}
+__scl 0.292722 {fdct_zigzag_zigzag_mod_sresult_reg_34__11_/CP}
+__scl 0.258206 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_11_/CP}
+__scl 0.279543 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_20_/CP}
+__scl 0.293108 {fdct_zigzag_zigzag_mod_sresult_reg_21__8_/CP}
+__scl 0.28824 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_19_/CP}
+__scl 0.263154 {qnr_divider_divider_s_pipe_reg_6__24_/CP}
+__scl 0.275872 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_mult_res_reg_17_/CP}
+__scl 0.289203 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_coef_reg_27_/CP}
+__scl 0.263937 {qnr_divider_divider_d_pipe_reg_8__12_/CP}
+__scl 0.276857 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_mult_res_reg_15_/CP}
+__scl 0.289459 {qnr_divider_divider_d_pipe_reg_4__4_/CP}
+__scl 0.276839 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_8_/CP}
+__scl 0.275936 {fdct_zigzag_zigzag_mod_sresult_reg_1__1_/CP}
+__scl 0.258693 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_4_/CP}
+__scl 0.263111 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_11_/CP}
+__scl 0.260454 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_18_/CP}
+__scl 0.271561 {fdct_zigzag_zigzag_mod_sresult_reg_24__3_/CP}
+__scl 0.258629 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_8_/CP}
+__scl 0.291447 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_19_/CP}
+__scl 0.277475 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_1_/CP}
+__scl 0.276293 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_14_/CP}
+__scl 0.275758 {fdct_zigzag_zigzag_mod_sresult_reg_1__11_/CP}
+__scl 0.290268 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_4_/CP}
+__scl 0.268796 {fdct_zigzag_zigzag_mod_sresult_reg_31__3_/CP}
+__scl 0.281799 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_coef_reg_30_/CP}
+__scl 0.290944 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_coef_reg_29_/CP}
+__scl 0.294317 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_13_/CP}
+__scl 0.29466 {fdct_zigzag_zigzag_mod_sresult_reg_41__7_/CP}
+__scl 0.281534 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_10_/CP}
+__scl 0.265104 {qnr_divider_divider_s_pipe_reg_10__8_/CP}
+__scl 0.288033 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_18_/CP}
+__scl 0.288957 {fdct_zigzag_zigzag_mod_sresult_reg_29__1_/CP}
+__scl 0.282924 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_coef_reg_23_/CP}
+__scl 0.288244 {fdct_zigzag_zigzag_mod_sresult_reg_45__7_/CP}
+__scl 0.25921 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_19_/CP}
+__scl 0.286312 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_1_/CP}
+__scl 0.258866 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_12_/CP}
+__scl 0.278277 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_3_/CP}
+__scl 0.292645 {qnr_divider_divider_s_pipe_reg_11__0_/CP}
+__scl 0.266851 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_16_/CP}
+__scl 0.274557 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_14_/CP}
+__scl 0.277893 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_14_/CP}
+__scl 0.275528 {fdct_zigzag_zigzag_mod_sresult_reg_10__9_/CP}
+__scl 0.282509 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_4_/CP}
+__scl 0.292937 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_14_/CP}
+__scl 0.263911 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_7_/CP}
+__scl 0.29333 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_16_/CP}
+__scl 0.287848 {fdct_zigzag_zigzag_mod_sresult_reg_42__7_/CP}
+__scl 0.27625 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_6_/CP}
+__scl 0.257536 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_9_/CP}
+__scl 0.276044 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_13_/CP}
+__scl 0.294039 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_18_/CP}
+__scl 0.28976 {fdct_zigzag_zigzag_mod_sresult_reg_55__1_/CP}
+__scl 0.264838 {qnr_divider_divider_d_pipe_reg_7__8_/CP}
+__scl 0.276545 {fdct_zigzag_zigzag_mod_sresult_reg_7__4_/CP}
+__scl 0.293315 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_17_/CP}
+__scl 0.261448 {qnr_divider_divider_d_pipe_reg_8__24_/CP}
+__scl 0.266936 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_1_/CP}
+__scl 0.277234 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_3_/CP}
+__scl 0.293379 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_14_/CP}
+__scl 0.286252 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_4_/CP}
+__scl 0.291442 {qnr_divider_divider_d_pipe_reg_11__5_/CP}
+__scl 0.277663 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_5_/CP}
+__scl 0.277233 {fdct_zigzag_zigzag_mod_sresult_reg_19__2_/CP}
+__scl 0.263908 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_4_/CP}
+__scl 0.270716 {fdct_zigzag_zigzag_mod_sresult_reg_25__1_/CP}
+__scl 0.263794 {fdct_zigzag_zigzag_mod_sresult_reg_53__5_/CP}
+__scl 0.262618 {qnr_divider_divider_d_pipe_reg_9__23_/CP}
+__scl 0.261382 {qnr_divider_divider_s_pipe_reg_8__21_/CP}
+__scl 0.275993 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_coef_reg_29_/CP}
+__scl 0.259317 {fdct_zigzag_zigzag_mod_sresult_reg_18__4_/CP}
+__scl 0.276822 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_0_/CP}
+__scl 0.27114 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_21_/CP}
+__scl 0.261916 {qnr_divider_divider_d_pipe_reg_11__15_/CP}
+__scl 0.263467 {qnr_divider_divider_s_pipe_reg_4__24_/CP}
+__scl 0.266359 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_3_/CP}
+__scl 0.293169 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_18_/CP}
+__scl 0.290007 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_coef_reg_25_/CP}
+__scl 0.276861 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_coef_reg_31_/CP}
+__scl 0.265079 {qnr_divider_divider_d_pipe_reg_9__8_/CP}
+__scl 0.274722 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_19_/CP}
+__scl 0.262652 {qnr_divider_divider_s_pipe_reg_7__22_/CP}
+__scl 0.277603 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_result_reg_11_/CP}
+__scl 0.290318 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_5_/CP}
+__scl 0.286004 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_coef_reg_24_/CP}
+__scl 0.25975 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_13_/CP}
+__scl 0.291893 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_20_/CP}
+__scl 0.261086 {qnr_divider_divider_d_pipe_reg_8__18_/CP}
+__scl 0.27689 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_9_/CP}
+__scl 0.294008 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_14_/CP}
+__scl 0.278816 {rle_rz4_ampo_reg_8_/CP}
+__scl 0.259725 {fdct_zigzag_zigzag_mod_sresult_reg_4__2_/CP}
+__scl 0.294027 {dfdct_dout_reg_8_/CP}
+__scl 0.289727 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_15_/CP}
+__scl 0.274679 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_result_reg_17_/CP}
+__scl 0.289398 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_coef_reg_28_/CP}
+__scl 0.274743 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_21_/CP}
+__scl 0.293424 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_12_/CP}
+__scl 0.270859 {rle_rz3_rlen_reg_0_/CP}
+__scl 0.275606 {fdct_zigzag_zigzag_mod_sresult_reg_8__9_/CP}
+__scl 0.291631 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_13_/CP}
+__scl 0.290758 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_mult_res_reg_9_/CP}
+__scl 0.27768 {fdct_zigzag_zigzag_mod_sresult_reg_54__4_/CP}
+__scl 0.281579 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_4_/CP}
+__scl 0.265241 {qnr_divider_divider_s_pipe_reg_11__8_/CP}
+__scl 0.265148 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_12_/CP}
+__scl 0.266743 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_10_/CP}
+__scl 0.258908 {fdct_zigzag_zigzag_mod_sresult_reg_14__2_/CP}
+__scl 0.293378 {fdct_zigzag_zigzag_mod_sresult_reg_22__2_/CP}
+__scl 0.29224 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_mult_res_reg_15_/CP}
+__scl 0.263671 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_9_/CP}
+__scl 0.292785 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_mult_res_reg_10_/CP}
+__scl 0.277462 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_3_/CP}
+__scl 0.276801 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_coef_reg_25_/CP}
+__scl 0.294485 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_19_/CP}
+__scl 0.263538 {qnr_divider_divider_d_pipe_reg_5__24_/CP}
+__scl 0.287884 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_coef_reg_28_/CP}
+__scl 0.261193 {qnr_divider_divider_d_pipe_reg_7__16_/CP}
+__scl 0.269745 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_6_/CP}
+__scl 0.274152 {fdct_zigzag_zigzag_mod_sresult_reg_5__3_/CP}
+__scl 0.274471 {fdct_zigzag_zigzag_mod_sresult_reg_3__9_/CP}
+__scl 0.293722 {fdct_zigzag_zigzag_mod_sresult_reg_23__5_/CP}
+__scl 0.293517 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_12_/CP}
+__scl 0.293156 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_coef_reg_30_/CP}
+__scl 0.290247 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_19_/CP}
+__scl 0.27559 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_12_/CP}
+__scl 0.276282 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_10_/CP}
+__scl 0.266629 {fdct_zigzag_zigzag_mod_sresult_reg_30__0_/CP}
+__scl 0.278251 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_5_/CP}
+__scl 0.277026 {fdct_zigzag_zigzag_mod_sresult_reg_12__3_/CP}
+__scl 0.27666 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_18_/CP}
+__scl 0.295031 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_14_/CP}
+__scl 0.267834 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_2_/CP}
+__scl 0.291983 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_coef_reg_27_/CP}
+__scl 0.275712 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_15_/CP}
+__scl 0.286226 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_11_/CP}
+__scl 0.282752 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_5_/CP}
+__scl 0.275672 {fdct_zigzag_zigzag_mod_sresult_reg_4__5_/CP}
+__scl 0.261591 {qnr_divider_divider_d_pipe_reg_8__16_/CP}
+__scl 0.287877 {qnr_divider_divider_d_pipe_reg_7__1_/CP}
+__scl 0.292263 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_coef_reg_27_/CP}
+__scl 0.290869 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_15_/CP}
+__scl 0.270377 {rle_rz4_ampo_reg_2_/CP}
+__scl 0.26134 {qnr_divider_divider_s_pipe_reg_8__23_/CP}
+__scl 0.275876 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_4_/CP}
+__scl 0.275711 {fdct_zigzag_zigzag_mod_sresult_reg_3__4_/CP}
+__scl 0.270626 {rle_rz3_rlen_reg_3_/CP}
+__scl 0.261754 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_18_/CP}
+__scl 0.258694 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_10_/CP}
+__scl 0.274535 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_6_/CP}
+__scl 0.258785 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_14_/CP}
+__scl 0.276131 {fdct_zigzag_zigzag_mod_sresult_reg_11__4_/CP}
+__scl 0.278316 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_1_/CP}
+__scl 0.289531 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_9_/CP}
+__scl 0.261416 {qnr_divider_divider_s_pipe_reg_8__22_/CP}
+__scl 0.290601 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_coef_reg_25_/CP}
+__scl 0.26881 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_2_/CP}
+__scl 0.285792 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_coef_reg_27_/CP}
+__scl 0.270386 {rle_rz2_sizeo_reg_2_/CP}
+__scl 0.275926 {fdct_zigzag_zigzag_mod_sresult_reg_1__7_/CP}
+__scl 0.289716 {fdct_zigzag_zigzag_mod_sresult_reg_30__9_/CP}
+__scl 0.269691 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_3_/CP}
+__scl 0.275707 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_coef_reg_21_/CP}
+__scl 0.258951 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_15_/CP}
+__scl 0.293786 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_coef_reg_21_/CP}
+__scl 0.262297 {qnr_divider_divider_s_pipe_reg_7__14_/CP}
+__scl 0.294843 {fdct_zigzag_zigzag_mod_sresult_reg_27__11_/CP}
+__scl 0.265135 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_11_/CP}
+__scl 0.262555 {qnr_divider_divider_d_pipe_reg_6__11_/CP}
+__scl 0.257919 {fdct_zigzag_zigzag_mod_sresult_reg_14__9_/CP}
+__scl 0.277232 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_2_/CP}
+__scl 0.291853 {fdct_zigzag_zigzag_mod_sresult_reg_53__8_/CP}
+__scl 0.292963 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_coef_reg_22_/CP}
+__scl 0.294814 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_mult_res_reg_14_/CP}
+__scl 0.261625 {qnr_divider_divider_s_pipe_reg_9__19_/CP}
+__scl 0.263616 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_4_coef_reg_28_/CP}
+__scl 0.27101 {fdct_zigzag_zigzag_mod_sresult_reg_63__7_/CP}
+__scl 0.262019 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_12_/CP}
+__scl 0.281304 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_2_/CP}
+__scl 0.262237 {qnr_divider_divider_s_pipe_reg_10__22_/CP}
+__scl 0.29012 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_7_/CP}
+__scl 0.262828 {qnr_divider_divider_s_pipe_reg_6__19_/CP}
+__scl 0.263638 {qnr_divider_divider_d_pipe_reg_5__22_/CP}
+__scl 0.276217 {fdct_zigzag_zigzag_mod_sresult_reg_11__0_/CP}
+__scl 0.275014 {fdct_zigzag_zigzag_mod_sresult_reg_57__0_/CP}
+__scl 0.29036 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_coef_reg_22_/CP}
+__scl 0.29486 {fdct_zigzag_zigzag_mod_sresult_reg_28__8_/CP}
+__scl 0.283434 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_15_/CP}
+__scl 0.259041 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_19_/CP}
+__scl 0.262339 {qnr_divider_divider_s_pipe_reg_11__23_/CP}
+__scl 0.275514 {fdct_zigzag_zigzag_mod_sresult_reg_12__0_/CP}
+__scl 0.264318 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_1_/CP}
+__scl 0.293265 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_21_/CP}
+__scl 0.275633 {fdct_zigzag_zigzag_mod_sresult_reg_13__11_/CP}
+__scl 0.258626 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_13_/CP}
+__scl 0.294862 {fdct_zigzag_zigzag_mod_sresult_reg_23__4_/CP}
+__scl 0.275561 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_10_/CP}
+__scl 0.293387 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_14_/CP}
+__scl 0.262608 {qnr_divider_divider_d_pipe_reg_9__22_/CP}
+__scl 0.292173 {fdct_zigzag_zigzag_mod_sresult_reg_51__4_/CP}
+__scl 0.276853 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_12_/CP}
+__scl 0.293142 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_6_/CP}
+__scl 0.278799 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_macu_result_reg_15_/CP}
+__scl 0.278189 {fdct_zigzag_zigzag_mod_sresult_reg_56__5_/CP}
+__scl 0.276716 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_8_/CP}
+__scl 0.29417 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_mult_res_reg_12_/CP}
+__scl 0.263917 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_coef_reg_26_/CP}
+__scl 0.25837 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_6_/CP}
+__scl 0.278248 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_7_/CP}
+__scl 0.291763 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_10_/CP}
+__scl 0.288114 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_coef_reg_24_/CP}
+__scl 0.260616 {fdct_zigzag_zigzag_mod_sresult_reg_0__5_/CP}
+__scl 0.268969 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_11_/CP}
+__scl 0.274988 {fdct_zigzag_zigzag_mod_sresult_reg_2__8_/CP}
+__scl 0.293985 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_0_/CP}
+__scl 0.281831 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_12_/CP}
+__scl 0.288205 {qnr_divider_divider_s_pipe_reg_7__1_/CP}
+__scl 0.290377 {fdct_zigzag_dct_mod_sample_cnt_reg_1_/CP}
+__scl 0.264337 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_3_/CP}
+__scl 0.27146 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_18_/CP}
+__scl 0.29442 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_18_/CP}
+__scl 0.293277 {fdct_zigzag_zigzag_mod_sresult_reg_23__0_/CP}
+__scl 0.278815 {rle_rz2_ampo_reg_9_/CP}
+__scl 0.288078 {qnr_divider_divider_s_pipe_reg_6__1_/CP}
+__scl 0.279221 {fdct_zigzag_zigzag_mod_sresult_reg_45__3_/CP}
+__scl 0.279574 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_6_/CP}
+__scl 0.26344 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_14_/CP}
+__scl 0.273578 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_coef_reg_30_/CP}
+__scl 0.288164 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_coef_reg_28_/CP}
+__scl 0.287052 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_3_/CP}
+__scl 0.290925 {fdct_zigzag_zigzag_mod_sresult_reg_32__9_/CP}
+__scl 0.28868 {qnr_divider_divider_d_pipe_reg_5__6_/CP}
+__scl 0.278842 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_3_/CP}
+__scl 0.258744 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_14_/CP}
+__scl 0.292717 {qnr_divider_divider_s_pipe_reg_11__4_/CP}
+__scl 0.291455 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_11_/CP}
+__scl 0.291898 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_17_/CP}
+__scl 0.290015 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_4_/CP}
+__scl 0.261619 {qnr_divider_id_reg_6_/CP}
+__scl 0.278122 {fdct_zigzag_zigzag_mod_sresult_reg_56__6_/CP}
+__scl 0.274789 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_7_/CP}
+__scl 0.262767 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_9_/CP}
+__scl 0.290023 {qnr_divider_divider_s_pipe_reg_7__0_/CP}
+__scl 0.275522 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_11_/CP}
+__scl 0.27624 {fdct_zigzag_zigzag_mod_sresult_reg_60__0_/CP}
+__scl 0.276667 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_16_/CP}
+__scl 0.277679 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_3_coef_reg_24_/CP}
+__scl 0.287034 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_coef_reg_29_/CP}
+__scl 0.289833 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_coef_reg_24_/CP}
+__scl 0.257446 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_8_/CP}
+__scl 0.277571 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_coef_reg_21_/CP}
+__scl 0.261418 {qnr_divider_divider_d_pipe_reg_8__22_/CP}
+__scl 0.277264 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_1_/CP}
+__scl 0.27032 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_15_/CP}
+__scl 0.276485 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_1_/CP}
+__scl 0.275676 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_7_/CP}
+__scl 0.277665 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_16_/CP}
+__scl 0.289528 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_coef_reg_27_/CP}
+__scl 0.293132 {fdct_zigzag_zigzag_mod_sresult_reg_24__10_/CP}
+__scl 0.294758 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_18_/CP}
+__scl 0.262537 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_15_/CP}
+__scl 0.276451 {fdct_zigzag_zigzag_mod_sresult_reg_11__9_/CP}
+__scl 0.275353 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_coef_reg_24_/CP}
+__scl 0.278651 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_8_/CP}
+__scl 0.275613 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_10_/CP}
+__scl 0.278081 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_coef_reg_26_/CP}
+__scl 0.269082 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_mult_res_reg_12_/CP}
+__scl 0.274398 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_10_/CP}
+__scl 0.27142 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_19_/CP}
+__scl 0.279539 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_coef_reg_30_/CP}
+__scl 0.289379 {fdct_zigzag_zigzag_mod_sresult_reg_43__5_/CP}
+__scl 0.263042 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_2_/CP}
+__scl 0.291688 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_0_/CP}
+__scl 0.290271 {fdct_zigzag_zigzag_mod_sresult_reg_47__11_/CP}
+__scl 0.290121 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_6_/CP}
+__scl 0.265196 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_8_/CP}
+__scl 0.278306 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_6_macu_mult_res_reg_3_/CP}
+__scl 0.294648 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_7_/CP}
+__scl 0.285976 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_coef_reg_22_/CP}
+__scl 0.267334 {fdct_zigzag_zigzag_mod_sresult_reg_31__4_/CP}
+__scl 0.289715 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_coef_reg_22_/CP}
+__scl 0.278621 {fdct_zigzag_zigzag_mod_sresult_reg_9__6_/CP}
+__scl 0.266274 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_coef_reg_26_/CP}
+__scl 0.290343 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_5_/CP}
+__scl 0.265065 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_mult_res_reg_16_/CP}
+__scl 0.291345 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_7_/CP}
+__scl 0.262908 {qnr_divider_divider_s_pipe_reg_11__11_/CP}
+__scl 0.266881 {fdct_zigzag_zigzag_mod_sresult_reg_31__1_/CP}
+__scl 0.293425 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_16_/CP}
+__scl 0.290574 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_9_/CP}
+__scl 0.26985 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_5_/CP}
+__scl 0.289988 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_7_/CP}
+__scl 0.264414 {qnr_divider_divider_s_pipe_reg_7__8_/CP}
+__scl 0.295134 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_mult_res_reg_10_/CP}
+__scl 0.290544 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_12_/CP}
+__scl 0.290679 {fdct_zigzag_zigzag_mod_sresult_reg_52__11_/CP}
+__scl 0.282802 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_0_/CP}
+__scl 0.278031 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_19_/CP}
+__scl 0.276544 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_12_/CP}
+__scl 0.27666 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_13_/CP}
+__scl 0.276343 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_coef_reg_24_/CP}
+__scl 0.288649 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_3_/CP}
+__scl 0.278269 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_coef_reg_24_/CP}
+__scl 0.2625 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_18_/CP}
+__scl 0.265153 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_10_/CP}
+__scl 0.270057 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_16_/CP}
+__scl 0.258245 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_13_/CP}
+__scl 0.294587 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_20_/CP}
+__scl 0.269804 {rle_rle_size_reg_0_/CP}
+__scl 0.276475 {fdct_zigzag_zigzag_mod_sresult_reg_11__8_/CP}
+__scl 0.2772 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_0_/CP}
+__scl 0.290737 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_2_/CP}
+__scl 0.262493 {qnr_divider_divider_s_pipe_reg_11__22_/CP}
+__scl 0.278542 {rle_rz3_ampo_reg_9_/CP}
+__scl 0.262012 {qnr_divider_divider_s_pipe_reg_11__24_/CP}
+__scl 0.261908 {qnr_divider_divider_s_pipe_reg_11__15_/CP}
+__scl 0.259904 {fdct_zigzag_zigzag_mod_sresult_reg_0__8_/CP}
+__scl 0.276739 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_11_/CP}
+__scl 0.290249 {fdct_zigzag_zigzag_mod_sresult_reg_31__9_/CP}
+__scl 0.292745 {fdct_zigzag_zigzag_mod_sresult_reg_23__8_/CP}
+__scl 0.28709 {fdct_zigzag_zigzag_mod_sresult_reg_44__1_/CP}
+__scl 0.294942 {fdct_zigzag_zigzag_mod_sresult_reg_28__7_/CP}
+__scl 0.290567 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_19_/CP}
+__scl 0.262485 {qnr_divider_divider_q_pipe_reg_10__0_/CP}
+__scl 0.294147 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_1_/CP}
+__scl 0.291452 {fdct_zigzag_zigzag_mod_sresult_reg_50__10_/CP}
+__scl 0.262349 {qnr_divider_divider_s_pipe_reg_9__21_/CP}
+__scl 0.289775 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_coef_reg_28_/CP}
+__scl 0.276578 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_8_/CP}
+__scl 0.270877 {rle_rz3_rlen_reg_1_/CP}
+__scl 0.259136 {qnr_divider_id_reg_1_/CP}
+__scl 0.262825 {qnr_divider_divider_d_pipe_reg_8__14_/CP}
+__scl 0.259245 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_18_/CP}
+__scl 0.292453 {fdct_zigzag_zigzag_mod_sresult_reg_23__11_/CP}
+__scl 0.294001 {fdct_zigzag_zigzag_mod_sresult_reg_22__10_/CP}
+__scl 0.288428 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_0_/CP}
+__scl 0.293616 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_19_/CP}
+__scl 0.290363 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_11_/CP}
+__scl 0.26471 {qnr_divider_divider_d_pipe_reg_8__10_/CP}
+__scl 0.291625 {qnr_divider_divider_d_pipe_reg_9__5_/CP}
+__scl 0.275566 {fdct_zigzag_zigzag_mod_sresult_reg_2__3_/CP}
+__scl 0.292731 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_19_/CP}
+__scl 0.258757 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_2_/CP}
+__scl 0.281742 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_1_/CP}
+__scl 0.277877 {fdct_zigzag_zigzag_mod_sresult_reg_19__9_/CP}
+__scl 0.268972 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_mult_res_reg_13_/CP}
+__scl 0.261224 {qnr_divider_divider_d_pipe_reg_6__15_/CP}
+__scl 0.293212 {fdct_zigzag_zigzag_mod_sresult_reg_25__7_/CP}
+__scl 0.270415 {rle_rz4_amp_reg_2_/CP}
+__scl 0.288564 {qnr_divider_divider_d_pipe_reg_6__7_/CP}
+__scl 0.264004 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_6_/CP}
+__scl 0.268704 {fdct_zigzag_zigzag_mod_sresult_reg_50__5_/CP}
+__scl 0.291453 {qnr_divider_divider_s_pipe_reg_10__4_/CP}
+__scl 0.290405 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_8_/CP}
+__scl 0.29068 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_2_/CP}
+__scl 0.293199 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_coef_reg_24_/CP}
+__scl 0.274485 {fdct_zigzag_zigzag_mod_sresult_reg_6__5_/CP}
+__scl 0.279384 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_coef_reg_25_/CP}
+__scl 0.276667 {fdct_zigzag_zigzag_mod_sresult_reg_8__6_/CP}
+__scl 0.257531 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_7_/CP}
+__scl 0.292965 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_2_macu_result_reg_21_/CP}
+__scl 0.290721 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_11_/CP}
+__scl 0.294183 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_mult_res_reg_11_/CP}
+__scl 0.274006 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_12_/CP}
+__scl 0.287123 {fdct_zigzag_zigzag_mod_sresult_reg_45__10_/CP}
+__scl 0.277084 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_mult_res_reg_12_/CP}
+__scl 0.279554 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_coef_reg_31_/CP}
+__scl 0.293607 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_21_/CP}
+__scl 0.289765 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_6_/CP}
+__scl 0.292277 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_7_/CP}
+__scl 0.293475 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_10_/CP}
+__scl 0.27798 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_14_/CP}
+__scl 0.258323 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_7_/CP}
+__scl 0.290383 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_5_/CP}
+__scl 0.266197 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_3_/CP}
+__scl 0.275015 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_3_coef_reg_23_/CP}
+__scl 0.263456 {qnr_divider_divider_s_pipe_reg_5__22_/CP}
+__scl 0.290053 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_coef_reg_31_/CP}
+__scl 0.27687 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_5_/CP}
+__scl 0.26365 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_9_/CP}
+__scl 0.269036 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_14_/CP}
+__scl 0.274891 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_2_/CP}
+__scl 0.257953 {fdct_zigzag_zigzag_mod_sresult_reg_15__5_/CP}
+__scl 0.258133 {fdct_zigzag_zigzag_mod_sresult_reg_16__10_/CP}
+__scl 0.276588 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_4_/CP}
+__scl 0.261513 {qnr_divider_divider_s_pipe_reg_6__17_/CP}
+__scl 0.280103 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_coef_reg_22_/CP}
+__scl 0.25755 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_coef_reg_27_/CP}
+__scl 0.27684 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_8_/CP}
+__scl 0.278293 {rle_rz2_ampo_reg_8_/CP}
+__scl 0.258046 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_4_/CP}
+__scl 0.275488 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_mult_res_reg_18_/CP}
+__scl 0.260149 {fdct_zigzag_zigzag_mod_sresult_reg_0__3_/CP}
+__scl 0.291065 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_21_/CP}
+__scl 0.289212 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_6_/CP}
+__scl 0.269289 {fdct_zigzag_zigzag_mod_sresult_reg_26__5_/CP}
+__scl 0.261388 {qnr_divider_divider_s_pipe_reg_9__17_/CP}
+__scl 0.289703 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_16_/CP}
+__scl 0.257686 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_result_reg_20_/CP}
+__scl 0.261391 {qnr_divider_divider_d_pipe_reg_9__21_/CP}
+__scl 0.258647 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_result_reg_16_/CP}
+__scl 0.278945 {rle_rz2_amp_reg_11_/CP}
+__scl 0.278563 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_11_/CP}
+__scl 0.278696 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_coef_reg_26_/CP}
+__scl 0.289186 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_7_/CP}
+__scl 0.265937 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_3_/CP}
+__scl 0.278053 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_coef_reg_23_/CP}
+__scl 0.278055 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_2_/CP}
+__scl 0.270986 {rle_rz3_rlen_reg_2_/CP}
+__scl 0.276877 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_8_/CP}
+__scl 0.295145 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_result_reg_20_/CP}
+__scl 0.266142 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_17_/CP}
+__scl 0.277587 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_5_/CP}
+__scl 0.274527 {fdct_zigzag_zigzag_mod_sresult_reg_7__11_/CP}
+__scl 0.258659 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_result_reg_15_/CP}
+__scl 0.284708 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_1_/CP}
+__scl 0.286376 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_0_/CP}
+__scl 0.278661 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_22_/CP}
+__scl 0.290335 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_coef_reg_21_/CP}
+__scl 0.290879 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_mult_res_reg_16_/CP}
+__scl 0.274354 {fdct_zigzag_zigzag_mod_sresult_reg_6__9_/CP}
+__scl 0.27736 {fdct_zigzag_zigzag_mod_sresult_reg_44__5_/CP}
+__scl 0.288666 {qnr_divider_divider_s_pipe_reg_8__5_/CP}
+__scl 0.290744 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_10_/CP}
+__scl 0.281837 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_6_/CP}
+__scl 0.288565 {qnr_divider_divider_s_pipe_reg_6__5_/CP}
+__scl 0.290998 {fdct_zigzag_zigzag_mod_sresult_reg_33__4_/CP}
+__scl 0.29106 {fdct_zigzag_zigzag_mod_sresult_reg_32__10_/CP}
+__scl 0.274644 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_16_/CP}
+__scl 0.263948 {qnr_divider_divider_d_pipe_reg_9__13_/CP}
+__scl 0.273447 {fdct_zigzag_zigzag_mod_sresult_reg_6__8_/CP}
+__scl 0.29418 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_mult_res_reg_10_/CP}
+__scl 0.295124 {fdct_zigzag_zigzag_mod_sresult_reg_26__8_/CP}
+__scl 0.293587 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_20_/CP}
+__scl 0.287812 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_coef_reg_21_/CP}
+__scl 0.275434 {fdct_zigzag_zigzag_mod_sresult_reg_12__10_/CP}
+__scl 0.293532 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_mult_res_reg_15_/CP}
+__scl 0.25733 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_15_/CP}
+__scl 0.258912 {fdct_zigzag_zigzag_mod_sresult_reg_17__4_/CP}
+__scl 0.261592 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_16_/CP}
+__scl 0.292786 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_7_/CP}
+__scl 0.288702 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_15_/CP}
+__scl 0.29161 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_coef_reg_24_/CP}
+__scl 0.267892 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_coef_reg_21_/CP}
+__scl 0.293942 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_11_/CP}
+__scl 0.2886 {qnr_divider_divider_s_pipe_reg_7__7_/CP}
+__scl 0.266564 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_13_/CP}
+__scl 0.293407 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_coef_reg_31_/CP}
+__scl 0.291359 {qnr_divider_divider_s_pipe_reg_8__2_/CP}
+__scl 0.270625 {fdct_zigzag_zigzag_mod_sresult_reg_28__2_/CP}
+__scl 0.277511 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_result_reg_13_/CP}
+__scl 0.279566 {fdct_zigzag_zigzag_mod_sresult_reg_44__3_/CP}
+__scl 0.288687 {qnr_divider_divider_s_pipe_reg_5__6_/CP}
+__scl 0.274324 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_11_/CP}
+__scl 0.270204 {rle_rz2_size_reg_2_/CP}
+__scl 0.262564 {qnr_divider_divider_s_pipe_reg_9__24_/CP}
+__scl 0.27092 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_mult_res_reg_11_/CP}
+__scl 0.281822 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_4_/CP}
+__scl 0.277574 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_18_/CP}
+__scl 0.26404 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_coef_reg_30_/CP}
+__scl 0.276855 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_17_/CP}
+__scl 0.278069 {fdct_zigzag_zigzag_mod_sresult_reg_12__2_/CP}
+__scl 0.289781 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_10_/CP}
+__scl 0.26665 {fdct_zigzag_zigzag_mod_sresult_reg_48__1_/CP}
+__scl 0.277226 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_3_coef_reg_29_/CP}
+__scl 0.27776 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_17_/CP}
+__scl 0.293385 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_11_/CP}
+__scl 0.275905 {fdct_zigzag_zigzag_mod_sresult_reg_57__4_/CP}
+__scl 0.277634 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_3_coef_reg_21_/CP}
+__scl 0.26255 {qnr_divider_divider_d_pipe_reg_6__12_/CP}
+__scl 0.275537 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_macu_result_reg_18_/CP}
+__scl 0.289092 {fdct_zigzag_zigzag_mod_sresult_reg_46__8_/CP}
+__scl 0.278264 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_coef_reg_25_/CP}
+__scl 0.2649 {qnr_divider_divider_s_pipe_reg_9__10_/CP}
+__scl 0.258863 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_11_/CP}
+__scl 0.288985 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_15_/CP}
+__scl 0.267932 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_mult_res_reg_10_/CP}
+__scl 0.293923 {fdct_zigzag_zigzag_mod_sresult_reg_63__1_/CP}
+__scl 0.267346 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_8_/CP}
+__scl 0.286351 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_mult_res_reg_13_/CP}
+__scl 0.278264 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_coef_reg_27_/CP}
+__scl 0.26811 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_7_/CP}
+__scl 0.263046 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_4_/CP}
+__scl 0.273961 {fdct_zigzag_zigzag_mod_sresult_reg_4__11_/CP}
+__scl 0.294262 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_mult_res_reg_11_/CP}
+__scl 0.25885 {fdct_zigzag_zigzag_mod_sresult_reg_17__8_/CP}
+__scl 0.264045 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_4_/CP}
+__scl 0.291674 {fdct_zigzag_zigzag_mod_sresult_reg_43__1_/CP}
+__scl 0.28918 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_coef_reg_30_/CP}
+__scl 0.281826 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_5_/CP}
+__scl 0.291833 {fdct_zigzag_zigzag_mod_sresult_reg_51__10_/CP}
+__scl 0.273927 {fdct_zigzag_zigzag_mod_sresult_reg_5__7_/CP}
+__scl 0.27486 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_18_/CP}
+__scl 0.263681 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_coef_reg_29_/CP}
+__scl 0.289447 {qnr_divider_divider_d_pipe_reg_4__3_/CP}
+__scl 0.263812 {fdct_zigzag_zigzag_mod_sresult_reg_51__3_/CP}
+__scl 0.276771 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_result_reg_17_/CP}
+__scl 0.291289 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_21_/CP}
+__scl 0.262226 {qnr_divider_divider_s_pipe_reg_11__21_/CP}
+__scl 0.290755 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_1_/CP}
+__scl 0.278659 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_23_/CP}
+__scl 0.283329 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_coef_reg_22_/CP}
+__scl 0.286917 {fdct_zigzag_zigzag_mod_sresult_reg_46__1_/CP}
+__scl 0.291676 {fdct_zigzag_zigzag_mod_sresult_reg_33__7_/CP}
+__scl 0.290605 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_coef_reg_22_/CP}
+__scl 0.266123 {fdct_zigzag_zigzag_mod_sresult_reg_50__1_/CP}
+__scl 0.276 {fdct_zigzag_zigzag_mod_sresult_reg_0__9_/CP}
+__scl 0.276661 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_9_/CP}
+__scl 0.257374 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_6_/CP}
+__scl 0.293288 {fdct_zigzag_zigzag_mod_sresult_reg_23__2_/CP}
+__scl 0.26301 {qnr_divider_divider_s_pipe_reg_10__12_/CP}
+__scl 0.277002 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_coef_reg_31_/CP}
+__scl 0.279139 {rle_rz2_ampo_reg_5_/CP}
+__scl 0.269001 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_1_/CP}
+__scl 0.290124 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_coef_reg_30_/CP}
+__scl 0.279526 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_macu_result_reg_16_/CP}
+__scl 0.277923 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_coef_reg_29_/CP}
+__scl 0.275255 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_15_/CP}
+__scl 0.26857 {fdct_zigzag_zigzag_mod_sresult_reg_49__5_/CP}
+__scl 0.277805 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_11_/CP}
+__scl 0.276667 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_12_/CP}
+__scl 0.26229 {qnr_divider_divider_s_pipe_reg_9__20_/CP}
+__scl 0.294262 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_mult_res_reg_12_/CP}
+__scl 0.290301 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_11_/CP}
+__scl 0.281827 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_1_/CP}
+__scl 0.291862 {fdct_zigzag_zigzag_mod_sresult_reg_51__9_/CP}
+__scl 0.277809 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_result_reg_11_/CP}
+__scl 0.293846 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_2_macu_result_reg_17_/CP}
+__scl 0.28977 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_coef_reg_29_/CP}
+__scl 0.294484 {fdct_zigzag_zigzag_mod_sresult_reg_41__4_/CP}
+__scl 0.287332 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_coef_reg_30_/CP}
+__scl 0.289608 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_result_reg_18_/CP}
+__scl 0.289767 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_10_/CP}
+__scl 0.289691 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_9_/CP}
+__scl 0.258745 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_2_/CP}
+__scl 0.257866 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_12_/CP}
+__scl 0.270792 {rle_rz2_rleno_reg_1_/CP}
+__scl 0.2941 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_10_/CP}
+__scl 0.275755 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_16_/CP}
+__scl 0.277591 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_17_/CP}
+__scl 0.269632 {rle_rz1_rleno_reg_2_/CP}
+__scl 0.270095 {qnr_rq_reg_8_/CP}
+__scl 0.285935 {fdct_zigzag_zigzag_mod_sresult_reg_43__10_/CP}
+__scl 0.268956 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_13_/CP}
+__scl 0.263462 {qnr_divider_divider_s_pipe_reg_6__22_/CP}
+__scl 0.277953 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_coef_reg_31_/CP}
+__scl 0.291355 {fdct_zigzag_zigzag_mod_sresult_reg_43__3_/CP}
+__scl 0.258438 {fdct_zigzag_dct_mod_ddin_reg_3_/CP}
+__scl 0.294706 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_13_/CP}
+__scl 0.275309 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_14_/CP}
+__scl 0.27869 {rle_rz3_ampo_reg_8_/CP}
+__scl 0.288735 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_2_/CP}
+__scl 0.291864 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_11_/CP}
+__scl 0.287382 {fdct_zigzag_zigzag_mod_sresult_reg_44__8_/CP}
+__scl 0.278013 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_4_macu_result_reg_18_/CP}
+__scl 0.278117 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_14_/CP}
+__scl 0.288634 {qnr_divider_divider_d_pipe_reg_8__5_/CP}
+__scl 0.279185 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_coef_reg_30_/CP}
+__scl 0.262412 {qnr_divider_divider_s_pipe_reg_10__23_/CP}
+__scl 0.288397 {qnr_divider_divider_d_pipe_reg_6__4_/CP}
+__scl 0.291236 {fdct_zigzag_zigzag_mod_sresult_reg_39__4_/CP}
+__scl 0.262227 {qnr_divider_divider_d_pipe_reg_10__17_/CP}
+__scl 0.287066 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_coef_reg_27_/CP}
+__scl 0.290106 {fdct_zigzag_zigzag_mod_sresult_reg_30__11_/CP}
+__scl 0.277085 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_3_/CP}
+__scl 0.263946 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_6_/CP}
+__scl 0.29373 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_mult_res_reg_16_/CP}
+__scl 0.267326 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_7_/CP}
+__scl 0.294585 {fdct_zigzag_zigzag_mod_sresult_reg_49__4_/CP}
+__scl 0.293098 {fdct_zigzag_zigzag_mod_sresult_reg_50__8_/CP}
+__scl 0.264984 {qnr_divider_divider_d_pipe_reg_8__8_/CP}
+__scl 0.276935 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_9_/CP}
+__scl 0.293631 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_coef_reg_28_/CP}
+__scl 0.259303 {fdct_zigzag_zigzag_mod_sresult_reg_18__2_/CP}
+__scl 0.294208 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_coef_reg_26_/CP}
+__scl 0.293181 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_21_/CP}
+__scl 0.274349 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_12_/CP}
+__scl 0.28973 {fdct_zigzag_zigzag_mod_sresult_reg_55__4_/CP}
+__scl 0.290621 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_coef_reg_31_/CP}
+__scl 0.259211 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_18_/CP}
+__scl 0.293207 {fdct_zigzag_zigzag_mod_sresult_reg_40__2_/CP}
+__scl 0.274493 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_16_/CP}
+__scl 0.289777 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_coef_reg_31_/CP}
+__scl 0.257319 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_result_reg_18_/CP}
+__scl 0.281838 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_2_/CP}
+__scl 0.279016 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_1_/CP}
+__scl 0.263268 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_1_/CP}
+__scl 0.292475 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_4_/CP}
+__scl 0.278327 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_coef_reg_30_/CP}
+__scl 0.288687 {qnr_divider_divider_s_pipe_reg_8__6_/CP}
+__scl 0.281808 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_coef_reg_31_/CP}
+__scl 0.270428 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_mult_res_reg_14_/CP}
+__scl 0.258308 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_5_/CP}
+__scl 0.259163 {fdct_zigzag_dct_mod_ddin_reg_5_/CP}
+__scl 0.288831 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_15_/CP}
+__scl 0.291608 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_16_/CP}
+__scl 0.277936 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_6_/CP}
+__scl 0.294569 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_2_macu_result_reg_15_/CP}
+__scl 0.266143 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_7_/CP}
+__scl 0.2772 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_0_/CP}
+__scl 0.290172 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_12_/CP}
+__scl 0.289493 {fdct_zigzag_zigzag_mod_sresult_reg_46__6_/CP}
+__scl 0.268812 {fdct_zigzag_zigzag_mod_sresult_reg_50__6_/CP}
+__scl 0.288252 {qnr_divider_divider_s_pipe_reg_7__2_/CP}
+__scl 0.290152 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_coef_reg_27_/CP}
+__scl 0.291855 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_12_/CP}
+__scl 0.276152 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_3_/CP}
+__scl 0.283403 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_10_/CP}
+__scl 0.276339 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_mult_res_reg_18_/CP}
+__scl 0.275395 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_coef_reg_27_/CP}
+__scl 0.265196 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_coef_reg_23_/CP}
+__scl 0.293861 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_mult_res_reg_14_/CP}
+__scl 0.263663 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_coef_reg_27_/CP}
+__scl 0.266687 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_7_/CP}
+__scl 0.287816 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_7_/CP}
+__scl 0.275486 {fdct_zigzag_zigzag_mod_sresult_reg_11__1_/CP}
+__scl 0.264948 {fdct_zigzag_zigzag_mod_sresult_reg_47__1_/CP}
+__scl 0.263507 {fdct_zigzag_zigzag_mod_sresult_reg_52__5_/CP}
+__scl 0.289655 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_14_/CP}
+__scl 0.294496 {fdct_zigzag_zigzag_mod_sresult_reg_49__8_/CP}
+__scl 0.263941 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_9_/CP}
+__scl 0.276271 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_11_/CP}
+__scl 0.270748 {rle_rz2_rleno_reg_3_/CP}
+__scl 0.262672 {qnr_divider_divider_d_pipe_reg_7__21_/CP}
+__scl 0.290508 {fdct_zigzag_zigzag_mod_sresult_reg_31__11_/CP}
+__scl 0.269254 {rle_rz3_sizeo_reg_3_/CP}
+__scl 0.278833 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_1_/CP}
+__scl 0.262861 {qnr_divider_divider_d_pipe_reg_9__14_/CP}
+__scl 0.277632 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_coef_reg_24_/CP}
+__scl 0.266085 {fdct_zigzag_zigzag_mod_sresult_reg_49__2_/CP}
+__scl 0.26732 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_2_/CP}
+__scl 0.288691 {qnr_divider_divider_d_pipe_reg_8__7_/CP}
+__scl 0.278127 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_coef_reg_30_/CP}
+__scl 0.290428 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_13_/CP}
+__scl 0.262459 {qnr_divider_divider_s_pipe_reg_6__11_/CP}
+__scl 0.278619 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_1_/CP}
+__scl 0.257956 {fdct_zigzag_zigzag_mod_sresult_reg_16__6_/CP}
+__scl 0.292767 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_8_/CP}
+__scl 0.292435 {fdct_zigzag_zigzag_mod_sresult_reg_41__2_/CP}
+__scl 0.276126 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_coef_reg_21_/CP}
+__scl 0.268397 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_6_/CP}
+__scl 0.29305 {fdct_zigzag_zigzag_mod_sresult_reg_39__0_/CP}
+__scl 0.292089 {fdct_zigzag_zigzag_mod_sresult_reg_20__0_/CP}
+__scl 0.292169 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_3_/CP}
+__scl 0.289692 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_11_/CP}
+__scl 0.27408 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_13_/CP}
+__scl 0.27701 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_10_/CP}
+__scl 0.264696 {qnr_divider_divider_d_pipe_reg_9__11_/CP}
+__scl 0.277017 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_2_/CP}
+__scl 0.278963 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_3_/CP}
+__scl 0.294233 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_coef_reg_27_/CP}
+__scl 0.289769 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_coef_reg_27_/CP}
+__scl 0.276901 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_13_/CP}
+__scl 0.293279 {fdct_zigzag_zigzag_mod_sresult_reg_42__3_/CP}
+__scl 0.290588 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_coef_reg_24_/CP}
+__scl 0.288261 {fdct_zigzag_zigzag_mod_sresult_reg_43__4_/CP}
+__scl 0.278553 {fdct_zigzag_zigzag_mod_sresult_reg_9__3_/CP}
+__scl 0.294578 {fdct_zigzag_zigzag_mod_sresult_reg_36__8_/CP}
+__scl 0.283064 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_9_/CP}
+__scl 0.265167 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_coef_reg_30_/CP}
+__scl 0.292401 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_14_/CP}
+__scl 0.270012 {rle_rz2_den_reg/CP}
+__scl 0.295114 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_9_/CP}
+__scl 0.278178 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_coef_reg_28_/CP}
+__scl 0.293145 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_coef_reg_31_/CP}
+__scl 0.27688 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_7_/CP}
+__scl 0.293716 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_coef_reg_30_/CP}
+__scl 0.27804 {fdct_zigzag_zigzag_mod_sresult_reg_13__0_/CP}
+__scl 0.279481 {fdct_zigzag_zigzag_mod_sresult_reg_9__0_/CP}
+__scl 0.278224 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_coef_reg_21_/CP}
+__scl 0.277126 {fdct_zigzag_zigzag_mod_sresult_reg_59__4_/CP}
+__scl 0.294694 {fdct_zigzag_zigzag_mod_sresult_reg_25__10_/CP}
+__scl 0.262165 {qnr_divider_divider_d_pipe_reg_10__20_/CP}
+__scl 0.261627 {qnr_divider_divider_s_pipe_reg_8__18_/CP}
+__scl 0.283308 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_9_/CP}
+__scl 0.278083 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_mult_res_reg_15_/CP}
+__scl 0.268643 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_5_/CP}
+__scl 0.290783 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_4_/CP}
+__scl 0.275888 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_coef_reg_26_/CP}
+__scl 0.259108 {fdct_zigzag_zigzag_mod_sresult_reg_17__6_/CP}
+__scl 0.262862 {qnr_divider_divider_d_pipe_reg_11__13_/CP}
+__scl 0.281862 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_13_/CP}
+__scl 0.26699 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_10_/CP}
+__scl 0.292766 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_mult_res_reg_11_/CP}
+__scl 0.275932 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_15_/CP}
+__scl 0.29168 {qnr_divider_divider_d_pipe_reg_11__3_/CP}
+__scl 0.269985 {rle_rz2_rlen_reg_1_/CP}
+__scl 0.271621 {fdct_zigzag_zigzag_mod_sresult_reg_26__7_/CP}
+__scl 0.277548 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_16_/CP}
+__scl 0.276701 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_result_reg_13_/CP}
+__scl 0.281242 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_0_/CP}
+__scl 0.266027 {fdct_zigzag_zigzag_mod_sresult_reg_49__3_/CP}
+__scl 0.294509 {fdct_zigzag_zigzag_mod_sresult_reg_42__10_/CP}
+__scl 0.290646 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_2_/CP}
+__scl 0.26299 {qnr_divider_divider_d_pipe_reg_10__13_/CP}
+__scl 0.263392 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_coef_reg_31_/CP}
+__scl 0.263622 {fdct_zigzag_zigzag_mod_sresult_reg_52__2_/CP}
+__scl 0.278679 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_2_/CP}
+__scl 0.263876 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_27_/CP}
+__scl 0.29258 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_mult_res_reg_17_/CP}
+__scl 0.277984 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_coef_reg_29_/CP}
+__scl 0.257834 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_13_/CP}
+__scl 0.279396 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_coef_reg_21_/CP}
+__scl 0.275303 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_mult_res_reg_0_/CP}
+__scl 0.28942 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_coef_reg_29_/CP}
+__scl 0.270606 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_16_/CP}
+__scl 0.278171 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_mult_res_reg_17_/CP}
+__scl 0.276709 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_result_reg_12_/CP}
+__scl 0.291959 {qnr_divider_divider_d_pipe_reg_11__7_/CP}
+__scl 0.269717 {rle_rle_amp_reg_1_/CP}
+__scl 0.257356 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_7_/CP}
+__scl 0.257833 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_11_/CP}
+__scl 0.278473 {fdct_zigzag_zigzag_mod_sresult_reg_9__7_/CP}
+__scl 0.291467 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_coef_reg_31_/CP}
+__scl 0.294078 {dfdct_dout_reg_0_/CP}
+__scl 0.275611 {fdct_zigzag_zigzag_mod_sresult_reg_1__6_/CP}
+__scl 0.291453 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_18_/CP}
+__scl 0.265653 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_coef_reg_24_/CP}
+__scl 0.275884 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_result_reg_15_/CP}
+__scl 0.276915 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_15_/CP}
+__scl 0.291799 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_17_/CP}
+__scl 0.277387 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_coef_reg_21_/CP}
+__scl 0.288159 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_coef_reg_27_/CP}
+__scl 0.289665 {fdct_zigzag_zigzag_mod_sresult_reg_32__2_/CP}
+__scl 0.277474 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_5_/CP}
+__scl 0.270636 {rle_rz3_rleno_reg_1_/CP}
+__scl 0.275449 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_15_/CP}
+__scl 0.283003 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_coef_reg_27_/CP}
+__scl 0.26248 {qnr_divider_divider_q_pipe_reg_11__0_/CP}
+__scl 0.275239 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_19_/CP}
+__scl 0.263999 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_30_/CP}
+__scl 0.288146 {fdct_zigzag_zigzag_mod_sresult_reg_19__7_/CP}
+__scl 0.274885 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_10_/CP}
+__scl 0.270604 {rle_rz3_size_reg_0_/CP}
+__scl 0.276847 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_coef_reg_29_/CP}
+__scl 0.263551 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_2_/CP}
+__scl 0.294512 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_coef_reg_27_/CP}
+__scl 0.294493 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_15_/CP}
+__scl 0.259771 {fdct_zigzag_zigzag_mod_sresult_reg_1__4_/CP}
+__scl 0.271039 {rle_rz3_state_reg/CP}
+__scl 0.294361 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_10_/CP}
+__scl 0.29219 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_21_/CP}
+__scl 0.28894 {qnr_divider_divider_d_pipe_reg_5__0_/CP}
+__scl 0.258109 {fdct_zigzag_zigzag_mod_sresult_reg_15__4_/CP}
+__scl 0.273975 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_16_/CP}
+__scl 0.293235 {fdct_zigzag_zigzag_mod_sresult_reg_39__3_/CP}
+__scl 0.275403 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_coef_reg_22_/CP}
+__scl 0.276841 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_12_/CP}
+__scl 0.270919 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_coef_reg_26_/CP}
+__scl 0.278623 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_coef_reg_23_/CP}
+__scl 0.289358 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_5_/CP}
+__scl 0.293228 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_coef_reg_31_/CP}
+__scl 0.293023 {fdct_zigzag_zigzag_mod_sresult_reg_23__6_/CP}
+__scl 0.275124 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_coef_reg_21_/CP}
+__scl 0.277635 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_11_/CP}
+__scl 0.2889 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_coef_reg_23_/CP}
+__scl 0.28915 {qnr_divider_divider_s_pipe_reg_5__2_/CP}
+__scl 0.278224 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_6_/CP}
+__scl 0.287355 {fdct_zigzag_zigzag_mod_sresult_reg_44__10_/CP}
+__scl 0.289222 {qnr_divider_divider_d_pipe_reg_5__4_/CP}
+__scl 0.274514 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_8_/CP}
+__scl 0.276716 {fdct_zigzag_zigzag_mod_sresult_reg_8__8_/CP}
+__scl 0.289329 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_coef_reg_30_/CP}
+__scl 0.277991 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_4_/CP}
+__scl 0.261709 {qnr_divider_divider_d_pipe_reg_5__18_/CP}
+__scl 0.283067 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_6_/CP}
+__scl 0.268303 {fdct_zigzag_zigzag_mod_sresult_reg_30__2_/CP}
+__scl 0.290767 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_13_/CP}
+__scl 0.264965 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_0_/CP}
+__scl 0.276949 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_1_/CP}
+__scl 0.262111 {qnr_divider_divider_s_pipe_reg_9__15_/CP}
+__scl 0.265951 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_mult_res_reg_18_/CP}
+__scl 0.276605 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_result_reg_15_/CP}
+__scl 0.263929 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_8_/CP}
+__scl 0.280835 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_12_/CP}
+__scl 0.277104 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_mult_res_reg_14_/CP}
+__scl 0.28711 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_10_/CP}
+__scl 0.262821 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_10_/CP}
+__scl 0.294764 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_11_/CP}
+__scl 0.278543 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_13_/CP}
+__scl 0.26714 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_0_/CP}
+__scl 0.27021 {rle_rle_rlen_reg_2_/CP}
+__scl 0.276611 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_0_/CP}
+__scl 0.277382 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_2_/CP}
+__scl 0.269932 {rle_rz2_rlen_reg_3_/CP}
+__scl 0.277059 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_mult_res_reg_15_/CP}
+__scl 0.283298 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_8_/CP}
+__scl 0.27747 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_4_/CP}
+__scl 0.275598 {fdct_zigzag_zigzag_mod_sresult_reg_2__1_/CP}
+__scl 0.292997 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_coef_reg_29_/CP}
+__scl 0.268814 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_18_/CP}
+__scl 0.286989 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_coef_reg_31_/CP}
+__scl 0.277762 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_0_/CP}
+__scl 0.264051 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_coef_reg_21_/CP}
+__scl 0.277923 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_15_/CP}
+__scl 0.278348 {rle_rz2_ampo_reg_7_/CP}
+__scl 0.292821 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_9_/CP}
+__scl 0.292318 {fdct_zigzag_zigzag_mod_sresult_reg_39__7_/CP}
+__scl 0.276734 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_13_/CP}
+__scl 0.278012 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_14_/CP}
+__scl 0.293655 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_coef_reg_23_/CP}
+__scl 0.268774 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_mult_res_reg_17_/CP}
+__scl 0.267489 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_coef_reg_24_/CP}
+__scl 0.27657 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_13_/CP}
+__scl 0.271499 {fdct_zigzag_zigzag_mod_sresult_reg_28__5_/CP}
+__scl 0.27712 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_7_/CP}
+__scl 0.289548 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_12_/CP}
+__scl 0.289717 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_16_/CP}
+__scl 0.283067 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_3_/CP}
+__scl 0.294511 {fdct_zigzag_zigzag_mod_sresult_reg_36__10_/CP}
+__scl 0.290412 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_14_/CP}
+__scl 0.265182 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_coef_reg_25_/CP}
+__scl 0.262441 {qnr_divider_divider_d_pipe_reg_7__20_/CP}
+__scl 0.276659 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_7_/CP}
+__scl 0.291951 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_mult_res_reg_12_/CP}
+__scl 0.275581 {fdct_zigzag_zigzag_mod_sresult_reg_57__2_/CP}
+__scl 0.267625 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_16_/CP}
+__scl 0.288123 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_result_reg_19_/CP}
+__scl 0.291904 {fdct_zigzag_zigzag_mod_sresult_reg_33__2_/CP}
+__scl 0.264336 {qnr_divider_divider_d_pipe_reg_8__11_/CP}
+__scl 0.277346 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_coef_reg_29_/CP}
+__scl 0.289282 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_coef_reg_24_/CP}
+__scl 0.287119 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_13_/CP}
+__scl 0.290521 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_4_/CP}
+__scl 0.293623 {fdct_zigzag_zigzag_mod_sresult_reg_54__0_/CP}
+__scl 0.291294 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_13_/CP}
+__scl 0.288554 {qnr_divider_divider_d_pipe_reg_7__5_/CP}
+__scl 0.278679 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_4_/CP}
+__scl 0.294314 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_14_/CP}
+__scl 0.288926 {fdct_zigzag_zigzag_mod_sresult_reg_41__9_/CP}
+__scl 0.258638 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_9_/CP}
+__scl 0.259078 {fdct_zigzag_zigzag_mod_sresult_reg_18__10_/CP}
+__scl 0.276724 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_2_/CP}
+__scl 0.28045 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_11_/CP}
+__scl 0.266169 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_mult_res_reg_13_/CP}
+__scl 0.275033 {fdct_zigzag_zigzag_mod_sresult_reg_6__0_/CP}
+__scl 0.277623 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_mult_res_reg_12_/CP}
+__scl 0.274483 {fdct_zigzag_zigzag_mod_sresult_reg_5__0_/CP}
+__scl 0.27004 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_coef_reg_21_/CP}
+__scl 0.294296 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_7_/CP}
+__scl 0.269508 {rle_rz1_rleno_reg_3_/CP}
+__scl 0.293338 {fdct_zigzag_zigzag_mod_sresult_reg_24__7_/CP}
+__scl 0.276532 {fdct_zigzag_zigzag_mod_sresult_reg_10__11_/CP}
+__scl 0.262373 {qnr_divider_divider_s_pipe_reg_8__14_/CP}
+__scl 0.289746 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_20_/CP}
+__scl 0.274257 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_10_/CP}
+__scl 0.271131 {fdct_zigzag_zigzag_mod_sresult_reg_63__3_/CP}
+__scl 0.27447 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_14_/CP}
+__scl 0.289459 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_8_/CP}
+__scl 0.287942 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_result_reg_14_/CP}
+__scl 0.28972 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_10_/CP}
+__scl 0.281787 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_14_/CP}
+__scl 0.292392 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_13_/CP}
+__scl 0.277666 {fdct_zigzag_zigzag_mod_sresult_reg_13__3_/CP}
+__scl 0.270713 {rle_rz2_rleno_reg_0_/CP}
+__scl 0.289616 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_19_/CP}
+__scl 0.288319 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_3_/CP}
+__scl 0.264288 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_2_/CP}
+__scl 0.263945 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_7_/CP}
+__scl 0.277636 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_mult_res_reg_4_/CP}
+__scl 0.290974 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_7_/CP}
+__scl 0.280027 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_result_reg_0_/CP}
+__scl 0.289397 {qnr_divider_divider_s_pipe_reg_4__1_/CP}
+__scl 0.270517 {fdct_zigzag_zigzag_mod_sresult_reg_26__3_/CP}
+__scl 0.28942 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_8_/CP}
+__scl 0.293148 {fdct_zigzag_zigzag_mod_sresult_reg_37__11_/CP}
+__scl 0.293823 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_21_/CP}
+__scl 0.266866 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_12_/CP}
+__scl 0.294521 {fdct_zigzag_zigzag_mod_sresult_reg_20__10_/CP}
+__scl 0.291055 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_17_/CP}
+__scl 0.279334 {rle_rz1_amp_reg_9_/CP}
+__scl 0.289621 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_13_/CP}
+__scl 0.265074 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_11_/CP}
+__scl 0.27554 {fdct_zigzag_zigzag_mod_sresult_reg_9__10_/CP}
+__scl 0.294574 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_result_reg_19_/CP}
+__scl 0.275189 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_14_/CP}
+__scl 0.268869 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_17_/CP}
+__scl 0.27915 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_12_/CP}
+__scl 0.290742 {fdct_zigzag_zigzag_mod_sresult_reg_54__2_/CP}
+__scl 0.272956 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_coef_reg_22_/CP}
+__scl 0.273402 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_coef_reg_31_/CP}
+__scl 0.275736 {fdct_zigzag_zigzag_mod_sresult_reg_4__1_/CP}
+__scl 0.29247 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_coef_reg_27_/CP}
+__scl 0.266618 {fdct_zigzag_zigzag_mod_sresult_reg_48__3_/CP}
+__scl 0.259505 {fdct_zigzag_zigzag_mod_sresult_reg_14__6_/CP}
+__scl 0.292837 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_14_/CP}
+__scl 0.27766 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_coef_reg_31_/CP}
+__scl 0.267776 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_7_/CP}
+__scl 0.270981 {fdct_zigzag_zigzag_mod_sresult_reg_63__0_/CP}
+__scl 0.289996 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_5_/CP}
+__scl 0.263546 {qnr_divider_divider_q_pipe_reg_6__0_/CP}
+__scl 0.292101 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_14_/CP}
+__scl 0.288639 {qnr_divider_divider_d_pipe_reg_6__8_/CP}
+__scl 0.288437 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_coef_reg_24_/CP}
+__scl 0.293916 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_17_/CP}
+__scl 0.291254 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_15_/CP}
+__scl 0.264016 {qnr_divider_divider_s_pipe_reg_6__8_/CP}
+__scl 0.26979 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_13_/CP}
+__scl 0.270999 {rle_rz2_rleno_reg_2_/CP}
+__scl 0.29206 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_10_/CP}
+__scl 0.289718 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_18_/CP}
+__scl 0.286995 {fdct_zigzag_dct_mod_ddgo_reg/CP}
+__scl 0.290825 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_8_/CP}
+__scl 0.288602 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_18_/CP}
+__scl 0.288951 {fdct_zigzag_zigzag_mod_sresult_reg_21__10_/CP}
+__scl 0.261828 {qnr_divider_divider_d_pipe_reg_11__17_/CP}
+__scl 0.292271 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_6_/CP}
+__scl 0.276914 {fdct_zigzag_zigzag_mod_sresult_reg_19__1_/CP}
+__scl 0.267825 {fdct_zigzag_zigzag_mod_sresult_reg_48__7_/CP}
+__scl 0.293292 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_16_/CP}
+__scl 0.290384 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_7_/CP}
+__scl 0.262897 {qnr_divider_divider_s_pipe_reg_9__13_/CP}
+__scl 0.293178 {fdct_zigzag_zigzag_mod_sresult_reg_24__11_/CP}
+__scl 0.285961 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_coef_reg_26_/CP}
+__scl 0.29388 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_18_/CP}
+__scl 0.293469 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_13_/CP}
+__scl 0.257519 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_coef_reg_28_/CP}
+__scl 0.293054 {fdct_zigzag_zigzag_mod_sresult_reg_40__3_/CP}
+__scl 0.261849 {qnr_divider_divider_s_pipe_reg_11__16_/CP}
+__scl 0.291734 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_16_/CP}
+__scl 0.275126 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_17_/CP}
+__scl 0.287941 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_18_/CP}
+__scl 0.258638 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_12_/CP}
+__scl 0.289574 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_12_/CP}
+__scl 0.288538 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_2_/CP}
+__scl 0.278797 {rle_rz2_ampo_reg_6_/CP}
+__scl 0.258305 {fdct_zigzag_zigzag_mod_sresult_reg_15__0_/CP}
+__scl 0.274681 {fdct_zigzag_zigzag_mod_sresult_reg_3__10_/CP}
+__scl 0.290728 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_6_/CP}
+__scl 0.258759 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_15_/CP}
+__scl 0.265041 {qnr_divider_divider_d_pipe_reg_9__9_/CP}
+__scl 0.276132 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_13_/CP}
+__scl 0.276659 {fdct_zigzag_zigzag_mod_sresult_reg_7__3_/CP}
+__scl 0.276856 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_4_/CP}
+__scl 0.259077 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_11_/CP}
+__scl 0.277035 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_mult_res_reg_16_/CP}
+__scl 0.290235 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_18_/CP}
+__scl 0.277402 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_8_/CP}
+__scl 0.279052 {rle_rz1_amp_reg_11_/CP}
+__scl 0.277157 {fdct_zigzag_zigzag_mod_sresult_reg_57__7_/CP}
+__scl 0.27423 {fdct_zigzag_zigzag_mod_sresult_reg_7__1_/CP}
+__scl 0.276862 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_13_/CP}
+__scl 0.262376 {qnr_divider_divider_s_pipe_reg_10__24_/CP}
+__scl 0.278802 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_5_/CP}
+__scl 0.26138 {qnr_divider_divider_q_pipe_reg_8__0_/CP}
+__scl 0.262175 {qnr_divider_divider_d_pipe_reg_8__15_/CP}
+__scl 0.293392 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_17_/CP}
+__scl 0.289929 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_coef_reg_25_/CP}
+__scl 0.26571 {fdct_zigzag_zigzag_mod_sresult_reg_47__3_/CP}
+__scl 0.263542 {qnr_divider_divider_d_pipe_reg_6__23_/CP}
+__scl 0.287359 {fdct_zigzag_zigzag_mod_sresult_reg_44__9_/CP}
+__scl 0.294054 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_coef_reg_30_/CP}
+__scl 0.287952 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_17_/CP}
+__scl 0.262663 {qnr_divider_divider_d_pipe_reg_10__24_/CP}
+__scl 0.260429 {fdct_zigzag_zigzag_mod_sresult_reg_0__1_/CP}
+__scl 0.270699 {fdct_zigzag_zigzag_mod_sresult_reg_25__2_/CP}
+__scl 0.279265 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_coef_reg_31_/CP}
+__scl 0.275437 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_14_/CP}
+__scl 0.265043 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_11_/CP}
+__scl 0.277255 {fdct_zigzag_zigzag_mod_sresult_reg_45__6_/CP}
+__scl 0.294101 {dfdct_dout_reg_10_/CP}
+__scl 0.258649 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_5_/CP}
+__scl 0.27067 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_mult_res_reg_18_/CP}
+__scl 0.257617 {fdct_zigzag_zigzag_mod_sresult_reg_15__8_/CP}
+__scl 0.292816 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_18_/CP}
+__scl 0.262753 {qnr_divider_divider_d_pipe_reg_9__15_/CP}
+__scl 0.278081 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_13_/CP}
+__scl 0.27953 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_6_macu_result_reg_17_/CP}
+__scl 0.25864 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_9_/CP}
+__scl 0.269808 {rle_rz1_rleno_reg_1_/CP}
+__scl 0.288657 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_0_/CP}
+__scl 0.285136 {fdct_zigzag_zigzag_mod_sresult_reg_21__2_/CP}
+__scl 0.274406 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_11_/CP}
+__scl 0.292947 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_13_/CP}
+__scl 0.287952 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_coef_reg_26_/CP}
+__scl 0.27599 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_0_/CP}
+__scl 0.262918 {qnr_divider_divider_d_pipe_reg_11__11_/CP}
+__scl 0.265768 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_14_/CP}
+__scl 0.262418 {qnr_divider_divider_s_pipe_reg_7__13_/CP}
+__scl 0.289541 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_3_/CP}
+__scl 0.276772 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_3_/CP}
+__scl 0.263204 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_coef_reg_21_/CP}
+__scl 0.259084 {fdct_zigzag_zigzag_mod_sresult_reg_18__8_/CP}
+__scl 0.258136 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_4_/CP}
+__scl 0.291681 {fdct_zigzag_zigzag_mod_sresult_reg_33__11_/CP}
+__scl 0.289289 {fdct_zigzag_zigzag_mod_sresult_reg_46__7_/CP}
+__scl 0.270555 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_result_reg_15_/CP}
+__scl 0.291113 {fdct_zigzag_zigzag_mod_sresult_reg_34__2_/CP}
+__scl 0.269838 {fdct_zigzag_zigzag_mod_sresult_reg_27__2_/CP}
+__scl 0.26612 {fdct_zigzag_zigzag_mod_sresult_reg_52__0_/CP}
+__scl 0.276613 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_1_/CP}
+__scl 0.293255 {fdct_zigzag_zigzag_mod_sresult_reg_25__9_/CP}
+__scl 0.293077 {fdct_zigzag_zigzag_mod_sresult_reg_40__9_/CP}
+__scl 0.277898 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_5_/CP}
+__scl 0.288487 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_coef_reg_29_/CP}
+__scl 0.294898 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_11_/CP}
+__scl 0.285296 {fdct_zigzag_zigzag_mod_sresult_reg_21__3_/CP}
+__scl 0.270296 {rle_rz1_amp_reg_4_/CP}
+__scl 0.264289 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_14_/CP}
+__scl 0.27118 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_20_/CP}
+__scl 0.290127 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_15_/CP}
+__scl 0.276732 {qnr_dep_reg_13_/CP}
+__scl 0.268306 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_0_/CP}
+__scl 0.292192 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_13_/CP}
+__scl 0.270873 {rle_rz4_amp_reg_1_/CP}
+__scl 0.275696 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_21_/CP}
+__scl 0.275513 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_12_/CP}
+__scl 0.275867 {fdct_zigzag_zigzag_mod_sresult_reg_1__9_/CP}
+__scl 0.276745 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_0_/CP}
+__scl 0.263975 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_coef_reg_31_/CP}
+__scl 0.291933 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_17_/CP}
+__scl 0.291518 {qnr_divider_divider_s_pipe_reg_11__6_/CP}
+__scl 0.279583 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_macu_result_reg_13_/CP}
+__scl 0.289707 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_12_/CP}
+__scl 0.290978 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_18_/CP}
+__scl 0.289157 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_8_/CP}
+__scl 0.290742 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_mult_res_reg_18_/CP}
+__scl 0.276662 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_result_reg_14_/CP}
+__scl 0.279167 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_1_/CP}
+__scl 0.277798 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_11_/CP}
+__scl 0.278154 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_6_/CP}
+__scl 0.266391 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_4_/CP}
+__scl 0.285473 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_4_/CP}
+__scl 0.268727 {fdct_zigzag_zigzag_mod_sresult_reg_31__5_/CP}
+__scl 0.288637 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_1_/CP}
+__scl 0.288508 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_coef_reg_23_/CP}
+__scl 0.294197 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_coef_reg_31_/CP}
+__scl 0.292035 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_11_/CP}
+__scl 0.287321 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_coef_reg_25_/CP}
+__scl 0.277935 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_10_/CP}
+__scl 0.290654 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_1_/CP}
+__scl 0.258755 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_16_/CP}
+__scl 0.289671 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_coef_reg_30_/CP}
+__scl 0.292948 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_mult_res_reg_18_/CP}
+__scl 0.274925 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_18_/CP}
+__scl 0.27534 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_13_/CP}
+__scl 0.29109 {fdct_zigzag_zigzag_mod_sresult_reg_51__11_/CP}
+__scl 0.289196 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_coef_reg_29_/CP}
+__scl 0.270241 {rle_rz2_size_reg_3_/CP}
+__scl 0.261636 {qnr_divider_divider_s_pipe_reg_11__19_/CP}
+__scl 0.291878 {qnr_divider_divider_s_pipe_reg_9__6_/CP}
+__scl 0.278642 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_coef_reg_22_/CP}
+__scl 0.278763 {rle_rz3_amp_reg_11_/CP}
+__scl 0.276386 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_9_/CP}
+__scl 0.291453 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_20_/CP}
+__scl 0.292353 {fdct_zigzag_zigzag_mod_sresult_reg_30__3_/CP}
+__scl 0.268397 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_4_/CP}
+__scl 0.257327 {fdct_zigzag_zigzag_mod_sresult_reg_17__0_/CP}
+__scl 0.263309 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_24_/CP}
+__scl 0.275205 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_1_/CP}
+__scl 0.293985 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_16_/CP}
+__scl 0.278912 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_0_/CP}
+__scl 0.269851 {rle_rz1_den_reg/CP}
+__scl 0.262747 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_coef_reg_26_/CP}
+__scl 0.290223 {fdct_zigzag_zigzag_mod_sresult_reg_46__5_/CP}
+__scl 0.288064 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_coef_reg_24_/CP}
+__scl 0.293354 {fdct_zigzag_zigzag_mod_sresult_reg_40__4_/CP}
+__scl 0.294424 {fdct_zigzag_zigzag_mod_sresult_reg_28__11_/CP}
+__scl 0.293421 {fdct_zigzag_zigzag_mod_sresult_reg_21__11_/CP}
+__scl 0.288597 {qnr_divider_divider_d_pipe_reg_7__7_/CP}
+__scl 0.256703 {fdct_zigzag_zigzag_mod_sresult_reg_15__2_/CP}
+__scl 0.261219 {qnr_divider_divider_s_pipe_reg_6__15_/CP}
+__scl 0.274149 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_17_/CP}
+__scl 0.29191 {fdct_zigzag_zigzag_mod_sresult_reg_54__9_/CP}
+__scl 0.279364 {fdct_zigzag_zigzag_mod_sresult_reg_10__4_/CP}
+__scl 0.293229 {fdct_zigzag_zigzag_mod_sresult_reg_22__7_/CP}
+__scl 0.27704 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_13_/CP}
+__scl 0.277188 {fdct_zigzag_zigzag_mod_sresult_reg_19__5_/CP}
+__scl 0.290749 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_0_/CP}
+__scl 0.276608 {fdct_zigzag_zigzag_mod_sresult_reg_8__5_/CP}
+__scl 0.279309 {rle_rz4_ampo_reg_5_/CP}
+__scl 0.263352 {fdct_zigzag_zigzag_mod_sresult_reg_53__2_/CP}
+__scl 0.293253 {fdct_zigzag_zigzag_mod_sresult_reg_23__7_/CP}
+__scl 0.26946 {rle_rz1_size_reg_3_/CP}
+__scl 0.277545 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_14_/CP}
+__scl 0.262824 {qnr_divider_divider_s_pipe_reg_9__14_/CP}
+__scl 0.258281 {fdct_zigzag_zigzag_mod_sresult_reg_16__5_/CP}
+__scl 0.266665 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_17_/CP}
+__scl 0.288548 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_2_/CP}
+__scl 0.288873 {qnr_divider_divider_d_pipe_reg_5__1_/CP}
+__scl 0.277789 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_10_/CP}
+__scl 0.279336 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_6_macu_result_reg_2_/CP}
+__scl 0.293799 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_coef_reg_25_/CP}
+__scl 0.289423 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_coef_reg_31_/CP}
+__scl 0.268708 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_5_/CP}
+__scl 0.273955 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_17_/CP}
+__scl 0.265762 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_coef_reg_21_/CP}
+__scl 0.292075 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_1_/CP}
+__scl 0.264279 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_29_/CP}
+__scl 0.288039 {qnr_divider_divider_d_pipe_reg_6__2_/CP}
+__scl 0.290689 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_17_/CP}
+__scl 0.277056 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_17_/CP}
+__scl 0.294899 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_10_/CP}
+__scl 0.261778 {qnr_divider_divider_d_pipe_reg_5__19_/CP}
+__scl 0.273912 {fdct_zigzag_zigzag_mod_sresult_reg_4__9_/CP}
+__scl 0.289091 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_1_/CP}
+__scl 0.290023 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_coef_reg_24_/CP}
+__scl 0.292426 {qnr_divider_divider_s_pipe_reg_10__0_/CP}
+__scl 0.275004 {fdct_zigzag_zigzag_mod_sresult_reg_7__8_/CP}
+__scl 0.276885 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_mult_res_reg_14_/CP}
+__scl 0.275788 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_3_/CP}
+__scl 0.261537 {qnr_divider_divider_s_pipe_reg_5__14_/CP}
+__scl 0.277868 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_4_/CP}
+__scl 0.2945 {fdct_zigzag_zigzag_mod_sresult_reg_28__9_/CP}
+__scl 0.289756 {fdct_zigzag_zigzag_mod_sresult_reg_55__3_/CP}
+__scl 0.258472 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_1_/CP}
+__scl 0.27496 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_17_/CP}
+__scl 0.269619 {rle_rz1_rleno_reg_0_/CP}
+__scl 0.275973 {fdct_zigzag_zigzag_mod_sresult_reg_3__1_/CP}
+__scl 0.294124 {fdct_zigzag_zigzag_mod_sresult_reg_49__9_/CP}
+__scl 0.294405 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_19_/CP}
+__scl 0.269684 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_4_/CP}
+__scl 0.257849 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_5_/CP}
+__scl 0.277337 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_coef_reg_22_/CP}
+__scl 0.275306 {fdct_zigzag_zigzag_mod_sresult_reg_2__5_/CP}
+__scl 0.275419 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_21_/CP}
+__scl 0.293148 {fdct_zigzag_zigzag_mod_sresult_reg_40__5_/CP}
+__scl 0.28913 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_20_/CP}
+__scl 0.262504 {qnr_divider_divider_d_pipe_reg_6__14_/CP}
+__scl 0.262516 {qnr_divider_divider_d_pipe_reg_11__23_/CP}
+__scl 0.261271 {qnr_divider_divider_d_pipe_reg_6__19_/CP}
+__scl 0.262941 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_7_/CP}
+__scl 0.27759 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_11_/CP}
+__scl 0.290767 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_13_/CP}
+__scl 0.278921 {rle_rz2_amp_reg_7_/CP}
+__scl 0.276711 {fdct_zigzag_zigzag_mod_sresult_reg_61__2_/CP}
+__scl 0.268799 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_3_/CP}
+__scl 0.293088 {fdct_zigzag_zigzag_mod_sresult_reg_40__10_/CP}
+__scl 0.28306 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_7_/CP}
+__scl 0.290757 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_1_/CP}
+__scl 0.269904 {rle_rz2_size_reg_1_/CP}
+__scl 0.27853 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_0_/CP}
+__scl 0.290029 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_3_/CP}
+__scl 0.293743 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_12_/CP}
+__scl 0.261438 {qnr_divider_divider_d_pipe_reg_8__23_/CP}
+__scl 0.278815 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_4_/CP}
+__scl 0.26296 {qnr_divider_divider_s_pipe_reg_9__11_/CP}
+__scl 0.271725 {fdct_zigzag_zigzag_mod_sresult_reg_26__9_/CP}
+__scl 0.276922 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_mult_res_reg_1_/CP}
+__scl 0.266759 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_mult_res_reg_14_/CP}
+__scl 0.293355 {fdct_zigzag_zigzag_mod_sresult_reg_22__1_/CP}
+__scl 0.275935 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_coef_reg_30_/CP}
+__scl 0.261187 {qnr_divider_divider_s_pipe_reg_8__20_/CP}
+__scl 0.290702 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_1_/CP}
+__scl 0.294394 {fdct_zigzag_zigzag_mod_sresult_reg_37__9_/CP}
+__scl 0.259294 {fdct_zigzag_zigzag_mod_sresult_reg_18__3_/CP}
+__scl 0.258426 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_coef_reg_22_/CP}
+__scl 0.288651 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_4_/CP}
+__scl 0.293062 {fdct_zigzag_zigzag_mod_sresult_reg_22__3_/CP}
+__scl 0.27879 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_0_/CP}
+__scl 0.290539 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_10_/CP}
+__scl 0.275632 {fdct_zigzag_zigzag_mod_sresult_reg_2__0_/CP}
+__scl 0.26706 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_mult_res_reg_18_/CP}
+__scl 0.292803 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_19_/CP}
+__scl 0.287934 {qnr_divider_divider_d_pipe_reg_6__0_/CP}
+__scl 0.257697 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_coef_reg_27_/CP}
+__scl 0.269174 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_mult_res_reg_11_/CP}
+__scl 0.291101 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_1_/CP}
+__scl 0.275444 {fdct_zigzag_zigzag_mod_sresult_reg_1__0_/CP}
+__scl 0.275539 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_12_/CP}
+__scl 0.278483 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_1_/CP}
+__scl 0.276787 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_mult_res_reg_17_/CP}
+__scl 0.269038 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_2_/CP}
+__scl 0.277823 {fdct_zigzag_zigzag_mod_sresult_reg_58__4_/CP}
+__scl 0.274023 {fdct_zigzag_zigzag_mod_sresult_reg_5__5_/CP}
+__scl 0.295038 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_10_/CP}
+__scl 0.257491 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_coef_reg_30_/CP}
+__scl 0.285493 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_17_/CP}
+__scl 0.279882 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_result_reg_2_/CP}
+__scl 0.276612 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_result_reg_16_/CP}
+__scl 0.261532 {qnr_divider_divider_d_pipe_reg_5__16_/CP}
+__scl 0.29507 {fdct_zigzag_zigzag_mod_sresult_reg_29__10_/CP}
+__scl 0.277362 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_3_/CP}
+__scl 0.287733 {qnr_divider_divider_d_pipe_reg_7__0_/CP}
+__scl 0.263432 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_6_/CP}
+__scl 0.264549 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_0_/CP}
+__scl 0.277637 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_coef_reg_28_/CP}
+__scl 0.290048 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_18_/CP}
+__scl 0.279185 {rle_rz2_amp_reg_9_/CP}
+__scl 0.270222 {rle_rle_amp_reg_2_/CP}
+__scl 0.292657 {fdct_zigzag_zigzag_mod_sresult_reg_39__9_/CP}
+__scl 0.257114 {fdct_zigzag_zigzag_mod_sresult_reg_16__3_/CP}
+__scl 0.292483 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_9_/CP}
+__scl 0.288548 {qnr_divider_divider_s_pipe_reg_7__4_/CP}
+__scl 0.289653 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_coef_reg_31_/CP}
+__scl 0.263032 {qnr_divider_divider_d_pipe_reg_6__20_/CP}
+__scl 0.258811 {fdct_zigzag_zigzag_mod_sresult_reg_17__11_/CP}
+__scl 0.26682 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_15_/CP}
+__scl 0.268204 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_5_/CP}
+__scl 0.258298 {fdct_zigzag_zigzag_mod_sresult_reg_17__3_/CP}
+__scl 0.277771 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_13_/CP}
+__scl 0.289602 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_5_/CP}
+__scl 0.27797 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_3_/CP}
+__scl 0.266513 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_15_/CP}
+__scl 0.293108 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_2_macu_result_reg_19_/CP}
+__scl 0.290892 {fdct_zigzag_zigzag_mod_sresult_reg_55__0_/CP}
+__scl 0.291341 {fdct_zigzag_zigzag_mod_sresult_reg_53__11_/CP}
+__scl 0.29233 {fdct_zigzag_zigzag_mod_sresult_reg_32__5_/CP}
+__scl 0.27786 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_9_/CP}
+__scl 0.293085 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_20_/CP}
+__scl 0.293696 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_coef_reg_28_/CP}
+__scl 0.257583 {fdct_zigzag_zigzag_mod_sresult_reg_15__9_/CP}
+__scl 0.293423 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_coef_reg_24_/CP}
+__scl 0.275689 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_6_/CP}
+__scl 0.263228 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_coef_reg_29_/CP}
+__scl 0.290397 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_14_/CP}
+__scl 0.286385 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_coef_reg_29_/CP}
+__scl 0.286276 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_mult_res_reg_14_/CP}
+__scl 0.263675 {qnr_divider_divider_d_pipe_reg_5__21_/CP}
+__scl 0.260409 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_15_/CP}
+__scl 0.259066 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_21_/CP}
+__scl 0.290772 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_3_/CP}
+__scl 0.294825 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_mult_res_reg_13_/CP}
+__scl 0.294356 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_17_/CP}
+__scl 0.288 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_coef_reg_23_/CP}
+__scl 0.271438 {fdct_zigzag_zigzag_mod_sresult_reg_24__4_/CP}
+__scl 0.290749 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_0_/CP}
+__scl 0.2626 {qnr_divider_divider_s_pipe_reg_9__22_/CP}
+__scl 0.289924 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_coef_reg_28_/CP}
+__scl 0.289632 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_coef_reg_25_/CP}
+__scl 0.293895 {fdct_zigzag_zigzag_mod_sresult_reg_63__6_/CP}
+__scl 0.287187 {fdct_zigzag_zigzag_mod_sresult_reg_45__9_/CP}
+__scl 0.277999 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_coef_reg_21_/CP}
+__scl 0.292658 {fdct_zigzag_zigzag_mod_sresult_reg_39__11_/CP}
+__scl 0.275521 {fdct_zigzag_zigzag_mod_sresult_reg_8__4_/CP}
+__scl 0.263435 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_3_/CP}
+__scl 0.263489 {qnr_divider_divider_d_pipe_reg_6__21_/CP}
+__scl 0.262892 {qnr_divider_divider_s_pipe_reg_11__12_/CP}
+__scl 0.275902 {fdct_zigzag_zigzag_mod_sresult_reg_3__0_/CP}
+__scl 0.278343 {rle_rz3_amp_reg_9_/CP}
+__scl 0.269212 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_mult_res_reg_10_/CP}
+__scl 0.275977 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_coef_reg_27_/CP}
+__scl 0.261254 {qnr_divider_divider_s_pipe_reg_6__18_/CP}
+__scl 0.27383 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_17_/CP}
+__scl 0.26691 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_coef_reg_28_/CP}
+__scl 0.27899 {fdct_zigzag_zigzag_mod_sresult_reg_9__5_/CP}
+__scl 0.27706 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_14_/CP}
+__scl 0.275631 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_14_/CP}
+__scl 0.27578 {fdct_zigzag_zigzag_mod_sresult_reg_4__4_/CP}
+__scl 0.291316 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_14_/CP}
+__scl 0.264057 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_coef_reg_24_/CP}
+__scl 0.25862 {fdct_zigzag_zigzag_mod_sresult_reg_16__0_/CP}
+__scl 0.259078 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_2_/CP}
+__scl 0.276772 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_0_/CP}
+__scl 0.27704 {fdct_zigzag_zigzag_mod_sresult_reg_19__3_/CP}
+__scl 0.270893 {rle_rz3_deno_reg/CP}
+__scl 0.289615 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_2_/CP}
+__scl 0.263682 {fdct_zigzag_zigzag_mod_sresult_reg_52__6_/CP}
+__scl 0.270059 {rle_rz2_state_reg/CP}
+__scl 0.275115 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_12_/CP}
+__scl 0.275396 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_11_/CP}
+__scl 0.276689 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_14_/CP}
+__scl 0.291677 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_17_/CP}
+__scl 0.271365 {fdct_zigzag_zigzag_mod_sresult_reg_28__3_/CP}
+__scl 0.293079 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_10_/CP}
+__scl 0.275493 {fdct_zigzag_zigzag_mod_sresult_reg_6__1_/CP}
+__scl 0.283414 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_coef_reg_30_/CP}
+__scl 0.290598 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_coef_reg_22_/CP}
+__scl 0.270903 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_mult_res_reg_10_/CP}
+__scl 0.265348 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_0_/CP}
+__scl 0.267468 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_11_/CP}
+__scl 0.271657 {fdct_zigzag_zigzag_mod_sresult_reg_28__4_/CP}
+__scl 0.261621 {qnr_divider_divider_d_pipe_reg_8__19_/CP}
+__scl 0.294412 {fdct_zigzag_zigzag_mod_sresult_reg_48__9_/CP}
+__scl 0.269027 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_1_/CP}
+__scl 0.277272 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_0_/CP}
+__scl 0.29472 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_20_/CP}
+__scl 0.266815 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_mult_res_reg_18_/CP}
+__scl 0.290598 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_8_/CP}
+__scl 0.294665 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_10_/CP}
+__scl 0.274961 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_16_/CP}
+__scl 0.281799 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_0_/CP}
+__scl 0.293838 {fdct_zigzag_zigzag_mod_sresult_reg_38__8_/CP}
+__scl 0.291475 {qnr_divider_divider_d_pipe_reg_9__3_/CP}
+__scl 0.287277 {fdct_zigzag_zigzag_mod_sresult_reg_44__11_/CP}
+__scl 0.2787 {fdct_zigzag_zigzag_mod_sresult_reg_10__6_/CP}
+__scl 0.294693 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_mult_res_reg_18_/CP}
+__scl 0.268678 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_3_/CP}
+__scl 0.262525 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_12_/CP}
+__scl 0.292701 {qnr_divider_divider_s_pipe_reg_11__1_/CP}
+__scl 0.291651 {fdct_zigzag_zigzag_mod_sresult_reg_43__0_/CP}
+__scl 0.275391 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_19_/CP}
+__scl 0.269031 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_1_/CP}
+__scl 0.265724 {fdct_zigzag_zigzag_mod_sresult_reg_47__5_/CP}
+__scl 0.287928 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_21_/CP}
+__scl 0.286836 {fdct_zigzag_zigzag_mod_sresult_reg_46__0_/CP}
+__scl 0.285407 {fdct_zigzag_zigzag_mod_sresult_reg_21__5_/CP}
+__scl 0.277773 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_17_/CP}
+__scl 0.26374 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_9_/CP}
+__scl 0.276802 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_coef_reg_24_/CP}
+__scl 0.264982 {qnr_divider_divider_s_pipe_reg_8__7_/CP}
+__scl 0.267564 {qnr_divider_id_reg_3_/CP}
+__scl 0.279008 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_1_/CP}
+__scl 0.280434 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_coef_reg_24_/CP}
+__scl 0.279559 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_7_/CP}
+__scl 0.263452 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_15_/CP}
+__scl 0.266085 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_4_/CP}
+__scl 0.275513 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_macu_result_reg_19_/CP}
+__scl 0.289641 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_15_/CP}
+__scl 0.269401 {rle_rz1_sizeo_reg_0_/CP}
+__scl 0.292713 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_18_/CP}
+__scl 0.292983 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_7_/CP}
+__scl 0.289266 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_5_/CP}
+__scl 0.267294 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_coef_reg_22_/CP}
+__scl 0.279191 {rle_rz4_amp_reg_5_/CP}
+__scl 0.290662 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_11_/CP}
+__scl 0.294154 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_3_/CP}
+__scl 0.288578 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_16_/CP}
+__scl 0.291628 {fdct_zigzag_zigzag_mod_sresult_reg_20__3_/CP}
+__scl 0.276277 {fdct_zigzag_zigzag_mod_sresult_reg_60__1_/CP}
+__scl 0.280114 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_coef_reg_30_/CP}
+__scl 0.279655 {fdct_zigzag_zigzag_mod_sresult_reg_44__2_/CP}
+__scl 0.258052 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_18_/CP}
+__scl 0.294525 {fdct_zigzag_zigzag_mod_sresult_reg_36__9_/CP}
+__scl 0.276733 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_1_/CP}
+__scl 0.279423 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_11_/CP}
+__scl 0.295097 {fdct_zigzag_zigzag_mod_sresult_reg_29__9_/CP}
+__scl 0.275155 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_2_/CP}
+__scl 0.258578 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_3_/CP}
+__scl 0.289289 {qnr_divider_divider_s_pipe_reg_4__4_/CP}
+__scl 0.278707 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_coef_reg_23_/CP}
+__scl 0.276723 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_10_/CP}
+__scl 0.261217 {qnr_divider_divider_d_pipe_reg_7__18_/CP}
+__scl 0.291218 {fdct_zigzag_zigzag_mod_sresult_reg_34__7_/CP}
+__scl 0.277266 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_16_/CP}
+__scl 0.26513 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_coef_reg_27_/CP}
+__scl 0.294554 {fdct_zigzag_zigzag_mod_sresult_reg_38__1_/CP}
+__scl 0.262683 {qnr_divider_divider_s_pipe_reg_10__13_/CP}
+__scl 0.279147 {fdct_zigzag_zigzag_mod_sresult_reg_10__5_/CP}
+__scl 0.277022 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_coef_reg_30_/CP}
+__scl 0.294838 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_17_/CP}
+__scl 0.278262 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_coef_reg_21_/CP}
+__scl 0.270577 {rle_rz3_amp_reg_0_/CP}
+__scl 0.261187 {qnr_divider_divider_s_pipe_reg_7__17_/CP}
+__scl 0.292661 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_7_/CP}
+__scl 0.276827 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_8_/CP}
+__scl 0.279689 {fdct_zigzag_zigzag_mod_sresult_reg_18__5_/CP}
+__scl 0.278171 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_coef_reg_29_/CP}
+__scl 0.28655 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_1_/CP}
+__scl 0.277623 {fdct_zigzag_zigzag_mod_sresult_reg_19__6_/CP}
+__scl 0.263051 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_3_/CP}
+__scl 0.289511 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_mult_res_reg_12_/CP}
+__scl 0.288648 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_0_/CP}
+__scl 0.275257 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_11_/CP}
+__scl 0.288078 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_coef_reg_29_/CP}
+__scl 0.289718 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_14_/CP}
+__scl 0.278298 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_coef_reg_25_/CP}
+__scl 0.277177 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_result_reg_14_/CP}
+__scl 0.267809 {fdct_zigzag_zigzag_mod_sresult_reg_48__5_/CP}
+__scl 0.278285 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_4_/CP}
+__scl 0.288812 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_4_/CP}
+__scl 0.291654 {qnr_divider_divider_d_pipe_reg_10__3_/CP}
+__scl 0.269574 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_5_/CP}
+__scl 0.258867 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_10_/CP}
+__scl 0.258919 {fdct_zigzag_zigzag_mod_sresult_reg_18__1_/CP}
+__scl 0.293835 {fdct_zigzag_zigzag_mod_sresult_reg_49__10_/CP}
+__scl 0.277553 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_coef_reg_23_/CP}
+__scl 0.2786 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_10_/CP}
+__scl 0.289277 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_5_/CP}
+__scl 0.2794 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_coef_reg_25_/CP}
+__scl 0.277915 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_2_/CP}
+__scl 0.281729 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_0_/CP}
+__scl 0.292947 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_8_/CP}
+__scl 0.293632 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_18_/CP}
+__scl 0.263501 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_12_/CP}
+__scl 0.26948 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_8_/CP}
+__scl 0.263016 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_5_/CP}
+__scl 0.277237 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_17_/CP}
+__scl 0.282928 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_4_/CP}
+__scl 0.28989 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_16_/CP}
+__scl 0.276991 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_mult_res_reg_17_/CP}
+__scl 0.27824 {rle_rz3_ampo_reg_6_/CP}
+__scl 0.293564 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_mult_res_reg_18_/CP}
+__scl 0.278759 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_6_macu_result_reg_21_/CP}
+__scl 0.269864 {rle_rle_size_reg_1_/CP}
+__scl 0.29319 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_coef_reg_23_/CP}
+__scl 0.265888 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_2_/CP}
+__scl 0.277822 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_coef_reg_28_/CP}
+__scl 0.258839 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_17_/CP}
+__scl 0.27832 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_coef_reg_26_/CP}
+__scl 0.258357 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_16_/CP}
+__scl 0.288202 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_result_reg_18_/CP}
+__scl 0.263381 {qnr_divider_divider_s_pipe_reg_6__21_/CP}
+__scl 0.278996 {fdct_zigzag_zigzag_mod_sresult_reg_9__4_/CP}
+__scl 0.285532 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_mult_res_reg_15_/CP}
+__scl 0.271475 {fdct_zigzag_zigzag_mod_sresult_reg_28__1_/CP}
+__scl 0.287819 {fdct_zigzag_zigzag_mod_sresult_reg_20__4_/CP}
+__scl 0.270247 {rle_rle_amp_reg_4_/CP}
+__scl 0.291512 {fdct_zigzag_zigzag_mod_sresult_reg_20__1_/CP}
+__scl 0.277374 {fdct_zigzag_zigzag_mod_sresult_reg_59__1_/CP}
+__scl 0.262621 {qnr_divider_divider_s_pipe_reg_9__23_/CP}
+__scl 0.26686 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_5_/CP}
+__scl 0.259013 {fdct_zigzag_zigzag_mod_sresult_reg_14__1_/CP}
+__scl 0.27038 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_mult_res_reg_12_/CP}
+__scl 0.27553 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_macu_result_reg_20_/CP}
+__scl 0.290693 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_6_/CP}
+__scl 0.27089 {fdct_zigzag_zigzag_mod_sresult_reg_63__10_/CP}
+__scl 0.293223 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_coef_reg_31_/CP}
+__scl 0.275095 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_coef_reg_27_/CP}
+__scl 0.262863 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_coef_reg_31_/CP}
+__scl 0.274504 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_10_/CP}
+__scl 0.278152 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_11_/CP}
+__scl 0.263916 {qnr_divider_divider_d_pipe_reg_7__11_/CP}
+__scl 0.278321 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_coef_reg_30_/CP}
+__scl 0.25758 {fdct_zigzag_zigzag_mod_sresult_reg_15__7_/CP}
+__scl 0.279464 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_21_/CP}
+__scl 0.265158 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_coef_reg_31_/CP}
+__scl 0.281867 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_mult_res_reg_5_/CP}
+__scl 0.288698 {qnr_divider_divider_d_pipe_reg_9__7_/CP}
+__scl 0.278222 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_8_/CP}
+__scl 0.277269 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_coef_reg_29_/CP}
+__scl 0.274478 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_13_/CP}
+__scl 0.25979 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_18_/CP}
+__scl 0.288925 {fdct_zigzag_zigzag_mod_sresult_reg_46__9_/CP}
+__scl 0.269709 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_7_/CP}
+__scl 0.269556 {rle_rz1_sizeo_reg_1_/CP}
+__scl 0.294425 {fdct_zigzag_zigzag_mod_sresult_reg_41__1_/CP}
+__scl 0.277871 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_12_/CP}
+__scl 0.266848 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_mult_res_reg_17_/CP}
+__scl 0.259531 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_14_/CP}
+__scl 0.290737 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_7_/CP}
+__scl 0.271212 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_21_/CP}
+__scl 0.274715 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_result_reg_18_/CP}
+__scl 0.267839 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_mult_res_reg_13_/CP}
+__scl 0.271675 {fdct_zigzag_zigzag_mod_sresult_reg_26__6_/CP}
+__scl 0.264248 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_7_/CP}
+__scl 0.278275 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_coef_reg_27_/CP}
+__scl 0.294198 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_20_/CP}
+__scl 0.266857 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_0_/CP}
+__scl 0.273372 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_coef_reg_28_/CP}
+__scl 0.29468 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_mult_res_reg_17_/CP}
+__scl 0.262471 {qnr_divider_divider_s_pipe_reg_6__13_/CP}
+__scl 0.261156 {qnr_divider_divider_d_pipe_reg_9__18_/CP}
+__scl 0.27684 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_coef_reg_29_/CP}
+__scl 0.275936 {fdct_zigzag_zigzag_mod_sresult_reg_1__5_/CP}
+__scl 0.289634 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_16_/CP}
+__scl 0.26432 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_0_/CP}
+__scl 0.277115 {fdct_zigzag_zigzag_mod_sresult_reg_12__4_/CP}
+__scl 0.288064 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_coef_reg_26_/CP}
+__scl 0.277055 {fdct_zigzag_zigzag_mod_sresult_reg_59__3_/CP}
+__scl 0.274004 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_16_/CP}
+__scl 0.283395 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_10_/CP}
+__scl 0.261793 {qnr_divider_divider_s_pipe_reg_4__20_/CP}
+__scl 0.289235 {fdct_zigzag_dct_mod_sample_cnt_reg_3_/CP}
+__scl 0.273944 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_15_/CP}
+__scl 0.286915 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_coef_reg_21_/CP}
+__scl 0.2786 {fdct_zigzag_zigzag_mod_sresult_reg_10__1_/CP}
+__scl 0.293155 {fdct_zigzag_zigzag_mod_sresult_reg_22__6_/CP}
+__scl 0.263446 {qnr_divider_divider_s_pipe_reg_5__21_/CP}
+__scl 0.262456 {qnr_divider_divider_s_pipe_reg_6__14_/CP}
+__scl 0.276987 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_coef_reg_30_/CP}
+__scl 0.287356 {fdct_zigzag_zigzag_mod_sresult_reg_42__11_/CP}
+__scl 0.290295 {fdct_zigzag_zigzag_mod_sresult_reg_47__9_/CP}
+__scl 0.275613 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_mult_res_reg_12_/CP}
+__scl 0.28474 {fdct_zigzag_zigzag_mod_sresult_reg_43__9_/CP}
+__scl 0.283386 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_7_/CP}
+__scl 0.276854 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_13_/CP}
+__scl 0.292845 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_mult_res_reg_8_/CP}
+__scl 0.263996 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_5_/CP}
+__scl 0.274473 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_12_/CP}
+__scl 0.268637 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_4_/CP}
+__scl 0.262609 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_16_/CP}
+__scl 0.279352 {fdct_zigzag_zigzag_mod_sresult_reg_45__2_/CP}
+__scl 0.29168 {fdct_zigzag_zigzag_mod_sresult_reg_39__5_/CP}
+__scl 0.292262 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_11_/CP}
+__scl 0.276261 {fdct_zigzag_zigzag_mod_sresult_reg_11__2_/CP}
+__scl 0.25846 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_macu_result_reg_19_/CP}
+__scl 0.27874 {rle_rz4_amp_reg_7_/CP}
+__scl 0.278341 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_2_/CP}
+__scl 0.25754 {fdct_zigzag_zigzag_mod_sresult_reg_15__3_/CP}
+__scl 0.278359 {fdct_zigzag_dct_mod_ddin_reg_1_/CP}
+__scl 0.288834 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_14_/CP}
+__scl 0.291516 {fdct_zigzag_zigzag_mod_sresult_reg_20__5_/CP}
+__scl 0.270799 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_13_/CP}
+__scl 0.267242 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_6_/CP}
+__scl 0.293174 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_2_macu_result_reg_16_/CP}
+__scl 0.266221 {fdct_zigzag_zigzag_mod_sresult_reg_49__6_/CP}
+__scl 0.277786 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_14_/CP}
+__scl 0.266905 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_mult_res_reg_16_/CP}
+__scl 0.278146 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_coef_reg_23_/CP}
+__scl 0.266689 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_coef_reg_30_/CP}
+__scl 0.289037 {fdct_zigzag_dct_mod_dddcnt_reg/CP}
+__scl 0.26728 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_mult_res_reg_10_/CP}
+__scl 0.267942 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_mult_res_reg_12_/CP}
+__scl 0.289392 {fdct_zigzag_zigzag_mod_sresult_reg_32__4_/CP}
+__scl 0.292721 {qnr_divider_divider_d_pipe_reg_11__2_/CP}
+__scl 0.290121 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_17_/CP}
+__scl 0.284686 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_coef_reg_27_/CP}
+__scl 0.288114 {qnr_divider_divider_d_pipe_reg_7__2_/CP}
+__scl 0.262144 {qnr_divider_divider_d_pipe_reg_7__19_/CP}
+__scl 0.261315 {qnr_divider_divider_s_pipe_reg_8__16_/CP}
+__scl 0.264851 {qnr_divider_divider_s_pipe_reg_9__9_/CP}
+__scl 0.263607 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_10_/CP}
+__scl 0.264956 {qnr_divider_divider_d_pipe_reg_10__11_/CP}
+__scl 0.274297 {fdct_zigzag_zigzag_mod_sresult_reg_5__2_/CP}
+__scl 0.289731 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_2_/CP}
+__scl 0.288769 {fdct_zigzag_zigzag_mod_ld_zigzag_reg/CP}
+__scl 0.267058 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_mult_res_reg_15_/CP}
+__scl 0.276915 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_mult_res_reg_2_/CP}
+__scl 0.293787 {fdct_zigzag_zigzag_mod_sresult_reg_48__10_/CP}
+__scl 0.279075 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_coef_reg_29_/CP}
+__scl 0.274517 {fdct_zigzag_zigzag_mod_sresult_reg_57__3_/CP}
+__scl 0.278277 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_mult_res_reg_0_/CP}
+__scl 0.289724 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_coef_reg_25_/CP}
+__scl 0.268688 {fdct_zigzag_zigzag_mod_sresult_reg_32__0_/CP}
+__scl 0.2701 {rle_rz2_amp_reg_0_/CP}
+__scl 0.275728 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_14_/CP}
+__scl 0.288511 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_coef_reg_25_/CP}
+__scl 0.276819 {fdct_zigzag_zigzag_mod_sresult_reg_12__7_/CP}
+__scl 0.267336 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_13_/CP}
+__scl 0.291491 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_15_/CP}
+__scl 0.263236 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_coef_reg_21_/CP}
+__scl 0.289182 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_7_/CP}
+__scl 0.269761 {rle_rle_amp_reg_0_/CP}
+__scl 0.261748 {qnr_divider_divider_s_pipe_reg_5__19_/CP}
+__scl 0.294285 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_18_/CP}
+__scl 0.26177 {qnr_divider_divider_s_pipe_reg_5__20_/CP}
+__scl 0.279423 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_18_/CP}
+__scl 0.271115 {qnr_rq_reg_3_/CP}
+__scl 0.263459 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_13_/CP}
+__scl 0.26807 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_coef_reg_25_/CP}
+__scl 0.266515 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_6_/CP}
+__scl 0.292799 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_16_/CP}
+__scl 0.265134 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_coef_reg_29_/CP}
+__scl 0.281871 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_2_/CP}
+__scl 0.263983 {qnr_divider_divider_d_pipe_reg_6__10_/CP}
+__scl 0.278227 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_coef_reg_21_/CP}
+__scl 0.27692 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_mult_res_reg_18_/CP}
+__scl 0.26383 {qnr_divider_divider_s_pipe_reg_7__11_/CP}
+__scl 0.281795 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_6_/CP}
+__scl 0.293752 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_coef_reg_26_/CP}
+__scl 0.28937 {qnr_divider_divider_s_pipe_reg_4__0_/CP}
+__scl 0.295021 {fdct_zigzag_zigzag_mod_sresult_reg_28__6_/CP}
+__scl 0.263401 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_coef_reg_30_/CP}
+__scl 0.290438 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_10_/CP}
+__scl 0.263347 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_14_/CP}
+__scl 0.278154 {rle_rz4_amp_reg_10_/CP}
+__scl 0.288648 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_2_/CP}
+__scl 0.291015 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_10_/CP}
+__scl 0.261537 {qnr_divider_divider_d_pipe_reg_5__15_/CP}
+__scl 0.276993 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_coef_reg_28_/CP}
+__scl 0.29283 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_21_/CP}
+__scl 0.287821 {fdct_zigzag_zigzag_mod_sresult_reg_20__8_/CP}
+__scl 0.289228 {fdct_zigzag_zigzag_mod_sresult_reg_34__1_/CP}
+__scl 0.27551 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_5_/CP}
+__scl 0.291787 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_8_/CP}
+__scl 0.262646 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_15_/CP}
+__scl 0.293158 {fdct_zigzag_zigzag_mod_sresult_reg_21__7_/CP}
+__scl 0.290627 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_9_/CP}
+__scl 0.292424 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_3_/CP}
+__scl 0.294583 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_coef_reg_28_/CP}
+__scl 0.267878 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_6_/CP}
+__scl 0.26684 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_8_/CP}
+__scl 0.266263 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_6_/CP}
+__scl 0.282336 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_coef_reg_26_/CP}
+__scl 0.290531 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_11_/CP}
+__scl 0.27854 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_7_/CP}
+__scl 0.291708 {qnr_divider_divider_d_pipe_reg_11__4_/CP}
+__scl 0.290846 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_13_/CP}
+__scl 0.291382 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_12_/CP}
+__scl 0.268925 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_0_/CP}
+__scl 0.265453 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_mult_res_reg_17_/CP}
+__scl 0.263681 {qnr_divider_divider_d_pipe_reg_4__22_/CP}
+__scl 0.268407 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_14_/CP}
+__scl 0.275526 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_macu_result_reg_21_/CP}
+__scl 0.288667 {fdct_zigzag_dct_mod_dgo_reg/CP}
+__scl 0.269912 {rle_rz1_dc_reg/CP}
+__scl 0.288009 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_12_/CP}
+__scl 0.293429 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_14_/CP}
+__scl 0.29148 {qnr_divider_divider_s_pipe_reg_9__2_/CP}
+__scl 0.292593 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_21_/CP}
+__scl 0.2632 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_0_/CP}
+__scl 0.259844 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_11_/CP}
+__scl 0.289344 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_coef_reg_22_/CP}
+__scl 0.265007 {qnr_divider_divider_s_pipe_reg_10__11_/CP}
+__scl 0.26868 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_coef_reg_29_/CP}
+__scl 0.263034 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_coef_reg_27_/CP}
+__scl 0.290673 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_7_/CP}
+__scl 0.278018 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_4_/CP}
+__scl 0.261918 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_13_/CP}
+__scl 0.278184 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_mult_res_reg_16_/CP}
+__scl 0.261998 {qnr_divider_divider_d_pipe_reg_11__20_/CP}
+__scl 0.293135 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_20_/CP}
+__scl 0.274912 {fdct_zigzag_zigzag_mod_sresult_reg_6__2_/CP}
+__scl 0.260635 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_17_/CP}
+__scl 0.287074 {fdct_zigzag_zigzag_mod_sresult_reg_45__11_/CP}
+__scl 0.29353 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_16_/CP}
+__scl 0.278363 {rle_rz3_amp_reg_7_/CP}
+__scl 0.283373 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_coef_reg_21_/CP}
+__scl 0.291661 {fdct_zigzag_zigzag_mod_sresult_reg_33__3_/CP}
+__scl 0.262596 {qnr_divider_divider_d_pipe_reg_10__14_/CP}
+__scl 0.274513 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_7_/CP}
+__scl 0.267989 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_coef_reg_26_/CP}
+__scl 0.293919 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_12_/CP}
+__scl 0.269041 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_15_/CP}
+__scl 0.275657 {fdct_zigzag_zigzag_mod_sresult_reg_1__2_/CP}
+__scl 0.277831 {fdct_zigzag_zigzag_mod_sresult_reg_10__7_/CP}
+__scl 0.276762 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_2_/CP}
+__scl 0.25873 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_1_/CP}
+__scl 0.290258 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_14_/CP}
+__scl 0.258755 {fdct_zigzag_zigzag_mod_sresult_reg_16__9_/CP}
+__scl 0.263278 {qnr_divider_divider_s_pipe_reg_6__23_/CP}
+__scl 0.291357 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_11_/CP}
+__scl 0.278814 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_macu_result_reg_16_/CP}
+__scl 0.289423 {qnr_divider_divider_d_pipe_reg_4__2_/CP}
+__scl 0.294962 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_17_/CP}
+__scl 0.262856 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_6_/CP}
+__scl 0.291743 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_result_reg_19_/CP}
+__scl 0.288995 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_5_/CP}
+__scl 0.277538 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_4_/CP}
+__scl 0.26362 {qnr_divider_divider_s_pipe_reg_7__12_/CP}
+__scl 0.295038 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_13_/CP}
+__scl 0.294308 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_8_/CP}
+__scl 0.291306 {fdct_zigzag_zigzag_mod_sresult_reg_34__8_/CP}
+__scl 0.274801 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_17_/CP}
+__scl 0.289886 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_coef_reg_23_/CP}
+__scl 0.258553 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_8_/CP}
+__scl 0.262493 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_17_/CP}
+__scl 0.261706 {qnr_divider_divider_d_pipe_reg_5__17_/CP}
+__scl 0.294565 {fdct_zigzag_zigzag_mod_sresult_reg_48__8_/CP}
+__scl 0.266542 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_15_/CP}
+__scl 0.270583 {rle_rz3_size_reg_1_/CP}
+__scl 0.286812 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_3_/CP}
+__scl 0.271026 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_12_/CP}
+__scl 0.292248 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_10_/CP}
+__scl 0.287982 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_2_/CP}
+__scl 0.275575 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_3_macu_result_reg_19_/CP}
+__scl 0.277952 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_5_/CP}
+__scl 0.265069 {qnr_divider_divider_s_pipe_reg_10__10_/CP}
+__scl 0.270584 {rle_rz3_size_reg_2_/CP}
+__scl 0.265032 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_1_/CP}
+__scl 0.264128 {qnr_divider_divider_s_pipe_reg_8__11_/CP}
+__scl 0.259035 {fdct_zigzag_zigzag_mod_sresult_reg_14__4_/CP}
+__scl 0.274477 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_10_/CP}
+__scl 0.293405 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_19_/CP}
+__scl 0.293182 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_coef_reg_22_/CP}
+__scl 0.293244 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_16_/CP}
+__scl 0.276347 {fdct_zigzag_zigzag_mod_sresult_reg_12__5_/CP}
+__scl 0.291084 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_18_/CP}
+__scl 0.290541 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_12_/CP}
+__scl 0.276036 {fdct_zigzag_zigzag_mod_sresult_reg_12__1_/CP}
+__scl 0.275458 {fdct_zigzag_zigzag_mod_sresult_reg_12__8_/CP}
+__scl 0.277466 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_3_/CP}
+__scl 0.276063 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_result_reg_20_/CP}
+__scl 0.293489 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_14_/CP}
+__scl 0.275527 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_coef_reg_27_/CP}
+__scl 0.277191 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_15_/CP}
+__scl 0.267453 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_mult_res_reg_9_/CP}
+__scl 0.257728 {fdct_zigzag_zigzag_mod_sresult_reg_15__6_/CP}
+__scl 0.293153 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_coef_reg_30_/CP}
+__scl 0.258 {fdct_zigzag_zigzag_mod_sresult_reg_16__1_/CP}
+__scl 0.294449 {fdct_zigzag_zigzag_mod_sresult_reg_36__11_/CP}
+__scl 0.291409 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_21_/CP}
+__scl 0.291122 {fdct_zigzag_zigzag_mod_sresult_reg_32__6_/CP}
+__scl 0.289397 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_16_/CP}
+__scl 0.266554 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_11_/CP}
+__scl 0.277964 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_coef_reg_29_/CP}
+__scl 0.270519 {rle_rz2_dco_reg/CP}
+__scl 0.266392 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_coef_reg_25_/CP}
+__scl 0.275508 {fdct_zigzag_zigzag_mod_sresult_reg_2__2_/CP}
+__scl 0.289911 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_coef_reg_26_/CP}
+__scl 0.258799 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_coef_reg_22_/CP}
+__scl 0.290931 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_10_/CP}
+__scl 0.260369 {fdct_zigzag_zigzag_mod_sresult_reg_0__4_/CP}
+__scl 0.263854 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_coef_reg_28_/CP}
+__scl 0.27688 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_coef_reg_23_/CP}
+__scl 0.276865 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_coef_reg_30_/CP}
+__scl 0.26667 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_14_/CP}
+__scl 0.290773 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_0_/CP}
+__scl 0.266249 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_6_/CP}
+__scl 0.290616 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_3_/CP}
+__scl 0.292322 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_11_/CP}
+__scl 0.263143 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_coef_reg_28_/CP}
+__scl 0.274941 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_18_/CP}
+__scl 0.28789 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_0_/CP}
+__scl 0.262621 {qnr_divider_divider_q_pipe_reg_7__0_/CP}
+__scl 0.289882 {fdct_zigzag_dct_mod_ddin_reg_8_/CP}
+__scl 0.288416 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_20_/CP}
+__scl 0.258741 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_13_/CP}
+__scl 0.291839 {qnr_divider_divider_d_pipe_reg_9__0_/CP}
+__scl 0.290075 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_18_/CP}
+__scl 0.278253 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_6_coef_reg_23_/CP}
+__scl 0.292214 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_4_/CP}
+__scl 0.27688 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_11_/CP}
+__scl 0.275449 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_mult_res_reg_10_/CP}
+__scl 0.277776 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_coef_reg_23_/CP}
+__scl 0.260707 {qnr_divider_divider_d_pipe_reg_8__17_/CP}
+__scl 0.283375 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_coef_reg_22_/CP}
+__scl 0.271189 {fdct_zigzag_zigzag_mod_sresult_reg_63__11_/CP}
+__scl 0.289204 {qnr_divider_divider_s_pipe_reg_5__3_/CP}
+__scl 0.275093 {fdct_zigzag_zigzag_mod_sresult_reg_3__7_/CP}
+__scl 0.274506 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_mult_res_reg_10_/CP}
+__scl 0.289971 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_16_/CP}
+__scl 0.29155 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_16_/CP}
+__scl 0.26439 {qnr_divider_divider_d_pipe_reg_7__10_/CP}
+__scl 0.294527 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_17_/CP}
+__scl 0.275519 {fdct_zigzag_zigzag_mod_sresult_reg_9__8_/CP}
+__scl 0.262667 {qnr_divider_divider_d_pipe_reg_10__23_/CP}
+__scl 0.29241 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_21_/CP}
+__scl 0.291679 {fdct_zigzag_zigzag_mod_sresult_reg_39__6_/CP}
+__scl 0.291583 {fdct_zigzag_zigzag_mod_sresult_reg_53__10_/CP}
+__scl 0.274524 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_11_/CP}
+__scl 0.261662 {qnr_divider_divider_s_pipe_reg_7__15_/CP}
+__scl 0.275116 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_15_/CP}
+__scl 0.273386 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_21_/CP}
+__scl 0.268396 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_15_/CP}
+__scl 0.276709 {fdct_zigzag_zigzag_mod_sresult_reg_57__5_/CP}
+__scl 0.276173 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_coef_reg_24_/CP}
+__scl 0.290428 {fdct_zigzag_dct_mod_sample_cnt_reg_5_/CP}
+__scl 0.276594 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_1_/CP}
+__scl 0.289664 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_7_/CP}
+__scl 0.269837 {rle_rz1_state_reg/CP}
+__scl 0.291712 {fdct_zigzag_zigzag_mod_sresult_reg_20__9_/CP}
+__scl 0.280714 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_16_/CP}
+__scl 0.292428 {fdct_zigzag_zigzag_mod_sresult_reg_52__4_/CP}
+__scl 0.269299 {fdct_zigzag_zigzag_mod_sresult_reg_27__5_/CP}
+__scl 0.263451 {fdct_zigzag_zigzag_mod_sresult_reg_50__0_/CP}
+__scl 0.258231 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_result_reg_13_/CP}
+__scl 0.294314 {fdct_zigzag_zigzag_mod_sresult_reg_56__0_/CP}
+__scl 0.259762 {fdct_zigzag_zigzag_mod_sresult_reg_1__3_/CP}
+__scl 0.290743 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_3_/CP}
+__scl 0.27698 {fdct_zigzag_zigzag_mod_sresult_reg_8__1_/CP}
+__scl 0.271643 {fdct_zigzag_zigzag_mod_sresult_reg_27__7_/CP}
+__scl 0.294621 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_coef_reg_25_/CP}
+__scl 0.289196 {qnr_divider_divider_s_pipe_reg_5__1_/CP}
+__scl 0.277736 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_mult_res_reg_5_/CP}
+__scl 0.27691 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_coef_reg_24_/CP}
+__scl 0.270812 {fdct_zigzag_zigzag_mod_sresult_reg_24__2_/CP}
+__scl 0.265191 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_coef_reg_26_/CP}
+__scl 0.270698 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_11_/CP}
+__scl 0.263457 {qnr_divider_divider_d_pipe_reg_5__20_/CP}
+__scl 0.265384 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_1_/CP}
+__scl 0.291779 {fdct_zigzag_zigzag_mod_sresult_reg_33__0_/CP}
+__scl 0.290857 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_7_/CP}
+__scl 0.277227 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_6_/CP}
+__scl 0.279539 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_macu_result_reg_15_/CP}
+__scl 0.26867 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_4_/CP}
+__scl 0.294214 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_9_/CP}
+__scl 0.2899 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_20_/CP}
+__scl 0.291569 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_coef_reg_28_/CP}
+__scl 0.286893 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_3_/CP}
+__scl 0.25866 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_result_reg_17_/CP}
+__scl 0.29412 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_0_/CP}
+__scl 0.28963 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_coef_reg_23_/CP}
+__scl 0.273339 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_21_/CP}
+__scl 0.267761 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_coef_reg_28_/CP}
+__scl 0.276683 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_12_/CP}
+__scl 0.26352 {qnr_divider_divider_d_pipe_reg_6__24_/CP}
+__scl 0.270384 {rle_rle_zero_cnt_reg_3_/CP}
+__scl 0.29264 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_mult_res_reg_14_/CP}
+__scl 0.287695 {fdct_zigzag_zigzag_mod_sresult_reg_42__8_/CP}
+__scl 0.291081 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_11_/CP}
+__scl 0.266174 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_10_/CP}
+__scl 0.293116 {fdct_zigzag_zigzag_mod_sresult_reg_38__10_/CP}
+__scl 0.289668 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_17_/CP}
+__scl 0.259824 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_12_/CP}
+__scl 0.26516 {qnr_divider_divider_d_pipe_reg_10__10_/CP}
+__scl 0.290779 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_9_/CP}
+__scl 0.262505 {qnr_divider_divider_d_pipe_reg_11__22_/CP}
+__scl 0.275703 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_coef_reg_21_/CP}
+__scl 0.278802 {rle_rz3_amp_reg_5_/CP}
+__scl 0.257516 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_coef_reg_26_/CP}
+__scl 0.259021 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_1_/CP}
+__scl 0.29397 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_15_/CP}
+__scl 0.27833 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_coef_reg_31_/CP}
+__scl 0.266764 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_coef_reg_29_/CP}
+__scl 0.268285 {fdct_zigzag_zigzag_mod_sresult_reg_47__7_/CP}
+__scl 0.269741 {rle_rz1_size_reg_1_/CP}
+__scl 0.293242 {fdct_zigzag_zigzag_mod_sresult_reg_22__5_/CP}
+__scl 0.277525 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_17_/CP}
+__scl 0.27057 {rle_rz2_ampo_reg_1_/CP}
+__scl 0.259519 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_17_/CP}
+__scl 0.289933 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_16_/CP}
+__scl 0.276781 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_mult_res_reg_14_/CP}
+__scl 0.264845 {qnr_divider_divider_d_pipe_reg_9__10_/CP}
+__scl 0.291935 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_15_/CP}
+__scl 0.279543 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_coef_reg_31_/CP}
+__scl 0.285039 {fdct_zigzag_zigzag_mod_sresult_reg_43__7_/CP}
+__scl 0.276941 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_10_/CP}
+__scl 0.290979 {fdct_zigzag_zigzag_mod_sresult_reg_32__11_/CP}
+__scl 0.265184 {qnr_divider_divider_s_pipe_reg_10__9_/CP}
+__scl 0.265144 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_13_/CP}
+__scl 0.277487 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_coef_reg_25_/CP}
+__scl 0.268462 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_9_/CP}
+__scl 0.276896 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_coef_reg_26_/CP}
+__scl 0.270405 {rle_rle_zero_cnt_reg_2_/CP}
+__scl 0.292243 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_mult_res_reg_16_/CP}
+__scl 0.28611 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_coef_reg_21_/CP}
+__scl 0.270703 {fdct_zigzag_zigzag_mod_sresult_reg_63__9_/CP}
+__scl 0.289113 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_19_/CP}
+__scl 0.25987 {fdct_zigzag_zigzag_mod_sresult_reg_0__10_/CP}
+__scl 0.2623 {qnr_divider_divider_d_pipe_reg_7__14_/CP}
+__scl 0.291342 {qnr_divider_divider_s_pipe_reg_9__1_/CP}
+__scl 0.277207 {fdct_zigzag_zigzag_mod_sresult_reg_59__5_/CP}
+__scl 0.290761 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_2_/CP}
+__scl 0.274316 {fdct_zigzag_zigzag_mod_sresult_reg_7__2_/CP}
+__scl 0.288433 {qnr_divider_divider_s_pipe_reg_6__3_/CP}
+__scl 0.261827 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_17_/CP}
+__scl 0.294306 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_13_/CP}
+__scl 0.293396 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_15_/CP}
+__scl 0.25871 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_3_/CP}
+__scl 0.27722 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_coef_reg_31_/CP}
+__scl 0.262644 {qnr_divider_divider_d_pipe_reg_9__24_/CP}
+__scl 0.260314 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_14_/CP}
+__scl 0.289759 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_21_/CP}
+__scl 0.278122 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_coef_reg_24_/CP}
+__scl 0.278827 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_macu_result_reg_14_/CP}
+__scl 0.261703 {qnr_divider_divider_s_pipe_reg_5__17_/CP}
+__scl 0.267872 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_10_/CP}
+__scl 0.259493 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_16_/CP}
+__scl 0.266767 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_coef_reg_26_/CP}
+__scl 0.258893 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_12_/CP}
+__scl 0.279078 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_13_/CP}
+__scl 0.28962 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_10_/CP}
+__scl 0.289651 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_result_reg_17_/CP}
+__scl 0.291803 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_coef_reg_29_/CP}
+__scl 0.278308 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_coef_reg_24_/CP}
+__scl 0.291501 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_coef_reg_26_/CP}
+__scl 0.29459 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_18_/CP}
+__scl 0.275933 {fdct_zigzag_zigzag_mod_sresult_reg_59__0_/CP}
+__scl 0.294644 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_coef_reg_23_/CP}
+__scl 0.278028 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_4_macu_result_reg_19_/CP}
+__scl 0.277787 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_6_coef_reg_21_/CP}
+__scl 0.294185 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_10_/CP}
+__scl 0.268927 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_mult_res_reg_15_/CP}
+__scl 0.277696 {fdct_zigzag_zigzag_mod_sresult_reg_57__6_/CP}
+__scl 0.290752 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_18_/CP}
+__scl 0.261597 {qnr_divider_divider_s_pipe_reg_10__18_/CP}
+__scl 0.291905 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_5_/CP}
+__scl 0.292713 {qnr_divider_divider_d_pipe_reg_11__0_/CP}
+__scl 0.262546 {qnr_divider_divider_s_pipe_reg_10__14_/CP}
+__scl 0.288946 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_coef_reg_27_/CP}
+__scl 0.261913 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_12_/CP}
+__scl 0.294595 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_18_/CP}
+__scl 0.278044 {rle_rz1_ampo_reg_11_/CP}
+__scl 0.288709 {qnr_divider_divider_s_pipe_reg_9__7_/CP}
+__scl 0.294263 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_8_/CP}
+__scl 0.286929 {fdct_zigzag_zigzag_mod_sresult_reg_46__4_/CP}
+__scl 0.288942 {fdct_zigzag_zigzag_mod_sresult_reg_34__3_/CP}
+__scl 0.291213 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_13_/CP}
+__scl 0.294721 {fdct_zigzag_zigzag_mod_sresult_reg_38__3_/CP}
+__scl 0.288578 {qnr_divider_divider_d_pipe_reg_7__4_/CP}
+__scl 0.276 {fdct_zigzag_zigzag_mod_sresult_reg_3__2_/CP}
+__scl 0.266511 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_coef_reg_28_/CP}
+__scl 0.266993 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_9_/CP}
+__scl 0.265182 {qnr_divider_divider_s_pipe_reg_11__10_/CP}
+__scl 0.261862 {qnr_divider_divider_d_pipe_reg_11__16_/CP}
+__scl 0.277029 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_coef_reg_25_/CP}
+__scl 0.258106 {fdct_zigzag_zigzag_mod_sresult_reg_16__4_/CP}
+__scl 0.286952 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_coef_reg_30_/CP}
+__scl 0.277014 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_coef_reg_28_/CP}
+__scl 0.274965 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_16_/CP}
+__scl 0.262513 {qnr_divider_divider_d_pipe_reg_11__24_/CP}
+__scl 0.293114 {fdct_zigzag_zigzag_mod_sresult_reg_40__6_/CP}
+__scl 0.291086 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_15_/CP}
+__scl 0.288174 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_21_/CP}
+__scl 0.275164 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_15_/CP}
+__scl 0.293229 {fdct_zigzag_zigzag_mod_sresult_reg_40__8_/CP}
+__scl 0.291054 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_8_/CP}
+__scl 0.276139 {fdct_zigzag_zigzag_mod_sresult_reg_58__0_/CP}
+__scl 0.277524 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_result_reg_12_/CP}
+__scl 0.293167 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_20_/CP}
+__scl 0.267452 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_coef_reg_25_/CP}
+__scl 0.288451 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_3_/CP}
+__scl 0.271051 {qnr_rq_reg_11_/CP}
+__scl 0.289952 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_2_/CP}
+__scl 0.264504 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_2_/CP}
+__scl 0.291502 {fdct_zigzag_zigzag_mod_sresult_reg_32__7_/CP}
+__scl 0.290612 {fdct_zigzag_zigzag_mod_sresult_reg_52__10_/CP}
+__scl 0.277912 {fdct_zigzag_zigzag_mod_sresult_reg_13__5_/CP}
+__scl 0.277992 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_mult_res_reg_3_/CP}
+__scl 0.291122 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_6_/CP}
+__scl 0.290662 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_8_/CP}
+__scl 0.291975 {qnr_divider_divider_s_pipe_reg_11__7_/CP}
+__scl 0.289693 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_16_/CP}
+__scl 0.269016 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_12_/CP}
+__scl 0.289805 {fdct_zigzag_zigzag_mod_sresult_reg_34__5_/CP}
+__scl 0.26321 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_coef_reg_23_/CP}
+__scl 0.262504 {qnr_divider_divider_s_pipe_reg_7__21_/CP}
+__scl 0.271049 {rle_rz4_ampo_reg_1_/CP}
+__scl 0.28855 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_coef_reg_22_/CP}
+__scl 0.29099 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_9_/CP}
+__scl 0.278 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_7_/CP}
+__scl 0.294095 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_2_/CP}
+__scl 0.294697 {fdct_zigzag_zigzag_mod_sresult_reg_41__11_/CP}
+__scl 0.28756 {fdct_zigzag_zigzag_mod_sresult_reg_43__6_/CP}
+__scl 0.261517 {qnr_divider_divider_s_pipe_reg_5__15_/CP}
+__scl 0.286739 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_0_/CP}
+__scl 0.277389 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_4_/CP}
+__scl 0.277927 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_8_/CP}
+__scl 0.277554 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_4_/CP}
+__scl 0.2874 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_coef_reg_21_/CP}
+__scl 0.262777 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_8_/CP}
+__scl 0.266893 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_1_/CP}
+__scl 0.27685 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_coef_reg_22_/CP}
+__scl 0.283116 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_8_/CP}
+__scl 0.275512 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_13_/CP}
+__scl 0.269064 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_mult_res_reg_14_/CP}
+__scl 0.274943 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_3_/CP}
+__scl 0.290651 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_16_/CP}
+__scl 0.259051 {fdct_zigzag_zigzag_mod_sresult_reg_17__5_/CP}
+__scl 0.263782 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_26_/CP}
+__scl 0.268656 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_5_/CP}
+__scl 0.278747 {rle_rz3_ampo_reg_7_/CP}
+__scl 0.295129 {fdct_zigzag_zigzag_mod_sresult_reg_26__10_/CP}
+__scl 0.292515 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_mult_res_reg_13_/CP}
+__scl 0.266266 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_17_/CP}
+__scl 0.267397 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_coef_reg_27_/CP}
+__scl 0.262685 {qnr_divider_divider_d_pipe_reg_7__22_/CP}
+__scl 0.293037 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_10_/CP}
+__scl 0.288929 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_21_/CP}
+__scl 0.288714 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_11_/CP}
+__scl 0.268808 {fdct_zigzag_zigzag_mod_sresult_reg_49__7_/CP}
+__scl 0.278036 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_20_/CP}
+__scl 0.276904 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_result_reg_2_/CP}
+__scl 0.263963 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_coef_reg_27_/CP}
+__scl 0.263059 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_13_/CP}
+__scl 0.292712 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_19_/CP}
+__scl 0.294201 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_coef_reg_23_/CP}
+__scl 0.294382 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_15_/CP}
+__scl 0.289317 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_4_/CP}
+__scl 0.27795 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_11_/CP}
+__scl 0.275766 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_14_/CP}
+__scl 0.277829 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_5_/CP}
+__scl 0.283344 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_coef_reg_28_/CP}
+__scl 0.290923 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_coef_reg_25_/CP}
+__scl 0.288838 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_1_/CP}
+__scl 0.289615 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_17_/CP}
+__scl 0.290498 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_9_/CP}
+__scl 0.259756 {fdct_zigzag_zigzag_mod_sresult_reg_4__3_/CP}
+__scl 0.290685 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_10_/CP}
+__scl 0.29453 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_17_/CP}
+__scl 0.290411 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_8_/CP}
+__scl 0.294601 {fdct_zigzag_zigzag_mod_sresult_reg_37__6_/CP}
+__scl 0.2914 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_10_/CP}
+__scl 0.275742 {fdct_zigzag_zigzag_mod_sresult_reg_13__2_/CP}
+__scl 0.290879 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_7_/CP}
+__scl 0.267052 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_coef_reg_27_/CP}
+__scl 0.294243 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_17_/CP}
+__scl 0.287453 {fdct_zigzag_zigzag_mod_sresult_reg_20__2_/CP}
+__scl 0.294315 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_11_/CP}
+__scl 0.275033 {fdct_zigzag_zigzag_mod_sresult_reg_2__6_/CP}
+__scl 0.268814 {fdct_zigzag_zigzag_mod_sresult_reg_30__1_/CP}
+__scl 0.289252 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_coef_reg_22_/CP}
+__scl 0.286994 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_coef_reg_29_/CP}
+__scl 0.29498 {fdct_zigzag_zigzag_mod_sresult_reg_28__10_/CP}
+__scl 0.279202 {rle_rz1_ampo_reg_5_/CP}
+__scl 0.289404 {qnr_divider_divider_d_pipe_reg_4__0_/CP}
+__scl 0.267067 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_mult_res_reg_14_/CP}
+__scl 0.269903 {rle_rz1_ampo_reg_1_/CP}
+__scl 0.277789 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_3_/CP}
+__scl 0.290992 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_20_/CP}
+__scl 0.279403 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_coef_reg_26_/CP}
+__scl 0.268781 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_4_/CP}
+__scl 0.259792 {fdct_zigzag_zigzag_mod_sresult_reg_14__5_/CP}
+__scl 0.277261 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_16_/CP}
+__scl 0.282211 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_3_/CP}
+__scl 0.276673 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_11_/CP}
+__scl 0.291908 {fdct_zigzag_zigzag_mod_sresult_reg_33__1_/CP}
+__scl 0.266186 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_4_/CP}
+__scl 0.277484 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_6_/CP}
+__scl 0.276683 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_15_/CP}
+__scl 0.25893 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_13_/CP}
+__scl 0.277437 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_6_/CP}
+__scl 0.260565 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_18_/CP}
+__scl 0.265167 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_9_/CP}
+__scl 0.273132 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_19_/CP}
+__scl 0.276068 {fdct_zigzag_zigzag_mod_sresult_reg_7__9_/CP}
+__scl 0.276647 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_12_/CP}
+__scl 0.276198 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_4_/CP}
+__scl 0.288941 {fdct_zigzag_zigzag_mod_sresult_reg_41__8_/CP}
+__scl 0.291309 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_9_/CP}
+__scl 0.291221 {fdct_zigzag_zigzag_mod_sresult_reg_50__11_/CP}
+__scl 0.289634 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_coef_reg_30_/CP}
+__scl 0.263727 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_8_/CP}
+__scl 0.269658 {fdct_zigzag_zigzag_mod_sresult_reg_26__1_/CP}
+__scl 0.262529 {qnr_divider_divider_d_pipe_reg_6__13_/CP}
+__scl 0.267476 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_9_/CP}
+__scl 0.27734 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_mult_res_reg_13_/CP}
+__scl 0.267337 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_11_/CP}
+__scl 0.270881 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_coef_reg_28_/CP}
+__scl 0.274841 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_20_/CP}
+__scl 0.275877 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_coef_reg_25_/CP}
+__scl 0.27551 {fdct_zigzag_zigzag_mod_sresult_reg_10__8_/CP}
+__scl 0.288466 {qnr_divider_divider_d_pipe_reg_6__5_/CP}
+__scl 0.286948 {fdct_zigzag_zigzag_mod_sresult_reg_46__3_/CP}
+__scl 0.278373 {rle_rz4_amp_reg_8_/CP}
+__scl 0.289618 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_5_/CP}
+__scl 0.262655 {qnr_divider_divider_d_pipe_reg_7__24_/CP}
+__scl 0.275129 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_coef_reg_26_/CP}
+__scl 0.293961 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_mult_res_reg_13_/CP}
+__scl 0.263685 {qnr_divider_divider_d_pipe_reg_5__23_/CP}
+__scl 0.266458 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_14_/CP}
+__scl 0.275661 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_coef_reg_29_/CP}
+__scl 0.26744 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_coef_reg_28_/CP}
+__scl 0.277324 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_8_/CP}
+__scl 0.2768 {fdct_zigzag_zigzag_mod_sresult_reg_61__4_/CP}
+__scl 0.276812 {fdct_zigzag_zigzag_mod_sresult_reg_19__0_/CP}
+__scl 0.257609 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_6_/CP}
+__scl 0.263058 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_9_/CP}
+__scl 0.277897 {fdct_zigzag_zigzag_mod_sresult_reg_10__2_/CP}
+__scl 0.270476 {fdct_zigzag_zigzag_mod_sresult_reg_25__0_/CP}
+__scl 0.28674 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_2_/CP}
+__scl 0.263733 {qnr_divider_divider_s_pipe_reg_8__12_/CP}
+__scl 0.290385 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_7_/CP}
+__scl 0.263699 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_8_/CP}
+__scl 0.28497 {fdct_zigzag_zigzag_mod_sresult_reg_43__8_/CP}
+__scl 0.289496 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_coef_reg_31_/CP}
+__scl 0.292701 {qnr_divider_divider_s_pipe_reg_11__3_/CP}
+__scl 0.286036 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_6_/CP}
+__scl 0.287325 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_mult_res_reg_15_/CP}
+__scl 0.278197 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_12_/CP}
+__scl 0.258234 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_coef_reg_28_/CP}
+__scl 0.270614 {rle_rz3_dc_reg/CP}
+__scl 0.292878 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_13_/CP}
+__scl 0.277238 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_3_/CP}
+__scl 0.259494 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_21_/CP}
+__scl 0.289672 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_coef_reg_30_/CP}
+__scl 0.293993 {fdct_zigzag_zigzag_mod_sresult_reg_24__5_/CP}
+__scl 0.27792 {fdct_zigzag_zigzag_mod_sresult_reg_58__6_/CP}
+__scl 0.277928 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_5_/CP}
+__scl 0.259666 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_15_/CP}
+__scl 0.263303 {qnr_divider_divider_q_pipe_reg_5__0_/CP}
+__scl 0.290686 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_6_/CP}
+__scl 0.290766 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_coef_reg_25_/CP}
+__scl 0.293097 {fdct_zigzag_zigzag_mod_sresult_reg_42__0_/CP}
+__scl 0.28558 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_15_/CP}
+__scl 0.265217 {qnr_divider_divider_d_pipe_reg_11__10_/CP}
+__scl 0.263057 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_12_/CP}
+__scl 0.273422 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_18_/CP}
+__scl 0.262936 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_16_/CP}
+__scl 0.289172 {fdct_zigzag_dct_mod_ddcnt_reg/CP}
+__scl 0.27703 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_9_/CP}
+__scl 0.271087 {rle_rz3_den_reg/CP}
+__scl 0.291923 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_coef_reg_26_/CP}
+__scl 0.283408 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_11_/CP}
+__scl 0.263866 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_8_/CP}
+__scl 0.291719 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_coef_reg_28_/CP}
+__scl 0.291862 {fdct_zigzag_zigzag_mod_sresult_reg_53__9_/CP}
+__scl 0.278822 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_2_/CP}
+__scl 0.28963 {fdct_zigzag_zigzag_mod_sresult_reg_55__2_/CP}
+__scl 0.261223 {qnr_divider_divider_s_pipe_reg_7__18_/CP}
+__scl 0.278269 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_6_/CP}
+__scl 0.278092 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_result_reg_5_/CP}
+__scl 0.29317 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_21_/CP}
+__scl 0.278038 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_21_/CP}
+__scl 0.257908 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_13_/CP}
+__scl 0.270149 {rle_rz1_rlen_reg_1_/CP}
+__scl 0.276733 {fdct_zigzag_zigzag_mod_sresult_reg_9__9_/CP}
+__scl 0.276704 {fdct_zigzag_zigzag_mod_sresult_reg_58__2_/CP}
+__scl 0.286348 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_coef_reg_31_/CP}
+__scl 0.278844 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_5_/CP}
+__scl 0.274032 {fdct_zigzag_zigzag_mod_sresult_reg_4__8_/CP}
+__scl 0.276418 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_coef_reg_27_/CP}
+__scl 0.291478 {fdct_zigzag_zigzag_mod_sresult_reg_33__5_/CP}
+__scl 0.291937 {qnr_divider_divider_s_pipe_reg_10__7_/CP}
+__scl 0.277812 {fdct_zigzag_zigzag_mod_sresult_reg_11__6_/CP}
+__scl 0.28587 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_0_/CP}
+__scl 0.291473 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_20_/CP}
+__scl 0.290632 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_coef_reg_30_/CP}
+__scl 0.262901 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_6_/CP}
+__scl 0.276272 {fdct_zigzag_zigzag_mod_sresult_reg_7__5_/CP}
+__scl 0.292597 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_2_macu_result_reg_20_/CP}
+__scl 0.258241 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_result_reg_21_/CP}
+__scl 0.28847 {qnr_divider_divider_s_pipe_reg_7__3_/CP}
+__scl 0.292986 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_11_/CP}
+__scl 0.287118 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_19_/CP}
+__scl 0.268362 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_8_/CP}
+__scl 0.269858 {rle_rle_size_reg_2_/CP}
+__scl 0.291933 {qnr_divider_divider_d_pipe_reg_11__6_/CP}
+__scl 0.289848 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_19_/CP}
+__scl 0.287572 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_coef_reg_23_/CP}
+__scl 0.267566 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_8_/CP}
+__scl 0.26198 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_7_/CP}
+__scl 0.265234 {qnr_divider_divider_d_pipe_reg_11__9_/CP}
+__scl 0.273747 {fdct_zigzag_zigzag_mod_sresult_reg_5__9_/CP}
+__scl 0.276817 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_0_/CP}
+__scl 0.259284 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_17_/CP}
+__scl 0.277212 {fdct_zigzag_zigzag_mod_sresult_reg_59__2_/CP}
+__scl 0.276869 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_result_reg_1_/CP}
+__scl 0.27473 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_20_/CP}
+__scl 0.29313 {fdct_zigzag_zigzag_mod_sresult_reg_38__11_/CP}
+__scl 0.289966 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_3_/CP}
+__scl 0.264309 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_0_/CP}
+__scl 0.276517 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_mult_res_reg_12_/CP}
+__scl 0.287386 {fdct_zigzag_zigzag_mod_sresult_reg_44__7_/CP}
+__scl 0.289763 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_5_/CP}
+__scl 0.290909 {fdct_zigzag_zigzag_mod_sresult_reg_30__8_/CP}
+__scl 0.291492 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_coef_reg_21_/CP}
+__scl 0.276771 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_1_/CP}
+__scl 0.287869 {qnr_divider_divider_d_pipe_reg_6__1_/CP}
+__scl 0.288649 {qnr_divider_divider_s_pipe_reg_5__5_/CP}
+__scl 0.262884 {qnr_divider_divider_d_pipe_reg_11__12_/CP}
+__scl 0.294996 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_result_reg_18_/CP}
+__scl 0.293744 {fdct_zigzag_zigzag_mod_sresult_reg_50__4_/CP}
+__scl 0.267413 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_12_/CP}
+__scl 0.285594 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_17_/CP}
+__scl 0.288418 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_3_/CP}
+__scl 0.275737 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_mult_res_reg_15_/CP}
+__scl 0.291852 {fdct_zigzag_zigzag_mod_sresult_reg_55__5_/CP}
+__scl 0.277172 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_5_/CP}
+__scl 0.275509 {fdct_zigzag_zigzag_mod_sresult_reg_9__11_/CP}
+__scl 0.277542 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_coef_reg_26_/CP}
+__scl 0.291874 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_21_/CP}
+__scl 0.288883 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_coef_reg_21_/CP}
+__scl 0.291907 {qnr_divider_divider_s_pipe_reg_10__6_/CP}
+__scl 0.268977 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_11_/CP}
+__scl 0.292487 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_6_/CP}
+__scl 0.265188 {qnr_divider_divider_s_pipe_reg_11__9_/CP}
+__scl 0.291105 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_6_/CP}
+__scl 0.291255 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_mult_res_reg_18_/CP}
+__scl 0.258819 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_coef_reg_27_/CP}
+__scl 0.25753 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_8_/CP}
+__scl 0.262283 {qnr_divider_divider_s_pipe_reg_12__24_/CP}
+__scl 0.290468 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_6_/CP}
+__scl 0.291433 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_19_/CP}
+__scl 0.29272 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_20_/CP}
+__scl 0.295027 {fdct_zigzag_zigzag_mod_sresult_reg_29__11_/CP}
+__scl 0.276762 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_result_reg_0_/CP}
+__scl 0.268991 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_2_/CP}
+__scl 0.277838 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_coef_reg_28_/CP}
+__scl 0.288076 {qnr_divider_divider_s_pipe_reg_6__0_/CP}
+__scl 0.268313 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_13_/CP}
+__scl 0.277122 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_15_/CP}
+__scl 0.290262 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_8_/CP}
+__scl 0.26283 {qnr_divider_divider_s_pipe_reg_11__13_/CP}
+__scl 0.265533 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_1_/CP}
+__scl 0.277246 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_18_/CP}
+__scl 0.291498 {qnr_divider_divider_s_pipe_reg_10__5_/CP}
+__scl 0.259107 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_20_/CP}
+__scl 0.285781 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_coef_reg_28_/CP}
+__scl 0.275292 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_coef_reg_26_/CP}
+__scl 0.269153 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_10_/CP}
+__scl 0.289505 {fdct_zigzag_zigzag_mod_sresult_reg_32__1_/CP}
+__scl 0.278279 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_6_macu_mult_res_reg_0_/CP}
+__scl 0.259763 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_17_/CP}
+__scl 0.263567 {qnr_divider_divider_s_pipe_reg_5__23_/CP}
+__scl 0.263816 {fdct_zigzag_zigzag_mod_sresult_reg_53__6_/CP}
+__scl 0.27569 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_8_/CP}
+__scl 0.268559 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_0_/CP}
+__scl 0.288314 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_coef_reg_23_/CP}
+__scl 0.292378 {fdct_zigzag_zigzag_mod_sresult_reg_49__11_/CP}
+__scl 0.277636 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_result_reg_21_/CP}
+__scl 0.287729 {fdct_zigzag_zigzag_mod_sresult_reg_42__9_/CP}
+__scl 0.265911 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_17_/CP}
+__scl 0.269117 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_6_/CP}
+__scl 0.270361 {rle_rle_zero_cnt_reg_1_/CP}
+__scl 0.294525 {fdct_zigzag_zigzag_mod_sresult_reg_47__8_/CP}
+__scl 0.2917 {fdct_zigzag_zigzag_mod_sresult_reg_33__9_/CP}
+__scl 0.261511 {qnr_divider_divider_d_pipe_reg_6__17_/CP}
+__scl 0.263266 {fdct_zigzag_zigzag_mod_sresult_reg_53__0_/CP}
+__scl 0.288693 {qnr_divider_divider_d_pipe_reg_5__7_/CP}
+__scl 0.2672 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_10_/CP}
+__scl 0.289207 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_7_/CP}
+__scl 0.274049 {fdct_zigzag_zigzag_mod_sresult_reg_6__6_/CP}
+__scl 0.262939 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_15_/CP}
+__scl 0.291742 {qnr_divider_divider_s_pipe_reg_9__5_/CP}
+__scl 0.263295 {qnr_divider_divider_s_pipe_reg_6__20_/CP}
+__scl 0.264044 {qnr_divider_id_reg_7_/CP}
+__scl 0.259082 {fdct_zigzag_zigzag_mod_sresult_reg_18__9_/CP}
+__scl 0.258107 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_coef_reg_24_/CP}
+__scl 0.277355 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_15_/CP}
+__scl 0.292798 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_17_/CP}
+__scl 0.258389 {fdct_zigzag_zigzag_mod_sresult_reg_18__0_/CP}
+__scl 0.270576 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_result_reg_14_/CP}
+__scl 0.274637 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_1_/CP}
+__scl 0.264009 {qnr_divider_divider_d_pipe_reg_6__9_/CP}
+__scl 0.264894 {fdct_zigzag_zigzag_mod_sresult_reg_47__0_/CP}
+__scl 0.262969 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_coef_reg_30_/CP}
+__scl 0.286536 {fdct_zigzag_dct_mod_ddin_reg_7_/CP}
+__scl 0.277688 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_7_/CP}
+__scl 0.289528 {fdct_zigzag_zigzag_mod_sresult_reg_56__2_/CP}
+__scl 0.290433 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_4_/CP}
+__scl 0.278818 {rle_rz3_ampo_reg_5_/CP}
+__scl 0.276518 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_10_/CP}
+__scl 0.287556 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_coef_reg_21_/CP}
+__scl 0.291189 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_20_/CP}
+__scl 0.2864 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_coef_reg_29_/CP}
+__scl 0.267429 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_13_/CP}
+__scl 0.287569 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_coef_reg_25_/CP}
+__scl 0.2797 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_17_/CP}
+__scl 0.279341 {fdct_zigzag_zigzag_mod_sresult_reg_45__4_/CP}
+__scl 0.264014 {qnr_divider_divider_s_pipe_reg_6__9_/CP}
+__scl 0.27024 {rle_rle_amp_reg_3_/CP}
+__scl 0.292145 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_0_/CP}
+__scl 0.263909 {fdct_zigzag_zigzag_mod_sresult_reg_51__1_/CP}
+__scl 0.289692 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_7_/CP}
+__scl 0.291975 {qnr_divider_divider_d_pipe_reg_11__8_/CP}
+__scl 0.277993 {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_7_/CP}
+__scl 0.279072 {rle_rz2_amp_reg_10_/CP}
+__scl 0.269816 {rle_rz1_rlen_reg_3_/CP}
+__scl 0.293079 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_5_/CP}
+__scl 0.286088 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_coef_reg_23_/CP}
+__scl 0.277184 {fdct_zigzag_zigzag_mod_sresult_reg_13__1_/CP}
+__scl 0.278749 {rle_rz4_ampo_reg_6_/CP}
+__scl 0.271137 {fdct_zigzag_zigzag_mod_sresult_reg_63__5_/CP}
+__scl 0.276924 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_11_/CP}
+__scl 0.27551 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_10_/CP}
+__scl 0.290476 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_9_/CP}
+__scl 0.274471 {fdct_zigzag_zigzag_mod_sresult_reg_14__10_/CP}
+__scl 0.268855 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_0_/CP}
+__scl 0.274644 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_coef_reg_25_/CP}
+__scl 0.294157 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_8_/CP}
+__scl 0.288863 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_coef_reg_21_/CP}
+__scl 0.264033 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_7_/CP}
+__scl 0.27106 {fdct_zigzag_zigzag_mod_sresult_reg_63__4_/CP}
+__scl 0.267242 {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_2_/CP}
+__scl 0.278301 {fdct_zigzag_dct_mod_dct_block_0_dct_unit_6_macu_mult_res_reg_2_/CP}
+__scl 0.263253 {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_0_/CP}
+__scl 0.291996 {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_16_/CP}
+__scl 0.288236 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_coef_reg_22_/CP}
+__scl 0.292116 {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_14_/CP}
+__scl 0.293162 {fdct_zigzag_zigzag_mod_sresult_reg_40__11_/CP}
+__scl 0.290032 {fdct_zigzag_zigzag_mod_sresult_reg_30__10_/CP}
+__scl 0.273991 {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_17_/CP}
+__scl 0.279177 {rle_rz1_ampo_reg_10_/CP}
+__scl 0.276742 {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_result_reg_4_/CP}
+__scl 0.277147 {fdct_zigzag_zigzag_mod_sresult_reg_13__6_/CP}
+
+unalias __scl
+
+global skew_opt_skip_propagated_clocks
+if { ([info exists skew_opt_skip_propagated_clocks] == 0) || ($skew_opt_skip_propagated_clocks == "false") } {
+  echo "--> sourcing set_clock_tree_exceptions"
+  alias __scte set_clock_tree_exceptions
+  alias __rcte remove_clock_tree_exceptions
+} else {
+  alias __scte { # }
+  alias __rcte { # }
+}
+suppress_message CTS-239
+suppress_message CTS-117
+
+## optimized pins
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_10__8_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_27__4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {qnr_divider_id_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_9__1_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_41__6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_27__8_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_31__6_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_48__4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_6_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_25__4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_51__8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_32__3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_9__4_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {qnr_dep_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_ampo_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz4_ampo_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_4__22_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_25__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_23__10_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_11__2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_7__3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_9__12_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_21__0_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {dfdct_dout_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_9__20_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_46__10_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_41__3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_size_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_27__6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_13__4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_50__9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_52__3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_sizeo_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_8__6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz2_amp_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {qnr_rq_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_24__8_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_8__7_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_13__9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_41__5_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_16__2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_9__3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_8__2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_7__10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_6__7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_47__2_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_45__1_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_49__1_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_18__6_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_25__8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_61__1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_8__2_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_2__9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rle_amp_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_amp_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_47__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_11__1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_51__6_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_10__21_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {dfdct_dout_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_8__11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_25__11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_5__6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_57__1_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_6_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_45__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_59__6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_53__1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_8__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_61__3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_23__1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_douten_reg/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_5__11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_6_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz3_size_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_11__7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_10__1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_22__9_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_id_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_8__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rle_den_reg/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_3_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_38__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_18__11_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_8__17_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_14__11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_6__18_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_9__12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_sample_cnt_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_21__4_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_6__10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_53__7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_42__5_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {dfdct_dout_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_29__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_9__8_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_17__1_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_7__9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_37__8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_51__5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_6__11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_ddin_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_7__16_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {dfdct_dout_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_10__3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_24__9_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_42__2_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_8__8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_10__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_8__4_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_7__23_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_21__1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_23__3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_45__8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_10__21_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_10__17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_5__2_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_sizeo_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {qnr_rq_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_5__10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_31__2_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_2__10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz3_ampo_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_50__3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_40__7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_39__2_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_11__21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_33__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_44__0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_33__8_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_49__0_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_dc_reg/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_58__3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_ddin_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_37__7_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {qnr_rq_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_14__8_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_25__3_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz3_ampo_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_51__2_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_51__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_15__1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_52__7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_43__2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_20__7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_5__13_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_9__1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_5__4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz3_amp_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_54__11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_19__11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_7__6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_15__11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_10__22_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_6_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_4_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_7__10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_31__7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_7__15_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_10__18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_39__8_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_5__0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_20__11_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_11__18_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_6__3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_34__10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_7__0_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_10__7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_2__7_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_deno_reg/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz1_amp_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_6__2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_rlen_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_42__4_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_3__6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_11__3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_size_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_38__2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_rlen_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {qnr_dep_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_sample_cnt_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_2__4_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_22__0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_10__19_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_10__15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_61__0_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_10__10_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_7__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz1_ampo_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_size_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz3_ampo_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_45__5_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {dfdct_dout_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rle_rlen_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_11__5_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_24__0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_30__5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_4__10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_17__7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_6__16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz2_amp_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_amp_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_16__11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_10__19_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_38__7_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_5__16_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_63__8_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_11__17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_58__5_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_10__2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_10__15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_58__7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_4__2_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_54__8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_7__5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_7__20_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_9__18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_12__11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_rlen_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_61__5_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_6__6_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_16__8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_0__0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_29__7_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_8__19_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_8__13_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_46__11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_10__4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_8__9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_3__3_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_8__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_56__3_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_dco_reg/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_9__2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_5__1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_5__8_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_50__7_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_11__20_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_8__4_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_27__9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_11__10_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_7__12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_3__5_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz4_ampo_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_30__7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_29__8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_27__10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_33__10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_17__2_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_3_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_0__7_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_22__11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_6_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_37__5_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_5__24_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_18__7_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_7__9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_54__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_31__10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_2_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_12__6_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {dfdct_dout_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_52__1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_26__4_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_38__4_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_6__12_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_63__2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_48__11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_11__18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_7__6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_6_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_6__22_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_54__10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {qnr_dep_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_0__2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_25__5_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_27__3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_5__4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_9__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_52__9_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_4__3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_5__7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_8__1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_6__10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_6__7_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_30__4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_6__4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_17__10_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz2_amp_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_38__9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_amp_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz2_ampo_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_42__6_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_38__6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_15__10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz4_amp_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_6__3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_38__5_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_44__4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_13__10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {qnr_rq_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz1_ampo_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_31__8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz2_ampo_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_53__3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_26__0_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_30__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_34__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_4_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_10__9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz3_amp_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_56__4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_9__16_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_3__8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_54__1_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_9__4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz3_amp_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_6__16_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_sizeo_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_9__2_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_8__24_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_47__10_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz1_ampo_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz4_ampo_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_54__3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_42__1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz4_amp_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_24__6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_2_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_52__8_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_7__7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_9__19_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_11__14_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_23__9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_0__6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_q_pipe_reg_9__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_ampo_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_20__6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_8__15_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_34__9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_deno_reg/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_sample_cnt_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_56__7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_8__10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {dfdct_dout_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_8__3_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_41__0_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_4__1_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_7__19_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_10__2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_43__11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_9__16_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_amp_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_46__2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_27__1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_48__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_13__8_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_8__1_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_48__2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_53__4_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_8__20_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_10__20_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_6_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_56__1_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_16__7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_6__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_6__4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_39__1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_37__10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_ddin_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_40__0_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_6_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_14__0_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_10__12_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_5__18_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_34__4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_4_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_58__1_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_9__17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_10__3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz4_ampo_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_13__7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_3__11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_19__4_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_4__0_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_11__19_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_4__7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_0__11_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_8__13_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_40__1_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_11__5_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rle_size_reg_3_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_7__24_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_8__3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_17__9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_22__8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_32__8_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_24__1_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz3_amp_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_10__5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_41__10_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rle_rlen_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_11__14_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_go_reg/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_26__11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz1_ampo_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_34__0_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_1__8_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_8__3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_5__5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_10__1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_8__9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_51__7_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_39__10_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_10__16_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_7__23_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_1__10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_9__0_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_19__10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_19__8_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_4__6_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rle_rlen_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_sizeo_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_11__11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_21__6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_8__10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_44__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_amp_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_10__0_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_7__13_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_48__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_5__3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_sizeo_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz4_amp_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_26__2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_47__4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_50__2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_7__17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_54__7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_rlen_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_4_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_21__9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_2__11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_10__16_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_8__21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_14__7_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_2_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_14__3_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_12__9_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_31__0_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {dfdct_dout_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_34__11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_21__8_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_6__24_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_8__12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_4__4_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_1__1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_24__3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_1__11_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_31__3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_41__7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_10__8_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_29__1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_45__7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_11__0_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_10__9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_42__7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_55__1_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_7__8_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_7__4_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_8__24_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_11__5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_19__2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_25__1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_53__5_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_9__23_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_8__21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_18__4_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_11__15_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_4__24_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_9__8_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_7__22_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_8__18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz4_ampo_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_4__2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {dfdct_dout_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz3_rlen_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_8__9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_54__4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_11__8_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_14__2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_22__2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_5__24_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_7__16_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_5__3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_3__9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_23__5_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_30__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_12__3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_4__5_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_8__16_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_7__1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz4_ampo_reg_2_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_8__23_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_3__4_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz3_rlen_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_11__4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_8__22_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_sizeo_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_1__7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_30__9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_7__14_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_27__11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_6__11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_14__9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_53__8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_9__19_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_4_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_63__7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_10__22_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_6__19_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_5__22_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_11__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_57__0_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_28__8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_11__23_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_12__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_13__11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_23__4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_9__22_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_51__4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_56__5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_0__5_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_2__8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_7__1_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_sample_cnt_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_23__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz2_ampo_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_6__1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_45__3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_32__9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_5__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_11__4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_id_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_56__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_7__0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_60__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_3_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_8__22_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_24__10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_11__9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_43__5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_47__11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_6_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_31__4_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_9__6_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_11__11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_31__1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_7__8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_52__11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rle_size_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_11__8_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_11__22_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz3_ampo_reg_9_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_11__24_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_11__15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_0__8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_31__9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_23__8_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_44__1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_28__7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_q_pipe_reg_10__0_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_50__10_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_9__21_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz3_rlen_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {qnr_divider_id_reg_1_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_8__14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_23__11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_22__10_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_8__10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_9__5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_2__3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_19__9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_6__15_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_25__7_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz4_amp_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_6__7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_50__5_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_10__4_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_6__5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_8__6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_2_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_45__10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_3_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_5__22_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_15__5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_16__10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_6__17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz2_ampo_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_0__3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_26__5_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_9__17_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_9__21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz2_amp_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz3_rlen_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_7__11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_6__9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_44__5_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_8__5_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_6__5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_33__4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_32__10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_9__13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_6__8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_26__8_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_12__10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_17__4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_7__7_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_8__2_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_28__2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_44__3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_5__6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_size_reg_2_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_9__24_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_12__2_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_48__1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_3_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_57__4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_3_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_6__12_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_46__8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_9__10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_63__1_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_4__11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_17__8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_43__1_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_51__10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_5__7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_4__3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_51__3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_11__21_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_46__1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_33__7_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_50__1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_0__9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_23__2_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_10__12_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz2_ampo_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_49__5_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_9__20_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_51__9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_2_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_41__4_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_rleno_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_rleno_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {qnr_rq_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_43__10_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_6__22_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_43__3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_ddin_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz3_ampo_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_44__8_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_4_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_8__5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_10__23_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_6__4_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_39__4_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_10__17_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_30__11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_49__4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_50__8_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_8__8_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_18__2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_55__4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_40__2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_8__6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_ddin_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_2_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_46__6_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_50__6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_7__2_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_11__1_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_47__1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_52__5_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_49__8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_rleno_reg_3_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_7__21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_31__11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz3_sizeo_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_9__14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_49__2_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_8__7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_6__11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_16__6_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_41__2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_39__0_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_20__0_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_9__11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_42__3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_43__4_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_9__3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_36__8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_den_reg/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_13__0_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_9__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_59__4_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_25__10_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_10__20_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_8__18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_17__6_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_11__13_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_11__3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_rlen_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_26__7_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_49__3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_42__10_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_10__13_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_52__2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_11__7_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rle_amp_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_9__7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {dfdct_dout_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_1__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_32__2_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz3_rleno_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_q_pipe_reg_11__0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_19__7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz3_size_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_1__4_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz3_state_reg/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_5__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_15__4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_39__3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_23__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_5__2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_44__10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_5__4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_8__8_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_5__18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_30__2_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_9__15_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rle_rlen_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_rlen_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_2__1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz2_ampo_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_39__7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_28__5_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_36__10_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_7__20_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_57__2_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_33__2_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_8__11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_54__0_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_7__5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_41__9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_18__10_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_6__0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_5__0_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_rleno_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_24__7_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_10__11_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_8__14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_63__3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_13__3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_rleno_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_4__1_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_26__3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_37__11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_20__10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz1_amp_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_9__10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_54__2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_4__1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_48__3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_14__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_63__0_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_q_pipe_reg_6__0_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_6__8_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_6__8_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_rleno_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_ddgo_reg/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_21__10_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_11__17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_19__1_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_48__7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_9__13_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_24__11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_40__3_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_11__16_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz2_ampo_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_15__0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_3__10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_9__9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_7__3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz1_amp_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_57__7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_7__1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_10__24_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_q_pipe_reg_8__0_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_8__15_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_47__3_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_6__23_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_44__9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_10__24_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_0__1_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_25__2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_45__6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {dfdct_dout_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_15__8_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_9__15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_6_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_rleno_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_21__2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_11__11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_7__13_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_18__8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_33__11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_46__7_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_34__2_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_27__2_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_52__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_25__9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_40__9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_21__3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_amp_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {qnr_dep_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz4_amp_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_1__9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_11__6_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_31__5_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_51__11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_size_reg_3_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_11__19_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_9__6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz3_amp_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_30__3_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_17__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_den_reg/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_46__5_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_40__4_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_28__11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_21__11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_7__7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_15__2_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_6__15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_54__9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_10__4_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_22__7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_19__5_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_8__5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz4_ampo_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_53__2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_23__7_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_size_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_9__14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_16__5_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_5__1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_6_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_6__2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_5__19_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_4__9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_10__0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_7__8_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_5__14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_28__9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_55__3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_rleno_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_3__1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_49__9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_2__5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_40__5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_6__14_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_11__23_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_6__19_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz2_amp_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_61__2_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_40__10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_size_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_8__23_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_9__11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_26__9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_22__1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_8__20_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_37__9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_18__3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_22__3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_2__0_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_6__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_1__0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_58__4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_5__5_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_5__16_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_29__10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_7__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz2_amp_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rle_amp_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_39__9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_16__3_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_7__4_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_6__20_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_17__11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_17__3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_2_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_55__0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_53__11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_32__5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_15__9_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_5__21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_24__4_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_9__22_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_63__6_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_45__9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_39__11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_8__4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_6__21_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_11__12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_3__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz3_amp_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_6__18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_9__5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_4__4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_16__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_19__3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz3_deno_reg/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_52__6_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_state_reg/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_28__3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_6__1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_28__4_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_8__19_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_48__9_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_38__8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_9__3_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_44__11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_10__6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_11__1_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_43__0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_47__5_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_46__0_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_21__5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_8__7_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {qnr_divider_id_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_sizeo_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz4_amp_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_20__3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_60__1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_44__2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_36__9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_29__9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_4__4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_7__18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_34__7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_38__1_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_10__13_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_10__5_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz3_amp_reg_0_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_7__17_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_18__5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_19__6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_48__5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_10__3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_18__1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_49__10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz3_ampo_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_6_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rle_size_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_6__21_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_9__4_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_28__1_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_20__4_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rle_amp_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_20__1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_59__1_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_9__23_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_14__1_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_63__10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_7__11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_15__7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_9__7_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_46__9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_sizeo_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_41__1_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_26__6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_6__13_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_9__18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_1__5_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_12__4_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_59__3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_4__20_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_sample_cnt_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_10__1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_22__6_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_5__21_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_6__14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_42__11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_47__9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_43__9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_45__2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_39__5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_11__2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz4_amp_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_15__3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_ddin_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_20__5_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_2_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_49__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dddcnt_reg/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_32__4_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_11__2_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_7__2_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_7__19_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_8__16_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_9__9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_10__11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_5__2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_ld_zigzag_reg/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_48__10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_57__3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_32__0_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_amp_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_12__7_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rle_amp_reg_0_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_5__19_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_5__20_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {qnr_rq_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_6__10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_7__11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_4__0_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_28__6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz4_amp_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_5__15_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_20__8_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_34__1_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_21__7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_11__4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_4__22_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dgo_reg/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_dc_reg/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_9__2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_10__11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_11__20_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_6__2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_45__11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz3_amp_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_33__3_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_10__14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_1__2_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_10__7_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_16__9_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_6__23_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_4__2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_7__12_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_34__8_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_5__17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_48__8_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz3_size_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_3_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_10__10_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz3_size_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_8__11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_14__4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_12__5_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_12__1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_12__8_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_6_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_15__6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_16__1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_36__11_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_32__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_dco_reg/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_2__2_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_0__4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_q_pipe_reg_7__0_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_ddin_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_9__0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_6_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_8__17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_63__11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_5__3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_3__7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_7__10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_9__8_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_10__23_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_39__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_53__10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_7__15_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_57__5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_sample_cnt_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_state_reg/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_20__9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_52__4_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_27__5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_50__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_56__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_1__3_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_8__1_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_27__7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_5__1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_5_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_24__2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_5__20_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_33__0_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_7_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_6__24_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rle_zero_cnt_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_42__8_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_38__10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_10__10_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_11__22_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz3_amp_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_3_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_47__7_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_size_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_22__5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz2_ampo_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_9__10_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_43__7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_32__11_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_10__9_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rle_zero_cnt_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_63__9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_0__10_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_7__14_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_9__1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_59__5_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_7__2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_6__3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_9__24_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_5__17_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_59__0_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_4_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_6_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_57__6_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_10__18_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_11__0_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_10__14_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz1_ampo_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_9__7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_46__4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_34__3_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_38__3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_7__4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_3__2_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_11__10_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_11__16_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_16__4_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_11__24_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_40__6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_40__8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_58__0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {qnr_rq_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_32__7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_52__10_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_13__5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_11__7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_34__5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_7__21_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz4_ampo_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_41__11_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_43__6_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_5__15_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_4_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_17__5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz3_ampo_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_26__10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_7__22_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_1_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_49__7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_4__3_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_37__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_mult_res_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_13__2_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_20__2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_2__6_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_30__1_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_28__10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz1_ampo_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_4__0_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_ampo_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_14__5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_33__1_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_7__9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_41__8_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_50__11_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_26__1_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_6__13_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_10__8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_6__5_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_46__3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz4_amp_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_7__24_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_5__23_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_61__4_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_19__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_10__2_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_25__0_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_8__12_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_43__8_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_11__3_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_3_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_5_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz3_dc_reg/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_24__5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_58__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_q_pipe_reg_5__0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_42__0_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_0_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_11__10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_ddcnt_reg/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz3_den_reg/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_0_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_53__9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_55__2_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_7__18_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_mult_res_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_rlen_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_9__9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_58__2_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_coef_reg_31_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_4__8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_2_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_33__5_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_10__7_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_11__6_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_7_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_7__5_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_2_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_4_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_7__3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rle_size_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_11__6_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_7_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_11__9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_5__9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_59__2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_38__11_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_6_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_mult_res_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_44__7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_30__8_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_7_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_6__1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_5__5_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_11__12_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_50__4_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_12_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_result_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_55__5_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_macu_mult_res_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_9__11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_3_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_10__6_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_2_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_11__9_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_5_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_0_macu_mult_res_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_coef_reg_27_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_12__24_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_3_macu_result_reg_19_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_29__11_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_2_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_6__0_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_result_reg_8_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_11__13_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_18_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_10__5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_5_coef_reg_28_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_7_coef_reg_26_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_1_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_32__1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_6_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_6_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_5__23_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_53__6_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_49__11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_2_macu_result_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_42__9_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_5_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_macu_result_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rle_zero_cnt_reg_1_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_47__8_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_33__9_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_6__17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_53__0_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_5__7_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_4_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_5_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_6__6_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_s_pipe_reg_9__5_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_6__20_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_id_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_18__9_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_4_coef_reg_24_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_result_reg_15_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_1_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_18__0_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_macu_result_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_3_macu_mult_res_reg_1_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_d_pipe_reg_6__9_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_47__0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_1_coef_reg_30_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_ddin_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_macu_result_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_56__2_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz3_ampo_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_0_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_7_macu_result_reg_20_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_6_coef_reg_29_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_4_macu_result_reg_13_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_2_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_6_macu_result_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_45__4_/CP}
+__scte -float_pin_max_delay_rise 0.001 -float_pin_min_delay_rise 0.001 -float_pins {qnr_divider_divider_s_pipe_reg_6__9_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rle_amp_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_51__1_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_1_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {qnr_divider_divider_d_pipe_reg_11__8_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_6_dct_unit_2_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz2_amp_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {rle_rz1_rlen_reg_3_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_5_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_7_coef_reg_23_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_13__1_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz4_ampo_reg_6_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_63__5_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_7_macu_result_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_3_macu_mult_res_reg_9_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_14__10_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_result_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_5_coef_reg_25_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_macu_mult_res_reg_8_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_1_coef_reg_21_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_3_macu_mult_res_reg_7_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_63__4_/CP}
+__scte -float_pin_max_delay_rise -0.007 -float_pin_min_delay_rise -0.007 -float_pins {fdct_zigzag_dct_mod_dct_block_5_dct_unit_2_macu_result_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_0_dct_unit_6_macu_mult_res_reg_2_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_3_dct_unit_0_macu_mult_res_reg_0_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_4_dct_unit_1_macu_result_reg_16_/CP}
+__scte -float_pin_max_delay_rise -0.002 -float_pin_min_delay_rise -0.002 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_1_coef_reg_22_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_1_dct_unit_6_macu_mult_res_reg_14_/CP}
+__scte -float_pin_max_delay_rise -0.004 -float_pin_min_delay_rise -0.004 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_40__11_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_30__10_/CP}
+__scte -float_pin_max_delay_rise -0.008 -float_pin_min_delay_rise -0.008 -float_pins {fdct_zigzag_dct_mod_dct_block_7_dct_unit_5_macu_mult_res_reg_17_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {rle_rz1_ampo_reg_10_/CP}
+__scte -float_pin_max_delay_rise -0.001 -float_pin_min_delay_rise -0.001 -float_pins {fdct_zigzag_dct_mod_dct_block_2_dct_unit_4_macu_result_reg_4_/CP}
+__scte -float_pin_max_delay_rise -0.011 -float_pin_min_delay_rise -0.011 -float_pins {fdct_zigzag_zigzag_mod_sresult_reg_13__6_/CP}
+
+unsuppress_message CTS-239
+unsuppress_message CTS-117
+unalias __scte
+unalias __rcte
+
+unsuppress_message UID-476
+unset __scl_skip
+
+global skew_opt_skip_clock_balancing
+if { ([info exists skew_opt_skip_clock_balancing] == 0) || ($skew_opt_skip_clock_balancing == "false") } {
+  echo "--> sourcing set_inter_clock_delay_options"
+  reset_inter_clock_delay_options -all
+  alias __sicdo set_inter_clock_delay_options
+} else {
+  alias __sicdo { # }
+}
+suppress_message CTS-800
+__sicdo -balance_group { clk }
+unsuppress_message CTS-800
+unalias __sicdo
+
+if { [check_error] == 0 } {
+  return 1
+} else {
+  return 0
+}
