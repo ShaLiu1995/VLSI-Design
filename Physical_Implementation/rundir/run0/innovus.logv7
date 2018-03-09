@@ -1,0 +1,2012 @@
+[02/01 20:48:09      0] 
+[02/01 20:48:09      0] Cadence Innovus(TM) Implementation System.
+[02/01 20:48:09      0] Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+[02/01 20:48:09      0] 
+[02/01 20:48:09      0] Version:	v15.23-s045_1, built Fri Apr 22 12:32:52 PDT 2016
+[02/01 20:48:09      0] Options:	
+[02/01 20:48:09      0] Date:		Thu Feb  1 20:48:09 2018
+[02/01 20:48:09      0] Host:		ieng6-ece-19.ucsd.edu (x86_64 w/Linux 2.6.32-696.18.7.el6.x86_64) (4cores*8cpus*Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz 20480KB)
+[02/01 20:48:09      0] OS:		CentOS release 6.9 (Final)
+[02/01 20:48:09      0] 
+[02/01 20:48:09      0] License:
+[02/01 20:48:09      0] 		invs	Innovus Implementation System	15.2	checkout succeeded
+[02/01 20:48:09      0] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[02/01 20:48:11      0] **WARN: (IMPSYT-1507):	The display is invalid and will start in no window mode
+[02/01 20:48:21      9] @(#)CDS: Innovus v15.23-s045_1 (64bit) 04/22/2016 12:32 (Linux 2.6.18-194.el5)
+[02/01 20:48:21      9] @(#)CDS: NanoRoute 15.23-s045_1 NR160414-1105/15_23-UB (database version 2.30, 317.6.1) {superthreading v1.26}
+[02/01 20:48:21      9] @(#)CDS: AAE 15.23-s014 (64bit) 04/22/2016 (Linux 2.6.18-194.el5)
+[02/01 20:48:21      9] @(#)CDS: CTE 15.23-s022_1 () Apr 22 2016 09:38:45 ( )
+[02/01 20:48:21      9] @(#)CDS: SYNTECH 15.23-s008_1 () Apr 12 2016 21:52:59 ( )
+[02/01 20:48:21      9] @(#)CDS: CPE v15.23-s045
+[02/01 20:48:21      9] @(#)CDS: IQRC/TQRC 15.1.4-s213 (64bit) Tue Feb  9 17:31:28 PST 2016 (Linux 2.6.18-194.el5)
+[02/01 20:48:21      9] @(#)CDS: OA 22.50-p036 Tue Nov  3 09:29:52 2015
+[02/01 20:48:21      9] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[02/01 20:48:21      9] @(#)CDS: RCDB 11.7
+[02/01 20:48:21      9] --- Running on ieng6-ece-19.ucsd.edu (x86_64 w/Linux 2.6.32-696.18.7.el6.x86_64) (4cores*8cpus*Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz 20480KB) ---
+[02/01 20:48:21      9] Create and set the environment variable TMPDIR to /tmp/innovus_temp_30998_ieng6-ece-19.ucsd.edu_shl237_qStOM8.
+
+[02/01 20:48:21      9] 
+[02/01 20:48:21      9] **INFO:  MMMC transition support version v31-84 
+[02/01 20:48:21      9] 
+[02/01 20:48:21      9] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[02/01 20:48:21      9] <CMD> suppressMessage ENCEXT-2799
+[02/01 20:48:39      9] <CMD> restoreDesign /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat aes_cipher_top
+[02/01 20:48:39      9] exclude_path_collection 0
+[02/01 20:48:39      9] Set Default Input Pin Transition as 0.1 ps.
+[02/01 20:48:39      9] **WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+[02/01 20:48:39      9] 
+[02/01 20:48:39      9] Loading LEF file /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef ...
+[02/01 20:48:39      9] WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+[02/01 20:48:39      9] The LEF parser will ignore this statement.
+[02/01 20:48:39      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 28.
+[02/01 20:48:39      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[02/01 20:48:39      9] The LEF parser will ignore this statement.
+[02/01 20:48:39      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 867.
+[02/01 20:48:39      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[02/01 20:48:39      9] The LEF parser will ignore this statement.
+[02/01 20:48:39      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 877.
+[02/01 20:48:39      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[02/01 20:48:39      9] The LEF parser will ignore this statement.
+[02/01 20:48:39      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1014.
+[02/01 20:48:39      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[02/01 20:48:39      9] The LEF parser will ignore this statement.
+[02/01 20:48:39      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1024.
+[02/01 20:48:39      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[02/01 20:48:39      9] The LEF parser will ignore this statement.
+[02/01 20:48:39      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1161.
+[02/01 20:48:39      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[02/01 20:48:39      9] The LEF parser will ignore this statement.
+[02/01 20:48:39      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1171.
+[02/01 20:48:39      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[02/01 20:48:39      9] The LEF parser will ignore this statement.
+[02/01 20:48:39      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1308.
+[02/01 20:48:39      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[02/01 20:48:39      9] The LEF parser will ignore this statement.
+[02/01 20:48:39      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1318.
+[02/01 20:48:39      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[02/01 20:48:39      9] The LEF parser will ignore this statement.
+[02/01 20:48:39      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1372.
+[02/01 20:48:39      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[02/01 20:48:39      9] The LEF parser will ignore this statement.
+[02/01 20:48:39      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1383.
+[02/01 20:48:39      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[02/01 20:48:39      9] The LEF parser will ignore this statement.
+[02/01 20:48:39      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1604.
+[02/01 20:48:39      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[02/01 20:48:39      9] The LEF parser will ignore this statement.
+[02/01 20:48:39      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1614.
+[02/01 20:48:39      9] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[02/01 20:48:39      9] The LEF parser will ignore this statement.
+[02/01 20:48:39      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1769.
+[02/01 20:48:39      9] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[02/01 20:48:39      9] The LEF parser will ignore this statement.
+[02/01 20:48:39      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1771.
+[02/01 20:48:39      9] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+[02/01 20:48:39      9] The LEF parser will ignore this statement.
+[02/01 20:48:39      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1772.
+[02/01 20:48:39      9] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[02/01 20:48:39      9] The LEF parser will ignore this statement.
+[02/01 20:48:39      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1776.
+[02/01 20:48:39      9] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[02/01 20:48:39      9] The LEF parser will ignore this statement.
+[02/01 20:48:39      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1778.
+[02/01 20:48:39      9] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+[02/01 20:48:39      9] The LEF parser will ignore this statement.
+[02/01 20:48:39      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1779.
+[02/01 20:48:39      9] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[02/01 20:48:39      9] The LEF parser will ignore this statement.
+[02/01 20:48:39      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1783.
+[02/01 20:48:39      9] Set DBUPerIGU to M2 pitch 400.
+[02/01 20:48:39      9] **WARN: (IMPLF-200):	Pin 'I' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[02/01 20:48:39      9] Type 'man IMPLF-200' for more detail.
+[02/01 20:48:39      9] 
+[02/01 20:48:39      9] viaInitial starts at Thu Feb  1 20:48:39 2018
+viaInitial ends at Thu Feb  1 20:48:39 2018
+Loading view definition file from /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/viewDefinition.tcl
+[02/01 20:48:39      9] Reading WC_LIB timing library '/home/linux/ieng6/ee260b/public/data/libraries/lib/tcbn65gpluswc.lib' ...
+[02/01 20:48:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2D0' is not defined in the library.
+[02/01 20:48:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2D1' is not defined in the library.
+[02/01 20:48:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2D2' is not defined in the library.
+[02/01 20:48:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2D4' is not defined in the library.
+[02/01 20:48:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2D8' is not defined in the library.
+[02/01 20:48:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2XD1' is not defined in the library.
+[02/01 20:48:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3D0' is not defined in the library.
+[02/01 20:48:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3D1' is not defined in the library.
+[02/01 20:48:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3D2' is not defined in the library.
+[02/01 20:48:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3D4' is not defined in the library.
+[02/01 20:48:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3D8' is not defined in the library.
+[02/01 20:48:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3XD1' is not defined in the library.
+[02/01 20:48:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4D0' is not defined in the library.
+[02/01 20:48:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4D1' is not defined in the library.
+[02/01 20:48:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4D2' is not defined in the library.
+[02/01 20:48:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4D4' is not defined in the library.
+[02/01 20:48:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4D8' is not defined in the library.
+[02/01 20:48:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4XD1' is not defined in the library.
+[02/01 20:48:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AO211D0' is not defined in the library.
+[02/01 20:48:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AO211D1' is not defined in the library.
+[02/01 20:48:39      9] Message <TECHLIB-436> has exceeded the message display limit of '20'. setMessageLimit/set_message_limit sets the limit. unsetMessageLimit/unset_message_limit can be used to reset this.
+[02/01 20:48:41     11] Read 811 cells in library 'tcbn65gpluswc' 
+[02/01 20:48:41     11] Reading BC_LIB timing library '/home/linux/ieng6/ee260b/public/data/libraries/lib/tcbn65gplusbc.lib' ...
+[02/01 20:48:42     12] Read 811 cells in library 'tcbn65gplusbc' 
+[02/01 20:48:42     12] *** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=0.21min, fe_real=0.55min, fe_mem=430.4M) ***
+[02/01 20:48:42     12] *** Begin netlist parsing (mem=430.4M) ***
+[02/01 20:48:42     12] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4D4' is defined in LEF but not in the timing library.
+[02/01 20:48:42     12] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4D4' is defined in LEF but not in the timing library.
+[02/01 20:48:42     12] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4D2' is defined in LEF but not in the timing library.
+[02/01 20:48:42     12] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4D2' is defined in LEF but not in the timing library.
+[02/01 20:48:42     12] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4D1' is defined in LEF but not in the timing library.
+[02/01 20:48:42     12] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4D1' is defined in LEF but not in the timing library.
+[02/01 20:48:42     12] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4D0' is defined in LEF but not in the timing library.
+[02/01 20:48:42     12] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4D0' is defined in LEF but not in the timing library.
+[02/01 20:48:42     12] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3D4' is defined in LEF but not in the timing library.
+[02/01 20:48:42     12] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3D4' is defined in LEF but not in the timing library.
+[02/01 20:48:42     12] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3D2' is defined in LEF but not in the timing library.
+[02/01 20:48:42     12] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3D2' is defined in LEF but not in the timing library.
+[02/01 20:48:42     12] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3D1' is defined in LEF but not in the timing library.
+[02/01 20:48:42     12] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3D1' is defined in LEF but not in the timing library.
+[02/01 20:48:42     12] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3D0' is defined in LEF but not in the timing library.
+[02/01 20:48:42     12] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3D0' is defined in LEF but not in the timing library.
+[02/01 20:48:42     12] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR2D4' is defined in LEF but not in the timing library.
+[02/01 20:48:42     12] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR2D4' is defined in LEF but not in the timing library.
+[02/01 20:48:42     12] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR2D2' is defined in LEF but not in the timing library.
+[02/01 20:48:42     12] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR2D2' is defined in LEF but not in the timing library.
+[02/01 20:48:42     12] **WARN: (EMS-27):	Message (IMPVL-159) has exceeded the current message display limit of 20.
+[02/01 20:48:42     12] To increase the message display limit, refer to the product command reference manual.
+[02/01 20:48:42     12] Created 811 new cells from 2 timing libraries.
+[02/01 20:48:42     12] Reading netlist ...
+[02/01 20:48:42     12] Backslashed names will retain backslash and a trailing blank character.
+[02/01 20:48:42     12] Reading verilog netlist '/home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/aes_cipher_top.v.gz'
+[02/01 20:48:43     12] 
+[02/01 20:48:43     12] *** Memory Usage v#1 (Current mem = 434.438M, initial mem = 151.930M) ***
+[02/01 20:48:43     12] *** End netlist parsing (cpu=0:00:00.2, real=0:00:01.0, mem=434.4M) ***
+[02/01 20:48:43     12] Set top cell to aes_cipher_top.
+[02/01 20:48:43     13] Hooked 1622 DB cells to tlib cells.
+[02/01 20:48:43     13] Starting recursive module instantiation check.
+[02/01 20:48:43     13] No recursion found.
+[02/01 20:48:43     13] Building hierarchical netlist for Cell aes_cipher_top ...
+[02/01 20:48:43     13] *** Netlist is unique.
+[02/01 20:48:43     13] ** info: there are 1680 modules.
+[02/01 20:48:43     13] ** info: there are 13890 stdCell insts.
+[02/01 20:48:43     13] 
+[02/01 20:48:43     13] *** Memory Usage v#1 (Current mem = 494.641M, initial mem = 151.930M) ***
+[02/01 20:48:43     13] *info: set bottom ioPad orient R0
+[02/01 20:48:43     13] **WARN: (IMPFP-3961):	The techSite 'dcore' has no related cells in LEF/OA library. Cannot make calculations for this site type unless cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[02/01 20:48:43     13] Type 'man IMPFP-3961' for more detail.
+[02/01 20:48:43     13] **WARN: (IMPFP-3961):	The techSite 'ccore' has no related cells in LEF/OA library. Cannot make calculations for this site type unless cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[02/01 20:48:43     13] Type 'man IMPFP-3961' for more detail.
+[02/01 20:48:43     13] Set Default Net Delay as 1000 ps.
+[02/01 20:48:43     13] Set Default Net Load as 0.5 pF. 
+[02/01 20:48:43     13] Set Default Input Pin Transition as 0.1 ps.
+[02/01 20:48:43     13] Loading preference file /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/gui.pref.tcl ...
+[02/01 20:48:43     13] Applying the recommended capacitance filtering threshold values for 65nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+[02/01 20:48:43     13] 	These values will be used by all post-route extraction engines, including tQuantus, IQRC and Quantus QRC extraction.
+[02/01 20:48:43     13] 	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+[02/01 20:48:43     13] 	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+[02/01 20:48:43     13] 	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+[02/01 20:48:43     13] Updating process node dependent CCOpt properties for the 65nm process node.
+[02/01 20:48:43     13] Initializing multi-corner RC extraction with 2 active RC Corners ...
+[02/01 20:48:43     13] Reading Capacitance Table File /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/mmmc/cln65g+_1p08m+alrdl_top2_cworst.captable ...
+[02/01 20:48:43     13] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[02/01 20:48:43     13] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[02/01 20:48:43     13] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[02/01 20:48:43     13] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[02/01 20:48:43     13] Reading Capacitance Table File /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/mmmc/cln65g+_1p08m+alrdl_top2_cbest.captable ...
+[02/01 20:48:43     13] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[02/01 20:48:43     13] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[02/01 20:48:43     13] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[02/01 20:48:43     13] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[02/01 20:48:43     13] Importing multi-corner RC tables ... 
+[02/01 20:48:43     13] Summary of Active RC-Corners : 
+[02/01 20:48:43     13]  
+[02/01 20:48:43     13]  Analysis View: WC_VIEW
+[02/01 20:48:43     13]     RC-Corner Name        : Cmax
+[02/01 20:48:43     13]     RC-Corner Index       : 0
+[02/01 20:48:43     13]     RC-Corner Temperature : 125 Celsius
+[02/01 20:48:43     13]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/mmmc/cln65g+_1p08m+alrdl_top2_cworst.captable'
+[02/01 20:48:43     13]     RC-Corner PreRoute Res Factor         : 1
+[02/01 20:48:43     13]     RC-Corner PreRoute Cap Factor         : 1
+[02/01 20:48:43     13]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[02/01 20:48:43     13]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[02/01 20:48:43     13]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[02/01 20:48:43     13]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[02/01 20:48:43     13]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[02/01 20:48:43     13]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[02/01 20:48:43     13]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[02/01 20:48:43     13]  
+[02/01 20:48:43     13]  Analysis View: BC_VIEW
+[02/01 20:48:43     13]     RC-Corner Name        : Cmin
+[02/01 20:48:43     13]     RC-Corner Index       : 1
+[02/01 20:48:43     13]     RC-Corner Temperature : -40 Celsius
+[02/01 20:48:43     13]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/libs/mmmc/cln65g+_1p08m+alrdl_top2_cbest.captable'
+[02/01 20:48:43     13]     RC-Corner PreRoute Res Factor         : 1
+[02/01 20:48:43     13]     RC-Corner PreRoute Cap Factor         : 1
+[02/01 20:48:43     13]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[02/01 20:48:43     13]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[02/01 20:48:43     13]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[02/01 20:48:43     13]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[02/01 20:48:43     13]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[02/01 20:48:43     13]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[02/01 20:48:43     13]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[02/01 20:48:44     13] *Info: initialize multi-corner CTS.
+[02/01 20:48:44     14] Reading timing constraints file '/home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/mmmc/modes/CON/CON.sdc' ...
+[02/01 20:48:44     14] Current (total cpu=0:00:14.0, real=0:00:35.0, peak res=309.2M, current mem=629.3M)
+[02/01 20:48:44     14] INFO (CTE): Constraints read successfully.
+[02/01 20:48:44     14] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=325.9M, current mem=647.5M)
+[02/01 20:48:44     14] Current (total cpu=0:00:14.1, real=0:00:35.0, peak res=325.9M, current mem=647.5M)
+[02/01 20:48:44     14] Summary for sequential cells idenfication: 
+[02/01 20:48:44     14] Identified SBFF number: 199
+[02/01 20:48:44     14] Identified MBFF number: 0
+[02/01 20:48:44     14] Not identified SBFF number: 0
+[02/01 20:48:44     14] Not identified MBFF number: 0
+[02/01 20:48:44     14] Number of sequential cells which are not FFs: 104
+[02/01 20:48:44     14] 
+[02/01 20:48:44     14] Total number of combinational cells: 492
+[02/01 20:48:44     14] Total number of sequential cells: 303
+[02/01 20:48:44     14] Total number of tristate cells: 11
+[02/01 20:48:44     14] Total number of level shifter cells: 0
+[02/01 20:48:44     14] Total number of power gating cells: 0
+[02/01 20:48:44     14] Total number of isolation cells: 0
+[02/01 20:48:44     14] Total number of power switch cells: 0
+[02/01 20:48:44     14] Total number of pulse generator cells: 0
+[02/01 20:48:44     14] Total number of always on buffers: 0
+[02/01 20:48:44     14] Total number of retention cells: 0
+[02/01 20:48:44     14] List of usable buffers: BUFFD1 BUFFD0 BUFFD2 BUFFD3 BUFFD4 BUFFD6 BUFFD8 BUFFD12 BUFFD16 CKBD1 CKBD0 CKBD2 CKBD3 CKBD4 CKBD6 CKBD8 CKBD12 CKBD16
+[02/01 20:48:44     14] Total number of usable buffers: 18
+[02/01 20:48:44     14] List of unusable buffers: BUFFD20 BUFFD24 CKBD20 CKBD24 GBUFFD1 GBUFFD3 GBUFFD2 GBUFFD4 GBUFFD8
+[02/01 20:48:44     14] Total number of unusable buffers: 9
+[02/01 20:48:44     14] List of usable inverters: CKND1 CKND0 CKND2 CKND3 CKND4 CKND6 CKND8 CKND12 CKND16 INVD1 INVD0 INVD2 INVD3 INVD4 INVD6 INVD8 INVD12 INVD16
+[02/01 20:48:44     14] Total number of usable inverters: 18
+[02/01 20:48:44     14] List of unusable inverters: CKND20 CKND24 GINVD2 GINVD1 GINVD4 GINVD3 GINVD8 INVD20 INVD24
+[02/01 20:48:44     14] Total number of unusable inverters: 9
+[02/01 20:48:44     14] List of identified usable delay cells:
+[02/01 20:48:44     14] Total number of identified usable delay cells: 0
+[02/01 20:48:44     14] List of identified unusable delay cells: DEL0 DEL005 DEL01 DEL015 DEL02 DEL1 DEL2 DEL3 DEL4
+[02/01 20:48:44     14] Total number of identified unusable delay cells: 9
+[02/01 20:48:44     14] All delay cells are dont_use. Buffers will be used to fix hold violations.
+[02/01 20:48:44     14] **WARN: (IMPOPT-3058):	Cell tcbn65gplusbc/AN2D1 already has a dont_use attribute false.
+[02/01 20:48:44     14] Type 'man IMPOPT-3058' for more detail.
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AN2D1
+[02/01 20:48:44     14] **WARN: (IMPOPT-3058):	Cell tcbn65gpluswc/AN2D1 already has a dont_use attribute false.
+[02/01 20:48:44     14] Type 'man IMPOPT-3058' for more detail.
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AN2D1
+[02/01 20:48:44     14] **WARN: (IMPOPT-3058):	Cell tcbn65gplusbc/AN2D2 already has a dont_use attribute false.
+[02/01 20:48:44     14] Type 'man IMPOPT-3058' for more detail.
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AN2D2
+[02/01 20:48:44     14] **WARN: (IMPOPT-3058):	Cell tcbn65gpluswc/AN2D2 already has a dont_use attribute false.
+[02/01 20:48:44     14] Type 'man IMPOPT-3058' for more detail.
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AN2D2
+[02/01 20:48:44     14] **WARN: (IMPOPT-3058):	Cell tcbn65gplusbc/AN2D4 already has a dont_use attribute false.
+[02/01 20:48:44     14] Type 'man IMPOPT-3058' for more detail.
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AN2D4
+[02/01 20:48:44     14] **WARN: (IMPOPT-3058):	Cell tcbn65gpluswc/AN2D4 already has a dont_use attribute false.
+[02/01 20:48:44     14] Type 'man IMPOPT-3058' for more detail.
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AN2D4
+[02/01 20:48:44     14] **WARN: (IMPOPT-3058):	Cell tcbn65gplusbc/AN2D8 already has a dont_use attribute false.
+[02/01 20:48:44     14] Type 'man IMPOPT-3058' for more detail.
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AN2D8
+[02/01 20:48:44     14] **WARN: (IMPOPT-3058):	Cell tcbn65gpluswc/AN2D8 already has a dont_use attribute false.
+[02/01 20:48:44     14] Type 'man IMPOPT-3058' for more detail.
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AN2D8
+[02/01 20:48:44     14] **WARN: (IMPOPT-3058):	Cell tcbn65gplusbc/AN2XD1 already has a dont_use attribute false.
+[02/01 20:48:44     14] Type 'man IMPOPT-3058' for more detail.
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AN2XD1
+[02/01 20:48:44     14] **WARN: (IMPOPT-3058):	Cell tcbn65gpluswc/AN2XD1 already has a dont_use attribute false.
+[02/01 20:48:44     14] Type 'man IMPOPT-3058' for more detail.
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AN2XD1
+[02/01 20:48:44     14] **WARN: (IMPOPT-3058):	Cell tcbn65gplusbc/AN3D2 already has a dont_use attribute false.
+[02/01 20:48:44     14] Type 'man IMPOPT-3058' for more detail.
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AN3D2
+[02/01 20:48:44     14] **WARN: (IMPOPT-3058):	Cell tcbn65gpluswc/AN3D2 already has a dont_use attribute false.
+[02/01 20:48:44     14] Type 'man IMPOPT-3058' for more detail.
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AN3D2
+[02/01 20:48:44     14] **WARN: (IMPOPT-3058):	Cell tcbn65gplusbc/AN3D4 already has a dont_use attribute false.
+[02/01 20:48:44     14] Type 'man IMPOPT-3058' for more detail.
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AN3D4
+[02/01 20:48:44     14] **WARN: (IMPOPT-3058):	Cell tcbn65gpluswc/AN3D4 already has a dont_use attribute false.
+[02/01 20:48:44     14] Type 'man IMPOPT-3058' for more detail.
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AN3D4
+[02/01 20:48:44     14] **WARN: (IMPOPT-3058):	Cell tcbn65gplusbc/AN3D8 already has a dont_use attribute false.
+[02/01 20:48:44     14] Type 'man IMPOPT-3058' for more detail.
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AN3D8
+[02/01 20:48:44     14] **WARN: (IMPOPT-3058):	Cell tcbn65gpluswc/AN3D8 already has a dont_use attribute false.
+[02/01 20:48:44     14] Type 'man IMPOPT-3058' for more detail.
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AN3D8
+[02/01 20:48:44     14] **WARN: (IMPOPT-3058):	Cell tcbn65gplusbc/AN3XD1 already has a dont_use attribute false.
+[02/01 20:48:44     14] Type 'man IMPOPT-3058' for more detail.
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AN3XD1
+[02/01 20:48:44     14] **WARN: (IMPOPT-3058):	Cell tcbn65gpluswc/AN3XD1 already has a dont_use attribute false.
+[02/01 20:48:44     14] Type 'man IMPOPT-3058' for more detail.
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AN3XD1
+[02/01 20:48:44     14] **WARN: (IMPOPT-3058):	Cell tcbn65gplusbc/AN4D2 already has a dont_use attribute false.
+[02/01 20:48:44     14] Type 'man IMPOPT-3058' for more detail.
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AN4D2
+[02/01 20:48:44     14] **WARN: (IMPOPT-3058):	Cell tcbn65gpluswc/AN4D2 already has a dont_use attribute false.
+[02/01 20:48:44     14] Type 'man IMPOPT-3058' for more detail.
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AN4D2
+[02/01 20:48:44     14] **WARN: (EMS-27):	Message (IMPOPT-3058) has exceeded the current message display limit of 20.
+[02/01 20:48:44     14] To increase the message display limit, refer to the product command reference manual.
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AN4D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AN4D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AN4D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AN4D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AN4XD1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AN4XD1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AO211D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AO211D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AO21D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AO21D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AO21D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AO21D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AO221D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AO221D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AO221D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AO221D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AO222D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AO222D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AO22D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AO22D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AO31D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AO31D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AO32D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AO32D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AO32D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AO32D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AO33D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AO33D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AO33D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AO33D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AOI211D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AOI211D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AOI211D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AOI211D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AOI21D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AOI21D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AOI21D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AOI21D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AOI21D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AOI21D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AOI221D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AOI221D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AOI222D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AOI222D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AOI22D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AOI22D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AOI22D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AOI22D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AOI31D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AOI31D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AOI31D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AOI31D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AOI32D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AOI32D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/AOI33D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/AOI33D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/BENCD1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/BENCD1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/BMLD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/BMLD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/BUFFD1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/BUFFD1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/BUFFD12
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/BUFFD12
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/BUFFD16
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/BUFFD16
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/BUFFD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/BUFFD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/BUFFD3
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/BUFFD3
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/BUFFD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/BUFFD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/BUFFD6
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/BUFFD6
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/BUFFD8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/BUFFD8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/BUFTD12
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/BUFTD12
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/BUFTD16
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/BUFTD16
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/BUFTD6
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/BUFTD6
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/BUFTD8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/BUFTD8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKAN2D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKAN2D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKAN2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKAN2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKAN2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKAN2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKAN2D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKAN2D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKBD1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKBD1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKBD12
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKBD12
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKBD16
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKBD16
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKBD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKBD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKBD3
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKBD3
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKBD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKBD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKBD6
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKBD6
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKBD8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKBD8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKLHQD12
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKLHQD12
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKLHQD16
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKLHQD16
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKLHQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKLHQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKLHQD6
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKLHQD6
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKLHQD8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKLHQD8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKLNQD12
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKLNQD12
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKLNQD16
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKLNQD16
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKLNQD8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKLNQD8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKMUX2D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKMUX2D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKMUX2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKMUX2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKMUX2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKMUX2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKND12
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKND12
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKND16
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKND16
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKND2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKND2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKND2D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKND2D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKND2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKND2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKND2D3
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKND2D3
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKND2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKND2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKND2D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKND2D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKND3
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKND3
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKND6
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKND6
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKND8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKND8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKXOR2D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKXOR2D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKXOR2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKXOR2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/CKXOR2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/CKXOR2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/DFCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/DFCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/DFCNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/DFCNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/DFCSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/DFCSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/DFCSNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/DFCSNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/DFD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/DFD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/DFKCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/DFKCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/DFKCNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/DFKCNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/DFKCSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/DFKCSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/DFKSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/DFKSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/DFNCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/DFNCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/DFNCSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/DFNCSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/DFND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/DFND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/DFNSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/DFNSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/DFQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/DFQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/DFSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/DFSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/DFSNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/DFSNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/DFXD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/DFXD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/DFXQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/DFXQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/EDFCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/EDFCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/EDFCNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/EDFCNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/EDFD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/EDFD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/EDFKCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/EDFKCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/EDFKCNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/EDFKCNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/EDFQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/EDFQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/FA1D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/FA1D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/FA1D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/FA1D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/HA1D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/HA1D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/HA1D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/HA1D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/IAO21D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/IAO21D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/IAO21D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/IAO21D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/IAO22D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/IAO22D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/IAO22D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/IAO22D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/IIND4D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/IIND4D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/IIND4D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/IIND4D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/IINR4D0
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/IINR4D0
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/IND2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/IND2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/IND2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/IND2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/IND3D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/IND3D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/IND3D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/IND3D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/IND4D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/IND4D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/INR2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/INR2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/INR2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/INR2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/INR3D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/INR3D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/INR3D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/INR3D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/INR4D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/INR4D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/INVD12
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/INVD12
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/INVD16
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/INVD16
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/INVD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/INVD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/INVD3
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/INVD3
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/INVD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/INVD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/INVD6
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/INVD6
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/INVD8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/INVD8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/IOA21D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/IOA21D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/IOA21D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/IOA21D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/IOA22D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/IOA22D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/IOA22D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/IOA22D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LHCND2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LHCND2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LHCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LHCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LHCNDD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LHCNDD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LHCNDD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LHCNDD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LHCNDQD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LHCNDQD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LHCNDQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LHCNDQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LHCNQD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LHCNQD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LHCNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LHCNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LHCSND2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LHCSND2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LHCSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LHCSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LHCSNDD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LHCSNDD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LHCSNDD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LHCSNDD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LHCSNDQD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LHCSNDQD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LHCSNDQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LHCSNDQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LHCSNQD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LHCSNQD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LHCSNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LHCSNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LHD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LHD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LHQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LHQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LHSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LHSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LHSNDD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LHSNDD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LHSNDQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LHSNDQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LHSNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LHSNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LNCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LNCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LNCNDD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LNCNDD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LNCNDQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LNCNDQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LNCNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LNCNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LNCSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LNCSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LNCSNDD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LNCSNDD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LNCSNDQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LNCSNDQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LNCSNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LNCSNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LNSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LNSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LNSNDD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LNSNDD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LNSNDQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LNSNDQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/LNSNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/LNSNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/MAOI222D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/MAOI222D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/MAOI222D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/MAOI222D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/MAOI22D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/MAOI22D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/MOAI22D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/MOAI22D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/MUX2D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/MUX2D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/MUX2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/MUX2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/MUX2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/MUX2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/MUX2ND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/MUX2ND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/MUX3D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/MUX3D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/MUX3ND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/MUX3ND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/MUX4D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/MUX4D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/MUX4D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/MUX4D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/MUX4ND2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/MUX4ND2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/MUX4ND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/MUX4ND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/ND2D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/ND2D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/ND2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/ND2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/ND2D3
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/ND2D3
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/ND2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/ND2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/ND2D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/ND2D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/ND3D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/ND3D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/ND3D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/ND3D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/ND3D3
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/ND3D3
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/ND3D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/ND3D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/ND3D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/ND3D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/ND4D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/ND4D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/NR2D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/NR2D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/NR2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/NR2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/NR2D3
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/NR2D3
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/NR2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/NR2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/NR2D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/NR2D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/NR3D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/NR3D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/NR3D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/NR3D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/NR3D3
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/NR3D3
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/NR3D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/NR3D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/NR3D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/NR3D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/NR4D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/NR4D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OA211D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OA211D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OA21D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OA21D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OA221D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OA221D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OA221D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OA221D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OA222D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OA222D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OA22D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OA22D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OA31D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OA31D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OA32D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OA32D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OA32D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OA32D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OA33D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OA33D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OAI211D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OAI211D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OAI211D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OAI211D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OAI21D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OAI21D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OAI21D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OAI21D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OAI21D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OAI21D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OAI221D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OAI221D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OAI222D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OAI222D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OAI22D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OAI22D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OAI22D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OAI22D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OAI31D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OAI31D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OAI31D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OAI31D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OAI32D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OAI32D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OAI33D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OAI33D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OR2D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OR2D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OR2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OR2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OR2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OR2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OR2D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OR2D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OR2XD1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OR2XD1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OR3D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OR3D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OR3D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OR3D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OR3D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OR3D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OR3XD1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OR3XD1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OR4D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OR4D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OR4D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OR4D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/OR4D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/OR4D8
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFCNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFCNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFCSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFCSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFCSNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFCSNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFKCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFKCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFKCNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFKCNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFKCSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFKCSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFKCSNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFKCSNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFKSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFKSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFKSNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFKSNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFNCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFNCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFNCSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFNCSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFND2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFND2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFNSND2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFNSND2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFNSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFNSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFQD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFQD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFQND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFQND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFSND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFSNQD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFSNQD2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFSNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFSNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFXD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFXD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SDFXQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SDFXQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SEDFCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SEDFCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SEDFCNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SEDFCNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SEDFD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SEDFD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SEDFKCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SEDFKCND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SEDFKCNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SEDFKCNQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SEDFQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SEDFQD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SEDFQND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SEDFQND4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SEDFQNXD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SEDFQNXD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SEDFQXD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SEDFQXD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/SEDFXD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/SEDFXD4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/XNR2D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/XNR2D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/XNR2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/XNR2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/XNR2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/XNR2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/XNR3D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/XNR3D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/XNR4D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/XNR4D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/XOR2D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/XOR2D1
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/XOR2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/XOR2D2
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/XOR2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/XOR2D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/XOR3D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/XOR3D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gplusbc/XOR4D4
+[02/01 20:48:44     14]  Setting dont_use false for cell tcbn65gpluswc/XOR4D4
+[02/01 20:48:44     14] Reading floorplan file - /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/aes_cipher_top.fp.gz (mem = 651.5M).
+[02/01 20:48:44     14] *info: reset 14182 existing net BottomPreferredLayer and AvoidDetour
+[02/01 20:48:44     14] Deleting old partition specification.
+[02/01 20:48:44     14] Set FPlanBox to (0 0 527600 522400)
+[02/01 20:48:44     14]  ... processed partition successfully.
+[02/01 20:48:44     14] Set (u0) in guide (162000 164000 359600 354800)
+[02/01 20:48:44     14] Set (us00) in guide (28000 430400 125600 491600)
+[02/01 20:48:44     14] Set (us01) in guide (131600 430400 231200 491600)
+[02/01 20:48:44     14] Set (us02) in guide (288000 430400 387200 491600)
+[02/01 20:48:44     14] Set (us03) in guide (396800 430400 497200 491600)
+[02/01 20:48:44     14] Set (us20) in guide (26000 362000 124400 423200)
+[02/01 20:48:44     14] Set (us21) in guide (131600 362000 232000 423200)
+[02/01 20:48:44     14] Set (us32) in guide (288000 362000 387600 423200)
+[02/01 20:48:44     14] Set (us33) in guide (396000 362000 499200 423200)
+[02/01 20:48:44     14] Set (us10) in guide (28000 99200 128000 160400)
+[02/01 20:48:44     14] Set (us22) in guide (28000 30800 127200 92000)
+[02/01 20:48:44     14] Set (us23) in guide (133200 30800 235600 92000)
+[02/01 20:48:44     14] Set (us30) in guide (296400 27200 395200 88400)
+[02/01 20:48:44     14] Set (us31) in guide (403600 27200 502800 88400)
+[02/01 20:48:44     14] Set (us11) in guide (132400 99200 236400 156800)
+[02/01 20:48:44     14] Set (us12) in guide (296400 95600 395200 156800)
+[02/01 20:48:44     14] Set (us13) in guide (402000 95600 499600 156800)
+[02/01 20:48:44     14] There are 10 nets with weight being set
+[02/01 20:48:44     14] There are 139 nets with bottomPreferredRoutingLayer being set
+[02/01 20:48:44     14] There are 10 nets with avoidDetour being set
+[02/01 20:48:44     14] Extracting standard cell pins and blockage ...... 
+[02/01 20:48:44     14] Pin and blockage extraction finished
+[02/01 20:48:44     14] *** End loading floorplan (cpu = 0:00:00.1, mem = 651.5M) ***
+[02/01 20:48:44     14] Reading placement file - /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/aes_cipher_top.place.gz.
+[02/01 20:48:44     14] ** Reading stdCellPlacement "/home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/aes_cipher_top.place.gz" ...
+[02/01 20:48:44     14] *** Completed restorePlace (cpu=0:00:00.1 real=0:00:00.0 mem=654.5M) ***
+[02/01 20:48:44     14] Total net length = 2.560e+05 (1.309e+05 1.251e+05) (ext = 1.575e+04)
+[02/01 20:48:44     14] Reading routing file - /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/aes_cipher_top.route.gz.
+[02/01 20:48:44     14] Reading Innovus routing data (Created by Innovus v15.23-s045_1 on Thu Feb  1 19:56:42 2018 Format: 15.2) ...
+[02/01 20:48:44     14] Suppress "**WARN ..." messages.
+[02/01 20:48:44     14] routingBox: (0 0) (527600 522400)
+[02/01 20:48:44     14] coreBox:    (20000 20000) (507600 502400)
+[02/01 20:48:44     14] Un-suppress "**WARN ..." messages.
+[02/01 20:48:45     14] *** Total 14154 nets are successfully restored.
+[02/01 20:48:45     14] *** Completed restoreRoute (cpu=0:00:00.3 real=0:00:01.0 mem=670.6M) ***
+[02/01 20:48:45     14] Reading DEF file '/home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/aes_cipher_top.def.gz', current time is Thu Feb  1 20:48:45 2018 ...
+[02/01 20:48:45     14] --- DIVIDERCHAR '/'
+[02/01 20:48:45     14] --- UnitsPerDBU = 1.0000
+[02/01 20:48:45     14] Extracting macro/IO cell pins and blockage ...... 
+[02/01 20:48:45     14] Pin and blockage extraction finished
+[02/01 20:48:45     14] DEF file '/home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/aes_cipher_top.def.gz' is parsed, current time is Thu Feb  1 20:48:45 2018.
+[02/01 20:48:45     14] Set Default Input Pin Transition as 0.1 ps.
+[02/01 20:48:45     14] **WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+[02/01 20:48:45     14] Updating RC grid for preRoute extraction ...
+[02/01 20:48:45     14] Initializing multi-corner capacitance tables ... 
+[02/01 20:48:45     15] Initializing multi-corner resistance tables ...
+[02/01 20:48:45     15] Loading rc congestion map /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat/aes_cipher_top.congmap.gz ...
+[02/01 20:48:45     15] Summary for sequential cells idenfication: 
+[02/01 20:48:45     15] Identified SBFF number: 199
+[02/01 20:48:45     15] Identified MBFF number: 0
+[02/01 20:48:45     15] Not identified SBFF number: 0
+[02/01 20:48:45     15] Not identified MBFF number: 0
+[02/01 20:48:45     15] Number of sequential cells which are not FFs: 104
+[02/01 20:48:45     15] 
+[02/01 20:48:45     15] Extracting original clock gating for clk... 
+[02/01 20:48:45     15]   clock_tree clk contains 530 sinks and 0 clock gates.
+[02/01 20:48:45     15]   Extraction for clk complete.
+[02/01 20:48:45     15] Extracting original clock gating for clk done.
+[02/01 20:48:45     15] 
+[02/01 20:48:45     15] *** Summary of all messages that are not suppressed in this session:
+[02/01 20:48:45     15] Severity  ID               Count  Summary                                  
+[02/01 20:48:45     15] WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[02/01 20:48:45     15] WARNING   IMPFP-3961           2  The techSite '%s' has no related cells i...
+[02/01 20:48:45     15] WARNING   IMPEXT-2710          2  Basic Cap table for layer M%d is ignored...
+[02/01 20:48:45     15] WARNING   IMPEXT-2760          2  Layer M%d specified in the cap table is ...
+[02/01 20:48:45     15] WARNING   IMPEXT-2771          2  Via %s specified in the cap table is ign...
+[02/01 20:48:45     15] WARNING   IMPEXT-2801          2  Resistance values are not provided in th...
+[02/01 20:48:45     15] WARNING   IMPVL-159         1622  Pin '%s' of cell '%s' is defined in LEF ...
+[02/01 20:48:45     15] WARNING   IMPOPT-3058        598  Cell %s/%s already has a dont_use attrib...
+[02/01 20:48:45     15] *** Message Summary: 2231 warning(s), 0 error(s)
+[02/01 20:48:45     15] 
+[02/01 20:49:12     15] <CMD> routeDesign
+[02/01 20:49:12     15] #routeDesign: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 619.16 (MB), peak = 619.16 (MB)
+[02/01 20:49:12     15] #**INFO: setDesignMode -flowEffort standard
+[02/01 20:49:12     15] #**INFO: multi-cut via swapping  will be performed after routing.
+[02/01 20:49:12     15] #**INFO: All auto set options tuned by routeDesign will be restored to their original settings on command completion.
+[02/01 20:49:12     15] #**INFO: auto set of routeReserveSpaceForMultiCut to true
+[02/01 20:49:12     15] #**INFO: auto set of routeConcurrentMinimizeViaCountEffort to high
+[02/01 20:49:12     15] #spOpts: N=65 
+[02/01 20:49:12     15] Core basic site is core
+[02/01 20:49:12     15] Estimated cell power/ground rail width = 0.225 um
+[02/01 20:49:12     15] Layer info - lib-1st H=1, V=2.  Cell-FPin=1. Top-pin=2
+[02/01 20:49:12     15] Begin checking placement ... (start mem=675.8M, init mem=680.8M)
+[02/01 20:49:12     15] *info: Placed = 13890          (Fixed = 9)
+[02/01 20:49:12     15] *info: Unplaced = 0           
+[02/01 20:49:12     15] Placement Density:84.81%(41630/49085)
+[02/01 20:49:12     15] Finished checkPlace (cpu: total=0:00:00.2, vio checks=0:00:00.0; mem=682.8M)
+[02/01 20:49:12     15] #**INFO: auto set of routeWithTimingDriven to true
+[02/01 20:49:12     15] #**INFO: auto set of routeWithSiDriven to true
+[02/01 20:49:12     15] 
+[02/01 20:49:12     15] changeUseClockNetStatus Option :  -noFixedNetWires 
+[02/01 20:49:12     15] *** Changed status on (10) nets in Clock.
+[02/01 20:49:12     15] *** End changeUseClockNetStatus (cpu=0:00:00.0, real=0:00:00.0, mem=682.8M) ***
+[02/01 20:49:12     15] #Start route 10 clock nets...
+[02/01 20:49:12     15] 
+[02/01 20:49:12     15] globalDetailRoute
+[02/01 20:49:12     15] 
+[02/01 20:49:12     15] #setNanoRouteMode -drouteEndIteration 5
+[02/01 20:49:12     15] #setNanoRouteMode -routeConcurrentMinimizeViaCountEffort "high"
+[02/01 20:49:12     15] #setNanoRouteMode -routeReserveSpaceForMultiCut true
+[02/01 20:49:12     15] #setNanoRouteMode -routeWithEco true
+[02/01 20:49:12     15] #setNanoRouteMode -routeWithSiDriven true
+[02/01 20:49:12     15] #setNanoRouteMode -routeWithTimingDriven true
+[02/01 20:49:12     15] #Start globalDetailRoute on Thu Feb  1 20:49:12 2018
+[02/01 20:49:12     15] #
+[02/01 20:49:13     16] Initializing multi-corner capacitance tables ... 
+[02/01 20:49:13     16] Initializing multi-corner resistance tables ...
+[02/01 20:49:13     16] ### Net info: total nets: 14182
+[02/01 20:49:13     16] ### Net info: dirty nets: 331
+[02/01 20:49:13     16] ### Net info: marked as disconnected nets: 0
+[02/01 20:49:13     16] #WARNING (NRDB-682) Connectivity is broken at PIN CP of INST text_in_r_reg_5_ connects to NET CTS_38 at location ( 252.300 192.600 ) on LAYER M1. The location is not inside the pin geometry extraction.
+[02/01 20:49:13     16] #WARNING (NRDB-682) Connectivity is broken at PIN CP of INST text_in_r_reg_62_ connects to NET CTS_38 at location ( 252.300 191.000 ) on LAYER M1. The location is not inside the pin geometry extraction.
+[02/01 20:49:13     16] #WARNING (NRDB-682) Connectivity is broken at PIN CP of INST text_out_reg_16_ connects to NET CTS_38 at location ( 250.100 187.200 ) on LAYER M1. The location is not inside the pin geometry extraction.
+[02/01 20:49:13     16] #WARNING (NRDB-682) Connectivity is broken at PIN CP of INST text_in_r_reg_4_ connects to NET CTS_38 at location ( 252.500 180.400 ) on LAYER M1. The location is not inside the pin geometry extraction.
+[02/01 20:49:13     16] #WARNING (NRDB-682) Connectivity is broken at PIN CP of INST text_out_reg_11_ connects to NET CTS_38 at location ( 249.900 181.800 ) on LAYER M1. The location is not inside the pin geometry extraction.
+[02/01 20:49:13     16] #WARNING (NRDB-682) Connectivity is broken at PIN CP of INST text_in_r_reg_8_ connects to NET CTS_38 at location ( 248.300 181.800 ) on LAYER M1. The location is not inside the pin geometry extraction.
+[02/01 20:49:13     16] #WARNING (NRDB-682) Connectivity is broken at PIN CP of INST text_in_r_reg_0_ connects to NET CTS_38 at location ( 247.300 180.400 ) on LAYER M1. The location is not inside the pin geometry extraction.
+[02/01 20:49:13     16] #WARNING (NRDB-682) Connectivity is broken at PIN CP of INST text_out_reg_12_ connects to NET CTS_38 at location ( 246.300 178.200 ) on LAYER M1. The location is not inside the pin geometry extraction.
+[02/01 20:49:13     16] #WARNING (NRDB-682) Connectivity is broken at PIN CP of INST text_out_reg_22_ connects to NET CTS_38 at location ( 242.500 178.200 ) on LAYER M1. The location is not inside the pin geometry extraction.
+[02/01 20:49:13     16] #WARNING (NRDB-682) Connectivity is broken at PIN CP of INST text_in_r_reg_27_ connects to NET CTS_38 at location ( 242.300 181.600 ) on LAYER M1. The location is not inside the pin geometry extraction.
+[02/01 20:49:13     16] #WARNING (NRDB-682) Connectivity is broken at PIN CP of INST text_in_r_reg_7_ connects to NET CTS_38 at location ( 240.900 180.400 ) on LAYER M1. The location is not inside the pin geometry extraction.
+[02/01 20:49:13     16] #WARNING (NRDB-682) Connectivity is broken at PIN CP of INST text_in_r_reg_12_ connects to NET CTS_38 at location ( 240.900 178.200 ) on LAYER M1. The location is not inside the pin geometry extraction.
+[02/01 20:49:13     16] #WARNING (NRDB-682) Connectivity is broken at PIN CP of INST text_out_reg_14_ connects to NET CTS_38 at location ( 242.700 176.600 ) on LAYER M1. The location is not inside the pin geometry extraction.
+[02/01 20:49:13     16] #WARNING (NRDB-682) Connectivity is broken at PIN CP of INST text_in_r_reg_3_ connects to NET CTS_38 at location ( 243.300 174.600 ) on LAYER M1. The location is not inside the pin geometry extraction.
+[02/01 20:49:13     16] #WARNING (NRDB-682) Connectivity is broken at PIN CP of INST text_in_r_reg_35_ connects to NET CTS_38 at location ( 251.900 173.200 ) on LAYER M1. The location is not inside the pin geometry extraction.
+[02/01 20:49:13     16] #WARNING (NRDB-682) Connectivity is broken at PIN CP of INST text_out_reg_17_ connects to NET CTS_38 at location ( 250.100 169.200 ) on LAYER M1. The location is not inside the pin geometry extraction.
+[02/01 20:49:13     16] #WARNING (NRDB-682) Connectivity is broken at PIN CP of INST text_out_reg_47_ connects to NET CTS_38 at location ( 250.100 167.400 ) on LAYER M1. The location is not inside the pin geometry extraction.
+[02/01 20:49:13     16] #WARNING (NRDB-682) Connectivity is broken at PIN CP of INST text_out_reg_9_ connects to NET CTS_38 at location ( 250.100 165.600 ) on LAYER M1. The location is not inside the pin geometry extraction.
+[02/01 20:49:13     16] #WARNING (NRDB-682) Connectivity is broken at PIN CP of INST text_out_reg_0_ connects to NET CTS_38 at location ( 250.100 163.800 ) on LAYER M1. The location is not inside the pin geometry extraction.
+[02/01 20:49:13     16] #WARNING (NRDB-682) Connectivity is broken at PIN CP of INST text_out_reg_4_ connects to NET CTS_38 at location ( 250.100 162.000 ) on LAYER M1. The location is not inside the pin geometry extraction.
+[02/01 20:49:13     16] #WARNING (EMS-27) Message (NRDB-682) has exceeded the current message display limit of 20.
+[02/01 20:49:13     16] #To increase the message display limit, refer to the product command reference manual.
+[02/01 20:49:13     16] #WARNING (NRIG-44) Imported NET CTS_38 has LVS problem. The integrity of the wires will be checked. NanoRoute will continue. Check the net for FIXED or misaligned routing connections. If necessary, skip this net or delete the net routing.
+[02/01 20:49:13     16] #WARNING (NRIG-44) Imported NET CTS_37 has LVS problem. The integrity of the wires will be checked. NanoRoute will continue. Check the net for FIXED or misaligned routing connections. If necessary, skip this net or delete the net routing.
+[02/01 20:49:13     16] #WARNING (NRIG-44) Imported NET CTS_35 has LVS problem. The integrity of the wires will be checked. NanoRoute will continue. Check the net for FIXED or misaligned routing connections. If necessary, skip this net or delete the net routing.
+[02/01 20:49:13     16] #WARNING (NRIG-44) Imported NET CTS_34 has LVS problem. The integrity of the wires will be checked. NanoRoute will continue. Check the net for FIXED or misaligned routing connections. If necessary, skip this net or delete the net routing.
+[02/01 20:49:13     16] #WARNING (NRIG-44) Imported NET CTS_33 has LVS problem. The integrity of the wires will be checked. NanoRoute will continue. Check the net for FIXED or misaligned routing connections. If necessary, skip this net or delete the net routing.
+[02/01 20:49:13     16] #WARNING (NRIG-44) Imported NET CTS_32 has LVS problem. The integrity of the wires will be checked. NanoRoute will continue. Check the net for FIXED or misaligned routing connections. If necessary, skip this net or delete the net routing.
+[02/01 20:49:13     16] #WARNING (NRIG-44) Imported NET CTS_31 has LVS problem. The integrity of the wires will be checked. NanoRoute will continue. Check the net for FIXED or misaligned routing connections. If necessary, skip this net or delete the net routing.
+[02/01 20:49:13     16] #WARNING (NRIG-44) Imported NET CTS_30 has LVS problem. The integrity of the wires will be checked. NanoRoute will continue. Check the net for FIXED or misaligned routing connections. If necessary, skip this net or delete the net routing.
+[02/01 20:49:13     16] ### Net info: fully routed nets: 0
+[02/01 20:49:13     16] ### Net info: trivial (single pin) nets: 0
+[02/01 20:49:13     16] ### Net info: unrouted nets: 14172
+[02/01 20:49:13     16] ### Net info: re-extraction nets: 10
+[02/01 20:49:13     16] ### Net info: ignored nets: 0
+[02/01 20:49:13     16] ### Net info: skip routing nets: 14172
+[02/01 20:49:13     16] #NanoRoute Version 15.23-s045_1 NR160414-1105/15_23-UB
+[02/01 20:49:13     16] #Start routing data preparation.
+[02/01 20:49:13     16] #WARNING (NRDB-2077) The below via enclosure for LAYER M1 is not specified for width 0.090.
+[02/01 20:49:13     16] #WARNING (NRDB-2078) The above via enclosure for LAYER M2 is not specified for width 0.100.
+[02/01 20:49:13     16] #WARNING (NRDB-2077) The below via enclosure for LAYER M1 is not specified for width 0.090.
+[02/01 20:49:13     16] #WARNING (NRDB-2078) The above via enclosure for LAYER M2 is not specified for width 0.100.
+[02/01 20:49:13     16] #WARNING (NRDB-2077) The below via enclosure for LAYER M2 is not specified for width 0.100.
+[02/01 20:49:13     16] #WARNING (NRDB-2078) The above via enclosure for LAYER M3 is not specified for width 0.100.
+[02/01 20:49:13     16] #WARNING (NRDB-2077) The below via enclosure for LAYER M2 is not specified for width 0.100.
+[02/01 20:49:13     16] #WARNING (NRDB-2078) The above via enclosure for LAYER M3 is not specified for width 0.100.
+[02/01 20:49:13     16] #WARNING (NRDB-2077) The below via enclosure for LAYER M3 is not specified for width 0.100.
+[02/01 20:49:13     16] #WARNING (NRDB-2078) The above via enclosure for LAYER M4 is not specified for width 0.100.
+[02/01 20:49:13     16] #WARNING (NRDB-2077) The below via enclosure for LAYER M3 is not specified for width 0.100.
+[02/01 20:49:13     16] #WARNING (NRDB-2078) The above via enclosure for LAYER M4 is not specified for width 0.100.
+[02/01 20:49:13     16] #WARNING (NRDB-2077) The below via enclosure for LAYER M4 is not specified for width 0.100.
+[02/01 20:49:13     16] #WARNING (NRDB-2078) The above via enclosure for LAYER M5 is not specified for width 0.100.
+[02/01 20:49:13     16] #WARNING (NRDB-2077) The below via enclosure for LAYER M4 is not specified for width 0.100.
+[02/01 20:49:13     16] #WARNING (NRDB-2078) The above via enclosure for LAYER M5 is not specified for width 0.100.
+[02/01 20:49:13     16] #WARNING (NRDB-2077) The below via enclosure for LAYER M5 is not specified for width 0.100.
+[02/01 20:49:13     16] #WARNING (NRDB-2078) The above via enclosure for LAYER M6 is not specified for width 0.100.
+[02/01 20:49:13     16] #WARNING (NRDB-2077) The below via enclosure for LAYER M5 is not specified for width 0.100.
+[02/01 20:49:13     16] #WARNING (NRDB-2078) The above via enclosure for LAYER M6 is not specified for width 0.100.
+[02/01 20:49:13     16] #WARNING (NRDB-2077) The below via enclosure for LAYER M6 is not specified for width 0.100.
+[02/01 20:49:13     16] #WARNING (NRDB-2078) The above via enclosure for LAYER M7 is not specified for width 0.400.
+[02/01 20:49:13     16] #WARNING (NRDB-2077) The below via enclosure for LAYER M6 is not specified for width 0.100.
+[02/01 20:49:13     16] #WARNING (NRDB-2078) The above via enclosure for LAYER M7 is not specified for width 0.400.
+[02/01 20:49:13     16] #WARNING (NRDB-2077) The below via enclosure for LAYER M7 is not specified for width 0.400.
+[02/01 20:49:13     16] #WARNING (NRDB-2078) The above via enclosure for LAYER M8 is not specified for width 0.400.
+[02/01 20:49:13     16] #WARNING (NRDB-2077) The below via enclosure for LAYER M7 is not specified for width 0.400.
+[02/01 20:49:13     16] #WARNING (NRDB-2078) The above via enclosure for LAYER M8 is not specified for width 0.400.
+[02/01 20:49:13     17] #Minimum voltage of a net in the design = 0.000.
+[02/01 20:49:13     17] #Maximum voltage of a net in the design = 1.100.
+[02/01 20:49:13     17] #Voltage range [0.000 - 0.000] has 1 net.
+[02/01 20:49:13     17] #Voltage range [0.900 - 1.100] has 1 net.
+[02/01 20:49:13     17] #Voltage range [0.000 - 1.100] has 14180 nets.
+[02/01 20:49:32     35] # M1           H   Track-Pitch = 0.200    Line-2-Via Pitch = 0.185
+[02/01 20:49:32     35] # M2           V   Track-Pitch = 0.200    Line-2-Via Pitch = 0.200
+[02/01 20:49:32     35] # M3           H   Track-Pitch = 0.200    Line-2-Via Pitch = 0.200
+[02/01 20:49:32     35] # M4           V   Track-Pitch = 0.200    Line-2-Via Pitch = 0.200
+[02/01 20:49:32     35] # M5           H   Track-Pitch = 0.200    Line-2-Via Pitch = 0.200
+[02/01 20:49:32     35] # M6           V   Track-Pitch = 0.200    Line-2-Via Pitch = 0.200
+[02/01 20:49:32     35] # M7           H   Track-Pitch = 0.800    Line-2-Via Pitch = 0.800
+[02/01 20:49:32     35] # M8           V   Track-Pitch = 0.800    Line-2-Via Pitch = 0.800
+[02/01 20:49:32     35] #Regenerating Ggrids automatically.
+[02/01 20:49:32     35] #Auto generating G-grids with size=15 tracks, using layer M2's pitch = 0.200.
+[02/01 20:49:32     35] #Using automatically generated G-grids.
+[02/01 20:49:32     35] #Done routing data preparation.
+[02/01 20:49:32     35] #cpu time = 00:00:19, elapsed time = 00:00:19, memory = 685.25 (MB), peak = 717.10 (MB)
+[02/01 20:49:32     35] #Merging special wires...
+[02/01 20:49:32     35] #WARNING (NRDB-1005) Cannot establish connection to PIN CP at ( 108.120 52.290 ) on M1 for NET CTS_30. The NET is considered partially routed. Visually verify wiring at the specified location as the wire/via origin may not touch the PIN. This NET will be rerouted with same or different wiring.
+[02/01 20:49:32     35] #WARNING (NRDB-1005) Cannot establish connection to PIN CP at ( 104.520 61.310 ) on M1 for NET CTS_30. The NET is considered partially routed. Visually verify wiring at the specified location as the wire/via origin may not touch the PIN. This NET will be rerouted with same or different wiring.
+[02/01 20:49:32     35] #WARNING (NRDB-1005) Cannot establish connection to PIN CP at ( 123.920 79.310 ) on M1 for NET CTS_30. The NET is considered partially routed. Visually verify wiring at the specified location as the wire/via origin may not touch the PIN. This NET will be rerouted with same or different wiring.
+[02/01 20:49:32     35] #WARNING (NRDB-1005) Cannot establish connection to PIN CP at ( 129.520 82.910 ) on M1 for NET CTS_30. The NET is considered partially routed. Visually verify wiring at the specified location as the wire/via origin may not touch the PIN. This NET will be rerouted with same or different wiring.
+[02/01 20:49:32     35] #WARNING (NRDB-1005) Cannot establish connection to PIN CP at ( 109.920 43.310 ) on M1 for NET CTS_30. The NET is considered partially routed. Visually verify wiring at the specified location as the wire/via origin may not touch the PIN. This NET will be rerouted with same or different wiring.
+[02/01 20:49:32     35] #WARNING (NRDB-1005) Cannot establish connection to PIN CP at ( 113.920 64.910 ) on M1 for NET CTS_30. The NET is considered partially routed. Visually verify wiring at the specified location as the wire/via origin may not touch the PIN. This NET will be rerouted with same or different wiring.
+[02/01 20:49:32     35] #WARNING (NRDB-1005) Cannot establish connection to PIN CP at ( 117.920 75.710 ) on M1 for NET CTS_30. The NET is considered partially routed. Visually verify wiring at the specified location as the wire/via origin may not touch the PIN. This NET will be rerouted with same or different wiring.
+[02/01 20:49:32     35] #WARNING (NRDB-1005) Cannot establish connection to PIN CP at ( 131.720 77.490 ) on M1 for NET CTS_30. The NET is considered partially routed. Visually verify wiring at the specified location as the wire/via origin may not touch the PIN. This NET will be rerouted with same or different wiring.
+[02/01 20:49:32     35] #WARNING (NRDB-1005) Cannot establish connection to PIN CP at ( 133.320 68.510 ) on M1 for NET CTS_30. The NET is considered partially routed. Visually verify wiring at the specified location as the wire/via origin may not touch the PIN. This NET will be rerouted with same or different wiring.
+[02/01 20:49:32     35] #WARNING (NRDB-1005) Cannot establish connection to PIN CP at ( 123.920 72.110 ) on M1 for NET CTS_30. The NET is considered partially routed. Visually verify wiring at the specified location as the wire/via origin may not touch the PIN. This NET will be rerouted with same or different wiring.
+[02/01 20:49:32     35] #WARNING (NRDB-1005) Cannot establish connection to PIN CP at ( 109.320 57.710 ) on M1 for NET CTS_30. The NET is considered partially routed. Visually verify wiring at the specified location as the wire/via origin may not touch the PIN. This NET will be rerouted with same or different wiring.
+[02/01 20:49:32     35] #WARNING (NRDB-1005) Cannot establish connection to PIN CP at ( 121.520 77.490 ) on M1 for NET CTS_30. The NET is considered partially routed. Visually verify wiring at the specified location as the wire/via origin may not touch the PIN. This NET will be rerouted with same or different wiring.
+[02/01 20:49:32     35] #WARNING (NRDB-1005) Cannot establish connection to PIN CP at ( 113.920 45.090 ) on M1 for NET CTS_30. The NET is considered partially routed. Visually verify wiring at the specified location as the wire/via origin may not touch the PIN. This NET will be rerouted with same or different wiring.
+[02/01 20:49:32     35] #WARNING (NRDB-1005) Cannot establish connection to PIN CP at ( 110.520 55.890 ) on M1 for NET CTS_30. The NET is considered partially routed. Visually verify wiring at the specified location as the wire/via origin may not touch the PIN. This NET will be rerouted with same or different wiring.
+[02/01 20:49:32     35] #WARNING (NRDB-1005) Cannot establish connection to PIN CP at ( 115.720 70.290 ) on M1 for NET CTS_30. The NET is considered partially routed. Visually verify wiring at the specified location as the wire/via origin may not touch the PIN. This NET will be rerouted with same or different wiring.
+[02/01 20:49:32     35] #WARNING (NRDB-1005) Cannot establish connection to PIN CP at ( 127.520 70.290 ) on M1 for NET CTS_30. The NET is considered partially routed. Visually verify wiring at the specified location as the wire/via origin may not touch the PIN. This NET will be rerouted with same or different wiring.
+[02/01 20:49:32     35] #WARNING (NRDB-1005) Cannot establish connection to PIN CP at ( 125.720 73.890 ) on M1 for NET CTS_30. The NET is considered partially routed. Visually verify wiring at the specified location as the wire/via origin may not touch the PIN. This NET will be rerouted with same or different wiring.
+[02/01 20:49:32     35] #WARNING (NRDB-1005) Cannot establish connection to PIN CP at ( 114.120 66.690 ) on M1 for NET CTS_30. The NET is considered partially routed. Visually verify wiring at the specified location as the wire/via origin may not touch the PIN. This NET will be rerouted with same or different wiring.
+[02/01 20:49:32     35] #WARNING (NRDB-1005) Cannot establish connection to PIN CP at ( 132.520 72.110 ) on M1 for NET CTS_30. The NET is considered partially routed. Visually verify wiring at the specified location as the wire/via origin may not touch the PIN. This NET will be rerouted with same or different wiring.
+[02/01 20:49:32     35] #WARNING (NRDB-1005) Cannot establish connection to PIN CP at ( 119.720 72.110 ) on M1 for NET CTS_30. The NET is considered partially routed. Visually verify wiring at the specified location as the wire/via origin may not touch the PIN. This NET will be rerouted with same or different wiring.
+[02/01 20:49:32     35] #WARNING (EMS-27) Message (NRDB-1005) has exceeded the current message display limit of 20.
+[02/01 20:49:32     35] #To increase the message display limit, refer to the product command reference manual.
+[02/01 20:49:32     35] #
+[02/01 20:49:32     35] #Connectivity extraction summary:
+[02/01 20:49:32     35] #10 routed nets are extracted.
+[02/01 20:49:32     35] #    9 (0.06%) extracted nets are partially routed.
+[02/01 20:49:32     35] #14172 nets are fixed|skipped|trivial (not extracted).
+[02/01 20:49:32     35] #Total number of nets = 14182.
+[02/01 20:49:32     35] #
+[02/01 20:49:32     35] #Number of eco nets is 9
+[02/01 20:49:32     35] #
+[02/01 20:49:32     35] #Start data preparation...
+[02/01 20:49:32     35] #
+[02/01 20:49:32     35] #Data preparation is done on Thu Feb  1 20:49:32 2018
+[02/01 20:49:32     35] #
+[02/01 20:49:32     35] #Analyzing routing resource...
+[02/01 20:49:32     35] #Routing resource analysis is done on Thu Feb  1 20:49:32 2018
+[02/01 20:49:32     35] #
+[02/01 20:49:32     35] #  Resource Analysis:
+[02/01 20:49:32     35] #
+[02/01 20:49:32     35] #               Routing  #Avail      #Track     #Total     %Gcell
+[02/01 20:49:32     35] #  Layer      Direction   Track     Blocked      Gcell    Blocked
+[02/01 20:49:32     35] #  --------------------------------------------------------------
+[02/01 20:49:32     35] #  Metal 1        H        1305           0        7656    69.00%
+[02/01 20:49:32     35] #  Metal 2        V        1319           0        7656     0.00%
+[02/01 20:49:32     35] #  Metal 3        H        1305           0        7656     0.00%
+[02/01 20:49:32     35] #  Metal 4        V        1319           0        7656     0.00%
+[02/01 20:49:32     35] #  Metal 5        H        1305           0        7656     0.00%
+[02/01 20:49:32     35] #  Metal 6        V        1319           0        7656     0.00%
+[02/01 20:49:32     35] #  Metal 7        H         326           0        7656     0.00%
+[02/01 20:49:32     35] #  Metal 8        V         330           0        7656     0.00%
+[02/01 20:49:32     35] #  --------------------------------------------------------------
+[02/01 20:49:32     35] #  Total                   8528       0.00%  61248     8.63%
+[02/01 20:49:32     35] #
+[02/01 20:49:32     35] #  10 nets (0.07%) with 1 preferred extra spacing.
+[02/01 20:49:32     35] #
+[02/01 20:49:32     35] #
+[02/01 20:49:32     35] #cpu time = 00:00:00, elapsed time = 00:00:00, memory = 687.16 (MB), peak = 717.10 (MB)
+[02/01 20:49:32     35] #
+[02/01 20:49:32     35] #start global routing iteration 1...
+[02/01 20:49:32     35] #cpu time = 00:00:00, elapsed time = 00:00:00, memory = 697.43 (MB), peak = 717.10 (MB)
+[02/01 20:49:32     35] #
+[02/01 20:49:32     35] #start global routing iteration 2...
+[02/01 20:49:32     36] #cpu time = 00:00:00, elapsed time = 00:00:00, memory = 695.34 (MB), peak = 717.10 (MB)
+[02/01 20:49:32     36] #
+[02/01 20:49:32     36] #
+[02/01 20:49:32     36] #Total number of trivial nets (e.g. < 2 pins) = 33 (skipped).
+[02/01 20:49:32     36] #Total number of nets with skipped attribute = 14139 (skipped).
+[02/01 20:49:32     36] #Total number of routable nets = 10.
+[02/01 20:49:32     36] #Total number of nets in the design = 14182.
+[02/01 20:49:32     36] #
+[02/01 20:49:32     36] #9 routable nets have only global wires.
+[02/01 20:49:32     36] #1 routable net has only detail routed wires.
+[02/01 20:49:32     36] #14139 skipped nets have only detail routed wires.
+[02/01 20:49:32     36] #9 global routed or unrouted (routable) nets have been constrained (e.g. have preferred extra spacing, require shielding etc.)
+[02/01 20:49:32     36] #1 detail routed (routable) net has been constrained (e.g. have preferred extra spacing, require shielding etc.)
+[02/01 20:49:32     36] #
+[02/01 20:49:32     36] #Routed net constraints summary:
+[02/01 20:49:32     36] #------------------------------------------------
+[02/01 20:49:32     36] #        Rules   Pref Extra Space   Unconstrained  
+[02/01 20:49:32     36] #------------------------------------------------
+[02/01 20:49:32     36] #      Default                  9               0  
+[02/01 20:49:32     36] #------------------------------------------------
+[02/01 20:49:32     36] #        Total                  9               0  
+[02/01 20:49:32     36] #------------------------------------------------
+[02/01 20:49:32     36] #
+[02/01 20:49:32     36] #Routing constraints summary of the whole design:
+[02/01 20:49:32     36] #Miscellaneous constraints include nets with expansion-ratio, avoid-detour, preferred-bottom-layer or preferred-top-layer etc. attributes
+[02/01 20:49:32     36] #-------------------------------------------------------------------
+[02/01 20:49:32     36] #        Rules   Pref Extra Space   Misc Constraints   Unconstrained  
+[02/01 20:49:32     36] #-------------------------------------------------------------------
+[02/01 20:49:32     36] #      Default                 10                168           13971  
+[02/01 20:49:32     36] #-------------------------------------------------------------------
+[02/01 20:49:32     36] #        Total                 10                168           13971  
+[02/01 20:49:32     36] #-------------------------------------------------------------------
+[02/01 20:49:32     36] #
+[02/01 20:49:32     36] #
+[02/01 20:49:32     36] #  Congestion Analysis: (blocked Gcells are excluded)
+[02/01 20:49:32     36] #
+[02/01 20:49:32     36] #                 OverCon          
+[02/01 20:49:32     36] #                  #Gcell    %Gcell
+[02/01 20:49:32     36] #     Layer           (1)   OverCon
+[02/01 20:49:32     36] #  --------------------------------
+[02/01 20:49:32     36] #   Metal 1      0(0.00%)   (0.00%)
+[02/01 20:49:32     36] #   Metal 2      0(0.00%)   (0.00%)
+[02/01 20:49:32     36] #   Metal 3      0(0.00%)   (0.00%)
+[02/01 20:49:32     36] #   Metal 4      0(0.00%)   (0.00%)
+[02/01 20:49:32     36] #   Metal 5      0(0.00%)   (0.00%)
+[02/01 20:49:32     36] #   Metal 6      0(0.00%)   (0.00%)
+[02/01 20:49:32     36] #   Metal 7      0(0.00%)   (0.00%)
+[02/01 20:49:32     36] #   Metal 8      0(0.00%)   (0.00%)
+[02/01 20:49:32     36] #  --------------------------------
+[02/01 20:49:32     36] #     Total      0(0.00%)   (0.00%)
+[02/01 20:49:32     36] #
+[02/01 20:49:32     36] #  The worst congested Gcell overcon (routing demand over resource in number of tracks) = 1
+[02/01 20:49:32     36] #  Overflow after GR: 0.00% H + 0.00% V
+[02/01 20:49:32     36] #
+[02/01 20:49:32     36] #Complete Global Routing.
+[02/01 20:49:32     36] #Total number of nets with non-default rule or having extra spacing = 10
+[02/01 20:49:32     36] #Total wire length = 4809 um.
+[02/01 20:49:32     36] #Total half perimeter of net bounding box = 1949 um.
+[02/01 20:49:32     36] #Total wire length on LAYER M1 = 1 um.
+[02/01 20:49:32     36] #Total wire length on LAYER M2 = 109 um.
+[02/01 20:49:32     36] #Total wire length on LAYER M3 = 2553 um.
+[02/01 20:49:32     36] #Total wire length on LAYER M4 = 2124 um.
+[02/01 20:49:32     36] #Total wire length on LAYER M5 = 21 um.
+[02/01 20:49:32     36] #Total wire length on LAYER M6 = 0 um.
+[02/01 20:49:32     36] #Total wire length on LAYER M7 = 0 um.
+[02/01 20:49:32     36] #Total wire length on LAYER M8 = 0 um.
+[02/01 20:49:32     36] #Total number of vias = 1624
+[02/01 20:49:32     36] #Total number of multi-cut vias = 9 (  0.6%)
+[02/01 20:49:32     36] #Total number of single cut vias = 1615 ( 99.4%)
+[02/01 20:49:32     36] #Up-Via Summary (total 1624):
+[02/01 20:49:32     36] #                   single-cut          multi-cut      Total
+[02/01 20:49:32     36] #-----------------------------------------------------------
+[02/01 20:49:32     36] #  Metal 1         531 ( 98.3%)         9 (  1.7%)        540
+[02/01 20:49:32     36] #  Metal 2         479 (100.0%)         0 (  0.0%)        479
+[02/01 20:49:32     36] #  Metal 3         591 (100.0%)         0 (  0.0%)        591
+[02/01 20:49:32     36] #  Metal 4          14 (100.0%)         0 (  0.0%)         14
+[02/01 20:49:32     36] #-----------------------------------------------------------
+[02/01 20:49:32     36] #                 1615 ( 99.4%)         9 (  0.6%)       1624 
+[02/01 20:49:32     36] #
+[02/01 20:49:32     36] #Total number of involved priority nets 9
+[02/01 20:49:32     36] #Maximum src to sink distance for priority net 288.4
+[02/01 20:49:32     36] #Average of max src_to_sink distance for priority net 220.7
+[02/01 20:49:32     36] #Average of ave src_to_sink distance for priority net 147.6
+[02/01 20:49:32     36] #Max overcon = 0 track.
+[02/01 20:49:32     36] #Total overcon = 0.00%.
+[02/01 20:49:32     36] #Worst layer Gcell overcon rate = 0.00%.
+[02/01 20:49:32     36] #cpu time = 00:00:00, elapsed time = 00:00:00, memory = 695.54 (MB), peak = 717.10 (MB)
+[02/01 20:49:32     36] #
+[02/01 20:49:32     36] #cpu time = 00:00:00, elapsed time = 00:00:00, memory = 688.99 (MB), peak = 717.10 (MB)
+[02/01 20:49:32     36] #Start Track Assignment.
+[02/01 20:49:32     36] #Done with 178 horizontal wires in 1 hboxes and 107 vertical wires in 1 hboxes.
+[02/01 20:49:32     36] #Done with 0 horizontal wires in 1 hboxes and 2 vertical wires in 1 hboxes.
+[02/01 20:49:32     36] #Complete Track Assignment.
+[02/01 20:49:32     36] #Total number of nets with non-default rule or having extra spacing = 10
+[02/01 20:49:32     36] #Total wire length = 4932 um.
+[02/01 20:49:32     36] #Total half perimeter of net bounding box = 1949 um.
+[02/01 20:49:32     36] #Total wire length on LAYER M1 = 133 um.
+[02/01 20:49:32     36] #Total wire length on LAYER M2 = 108 um.
+[02/01 20:49:32     36] #Total wire length on LAYER M3 = 2545 um.
+[02/01 20:49:32     36] #Total wire length on LAYER M4 = 2122 um.
+[02/01 20:49:32     36] #Total wire length on LAYER M5 = 24 um.
+[02/01 20:49:32     36] #Total wire length on LAYER M6 = 0 um.
+[02/01 20:49:32     36] #Total wire length on LAYER M7 = 0 um.
+[02/01 20:49:32     36] #Total wire length on LAYER M8 = 0 um.
+[02/01 20:49:32     36] #Total number of vias = 1569
+[02/01 20:49:32     36] #Total number of multi-cut vias = 9 (  0.6%)
+[02/01 20:49:32     36] #Total number of single cut vias = 1560 ( 99.4%)
+[02/01 20:49:32     36] #Up-Via Summary (total 1569):
+[02/01 20:49:32     36] #                   single-cut          multi-cut      Total
+[02/01 20:49:32     36] #-----------------------------------------------------------
+[02/01 20:49:32     36] #  Metal 1         504 ( 98.2%)         9 (  1.8%)        513
+[02/01 20:49:32     36] #  Metal 2         453 (100.0%)         0 (  0.0%)        453
+[02/01 20:49:32     36] #  Metal 3         590 (100.0%)         0 (  0.0%)        590
+[02/01 20:49:32     36] #  Metal 4          13 (100.0%)         0 (  0.0%)         13
+[02/01 20:49:32     36] #-----------------------------------------------------------
+[02/01 20:49:32     36] #                 1560 ( 99.4%)         9 (  0.6%)       1569 
+[02/01 20:49:32     36] #
+[02/01 20:49:32     36] #cpu time = 00:00:00, elapsed time = 00:00:00, memory = 693.63 (MB), peak = 717.10 (MB)
+[02/01 20:49:32     36] #
+[02/01 20:49:32     36] #Cpu time = 00:00:19
+[02/01 20:49:32     36] #Elapsed time = 00:00:19
+[02/01 20:49:32     36] #Increased memory = 28.70 (MB)
+[02/01 20:49:32     36] #Total memory = 693.63 (MB)
+[02/01 20:49:32     36] #Peak memory = 717.10 (MB)
+[02/01 20:49:33     37] #
+[02/01 20:49:33     37] #Start Detail Routing..
+[02/01 20:49:33     37] #start initial detail routing ...
+[02/01 20:49:41     45] # ECO: 16.2% of the total area was rechecked for DRC, and 44.3% required routing.
+[02/01 20:49:41     45] #    number of violations = 0
+[02/01 20:49:41     45] #13882 out of 13890 instances need to be verified(marked ipoed).
+[02/01 20:49:43     46] #    number of violations = 0
+[02/01 20:49:43     46] #cpu time = 00:00:09, elapsed time = 00:00:09, memory = 726.18 (MB), peak = 735.45 (MB)
+[02/01 20:49:43     46] #start 1st optimization iteration ...
+[02/01 20:49:43     46] #    number of violations = 0
+[02/01 20:49:43     46] #cpu time = 00:00:00, elapsed time = 00:00:00, memory = 697.76 (MB), peak = 735.45 (MB)
+[02/01 20:49:43     46] #Complete Detail Routing.
+[02/01 20:49:43     46] #Total number of nets with non-default rule or having extra spacing = 10
+[02/01 20:49:43     46] #Total wire length = 4055 um.
+[02/01 20:49:43     46] #Total half perimeter of net bounding box = 1949 um.
+[02/01 20:49:43     46] #Total wire length on LAYER M1 = 32 um.
+[02/01 20:49:43     46] #Total wire length on LAYER M2 = 522 um.
+[02/01 20:49:43     46] #Total wire length on LAYER M3 = 2034 um.
+[02/01 20:49:43     46] #Total wire length on LAYER M4 = 1467 um.
+[02/01 20:49:43     46] #Total wire length on LAYER M5 = 0 um.
+[02/01 20:49:43     46] #Total wire length on LAYER M6 = 0 um.
+[02/01 20:49:43     46] #Total wire length on LAYER M7 = 0 um.
+[02/01 20:49:43     46] #Total wire length on LAYER M8 = 0 um.
+[02/01 20:49:43     46] #Total number of vias = 1292
+[02/01 20:49:43     46] #Total number of multi-cut vias = 9 (  0.7%)
+[02/01 20:49:43     46] #Total number of single cut vias = 1283 ( 99.3%)
+[02/01 20:49:43     46] #Up-Via Summary (total 1292):
+[02/01 20:49:43     46] #                   single-cut          multi-cut      Total
+[02/01 20:49:43     46] #-----------------------------------------------------------
+[02/01 20:49:43     46] #  Metal 1         541 ( 98.4%)         9 (  1.6%)        550
+[02/01 20:49:43     46] #  Metal 2         409 (100.0%)         0 (  0.0%)        409
+[02/01 20:49:43     46] #  Metal 3         333 (100.0%)         0 (  0.0%)        333
+[02/01 20:49:43     46] #-----------------------------------------------------------
+[02/01 20:49:43     46] #                 1283 ( 99.3%)         9 (  0.7%)       1292 
+[02/01 20:49:43     46] #
+[02/01 20:49:43     46] #Total number of DRC violations = 0
+[02/01 20:49:43     46] #Cpu time = 00:00:11
+[02/01 20:49:43     46] #Elapsed time = 00:00:11
+[02/01 20:49:43     46] #Increased memory = 2.39 (MB)
+[02/01 20:49:43     46] #Total memory = 696.04 (MB)
+[02/01 20:49:43     46] #Peak memory = 735.45 (MB)
+[02/01 20:49:43     46] #detailRoute Statistics:
+[02/01 20:49:43     46] #Cpu time = 00:00:11
+[02/01 20:49:43     46] #Elapsed time = 00:00:11
+[02/01 20:49:43     46] #Increased memory = 2.41 (MB)
+[02/01 20:49:43     46] #Total memory = 696.04 (MB)
+[02/01 20:49:43     46] #Peak memory = 735.45 (MB)
+[02/01 20:49:43     46] #
+[02/01 20:49:43     46] #globalDetailRoute statistics:
+[02/01 20:49:43     46] #Cpu time = 00:00:31
+[02/01 20:49:43     46] #Elapsed time = 00:00:31
+[02/01 20:49:43     46] #Increased memory = 55.30 (MB)
+[02/01 20:49:43     46] #Total memory = 684.31 (MB)
+[02/01 20:49:43     46] #Peak memory = 735.45 (MB)
+[02/01 20:49:43     46] #Number of warnings = 78
+[02/01 20:49:43     46] #Total number of warnings = 79
+[02/01 20:49:43     46] #Number of fails = 0
+[02/01 20:49:43     46] #Total number of fails = 0
+[02/01 20:49:43     46] #Complete globalDetailRoute on Thu Feb  1 20:49:43 2018
+[02/01 20:49:43     46] #
+[02/01 20:49:43     46] 
+[02/01 20:49:43     46] globalDetailRoute
+[02/01 20:49:43     46] 
+[02/01 20:49:43     46] #setNanoRouteMode -routeConcurrentMinimizeViaCountEffort "high"
+[02/01 20:49:43     46] #setNanoRouteMode -routeReserveSpaceForMultiCut true
+[02/01 20:49:43     46] #setNanoRouteMode -routeWithSiDriven true
+[02/01 20:49:43     46] #setNanoRouteMode -routeWithTimingDriven true
+[02/01 20:49:43     46] #Start globalDetailRoute on Thu Feb  1 20:49:43 2018
+[02/01 20:49:43     46] #
+[02/01 20:49:43     46] #Generating timing data, please wait...
+[02/01 20:49:43     46] #14149 total nets, 10 already routed, 10 will ignore in trialRoute
+[02/01 20:49:43     46] [NR-eagl] Detected a user setting of 'getTrialRouteMode -handlePreroute true' which was ignored.
+[02/01 20:49:43     47] **WARN: (IMPEXT-3442):	The version of the capacitance table file being used is obsolete and is no longer recommended. For improved accuracy, generate the capacitance table file using the generateCapTbl command.
+[02/01 20:49:44     47] #Dump tif for version 2.1
+[02/01 20:49:48     52] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[02/01 20:49:48     52] End delay calculation. (MEM=935.551 CPU=0:00:03.1 REAL=0:00:03.0)
+[02/01 20:49:50     54] **WARN: (IMPEXT-3493):	The design extraction status has been reset by the 'setExtractRCMode' command. The parasitic data can be regenerated either by extracting the design using the extractRC command or by loading the SPEF or RCDB file(s). To prevent resetting of the extraction status, avoid changing extraction modes.
+[02/01 20:49:51     54] #Generating timing data took: cpu time = 00:00:07, elapsed time = 00:00:07, memory = 731.85 (MB), peak = 922.00 (MB)
+[02/01 20:49:51     54] #Done generating timing data.
+[02/01 20:49:51     54] ### Net info: total nets: 14182
+[02/01 20:49:51     54] ### Net info: dirty nets: 0
+[02/01 20:49:51     54] ### Net info: marked as disconnected nets: 0
+[02/01 20:49:51     54] ### Net info: fully routed nets: 10
+[02/01 20:49:51     54] ### Net info: trivial (single pin) nets: 0
+[02/01 20:49:51     54] ### Net info: unrouted nets: 14172
+[02/01 20:49:51     54] ### Net info: re-extraction nets: 0
+[02/01 20:49:51     54] ### Net info: ignored nets: 0
+[02/01 20:49:51     54] ### Net info: skip routing nets: 0
+[02/01 20:49:51     54] #Start reading timing information from file .timing_file_30998.tif.gz ...
+[02/01 20:49:51     54] #Read in timing information for 391 ports, 13890 instances from timing file .timing_file_30998.tif.gz.
+[02/01 20:49:51     54] #NanoRoute Version 15.23-s045_1 NR160414-1105/15_23-UB
+[02/01 20:49:51     54] #Start routing data preparation.
+[02/01 20:49:51     54] #Minimum voltage of a net in the design = 0.000.
+[02/01 20:49:51     54] #Maximum voltage of a net in the design = 1.100.
+[02/01 20:49:51     54] #Voltage range [0.000 - 0.000] has 1 net.
+[02/01 20:49:51     54] #Voltage range [0.900 - 1.100] has 1 net.
+[02/01 20:49:51     54] #Voltage range [0.000 - 1.100] has 14180 nets.
+[02/01 20:49:51     55] # M1           H   Track-Pitch = 0.200    Line-2-Via Pitch = 0.185
+[02/01 20:49:51     55] # M2           V   Track-Pitch = 0.200    Line-2-Via Pitch = 0.200
+[02/01 20:49:51     55] # M3           H   Track-Pitch = 0.200    Line-2-Via Pitch = 0.200
+[02/01 20:49:51     55] # M4           V   Track-Pitch = 0.200    Line-2-Via Pitch = 0.200
+[02/01 20:49:51     55] # M5           H   Track-Pitch = 0.200    Line-2-Via Pitch = 0.200
+[02/01 20:49:51     55] # M6           V   Track-Pitch = 0.200    Line-2-Via Pitch = 0.200
+[02/01 20:49:51     55] # M7           H   Track-Pitch = 0.800    Line-2-Via Pitch = 0.800
+[02/01 20:49:51     55] # M8           V   Track-Pitch = 0.800    Line-2-Via Pitch = 0.800
+[02/01 20:49:52     55] #165/14149 = 1% of signal nets have been set as priority nets
+[02/01 20:49:52     55] #Regenerating Ggrids automatically.
+[02/01 20:49:52     55] #Auto generating G-grids with size=15 tracks, using layer M2's pitch = 0.200.
+[02/01 20:49:52     55] #Using automatically generated G-grids.
+[02/01 20:49:52     55] #Done routing data preparation.
+[02/01 20:49:52     55] #cpu time = 00:00:00, elapsed time = 00:00:00, memory = 725.64 (MB), peak = 922.00 (MB)
+[02/01 20:49:52     55] #Merging special wires...
+[02/01 20:49:52     55] #Number of eco nets is 0
+[02/01 20:49:52     55] #
+[02/01 20:49:52     55] #Start data preparation...
+[02/01 20:49:52     55] #
+[02/01 20:49:52     55] #Data preparation is done on Thu Feb  1 20:49:52 2018
+[02/01 20:49:52     55] #
+[02/01 20:49:52     55] #Analyzing routing resource...
+[02/01 20:49:52     55] #Routing resource analysis is done on Thu Feb  1 20:49:52 2018
+[02/01 20:49:52     55] #
+[02/01 20:49:52     55] #  Resource Analysis:
+[02/01 20:49:52     55] #
+[02/01 20:49:52     55] #               Routing  #Avail      #Track     #Total     %Gcell
+[02/01 20:49:52     55] #  Layer      Direction   Track     Blocked      Gcell    Blocked
+[02/01 20:49:52     55] #  --------------------------------------------------------------
+[02/01 20:49:52     55] #  Metal 1        H        1305           0        7656    69.00%
+[02/01 20:49:52     55] #  Metal 2        V        1319           0        7656     0.00%
+[02/01 20:49:52     55] #  Metal 3        H        1305           0        7656     0.00%
+[02/01 20:49:52     55] #  Metal 4        V        1319           0        7656     0.00%
+[02/01 20:49:52     55] #  Metal 5        H        1305           0        7656     0.00%
+[02/01 20:49:52     55] #  Metal 6        V        1319           0        7656     0.00%
+[02/01 20:49:52     55] #  Metal 7        H         326           0        7656     0.00%
+[02/01 20:49:52     55] #  Metal 8        V         330           0        7656     0.00%
+[02/01 20:49:52     55] #  --------------------------------------------------------------
+[02/01 20:49:52     55] #  Total                   8528       0.00%  61248     8.63%
+[02/01 20:49:52     55] #
+[02/01 20:49:52     55] #  10 nets (0.07%) with 1 preferred extra spacing.
+[02/01 20:49:52     55] #
+[02/01 20:49:52     55] #
+[02/01 20:49:52     55] #cpu time = 00:00:00, elapsed time = 00:00:00, memory = 727.26 (MB), peak = 922.00 (MB)
+[02/01 20:49:52     55] #
+[02/01 20:49:52     55] #start global routing iteration 1...
+[02/01 20:50:03     66] #cpu time = 00:00:11, elapsed time = 00:00:11, memory = 784.80 (MB), peak = 922.00 (MB)
+[02/01 20:50:03     66] #
+[02/01 20:50:03     66] #start global routing iteration 2...
+[02/01 20:50:10     73] #cpu time = 00:00:07, elapsed time = 00:00:07, memory = 790.89 (MB), peak = 922.00 (MB)
+[02/01 20:50:10     73] #
+[02/01 20:50:10     73] #
+[02/01 20:50:10     73] #Total number of trivial nets (e.g. < 2 pins) = 33 (skipped).
+[02/01 20:50:10     73] #Total number of routable nets = 14149.
+[02/01 20:50:10     73] #Total number of nets in the design = 14182.
+[02/01 20:50:10     73] #
+[02/01 20:50:10     73] #14139 routable nets have only global wires.
+[02/01 20:50:10     73] #10 routable nets have only detail routed wires.
+[02/01 20:50:10     73] #168 global routed or unrouted (routable) nets have been constrained (e.g. have preferred extra spacing, require shielding etc.)
+[02/01 20:50:10     73] #10 detail routed (routable) nets have been constrained (e.g. have preferred extra spacing, require shielding etc.)
+[02/01 20:50:10     73] #
+[02/01 20:50:10     73] #Routed nets constraints summary:
+[02/01 20:50:10     73] #Miscellaneous constraints include nets with expansion-ratio, avoid-detour, preferred-bottom-layer or preferred-top-layer etc. attributes
+[02/01 20:50:10     73] #------------------------------------------------
+[02/01 20:50:10     73] #        Rules   Misc Constraints   Unconstrained  
+[02/01 20:50:10     73] #------------------------------------------------
+[02/01 20:50:10     73] #      Default                168           13971  
+[02/01 20:50:10     73] #------------------------------------------------
+[02/01 20:50:10     73] #        Total                168           13971  
+[02/01 20:50:10     73] #------------------------------------------------
+[02/01 20:50:10     73] #
+[02/01 20:50:10     73] #Routing constraints summary of the whole design:
+[02/01 20:50:10     73] #Miscellaneous constraints include nets with expansion-ratio, avoid-detour, preferred-bottom-layer or preferred-top-layer etc. attributes
+[02/01 20:50:10     73] #-------------------------------------------------------------------
+[02/01 20:50:10     73] #        Rules   Pref Extra Space   Misc Constraints   Unconstrained  
+[02/01 20:50:10     73] #-------------------------------------------------------------------
+[02/01 20:50:10     73] #      Default                 10                168           13971  
+[02/01 20:50:10     73] #-------------------------------------------------------------------
+[02/01 20:50:10     73] #        Total                 10                168           13971  
+[02/01 20:50:10     73] #-------------------------------------------------------------------
+[02/01 20:50:10     73] #
+[02/01 20:50:10     74] #
+[02/01 20:50:10     74] #  Congestion Analysis: (blocked Gcells are excluded)
+[02/01 20:50:10     74] #
+[02/01 20:50:10     74] #                 OverCon       OverCon       OverCon          
+[02/01 20:50:10     74] #                  #Gcell        #Gcell        #Gcell    %Gcell
+[02/01 20:50:10     74] #     Layer         (1-2)         (3-4)           (5)   OverCon
+[02/01 20:50:10     74] #  ------------------------------------------------------------
+[02/01 20:50:10     74] #   Metal 1      0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
+[02/01 20:50:10     74] #   Metal 2    140(1.83%)     39(0.51%)      4(0.05%)   (2.39%)
+[02/01 20:50:10     74] #   Metal 3      0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
+[02/01 20:50:10     74] #   Metal 4      0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
+[02/01 20:50:10     74] #   Metal 5      0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
+[02/01 20:50:10     74] #   Metal 6      0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
+[02/01 20:50:10     74] #   Metal 7      0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
+[02/01 20:50:10     74] #   Metal 8      0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
+[02/01 20:50:10     74] #  ------------------------------------------------------------
+[02/01 20:50:10     74] #     Total    140(0.25%)     39(0.07%)      4(0.01%)   (0.32%)
+[02/01 20:50:10     74] #
+[02/01 20:50:10     74] #  The worst congested Gcell overcon (routing demand over resource in number of tracks) = 5
+[02/01 20:50:10     74] #  Overflow after GR: 0.00% H + 0.60% V
+[02/01 20:50:10     74] #
+[02/01 20:50:10     74] #Complete Global Routing.
+[02/01 20:50:10     74] #Total number of nets with non-default rule or having extra spacing = 10
+[02/01 20:50:10     74] #Total wire length = 298382 um.
+[02/01 20:50:10     74] #Total half perimeter of net bounding box = 272503 um.
+[02/01 20:50:10     74] #Total wire length on LAYER M1 = 1298 um.
+[02/01 20:50:10     74] #Total wire length on LAYER M2 = 53772 um.
+[02/01 20:50:10     74] #Total wire length on LAYER M3 = 79172 um.
+[02/01 20:50:10     74] #Total wire length on LAYER M4 = 69313 um.
+[02/01 20:50:10     74] #Total wire length on LAYER M5 = 57229 um.
+[02/01 20:50:10     74] #Total wire length on LAYER M6 = 18371 um.
+[02/01 20:50:10     74] #Total wire length on LAYER M7 = 9051 um.
+[02/01 20:50:10     74] #Total wire length on LAYER M8 = 10176 um.
+[02/01 20:50:10     74] #Total number of vias = 110506
+[02/01 20:50:10     74] #Total number of multi-cut vias = 9 (  0.0%)
+[02/01 20:50:10     74] #Total number of single cut vias = 110497 (100.0%)
+[02/01 20:50:10     74] #Up-Via Summary (total 110506):
+[02/01 20:50:10     74] #                   single-cut          multi-cut      Total
+[02/01 20:50:10     74] #-----------------------------------------------------------
+[02/01 20:50:10     74] #  Metal 1       46784 (100.0%)         9 (  0.0%)      46793
+[02/01 20:50:10     74] #  Metal 2       33205 (100.0%)         0 (  0.0%)      33205
+[02/01 20:50:10     74] #  Metal 3       15874 (100.0%)         0 (  0.0%)      15874
+[02/01 20:50:10     74] #  Metal 4        8865 (100.0%)         0 (  0.0%)       8865
+[02/01 20:50:10     74] #  Metal 5        2902 (100.0%)         0 (  0.0%)       2902
+[02/01 20:50:10     74] #  Metal 6        1480 (100.0%)         0 (  0.0%)       1480
+[02/01 20:50:10     74] #  Metal 7        1387 (100.0%)         0 (  0.0%)       1387
+[02/01 20:50:10     74] #-----------------------------------------------------------
+[02/01 20:50:10     74] #               110497 (100.0%)         9 (  0.0%)     110506 
+[02/01 20:50:10     74] #
+[02/01 20:50:10     74] #Max overcon = 5 tracks.
+[02/01 20:50:10     74] #Total overcon = 0.32%.
+[02/01 20:50:10     74] #Worst layer Gcell overcon rate = 0.00%.
+[02/01 20:50:10     74] #cpu time = 00:00:19, elapsed time = 00:00:19, memory = 790.89 (MB), peak = 922.00 (MB)
+[02/01 20:50:10     74] #
+[02/01 20:50:10     74] #cpu time = 00:00:00, elapsed time = 00:00:00, memory = 742.85 (MB), peak = 922.00 (MB)
+[02/01 20:50:10     74] #Start Track Assignment.
+[02/01 20:50:12     75] #Done with 24216 horizontal wires in 1 hboxes and 24479 vertical wires in 1 hboxes.
+[02/01 20:50:15     78] #Done with 5599 horizontal wires in 1 hboxes and 4686 vertical wires in 1 hboxes.
+[02/01 20:50:15     78] #Complete Track Assignment.
+[02/01 20:50:15     78] #Total number of nets with non-default rule or having extra spacing = 10
+[02/01 20:50:15     78] #Total wire length = 314804 um.
+[02/01 20:50:15     78] #Total half perimeter of net bounding box = 272503 um.
+[02/01 20:50:15     78] #Total wire length on LAYER M1 = 12933 um.
+[02/01 20:50:15     78] #Total wire length on LAYER M2 = 53567 um.
+[02/01 20:50:15     78] #Total wire length on LAYER M3 = 82422 um.
+[02/01 20:50:15     78] #Total wire length on LAYER M4 = 69647 um.
+[02/01 20:50:15     78] #Total wire length on LAYER M5 = 58300 um.
+[02/01 20:50:15     78] #Total wire length on LAYER M6 = 18517 um.
+[02/01 20:50:15     78] #Total wire length on LAYER M7 = 9148 um.
+[02/01 20:50:15     78] #Total wire length on LAYER M8 = 10270 um.
+[02/01 20:50:15     78] #Total number of vias = 110506
+[02/01 20:50:15     78] #Total number of multi-cut vias = 9 (  0.0%)
+[02/01 20:50:15     78] #Total number of single cut vias = 110497 (100.0%)
+[02/01 20:50:15     78] #Up-Via Summary (total 110506):
+[02/01 20:50:15     78] #                   single-cut          multi-cut      Total
+[02/01 20:50:15     78] #-----------------------------------------------------------
+[02/01 20:50:15     78] #  Metal 1       46784 (100.0%)         9 (  0.0%)      46793
+[02/01 20:50:15     78] #  Metal 2       33205 (100.0%)         0 (  0.0%)      33205
+[02/01 20:50:15     78] #  Metal 3       15874 (100.0%)         0 (  0.0%)      15874
+[02/01 20:50:15     78] #  Metal 4        8865 (100.0%)         0 (  0.0%)       8865
+[02/01 20:50:15     78] #  Metal 5        2902 (100.0%)         0 (  0.0%)       2902
+[02/01 20:50:15     78] #  Metal 6        1480 (100.0%)         0 (  0.0%)       1480
+[02/01 20:50:15     78] #  Metal 7        1387 (100.0%)         0 (  0.0%)       1387
+[02/01 20:50:15     78] #-----------------------------------------------------------
+[02/01 20:50:15     78] #               110497 (100.0%)         9 (  0.0%)     110506 
+[02/01 20:50:15     78] #
+[02/01 20:50:15     78] #cpu time = 00:00:04, elapsed time = 00:00:04, memory = 752.96 (MB), peak = 922.00 (MB)
+[02/01 20:50:15     78] #
+[02/01 20:50:15     78] #Cpu time = 00:00:24
+[02/01 20:50:15     78] #Elapsed time = 00:00:24
+[02/01 20:50:15     78] #Increased memory = 30.82 (MB)
+[02/01 20:50:15     78] #Total memory = 752.96 (MB)
+[02/01 20:50:15     78] #Peak memory = 922.00 (MB)
+[02/01 20:50:16     79] #routeSiEffort set to high
+[02/01 20:50:16     79] #
+[02/01 20:50:16     79] #Start Detail Routing..
+[02/01 20:50:16     79] #start initial detail routing ...
+[02/01 20:53:38    282] #    number of violations = 50
+[02/01 20:53:38    282] #
+[02/01 20:53:38    282] #    By Layer and Type :
+[02/01 20:53:38    282] #	         MetSpc   EOLSpc    Short   MinStp   CutSpc   MinCut   Totals
+[02/01 20:53:38    282] #	M1           13        5        6        7        3        0       34
+[02/01 20:53:38    282] #	M2            4        4        7        0        0        0       15
+[02/01 20:53:38    282] #	M3            0        0        0        0        0        0        0
+[02/01 20:53:38    282] #	M4            0        0        0        0        0        0        0
+[02/01 20:53:38    282] #	M5            0        0        0        0        0        1        1
+[02/01 20:53:38    282] #	Totals       17        9       13        7        3        1       50
+[02/01 20:53:38    282] #cpu time = 00:03:23, elapsed time = 00:03:23, memory = 825.80 (MB), peak = 922.00 (MB)
+[02/01 20:53:38    282] #start 1st optimization iteration ...
+[02/01 20:53:40    284] #    number of violations = 21
+[02/01 20:53:40    284] #
+[02/01 20:53:40    284] #    By Layer and Type :
+[02/01 20:53:40    284] #	         MetSpc   EOLSpc    Short   Totals
+[02/01 20:53:40    284] #	M1            5        3        4       12
+[02/01 20:53:40    284] #	M2            2        1        5        8
+[02/01 20:53:40    284] #	M3            0        0        0        0
+[02/01 20:53:40    284] #	M4            0        0        0        0
+[02/01 20:53:40    284] #	M5            0        0        1        1
+[02/01 20:53:40    284] #	Totals        7        4       10       21
+[02/01 20:53:40    284] #cpu time = 00:00:02, elapsed time = 00:00:02, memory = 774.83 (MB), peak = 922.00 (MB)
+[02/01 20:53:40    284] #start 2nd optimization iteration ...
+[02/01 20:53:41    284] #    number of violations = 19
+[02/01 20:53:41    284] #
+[02/01 20:53:41    284] #    By Layer and Type :
+[02/01 20:53:41    284] #	         MetSpc   EOLSpc    Short   Totals
+[02/01 20:53:41    284] #	M1            4        2        5       11
+[02/01 20:53:41    284] #	M2            2        1        5        8
+[02/01 20:53:41    284] #	Totals        6        3       10       19
+[02/01 20:53:41    284] #cpu time = 00:00:01, elapsed time = 00:00:01, memory = 775.64 (MB), peak = 922.00 (MB)
+[02/01 20:53:41    284] #start 3rd optimization iteration ...
+[02/01 20:53:41    285] #    number of violations = 12
+[02/01 20:53:41    285] #
+[02/01 20:53:41    285] #    By Layer and Type :
+[02/01 20:53:41    285] #	         MetSpc    Short   MinStp      Mar   Totals
+[02/01 20:53:41    285] #	M1            0        0        0        0        0
+[02/01 20:53:41    285] #	M2            2        3        4        3       12
+[02/01 20:53:41    285] #	Totals        2        3        4        3       12
+[02/01 20:53:41    285] #cpu time = 00:00:00, elapsed time = 00:00:00, memory = 775.32 (MB), peak = 922.00 (MB)
+[02/01 20:53:41    285] #start 4th optimization iteration ...
+[02/01 20:53:42    285] #    number of violations = 0
+[02/01 20:53:42    285] #cpu time = 00:00:00, elapsed time = 00:00:00, memory = 775.44 (MB), peak = 922.00 (MB)
+[02/01 20:53:42    285] #Complete Detail Routing.
+[02/01 20:53:42    285] #Total number of nets with non-default rule or having extra spacing = 10
+[02/01 20:53:42    285] #Total wire length = 318018 um.
+[02/01 20:53:42    285] #Total half perimeter of net bounding box = 272503 um.
+[02/01 20:53:42    285] #Total wire length on LAYER M1 = 2538 um.
+[02/01 20:53:42    285] #Total wire length on LAYER M2 = 69543 um.
+[02/01 20:53:42    285] #Total wire length on LAYER M3 = 90621 um.
+[02/01 20:53:42    285] #Total wire length on LAYER M4 = 69173 um.
+[02/01 20:53:42    285] #Total wire length on LAYER M5 = 51447 um.
+[02/01 20:53:42    285] #Total wire length on LAYER M6 = 18645 um.
+[02/01 20:53:42    285] #Total wire length on LAYER M7 = 7521 um.
+[02/01 20:53:42    285] #Total wire length on LAYER M8 = 8530 um.
+[02/01 20:53:42    285] #Total number of vias = 118154
+[02/01 20:53:42    285] #Total number of multi-cut vias = 1196 (  1.0%)
+[02/01 20:53:42    285] #Total number of single cut vias = 116958 ( 99.0%)
+[02/01 20:53:42    285] #Up-Via Summary (total 118154):
+[02/01 20:53:42    285] #                   single-cut          multi-cut      Total
+[02/01 20:53:42    285] #-----------------------------------------------------------
+[02/01 20:53:42    285] #  Metal 1       48231 ( 98.8%)       564 (  1.2%)      48795
+[02/01 20:53:42    285] #  Metal 2       40308 (100.0%)         0 (  0.0%)      40308
+[02/01 20:53:42    285] #  Metal 3       16701 (100.0%)         0 (  0.0%)      16701
+[02/01 20:53:42    285] #  Metal 4        8427 (100.0%)         0 (  0.0%)       8427
+[02/01 20:53:42    285] #  Metal 5        1795 ( 74.0%)       632 ( 26.0%)       2427
+[02/01 20:53:42    285] #  Metal 6         817 (100.0%)         0 (  0.0%)        817
+[02/01 20:53:42    285] #  Metal 7         679 (100.0%)         0 (  0.0%)        679
+[02/01 20:53:42    285] #-----------------------------------------------------------
+[02/01 20:53:42    285] #               116958 ( 99.0%)      1196 (  1.0%)     118154 
+[02/01 20:53:42    285] #
+[02/01 20:53:42    285] #Total number of DRC violations = 0
+[02/01 20:53:42    285] #Cpu time = 00:03:27
+[02/01 20:53:42    285] #Elapsed time = 00:03:27
+[02/01 20:53:42    285] #Increased memory = -0.89 (MB)
+[02/01 20:53:42    285] #Total memory = 752.07 (MB)
+[02/01 20:53:42    285] #Peak memory = 922.00 (MB)
+[02/01 20:53:42    285] #
+[02/01 20:53:42    285] #start routing for process antenna violation fix ...
+[02/01 20:53:43    286] #cpu time = 00:00:01, elapsed time = 00:00:01, memory = 753.84 (MB), peak = 922.00 (MB)
+[02/01 20:53:43    286] #
+[02/01 20:53:43    286] #Total number of nets with non-default rule or having extra spacing = 10
+[02/01 20:53:43    286] #Total wire length = 318018 um.
+[02/01 20:53:43    286] #Total half perimeter of net bounding box = 272503 um.
+[02/01 20:53:43    286] #Total wire length on LAYER M1 = 2538 um.
+[02/01 20:53:43    286] #Total wire length on LAYER M2 = 69543 um.
+[02/01 20:53:43    286] #Total wire length on LAYER M3 = 90621 um.
+[02/01 20:53:43    286] #Total wire length on LAYER M4 = 69173 um.
+[02/01 20:53:43    286] #Total wire length on LAYER M5 = 51447 um.
+[02/01 20:53:43    286] #Total wire length on LAYER M6 = 18645 um.
+[02/01 20:53:43    286] #Total wire length on LAYER M7 = 7521 um.
+[02/01 20:53:43    286] #Total wire length on LAYER M8 = 8530 um.
+[02/01 20:53:43    286] #Total number of vias = 118154
+[02/01 20:53:43    286] #Total number of multi-cut vias = 1196 (  1.0%)
+[02/01 20:53:43    286] #Total number of single cut vias = 116958 ( 99.0%)
+[02/01 20:53:43    286] #Up-Via Summary (total 118154):
+[02/01 20:53:43    286] #                   single-cut          multi-cut      Total
+[02/01 20:53:43    286] #-----------------------------------------------------------
+[02/01 20:53:43    286] #  Metal 1       48231 ( 98.8%)       564 (  1.2%)      48795
+[02/01 20:53:43    286] #  Metal 2       40308 (100.0%)         0 (  0.0%)      40308
+[02/01 20:53:43    286] #  Metal 3       16701 (100.0%)         0 (  0.0%)      16701
+[02/01 20:53:43    286] #  Metal 4        8427 (100.0%)         0 (  0.0%)       8427
+[02/01 20:53:43    286] #  Metal 5        1795 ( 74.0%)       632 ( 26.0%)       2427
+[02/01 20:53:43    286] #  Metal 6         817 (100.0%)         0 (  0.0%)        817
+[02/01 20:53:43    286] #  Metal 7         679 (100.0%)         0 (  0.0%)        679
+[02/01 20:53:43    286] #-----------------------------------------------------------
+[02/01 20:53:43    286] #               116958 ( 99.0%)      1196 (  1.0%)     118154 
+[02/01 20:53:43    286] #
+[02/01 20:53:43    286] #Total number of DRC violations = 0
+[02/01 20:53:43    286] #Total number of net violated process antenna rule = 0
+[02/01 20:53:43    286] #
+[02/01 20:53:45    288] #
+[02/01 20:53:45    288] #Start Post Route wire spreading..
+[02/01 20:53:45    288] #
+[02/01 20:53:45    288] #Start data preparation for wire spreading...
+[02/01 20:53:45    288] #
+[02/01 20:53:45    288] #Data preparation is done on Thu Feb  1 20:53:45 2018
+[02/01 20:53:45    288] #
+[02/01 20:53:45    288] #cpu time = 00:00:00, elapsed time = 00:00:00, memory = 753.84 (MB), peak = 922.00 (MB)
+[02/01 20:53:45    288] #
+[02/01 20:53:45    288] #Start Post Route Wire Spread.
+[02/01 20:53:46    290] #Done with 4358 horizontal wires in 2 hboxes and 3571 vertical wires in 2 hboxes.
+[02/01 20:53:47    290] #Complete Post Route Wire Spread.
+[02/01 20:53:47    290] #
+[02/01 20:53:47    290] #Total number of nets with non-default rule or having extra spacing = 10
+[02/01 20:53:47    290] #Total wire length = 320887 um.
+[02/01 20:53:47    290] #Total half perimeter of net bounding box = 272503 um.
+[02/01 20:53:47    290] #Total wire length on LAYER M1 = 2547 um.
+[02/01 20:53:47    290] #Total wire length on LAYER M2 = 69792 um.
+[02/01 20:53:47    290] #Total wire length on LAYER M3 = 91302 um.
+[02/01 20:53:47    290] #Total wire length on LAYER M4 = 70031 um.
+[02/01 20:53:47    290] #Total wire length on LAYER M5 = 52240 um.
+[02/01 20:53:47    290] #Total wire length on LAYER M6 = 18786 um.
+[02/01 20:53:47    290] #Total wire length on LAYER M7 = 7598 um.
+[02/01 20:53:47    290] #Total wire length on LAYER M8 = 8590 um.
+[02/01 20:53:47    290] #Total number of vias = 118154
+[02/01 20:53:47    290] #Total number of multi-cut vias = 1196 (  1.0%)
+[02/01 20:53:47    290] #Total number of single cut vias = 116958 ( 99.0%)
+[02/01 20:53:47    290] #Up-Via Summary (total 118154):
+[02/01 20:53:47    290] #                   single-cut          multi-cut      Total
+[02/01 20:53:47    290] #-----------------------------------------------------------
+[02/01 20:53:47    290] #  Metal 1       48231 ( 98.8%)       564 (  1.2%)      48795
+[02/01 20:53:47    290] #  Metal 2       40308 (100.0%)         0 (  0.0%)      40308
+[02/01 20:53:47    290] #  Metal 3       16701 (100.0%)         0 (  0.0%)      16701
+[02/01 20:53:47    290] #  Metal 4        8427 (100.0%)         0 (  0.0%)       8427
+[02/01 20:53:47    290] #  Metal 5        1795 ( 74.0%)       632 ( 26.0%)       2427
+[02/01 20:53:47    290] #  Metal 6         817 (100.0%)         0 (  0.0%)        817
+[02/01 20:53:47    290] #  Metal 7         679 (100.0%)         0 (  0.0%)        679
+[02/01 20:53:47    290] #-----------------------------------------------------------
+[02/01 20:53:47    290] #               116958 ( 99.0%)      1196 (  1.0%)     118154 
+[02/01 20:53:47    290] #
+[02/01 20:53:47    290] #cpu time = 00:00:02, elapsed time = 00:00:02, memory = 792.20 (MB), peak = 922.00 (MB)
+[02/01 20:53:47    290] #
+[02/01 20:53:47    290] #Post Route wire spread is done.
+[02/01 20:53:47    290] #Total number of nets with non-default rule or having extra spacing = 10
+[02/01 20:53:47    290] #Total wire length = 320887 um.
+[02/01 20:53:47    290] #Total half perimeter of net bounding box = 272503 um.
+[02/01 20:53:47    290] #Total wire length on LAYER M1 = 2547 um.
+[02/01 20:53:47    290] #Total wire length on LAYER M2 = 69792 um.
+[02/01 20:53:47    290] #Total wire length on LAYER M3 = 91302 um.
+[02/01 20:53:47    290] #Total wire length on LAYER M4 = 70031 um.
+[02/01 20:53:47    290] #Total wire length on LAYER M5 = 52240 um.
+[02/01 20:53:47    290] #Total wire length on LAYER M6 = 18786 um.
+[02/01 20:53:47    290] #Total wire length on LAYER M7 = 7598 um.
+[02/01 20:53:47    290] #Total wire length on LAYER M8 = 8590 um.
+[02/01 20:53:47    290] #Total number of vias = 118154
+[02/01 20:53:47    290] #Total number of multi-cut vias = 1196 (  1.0%)
+[02/01 20:53:47    290] #Total number of single cut vias = 116958 ( 99.0%)
+[02/01 20:53:47    290] #Up-Via Summary (total 118154):
+[02/01 20:53:47    290] #                   single-cut          multi-cut      Total
+[02/01 20:53:47    290] #-----------------------------------------------------------
+[02/01 20:53:47    290] #  Metal 1       48231 ( 98.8%)       564 (  1.2%)      48795
+[02/01 20:53:47    290] #  Metal 2       40308 (100.0%)         0 (  0.0%)      40308
+[02/01 20:53:47    290] #  Metal 3       16701 (100.0%)         0 (  0.0%)      16701
+[02/01 20:53:47    290] #  Metal 4        8427 (100.0%)         0 (  0.0%)       8427
+[02/01 20:53:47    290] #  Metal 5        1795 ( 74.0%)       632 ( 26.0%)       2427
+[02/01 20:53:47    290] #  Metal 6         817 (100.0%)         0 (  0.0%)        817
+[02/01 20:53:47    290] #  Metal 7         679 (100.0%)         0 (  0.0%)        679
+[02/01 20:53:47    290] #-----------------------------------------------------------
+[02/01 20:53:47    290] #               116958 ( 99.0%)      1196 (  1.0%)     118154 
+[02/01 20:53:47    290] #
+[02/01 20:53:48    291] #
+[02/01 20:53:48    291] #Start DRC checking..
+[02/01 20:53:57    300] #    number of violations = 0
+[02/01 20:53:57    300] #cpu time = 00:00:09, elapsed time = 00:00:09, memory = 807.11 (MB), peak = 922.00 (MB)
+[02/01 20:53:57    300] #CELL_VIEW aes_cipher_top,init has no DRC violation.
+[02/01 20:53:57    300] #Total number of DRC violations = 0
+[02/01 20:53:57    300] #Total number of net violated process antenna rule = 0
+[02/01 20:53:58    302] #
+[02/01 20:53:58    302] #Start Post Route via swapping..
+[02/01 20:54:23    326] #    number of violations = 0
+[02/01 20:54:23    326] #cpu time = 00:00:24, elapsed time = 00:00:24, memory = 764.62 (MB), peak = 922.00 (MB)
+[02/01 20:54:25    329] #    number of violations = 0
+[02/01 20:54:25    329] #cpu time = 00:00:27, elapsed time = 00:00:27, memory = 762.66 (MB), peak = 922.00 (MB)
+[02/01 20:54:25    329] #CELL_VIEW aes_cipher_top,init has no DRC violation.
+[02/01 20:54:25    329] #Total number of DRC violations = 0
+[02/01 20:54:25    329] #Total number of net violated process antenna rule = 0
+[02/01 20:54:25    329] #Post Route via swapping is done.
+[02/01 20:54:25    329] #Total number of nets with non-default rule or having extra spacing = 10
+[02/01 20:54:25    329] #Total wire length = 320887 um.
+[02/01 20:54:25    329] #Total half perimeter of net bounding box = 272503 um.
+[02/01 20:54:25    329] #Total wire length on LAYER M1 = 2547 um.
+[02/01 20:54:25    329] #Total wire length on LAYER M2 = 69792 um.
+[02/01 20:54:25    329] #Total wire length on LAYER M3 = 91302 um.
+[02/01 20:54:25    329] #Total wire length on LAYER M4 = 70031 um.
+[02/01 20:54:25    329] #Total wire length on LAYER M5 = 52240 um.
+[02/01 20:54:25    329] #Total wire length on LAYER M6 = 18786 um.
+[02/01 20:54:25    329] #Total wire length on LAYER M7 = 7598 um.
+[02/01 20:54:25    329] #Total wire length on LAYER M8 = 8590 um.
+[02/01 20:54:25    329] #Total number of vias = 118154
+[02/01 20:54:25    329] #Total number of multi-cut vias = 82700 ( 70.0%)
+[02/01 20:54:25    329] #Total number of single cut vias = 35454 ( 30.0%)
+[02/01 20:54:25    329] #Up-Via Summary (total 118154):
+[02/01 20:54:25    329] #                   single-cut          multi-cut      Total
+[02/01 20:54:25    329] #-----------------------------------------------------------
+[02/01 20:54:25    329] #  Metal 1       32452 ( 66.5%)     16343 ( 33.5%)      48795
+[02/01 20:54:25    329] #  Metal 2        2329 (  5.8%)     37979 ( 94.2%)      40308
+[02/01 20:54:25    329] #  Metal 3         515 (  3.1%)     16186 ( 96.9%)      16701
+[02/01 20:54:25    329] #  Metal 4          92 (  1.1%)      8335 ( 98.9%)       8427
+[02/01 20:54:25    329] #  Metal 5           1 (  0.0%)      2426 (100.0%)       2427
+[02/01 20:54:25    329] #  Metal 6          35 (  4.3%)       782 ( 95.7%)        817
+[02/01 20:54:25    329] #  Metal 7          30 (  4.4%)       649 ( 95.6%)        679
+[02/01 20:54:25    329] #-----------------------------------------------------------
+[02/01 20:54:25    329] #                35454 ( 30.0%)     82700 ( 70.0%)     118154 
+[02/01 20:54:25    329] #
+[02/01 20:54:25    329] #detailRoute Statistics:
+[02/01 20:54:25    329] #Cpu time = 00:04:11
+[02/01 20:54:25    329] #Elapsed time = 00:04:11
+[02/01 20:54:25    329] #Increased memory = 7.96 (MB)
+[02/01 20:54:25    329] #Total memory = 760.92 (MB)
+[02/01 20:54:25    329] #Peak memory = 922.00 (MB)
+[02/01 20:54:26    329] #
+[02/01 20:54:26    329] #globalDetailRoute statistics:
+[02/01 20:54:26    329] #Cpu time = 00:04:43
+[02/01 20:54:26    329] #Elapsed time = 00:04:43
+[02/01 20:54:26    329] #Increased memory = 46.90 (MB)
+[02/01 20:54:26    329] #Total memory = 731.22 (MB)
+[02/01 20:54:26    329] #Peak memory = 922.00 (MB)
+[02/01 20:54:26    329] #Number of warnings = 0
+[02/01 20:54:26    329] #Total number of warnings = 79
+[02/01 20:54:26    329] #Number of fails = 0
+[02/01 20:54:26    329] #Total number of fails = 0
+[02/01 20:54:26    329] #Complete globalDetailRoute on Thu Feb  1 20:54:26 2018
+[02/01 20:54:26    329] #
+[02/01 20:54:26    329] #routeDesign: cpu time = 00:05:14, elapsed time = 00:05:14, memory = 731.23 (MB), peak = 922.00 (MB)
+[02/01 20:54:26    329] 
+[02/01 20:54:26    329] *** Summary of all messages that are not suppressed in this session:
+[02/01 20:54:26    329] Severity  ID               Count  Summary                                  
+[02/01 20:54:26    329] WARNING   IMPEXT-3442          1  The version of the capacitance table fil...
+[02/01 20:54:26    329] WARNING   IMPEXT-3493          1  The design extraction status has been re...
+[02/01 20:54:26    329] *** Message Summary: 2 warning(s), 0 error(s)
+[02/01 20:54:26    329] 
+[02/01 20:54:33    329] <CMD> extractRC
+[02/01 20:54:33    329] Extraction called for design 'aes_cipher_top' of instances=13890 and nets=14182 using extraction engine 'preRoute' .
+[02/01 20:54:33    329] PreRoute RC Extraction called for design aes_cipher_top.
+[02/01 20:54:33    329] RC Extraction called in multi-corner(2) mode.
+[02/01 20:54:33    329] **WARN: (IMPEXT-3442):	The version of the capacitance table file being used is obsolete and is no longer recommended. For improved accuracy, generate the capacitance table file using the generateCapTbl command.
+[02/01 20:54:33    329] RCMode: PreRoute
+[02/01 20:54:33    329]       RC Corner Indexes            0       1   
+[02/01 20:54:33    329] Capacitance Scaling Factor   : 1.00000 1.00000 
+[02/01 20:54:33    329] Resistance Scaling Factor    : 1.00000 1.00000 
+[02/01 20:54:33    329] Clock Cap. Scaling Factor    : 1.00000 1.00000 
+[02/01 20:54:33    329] Clock Res. Scaling Factor    : 1.00000 1.00000 
+[02/01 20:54:33    329] Shrink Factor                : 1.00000
+[02/01 20:54:33    329] PreRoute extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+[02/01 20:54:33    329] Using capacitance table file ...
+[02/01 20:54:33    329] Updating RC grid for preRoute extraction ...
+[02/01 20:54:33    329] Initializing multi-corner capacitance tables ... 
+[02/01 20:54:33    329] Initializing multi-corner resistance tables ...
+[02/01 20:54:34    329] PreRoute RC Extraction DONE (CPU Time: 0:00:00.4  Real Time: 0:00:01.0  MEM: 898.949M)
+[02/01 20:54:50    329] <CMD> report_timing -max_paths 5
+[02/01 20:54:50    330] #################################################################################
+[02/01 20:54:50    330] # Design Stage: PostRoute
+[02/01 20:54:50    330] # Design Name: aes_cipher_top
+[02/01 20:54:50    330] # Design Mode: 65nm
+[02/01 20:54:50    330] # Analysis Mode: MMMC Non-OCV 
+[02/01 20:54:50    330] # Parasitics Mode: No SPEF/RCDB
+[02/01 20:54:50    330] # Signoff Settings: SI Off 
+[02/01 20:54:50    330] #################################################################################
+[02/01 20:54:51    330] Calculate delays in BcWc mode...
+[02/01 20:54:51    330] Topological Sorting (CPU = 0:00:00.0, MEM = 901.1M, InitMEM = 899.0M)
+[02/01 20:54:55    334] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[02/01 20:54:55    334] End delay calculation. (MEM=995.27 CPU=0:00:03.2 REAL=0:00:03.0)
+[02/01 20:54:55    334] *** CDM Built up (cpu=0:00:04.6  real=0:00:05.0  mem= 995.3M) ***
+[02/01 20:57:00    334] <CMD> optDesign -postRoute -setup -hold
+[02/01 20:57:00    334] **INFO: setDesignMode -flowEffort standard -> setting 'setOptMode -allEndPoints true' for the duration of this command.
+[02/01 20:57:00    334] Disable merging buffers from different footprints for postRoute code for non-MSV designs
+[02/01 20:57:00    334] -powerEffort high                          # enums={none low high}, default=none, user setting
+[02/01 20:57:00    334] -leakageToDynamicRatio 0.5                 # float, default=1, user setting
+[02/01 20:57:00    334] -setupDynamicPowerViewAsDefaultView false
+[02/01 20:57:00    334]                                            # bool, default=false, private
+[02/01 20:57:00    334] #spOpts: N=65 
+[02/01 20:57:00    334] Core basic site is core
+[02/01 20:57:00    335] Layer info - lib-1st H=1, V=2.  Cell-FPin=1. Top-pin=2
+[02/01 20:57:00    335] #spOpts: N=65 mergeVia=F 
+[02/01 20:57:00    335] Switching SI Aware to true by default in postroute mode   
+[02/01 20:57:00    335] GigaOpt running with 1 threads.
+[02/01 20:57:00    335] Info: 1 threads available for lower-level modules during optimization.
+[02/01 20:57:00    335] **WARN: (IMPOPT-3564):	The following cells are set dont_use temporarily by the tool because there are no rows defined for their technology site, or they are not placeable in any power domain. To avoid this message, review the floorplan, msv setting, the library setting or set manualy those cells as dont_use.
+[02/01 20:57:00    335] 	Cell FILL1_LL, site bcore.
+[02/01 20:57:00    335] 	Cell FILL_NW_HH, site bcore.
+[02/01 20:57:00    335] 	Cell FILL_NW_LL, site bcore.
+[02/01 20:57:00    335] 	Cell GFILL, site gacore.
+[02/01 20:57:00    335] 	Cell GFILL10, site gacore.
+[02/01 20:57:00    335] 	Cell GFILL2, site gacore.
+[02/01 20:57:00    335] 	Cell GFILL3, site gacore.
+[02/01 20:57:00    335] 	Cell GFILL4, site gacore.
+[02/01 20:57:00    335] 	Cell LVLLHCD1, site bcore.
+[02/01 20:57:00    335] 	Cell LVLLHCD2, site bcore.
+[02/01 20:57:00    335] 	Cell LVLLHCD4, site bcore.
+[02/01 20:57:00    335] 	Cell LVLLHCD8, site bcore.
+[02/01 20:57:00    335] 	Cell LVLLHD1, site bcore.
+[02/01 20:57:00    335] 	Cell LVLLHD2, site bcore.
+[02/01 20:57:00    335] 	Cell LVLLHD4, site bcore.
+[02/01 20:57:00    335] 	Cell LVLLHD8, site bcore.
+[02/01 20:57:00    335] .
+[02/01 20:57:00    335] **WARN: (IMPTS-403):	Delay calculation was forced to extrapolate table data outside of the characterized range. In some cases, extrapolation can reduce the accuracy of the delay calculation. You can enable more detailed reporting of these cases by enabling the command 'setDelayCalMode -reportOutBound true'.
+[02/01 20:57:00    335] Type 'man IMPTS-403' for more detail.
+[02/01 20:57:00    335] **WARN: (IMPOPT-7077):	Some of the LEF equivalent cells have different ANTENNAGATEAREA/ANTENNADIFFAREA/PINS etc... attributes. They will not be swapped for fixed instances and for lefsafe operations like optLeakagePower in postroute mode. To find out what cells are LEF equivalent use the findLefEquivalentCells command.
+[02/01 20:57:00    335] Type 'man IMPOPT-7077' for more detail.
+[02/01 20:57:02    336] Effort level <high> specified for reg2reg path_group
+[02/01 20:57:02    337] *** Timing Optimization ... ***
+[02/01 20:57:02    337] **optDesign ... cpu = 0:00:00, real = 0:00:00, mem = 964.1M, totSessionCpu=0:05:37 **
+[02/01 20:57:02    337] #Created 847 library cell signatures
+[02/01 20:57:02    337] #Created 14182 NETS and 0 SPECIALNETS signatures
+[02/01 20:57:02    337] #Created 13891 instance signatures
+[02/01 20:57:02    337] #Build design signature : cpu time = 00:00:00, elapsed time = 00:00:00, memory = 798.86 (MB), peak = 940.02 (MB)
+[02/01 20:57:03    337] #Save design signature : cpu time = 00:00:00, elapsed time = 00:00:00, memory = 798.91 (MB), peak = 940.02 (MB)
+[02/01 20:57:03    337] #spOpts: N=65 
+[02/01 20:57:03    337] Begin checking placement ... (start mem=964.1M, init mem=964.1M)
+[02/01 20:57:03    337] *info: Placed = 13890          (Fixed = 9)
+[02/01 20:57:03    337] *info: Unplaced = 0           
+[02/01 20:57:03    337] Placement Density:84.81%(41630/49085)
+[02/01 20:57:03    337] Finished checkPlace (cpu: total=0:00:00.1, vio checks=0:00:00.0; mem=964.1M)
+[02/01 20:57:03    337] **WARN: (IMPEXT-3493):	The design extraction status has been reset by the 'setExtractRCMode' command. The parasitic data can be regenerated either by extracting the design using the extractRC command or by loading the SPEF or RCDB file(s). To prevent resetting of the extraction status, avoid changing extraction modes.
+[02/01 20:57:03    337] Type 'man IMPEXT-3493' for more detail.
+[02/01 20:57:03    337] 
+[02/01 20:57:03    337] **ERROR: (IMPOPT-6080):	AAE-SI Optimization can only be turned on when the timing analysis mode is set to OCV.
+[02/01 20:57:03    337] 
+[02/01 20:57:03    337] 
+[02/01 20:57:03    337] 	OPT_RUNTIME:          optDesign (count =  2): (cpu=0:00:02.5 real=0:00:02.5)
+[02/01 20:57:03    337] Info: pop threads available for lower-level modules during optimization.
+[02/01 20:57:03    337] Removing temporary dont_use automatically set for cells with technology sites with no row.
+[02/01 20:57:03    337] 0
+[02/01 20:57:18    337] <CMD> report_timing -max_paths 5
+[02/01 20:57:18    337] Starting SI iteration 1 using Infinite Timing Windows
+[02/01 20:57:18    337] #################################################################################
+[02/01 20:57:18    337] # Design Stage: PostRoute
+[02/01 20:57:18    337] # Design Name: aes_cipher_top
+[02/01 20:57:18    337] # Design Mode: 65nm
+[02/01 20:57:18    337] # Analysis Mode: MMMC Non-OCV 
+[02/01 20:57:18    337] # Parasitics Mode: No SPEF/RCDB
+[02/01 20:57:18    337] # Signoff Settings: SI On 
+[02/01 20:57:18    337] #################################################################################
+[02/01 20:57:18    337] **WARN: (IMPEXT-3518):	The lower process node is set (using command 'setDesignMode') but the technology file for TQRC extraction not specified. Therefore, going for postRoute (effortLevel low) extraction instead of recommended extractor 'TQRC' for lower nodes. Use command 'set_analysis_view/update_rc_corner' to specify the technology file for TQRC extraction to take place.
+[02/01 20:57:18    337] Extraction called for design 'aes_cipher_top' of instances=13890 and nets=14182 using extraction engine 'postRoute' at effort level 'low' .
+[02/01 20:57:18    337] PostRoute (effortLevel low) RC Extraction called for design aes_cipher_top.
+[02/01 20:57:18    337] RC Extraction called in multi-corner(2) mode.
+[02/01 20:57:18    337] **WARN: (IMPEXT-3442):	The version of the capacitance table file being used is obsolete and is no longer recommended. For improved accuracy, generate the capacitance table file using the generateCapTbl command.
+[02/01 20:57:18    337] Process corner(s) are loaded.
+[02/01 20:57:18    337]  Corner: Cmax
+[02/01 20:57:18    337]  Corner: Cmin
+[02/01 20:57:18    337] extractDetailRC Option : -outfile /tmp/innovus_temp_30998_ieng6-ece-19.ucsd.edu_shl237_qStOM8/aes_cipher_top_30998_msOPE2.rcdb.d  -extended
+[02/01 20:57:18    337] RC Mode: PostRoute -effortLevel low [Extended CapTable, LEF Resistances]
+[02/01 20:57:18    337]       RC Corner Indexes            0       1   
+[02/01 20:57:18    337] Capacitance Scaling Factor   : 1.00000 1.00000 
+[02/01 20:57:18    337] Coupling Cap. Scaling Factor : 1.00000 1.00000 
+[02/01 20:57:18    337] Resistance Scaling Factor    : 1.00000 1.00000 
+[02/01 20:57:18    337] Clock Cap. Scaling Factor    : 1.00000 1.00000 
+[02/01 20:57:18    337] Clock Res. Scaling Factor    : 1.00000 1.00000 
+[02/01 20:57:18    337] Shrink Factor                : 1.00000
+[02/01 20:57:18    337] Initializing multi-corner capacitance tables ... 
+[02/01 20:57:18    337] Initializing multi-corner resistance tables ...
+[02/01 20:57:18    338] Checking LVS Completed (CPU Time= 0:00:00.1  MEM= 956.0M)
+[02/01 20:57:19    338] Creating parasitic data file '/tmp/innovus_temp_30998_ieng6-ece-19.ucsd.edu_shl237_qStOM8/aes_cipher_top_30998_msOPE2.rcdb.d' for storing RC.
+[02/01 20:57:19    338] Extracted 10.001% (CPU Time= 0:00:00.6  MEM= 1026.7M)
+[02/01 20:57:19    338] Extracted 20.0007% (CPU Time= 0:00:00.7  MEM= 1026.7M)
+[02/01 20:57:19    338] Extracted 30.0011% (CPU Time= 0:00:00.9  MEM= 1026.7M)
+[02/01 20:57:19    338] Extracted 40.0008% (CPU Time= 0:00:01.1  MEM= 1026.7M)
+[02/01 20:57:19    339] Extracted 50.0012% (CPU Time= 0:00:01.2  MEM= 1026.7M)
+[02/01 20:57:20    339] Extracted 60.001% (CPU Time= 0:00:01.5  MEM= 1026.7M)
+[02/01 20:57:20    339] Extracted 70.0007% (CPU Time= 0:00:01.8  MEM= 1026.7M)
+[02/01 20:57:20    340] Extracted 80.0011% (CPU Time= 0:00:02.1  MEM= 1030.7M)
+[02/01 20:57:21    340] Extracted 90.0008% (CPU Time= 0:00:02.5  MEM= 1030.7M)
+[02/01 20:57:21    341] Extracted 100% (CPU Time= 0:00:03.3  MEM= 1030.7M)
+[02/01 20:57:22    341] Number of Extracted Resistors     : 308271
+[02/01 20:57:22    341] Number of Extracted Ground Cap.   : 299662
+[02/01 20:57:22    341] Number of Extracted Coupling Cap. : 556564
+[02/01 20:57:22    341] Opening parasitic data file '/tmp/innovus_temp_30998_ieng6-ece-19.ucsd.edu_shl237_qStOM8/aes_cipher_top_30998_msOPE2.rcdb.d' for reading.
+[02/01 20:57:22    341] Filtering XCap in 'relativeAndCoupling' mode using values coupling_c_threshold=0.1fF, relative_c_threshold=1, and total_c_threshold=0fF.
+[02/01 20:57:22    341]  Corner: Cmax
+[02/01 20:57:22    341]  Corner: Cmin
+[02/01 20:57:22    341] Checking LVS Completed (CPU Time= 0:00:00.1  MEM= 995.7M)
+[02/01 20:57:22    341] Creating parasitic data file '/tmp/innovus_temp_30998_ieng6-ece-19.ucsd.edu_shl237_qStOM8/aes_cipher_top_30998_msOPE2.rcdb_Filter.rcdb.d' for storing RC.
+[02/01 20:57:22    341] Closing parasitic data file '/tmp/innovus_temp_30998_ieng6-ece-19.ucsd.edu_shl237_qStOM8/aes_cipher_top_30998_msOPE2.rcdb.d'. 14149 times net's RC data read were performed.
+[02/01 20:57:22    341] Lumped Parasitic Loading Started (total cpu=0:00:00.0, real=0:00:00.0, current mem=1003.727M)
+[02/01 20:57:22    341] Opening parasitic data file '/tmp/innovus_temp_30998_ieng6-ece-19.ucsd.edu_shl237_qStOM8/aes_cipher_top_30998_msOPE2.rcdb.d' for reading.
+[02/01 20:57:22    341] Lumped Parasitic Loading Completed (total cpu=0:00:00.0, real=0:00:00.0, current mem=1003.727M)
+[02/01 20:57:22    341] PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:03.9  Real Time: 0:00:04.0  MEM: 1003.727M)
+[02/01 20:57:22    341] Setting infinite Tws ...
+[02/01 20:57:22    341] First Iteration Infinite Tw... 
+[02/01 20:57:22    341] Calculate delays in BcWc mode...
+[02/01 20:57:22    341] Topological Sorting (CPU = 0:00:00.0, MEM = 1003.7M, InitMEM = 1003.7M)
+[02/01 20:57:22    341] Initializing multi-corner capacitance tables ... 
+[02/01 20:57:23    342] Initializing multi-corner resistance tables ...
+[02/01 20:57:23    342] Opening parasitic data file '/tmp/innovus_temp_30998_ieng6-ece-19.ucsd.edu_shl237_qStOM8/aes_cipher_top_30998_msOPE2.rcdb.d' for reading.
+[02/01 20:57:23    342] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1003.7M)
+[02/01 20:57:28    347] AAE_INFO-618: Total number of nets in the design is 14182,  99.8 percent of the nets selected for SI analysis
+[02/01 20:57:28    347] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[02/01 20:57:28    347] End delay calculation. (MEM=1043.49 CPU=0:00:04.8 REAL=0:00:05.0)
+[02/01 20:57:28    347] Save waveform /tmp/innovus_temp_30998_ieng6-ece-19.ucsd.edu_shl237_qStOM8/.AAE_HO0Q3G/.AAE_30998/waveform.data...
+[02/01 20:57:28    347] *** CDM Built up (cpu=0:00:09.5  real=0:00:10.0  mem= 1043.5M) ***
+[02/01 20:57:28    347] Loading CTE timing window...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1043.5M)
+[02/01 20:57:28    347] Add other clocks and setupCteToAAEClockMapping during iter 1
+[02/01 20:57:28    347] Loading CTE timing window is completed (CPU = 0:00:00.1, REAL = 0:00:00.0, MEM = 1043.5M)
+[02/01 20:57:28    347] Starting SI iteration 2
+[02/01 20:57:28    347] Calculate delays in BcWc mode...
+[02/01 20:57:32    351] AAE_INFO-618: Total number of nets in the design is 14182,  17.9 percent of the nets selected for SI analysis
+[02/01 20:57:32    351] End delay calculation. (MEM=1043.49 CPU=0:00:03.7 REAL=0:00:04.0)
+[02/01 20:57:32    351] *** CDM Built up (cpu=0:00:03.8  real=0:00:04.0  mem= 1043.5M) ***
+[02/01 20:58:14    351] invalid command name "eixt"
+[02/01 20:58:17    351] 
+[02/01 20:58:17    351] *** Memory Usage v#1 (Current mem = 946.598M, initial mem = 151.930M) ***
+[02/01 20:58:17    351] 
+[02/01 20:58:17    351] *** Summary of all messages that are not suppressed in this session:
+[02/01 20:58:17    351] Severity  ID               Count  Summary                                  
+[02/01 20:58:17    351] WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[02/01 20:58:17    351] WARNING   IMPFP-3961           2  The techSite '%s' has no related cells i...
+[02/01 20:58:17    351] WARNING   IMPTS-403            1  Delay calculation was forced to extrapol...
+[02/01 20:58:17    351] WARNING   IMPEXT-2710          2  Basic Cap table for layer M%d is ignored...
+[02/01 20:58:17    351] WARNING   IMPEXT-2760          2  Layer M%d specified in the cap table is ...
+[02/01 20:58:17    351] WARNING   IMPEXT-2771          2  Via %s specified in the cap table is ign...
+[02/01 20:58:17    351] WARNING   IMPEXT-2801          2  Resistance values are not provided in th...
+[02/01 20:58:17    351] WARNING   IMPEXT-3442          3  The version of the capacitance table fil...
+[02/01 20:58:17    351] WARNING   IMPEXT-3493          2  The design extraction status has been re...
+[02/01 20:58:17    351] WARNING   IMPEXT-3518          1  The lower process node is set (using com...
+[02/01 20:58:17    351] WARNING   IMPVL-159         1622  Pin '%s' of cell '%s' is defined in LEF ...
+[02/01 20:58:17    351] WARNING   IMPOPT-7077          1  Some of the LEF equivalent cells have di...
+[02/01 20:58:17    351] ERROR     IMPOPT-6080          1  AAE-SI Optimization can only be turned o...
+[02/01 20:58:17    351] WARNING   IMPOPT-3564          1  The following cells are set dont_use tem...
+[02/01 20:58:17    351] WARNING   IMPOPT-3058        598  Cell %s/%s already has a dont_use attrib...
+[02/01 20:58:17    351] *** Message Summary: 2240 warning(s), 1 error(s)
+[02/01 20:58:17    351] 
+[02/01 20:58:17    351] --- Ending "Innovus" (totcpu=0:05:52, real=0:10:08, mem=946.6M) ---

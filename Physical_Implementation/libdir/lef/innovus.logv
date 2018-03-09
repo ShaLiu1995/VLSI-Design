@@ -1,0 +1,37 @@
+[02/01 22:43:22      0] 
+[02/01 22:43:22      0] Cadence Innovus(TM) Implementation System.
+[02/01 22:43:22      0] Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+[02/01 22:43:22      0] 
+[02/01 22:43:22      0] Version:	v15.23-s045_1, built Fri Apr 22 12:32:52 PDT 2016
+[02/01 22:43:22      0] Options:	
+[02/01 22:43:22      0] Date:		Thu Feb  1 22:43:22 2018
+[02/01 22:43:22      0] Host:		ieng6-ece-19.ucsd.edu (x86_64 w/Linux 2.6.32-696.18.7.el6.x86_64) (4cores*8cpus*Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz 20480KB)
+[02/01 22:43:22      0] OS:		CentOS release 6.9 (Final)
+[02/01 22:43:22      0] 
+[02/01 22:43:22      0] License:
+[02/01 22:43:22      0] 		invs	Innovus Implementation System	15.2	checkout succeeded
+[02/01 22:43:22      0] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[02/01 22:43:24      0] **WARN: (IMPSYT-1507):	The display is invalid and will start in no window mode
+[02/01 22:43:40     14] @(#)CDS: Innovus v15.23-s045_1 (64bit) 04/22/2016 12:32 (Linux 2.6.18-194.el5)
+[02/01 22:43:40     14] @(#)CDS: NanoRoute 15.23-s045_1 NR160414-1105/15_23-UB (database version 2.30, 317.6.1) {superthreading v1.26}
+[02/01 22:43:40     14] @(#)CDS: AAE 15.23-s014 (64bit) 04/22/2016 (Linux 2.6.18-194.el5)
+[02/01 22:43:40     14] @(#)CDS: CTE 15.23-s022_1 () Apr 22 2016 09:38:45 ( )
+[02/01 22:43:40     14] @(#)CDS: SYNTECH 15.23-s008_1 () Apr 12 2016 21:52:59 ( )
+[02/01 22:43:40     14] @(#)CDS: CPE v15.23-s045
+[02/01 22:43:40     14] @(#)CDS: IQRC/TQRC 15.1.4-s213 (64bit) Tue Feb  9 17:31:28 PST 2016 (Linux 2.6.18-194.el5)
+[02/01 22:43:40     14] @(#)CDS: OA 22.50-p036 Tue Nov  3 09:29:52 2015
+[02/01 22:43:40     14] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[02/01 22:43:40     14] @(#)CDS: RCDB 11.7
+[02/01 22:43:40     14] --- Running on ieng6-ece-19.ucsd.edu (x86_64 w/Linux 2.6.32-696.18.7.el6.x86_64) (4cores*8cpus*Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz 20480KB) ---
+[02/01 22:43:40     14] Create and set the environment variable TMPDIR to /tmp/innovus_temp_13679_ieng6-ece-19.ucsd.edu_shl237_U2m9zV.
+
+[02/01 22:43:41     15] 
+[02/01 22:43:41     15] **INFO:  MMMC transition support version v31-84 
+[02/01 22:43:41     15] 
+[02/01 22:43:41     15] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[02/01 22:43:41     15] <CMD> suppressMessage ENCEXT-2799
+[02/01 22:43:57     15] 
+[02/01 22:43:57     15] *** Memory Usage v#1 (Current mem = 389.848M, initial mem = 151.930M) ***
+[02/01 22:43:57     15] *** Message Summary: 0 warning(s), 0 error(s)
+[02/01 22:43:57     15] 
+[02/01 22:43:57     15] --- Ending "Innovus" (totcpu=0:00:15.2, real=0:00:35.0, mem=389.8M) ---

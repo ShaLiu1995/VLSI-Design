@@ -1,0 +1,67 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Thu Feb  1 22:44:41 2018                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v15.23-s045_1 (64bit) 04/22/2016 12:32 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 15.23-s045_1 NR160414-1105/15_23-UB (database version 2.30, 317.6.1) {superthreading v1.26}
+#@(#)CDS: AAE 15.23-s014 (64bit) 04/22/2016 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 15.23-s022_1 () Apr 22 2016 09:38:45 ( )
+#@(#)CDS: SYNTECH 15.23-s008_1 () Apr 12 2016 21:52:59 ( )
+#@(#)CDS: CPE v15.23-s045
+#@(#)CDS: IQRC/TQRC 15.1.4-s213 (64bit) Tue Feb  9 17:31:28 PST 2016 (Linux 2.6.18-194.el5)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+set init_pwr_net vdd
+set init_gnd_net gnd
+set init_verilog ../../desdir/netlist/aes_cipher_top.v
+set init_design_netlisttype Verilog
+set init_design_settop 1
+set init_top_cell aes_cipher_top
+set init_lef_file ../../libdir/lef/tcbn65gplus_8lmT2.lef
+create_library_set -name WC_LIB -timing $worst_timing_lib
+create_library_set -name BC_LIB -timing $best_timing_lib
+create_rc_corner -name Cmax -cap_table $worst_captbl -T 125
+create_rc_corner -name Cmin -cap_table $best_captbl -T -40
+create_delay_corner -name WC -library_set WC_LIB -rc_corner Cmax
+create_delay_corner -name BC -library_set BC_LIB -rc_corner Cmin
+create_constraint_mode -name CON -sdc_file [list $sdc]
+create_analysis_view -name WC_VIEW -delay_corner WC -constraint_mode CON
+create_analysis_view -name BC_VIEW -delay_corner BC -constraint_mode CON
+init_design -setup WC_VIEW -hold BC_VIEW
+set_interactive_constraint_modes {CON}
+setDesignMode -process 65
+floorPlan -site core -r 1 0.50 10.0 10.0 10.0 10.0
+createPlaceBlockage -box {10 90 40 170}
+createPlaceBlockage -box {45 90 75 170}
+createPlaceBlockage -box {185 90 215 170}
+createPlaceBlockage -box {220 90 250 170}
+restoreDesign /home/linux/ieng6/ee260b/shl237/lab3/rundir/run0/cts.enc.dat aes_cipher_top
+routeDesign
+extractRC
+report_timing -max_paths 5
+optDesign -postRoute -setup -hold
+report_timing -max_paths 5 > ${design}.post_route.timing.rpt
+report_power -outfile aes_cipher_top.post_route.power.rpt
+summaryReport -nohtml -outfile aes_cipher_top.post_route.summary.rpt
+report_timing -from sa21_reg_4_/Q
+report_timing -from sa21_reg_4_/Q
+report_timing -from sa21_reg_4_/Q
+report_timing -from sa21_reg_4_/Q 2
+report_timing -from sa21_reg_4_/Q -through us21
+report_timing -from sa21_reg_4_/Q -through us21/U126
+report_timing -from sa21_reg_4_/Q -through us21/U126 -throguh us21/U82 -through us21/U368 -through us21/U389 -through us21/FE_RC_5944_0 -through us21/U336 -to sa13_reg_7_
+report_timing -from sa21_reg_4_/Q -to sa12_reg_7
+report_timing -from sa21_reg_4_/Q -to sa12_reg_7_D
+report_timing -from sa21_reg_4_/Q -to sa13_reg_7_D
+report_timing -from sa21_reg_4_/Q -to sa13_reg_7
+report_timing -from sa21_reg_4_/Q -to sa13_reg_7_
+report_timing -from sa21_reg_4_/Q -to sa13_reg_6_
+report_timing -from sa21_reg_4_/Q -to sa33_reg_6_
+report_timing -from sa21_reg_5_/Q -to sa01_reg_0
+report_timing -from sa21_reg_5_/Q -to sa01_reg_0_
+report_timing -from sa23_reg_5_/Q -to sa01_reg_0_
+report_timing -from sa23_reg_5_/Q -to sa21_reg_1_
