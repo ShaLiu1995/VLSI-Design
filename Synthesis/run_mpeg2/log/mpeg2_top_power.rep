@@ -1,0 +1,329 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : mpeg2_top
+Version: K-2015.06-SP2
+Date   : Wed Jan 24 23:06:29 2018
+****************************************
+
+
+Library(s) Used:
+
+    tcbn65gpluswc (File: /home/linux/ieng6/ee260b/public/data/libraries/db/tcbn65gpluswc.db)
+
+
+Operating Conditions: WCCOM   Library: tcbn65gpluswc
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+mpeg2_top              ZeroWireload      tcbn65gpluswc
+cntrltop               ZeroWireload      tcbn65gpluswc
+mctop                  ZeroWireload      tcbn65gpluswc
+uctop                  ZeroWireload      tcbn65gpluswc
+dctop                  ZeroWireload      tcbn65gpluswc
+buctop                 ZeroWireload      tcbn65gpluswc
+bdctop                 ZeroWireload      tcbn65gpluswc
+pbuftop                ZeroWireload      tcbn65gpluswc
+vldtop                 ZeroWireload      tcbn65gpluswc
+idcttop                ZeroWireload      tcbn65gpluswc
+iqtop                  ZeroWireload      tcbn65gpluswc
+busrtop                ZeroWireload      tcbn65gpluswc
+buswtop                ZeroWireload      tcbn65gpluswc
+regtop                 ZeroWireload      tcbn65gpluswc
+pcnttop                ZeroWireload      tcbn65gpluswc
+busiftop               ZeroWireload      tcbn65gpluswc
+cmbctl                 ZeroWireload      tcbn65gpluswc
+cpctl                  ZeroWireload      tcbn65gpluswc
+ctmg                   ZeroWireload      tcbn65gpluswc
+ct_mtparray            ZeroWireload      tcbn65gpluswc
+mc_bkmb                ZeroWireload      tcbn65gpluswc
+mc_fbdp                ZeroWireload      tcbn65gpluswc
+mc_frfi                ZeroWireload      tcbn65gpluswc
+mc_hp_1                ZeroWireload      tcbn65gpluswc
+mc_vcsl                ZeroWireload      tcbn65gpluswc
+mc_bmbarray            ZeroWireload      tcbn65gpluswc
+mc_ibearray_3          ZeroWireload      tcbn65gpluswc
+mc_ritarray            ZeroWireload      tcbn65gpluswc
+uc_h_1                 ZeroWireload      tcbn65gpluswc
+uc_v_1                 ZeroWireload      tcbn65gpluswc
+dc_h                   ZeroWireload      tcbn65gpluswc
+dc_v                   ZeroWireload      tcbn65gpluswc
+dc_hscarray            ZeroWireload      tcbn65gpluswc
+dc_vscarray            ZeroWireload      tcbn65gpluswc
+buc_ifictl             ZeroWireload      tcbn65gpluswc
+buc_srctl              ZeroWireload      tcbn65gpluswc
+buc_rfaarray           ZeroWireload      tcbn65gpluswc
+buc_rfbarray           ZeroWireload      tcbn65gpluswc
+bdc_ifoctl             ZeroWireload      tcbn65gpluswc
+bdc_sdictl             ZeroWireload      tcbn65gpluswc
+bdc_srctl              ZeroWireload      tcbn65gpluswc
+bdc_rcnarray           ZeroWireload      tcbn65gpluswc
+pb_pdist               ZeroWireload      tcbn65gpluswc
+vld_syndec             ZeroWireload      tcbn65gpluswc
+vld_motvec             ZeroWireload      tcbn65gpluswc
+idct_dcttp             ZeroWireload      tcbn65gpluswc
+idct_round             ZeroWireload      tcbn65gpluswc
+idct_seqmbs            ZeroWireload      tcbn65gpluswc
+idct_trparray          ZeroWireload      tcbn65gpluswc
+iq_1stage              ZeroWireload      tcbn65gpluswc
+iq_2stage              ZeroWireload      tcbn65gpluswc
+iq_pastdc              ZeroWireload      tcbn65gpluswc
+iq_seq                 ZeroWireload      tcbn65gpluswc
+iq_mtxarray            ZeroWireload      tcbn65gpluswc
+iq_zgtarray            ZeroWireload      tcbn65gpluswc
+b_rreq                 ZeroWireload      tcbn65gpluswc
+b_rres                 ZeroWireload      tcbn65gpluswc
+b_wreq                 ZeroWireload      tcbn65gpluswc
+b_wdcl                 ZeroWireload      tcbn65gpluswc
+reg_hdiarray           ZeroWireload      tcbn65gpluswc
+cmnwmbp                ZeroWireload      tcbn65gpluswc
+cmnxmbp                ZeroWireload      tcbn65gpluswc
+cmbfix                 ZeroWireload      tcbn65gpluswc
+cpif                   ZeroWireload      tcbn65gpluswc
+cpop                   ZeroWireload      tcbn65gpluswc
+ctqmt                  ZeroWireload      tcbn65gpluswc
+ctspgen                ZeroWireload      tcbn65gpluswc
+ctutgen                ZeroWireload      tcbn65gpluswc
+ctltgen                ZeroWireload      tcbn65gpluswc
+ctpedet                ZeroWireload      tcbn65gpluswc
+ctplcon                ZeroWireload      tcbn65gpluswc
+ctautopd               ZeroWireload      tcbn65gpluswc
+mc_fifr_1              ZeroWireload      tcbn65gpluswc
+mc_hph_1               ZeroWireload      tcbn65gpluswc
+mc_hpv_1               ZeroWireload      tcbn65gpluswc
+uc_hdtdep_1            ZeroWireload      tcbn65gpluswc
+uc_hctrl_1             ZeroWireload      tcbn65gpluswc
+uc_hlflt_1             ZeroWireload      tcbn65gpluswc
+uc_hlsel_1             ZeroWireload      tcbn65gpluswc
+uc_64232_1             ZeroWireload      tcbn65gpluswc
+uc_vctrl_1             ZeroWireload      tcbn65gpluswc
+uc_vtflt_1             ZeroWireload      tcbn65gpluswc
+uc_vtsel_1             ZeroWireload      tcbn65gpluswc
+dc_hcbnk               ZeroWireload      tcbn65gpluswc
+dc_hmult_23            ZeroWireload      tcbn65gpluswc
+dc_hpdsm               ZeroWireload      tcbn65gpluswc
+dc_hrdcp               ZeroWireload      tcbn65gpluswc
+dc_htgct               ZeroWireload      tcbn65gpluswc
+dc_hxpnd               ZeroWireload      tcbn65gpluswc
+dc_hvscn               ZeroWireload      tcbn65gpluswc
+dc_vhscn               ZeroWireload      tcbn65gpluswc
+dc_vtflt               ZeroWireload      tcbn65gpluswc
+pb_pccl                ZeroWireload      tcbn65gpluswc
+pb_fifo                ZeroWireload      tcbn65gpluswc
+vld_seqhed             ZeroWireload      tcbn65gpluswc
+vld_seqext             ZeroWireload      tcbn65gpluswc
+vld_seqdis             ZeroWireload      tcbn65gpluswc
+vld_usrdat             ZeroWireload      tcbn65gpluswc
+vld_gophed             ZeroWireload      tcbn65gpluswc
+vld_piched             ZeroWireload      tcbn65gpluswc
+vld_piccod             ZeroWireload      tcbn65gpluswc
+vld_picdis             ZeroWireload      tcbn65gpluswc
+vld_copyrt             ZeroWireload      tcbn65gpluswc
+vld_slched             ZeroWireload      tcbn65gpluswc
+vld_macblk             ZeroWireload      tcbn65gpluswc
+vld_blkdat             ZeroWireload      tcbn65gpluswc
+vld_outbuf             ZeroWireload      tcbn65gpluswc
+vld_vscdet             ZeroWireload      tcbn65gpluswc
+vld_vlfeed             ZeroWireload      tcbn65gpluswc
+vld_genpmv             ZeroWireload      tcbn65gpluswc
+vld_genvec_7           ZeroWireload      tcbn65gpluswc
+vld_outvec             ZeroWireload      tcbn65gpluswc
+idct_dctxx_1           ZeroWireload      tcbn65gpluswc
+idct_dctxx_0           ZeroWireload      tcbn65gpluswc
+idct_trans             ZeroWireload      tcbn65gpluswc
+idct_zdout             ZeroWireload      tcbn65gpluswc
+iq_both_1              ZeroWireload      tcbn65gpluswc
+iq_wall_1              ZeroWireload      tcbn65gpluswc
+iq_both_0              ZeroWireload      tcbn65gpluswc
+dc_vcbnk               ZeroWireload      tcbn65gpluswc
+dc_vpdsm               ZeroWireload      tcbn65gpluswc
+dc_vrdcp               ZeroWireload      tcbn65gpluswc
+dc_vtgct               ZeroWireload      tcbn65gpluswc
+dc_vxpnd               ZeroWireload      tcbn65gpluswc
+vld_blksta             ZeroWireload      tcbn65gpluswc
+vld_nulsft             ZeroWireload      tcbn65gpluswc
+vld_dcshft             ZeroWireload      tcbn65gpluswc
+vld_acshft             ZeroWireload      tcbn65gpluswc
+vld_escsft             ZeroWireload      tcbn65gpluswc
+vld_dcdecd             ZeroWireload      tcbn65gpluswc
+vld_acdecd             ZeroWireload      tcbn65gpluswc
+vld_escdec             ZeroWireload      tcbn65gpluswc
+vld_rldecd             ZeroWireload      tcbn65gpluswc
+idct_dprtp_1           ZeroWireload      tcbn65gpluswc
+idct_mactp_1           ZeroWireload      tcbn65gpluswc
+idct_postt_1           ZeroWireload      tcbn65gpluswc
+idct_dctsq_1           ZeroWireload      tcbn65gpluswc
+idct_dprtp_0           ZeroWireload      tcbn65gpluswc
+idct_mactp_0           ZeroWireload      tcbn65gpluswc
+idct_dctsq_0           ZeroWireload      tcbn65gpluswc
+idct_trnsq             ZeroWireload      tcbn65gpluswc
+vld_b14tbl             ZeroWireload      tcbn65gpluswc
+vld_b15tbl             ZeroWireload      tcbn65gpluswc
+idct_prdin_1           ZeroWireload      tcbn65gpluswc
+idct_prbtf_1           ZeroWireload      tcbn65gpluswc
+idct_prctt_1           ZeroWireload      tcbn65gpluswc
+idct_dmacx_1           ZeroWireload      tcbn65gpluswc
+idct_dmacy_1           ZeroWireload      tcbn65gpluswc
+idct_pobtf_1           ZeroWireload      tcbn65gpluswc
+idct_pornt_1           ZeroWireload      tcbn65gpluswc
+idct_prctt_0           ZeroWireload      tcbn65gpluswc
+idct_dmacx_0           ZeroWireload      tcbn65gpluswc
+idct_dmacy_0           ZeroWireload      tcbn65gpluswc
+idct_xc128_1           ZeroWireload      tcbn65gpluswc
+idct_trnad_1           ZeroWireload      tcbn65gpluswc
+idct_princ_3           ZeroWireload      tcbn65gpluswc
+idct_prctu_3           ZeroWireload      tcbn65gpluswc
+idct_dmade_3           ZeroWireload      tcbn65gpluswc
+idct_romx0_1           ZeroWireload      tcbn65gpluswc
+idct_romx1_1           ZeroWireload      tcbn65gpluswc
+idct_romx2_1           ZeroWireload      tcbn65gpluswc
+idct_romx3_1           ZeroWireload      tcbn65gpluswc
+idct_macct_15          ZeroWireload      tcbn65gpluswc
+idct_macct_14          ZeroWireload      tcbn65gpluswc
+idct_romx4_1           ZeroWireload      tcbn65gpluswc
+idct_romx5_1           ZeroWireload      tcbn65gpluswc
+idct_romx6_1           ZeroWireload      tcbn65gpluswc
+idct_romx7_1           ZeroWireload      tcbn65gpluswc
+idct_macct_3           ZeroWireload      tcbn65gpluswc
+idct_pccsl_3           ZeroWireload      tcbn65gpluswc
+idct_masft_15          ZeroWireload      tcbn65gpluswc
+mc_ibearray_0          ZeroWireload      tcbn65gpluswc
+mc_ibearray_1          ZeroWireload      tcbn65gpluswc
+mc_ibearray_2          ZeroWireload      tcbn65gpluswc
+uc_h_0                 ZeroWireload      tcbn65gpluswc
+uc_hctrl_0             ZeroWireload      tcbn65gpluswc
+uc_v_0                 ZeroWireload      tcbn65gpluswc
+uc_64232_0             ZeroWireload      tcbn65gpluswc
+idct_romx0_0           ZeroWireload      tcbn65gpluswc
+idct_postt_0           ZeroWireload      tcbn65gpluswc
+idct_macct_7           ZeroWireload      tcbn65gpluswc
+idct_macct_11          ZeroWireload      tcbn65gpluswc
+vld_genvec_0           ZeroWireload      tcbn65gpluswc
+vld_genvec_1           ZeroWireload      tcbn65gpluswc
+vld_genvec_2           ZeroWireload      tcbn65gpluswc
+vld_genvec_3           ZeroWireload      tcbn65gpluswc
+vld_genvec_4           ZeroWireload      tcbn65gpluswc
+vld_genvec_5           ZeroWireload      tcbn65gpluswc
+vld_genvec_6           ZeroWireload      tcbn65gpluswc
+idct_prdin_0           ZeroWireload      tcbn65gpluswc
+idct_romx2_0           ZeroWireload      tcbn65gpluswc
+idct_xc128_0           ZeroWireload      tcbn65gpluswc
+idct_romx3_0           ZeroWireload      tcbn65gpluswc
+idct_masft_0           ZeroWireload      tcbn65gpluswc
+idct_masft_1           ZeroWireload      tcbn65gpluswc
+idct_masft_2           ZeroWireload      tcbn65gpluswc
+idct_masft_3           ZeroWireload      tcbn65gpluswc
+idct_masft_4           ZeroWireload      tcbn65gpluswc
+idct_masft_5           ZeroWireload      tcbn65gpluswc
+idct_masft_6           ZeroWireload      tcbn65gpluswc
+idct_masft_7           ZeroWireload      tcbn65gpluswc
+idct_masft_8           ZeroWireload      tcbn65gpluswc
+idct_masft_9           ZeroWireload      tcbn65gpluswc
+idct_masft_10          ZeroWireload      tcbn65gpluswc
+idct_masft_11          ZeroWireload      tcbn65gpluswc
+idct_masft_12          ZeroWireload      tcbn65gpluswc
+idct_masft_13          ZeroWireload      tcbn65gpluswc
+idct_masft_14          ZeroWireload      tcbn65gpluswc
+mc_hp_0                ZeroWireload      tcbn65gpluswc
+mc_fifr_0              ZeroWireload      tcbn65gpluswc
+dc_hmult_0             ZeroWireload      tcbn65gpluswc
+dc_hmult_1             ZeroWireload      tcbn65gpluswc
+dc_hmult_2             ZeroWireload      tcbn65gpluswc
+dc_hmult_3             ZeroWireload      tcbn65gpluswc
+dc_hmult_4             ZeroWireload      tcbn65gpluswc
+dc_hmult_5             ZeroWireload      tcbn65gpluswc
+dc_hmult_6             ZeroWireload      tcbn65gpluswc
+dc_hmult_7             ZeroWireload      tcbn65gpluswc
+dc_hmult_8             ZeroWireload      tcbn65gpluswc
+dc_hmult_9             ZeroWireload      tcbn65gpluswc
+dc_hmult_10            ZeroWireload      tcbn65gpluswc
+dc_hmult_11            ZeroWireload      tcbn65gpluswc
+dc_hmult_12            ZeroWireload      tcbn65gpluswc
+dc_hmult_13            ZeroWireload      tcbn65gpluswc
+dc_hmult_14            ZeroWireload      tcbn65gpluswc
+dc_hmult_15            ZeroWireload      tcbn65gpluswc
+dc_hmult_16            ZeroWireload      tcbn65gpluswc
+dc_hmult_17            ZeroWireload      tcbn65gpluswc
+dc_hmult_18            ZeroWireload      tcbn65gpluswc
+dc_hmult_19            ZeroWireload      tcbn65gpluswc
+dc_hmult_20            ZeroWireload      tcbn65gpluswc
+dc_hmult_21            ZeroWireload      tcbn65gpluswc
+dc_hmult_22            ZeroWireload      tcbn65gpluswc
+idct_prbtf_0           ZeroWireload      tcbn65gpluswc
+idct_princ_0           ZeroWireload      tcbn65gpluswc
+idct_princ_1           ZeroWireload      tcbn65gpluswc
+idct_princ_2           ZeroWireload      tcbn65gpluswc
+idct_dmade_0           ZeroWireload      tcbn65gpluswc
+idct_dmade_1           ZeroWireload      tcbn65gpluswc
+idct_dmade_2           ZeroWireload      tcbn65gpluswc
+idct_prctu_0           ZeroWireload      tcbn65gpluswc
+idct_prctu_1           ZeroWireload      tcbn65gpluswc
+idct_prctu_2           ZeroWireload      tcbn65gpluswc
+idct_pccsl_0           ZeroWireload      tcbn65gpluswc
+idct_pccsl_1           ZeroWireload      tcbn65gpluswc
+idct_pccsl_2           ZeroWireload      tcbn65gpluswc
+idct_romx4_0           ZeroWireload      tcbn65gpluswc
+iq_wall_0              ZeroWireload      tcbn65gpluswc
+idct_romx1_0           ZeroWireload      tcbn65gpluswc
+mc_hpv_0               ZeroWireload      tcbn65gpluswc
+uc_hlflt_0             ZeroWireload      tcbn65gpluswc
+idct_trnad_0           ZeroWireload      tcbn65gpluswc
+uc_hdtdep_0            ZeroWireload      tcbn65gpluswc
+idct_pobtf_0           ZeroWireload      tcbn65gpluswc
+idct_romx6_0           ZeroWireload      tcbn65gpluswc
+idct_macct_0           ZeroWireload      tcbn65gpluswc
+idct_macct_1           ZeroWireload      tcbn65gpluswc
+idct_macct_2           ZeroWireload      tcbn65gpluswc
+idct_macct_4           ZeroWireload      tcbn65gpluswc
+idct_macct_5           ZeroWireload      tcbn65gpluswc
+idct_macct_6           ZeroWireload      tcbn65gpluswc
+idct_macct_8           ZeroWireload      tcbn65gpluswc
+idct_macct_9           ZeroWireload      tcbn65gpluswc
+idct_macct_10          ZeroWireload      tcbn65gpluswc
+idct_macct_12          ZeroWireload      tcbn65gpluswc
+idct_macct_13          ZeroWireload      tcbn65gpluswc
+uc_vctrl_0             ZeroWireload      tcbn65gpluswc
+idct_pornt_0           ZeroWireload      tcbn65gpluswc
+uc_vtflt_0             ZeroWireload      tcbn65gpluswc
+idct_romx5_0           ZeroWireload      tcbn65gpluswc
+mc_hph_0               ZeroWireload      tcbn65gpluswc
+idct_romx7_0           ZeroWireload      tcbn65gpluswc
+uc_hlsel_0             ZeroWireload      tcbn65gpluswc
+uc_vtsel_0             ZeroWireload      tcbn65gpluswc
+
+
+Global Operating Voltage = 0.9  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  = 385.7717 mW  (100%)
+  Net Switching Power  =   1.3394 mW    (0%)
+                         ---------
+Total Dynamic Power    = 387.1111 mW  (100%)
+
+Cell Leakage Power     =   9.3811 mW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register         384.6546            0.5500        7.2970e+06          392.5018  (  99.06%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.8453            0.7894        2.0841e+06            3.7188  (   0.94%)
+--------------------------------------------------------------------------------------------------
+Total            385.4999 mW         1.3394 mW     9.3811e+06 nW       396.2206 mW
+1
