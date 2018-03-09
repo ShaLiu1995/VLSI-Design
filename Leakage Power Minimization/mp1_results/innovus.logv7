@@ -1,0 +1,392 @@
+[03/07 22:08:11      0] 
+[03/07 22:08:11      0] Cadence Innovus(TM) Implementation System.
+[03/07 22:08:11      0] Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+[03/07 22:08:11      0] 
+[03/07 22:08:11      0] Version:	v15.23-s045_1, built Fri Apr 22 12:32:52 PDT 2016
+[03/07 22:08:11      0] Options:	
+[03/07 22:08:11      0] Date:		Wed Mar  7 22:08:11 2018
+[03/07 22:08:11      0] Host:		ieng6-ece-17.ucsd.edu (x86_64 w/Linux 2.6.32-696.18.7.el6.x86_64) (4cores*8cpus*Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz 20480KB)
+[03/07 22:08:11      0] OS:		CentOS release 6.9 (Final)
+[03/07 22:08:11      0] 
+[03/07 22:08:11      0] License:
+[03/07 22:08:11      0] 		invs	Innovus Implementation System	15.2	checkout succeeded
+[03/07 22:08:11      0] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[03/07 22:08:13      0] **WARN: (IMPSYT-1507):	The display is invalid and will start in no window mode
+[03/07 22:08:40     26] @(#)CDS: Innovus v15.23-s045_1 (64bit) 04/22/2016 12:32 (Linux 2.6.18-194.el5)
+[03/07 22:08:40     26] @(#)CDS: NanoRoute 15.23-s045_1 NR160414-1105/15_23-UB (database version 2.30, 317.6.1) {superthreading v1.26}
+[03/07 22:08:40     26] @(#)CDS: AAE 15.23-s014 (64bit) 04/22/2016 (Linux 2.6.18-194.el5)
+[03/07 22:08:40     26] @(#)CDS: CTE 15.23-s022_1 () Apr 22 2016 09:38:45 ( )
+[03/07 22:08:40     26] @(#)CDS: SYNTECH 15.23-s008_1 () Apr 12 2016 21:52:59 ( )
+[03/07 22:08:40     26] @(#)CDS: CPE v15.23-s045
+[03/07 22:08:40     26] @(#)CDS: IQRC/TQRC 15.1.4-s213 (64bit) Tue Feb  9 17:31:28 PST 2016 (Linux 2.6.18-194.el5)
+[03/07 22:08:40     26] @(#)CDS: OA 22.50-p036 Tue Nov  3 09:29:52 2015
+[03/07 22:08:40     26] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[03/07 22:08:40     26] @(#)CDS: RCDB 11.7
+[03/07 22:08:40     26] --- Running on ieng6-ece-17.ucsd.edu (x86_64 w/Linux 2.6.32-696.18.7.el6.x86_64) (4cores*8cpus*Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz 20480KB) ---
+[03/07 22:08:40     26] Create and set the environment variable TMPDIR to /tmp/innovus_temp_19615_ieng6-ece-17.ucsd.edu_shl237_cZfe83.
+
+[03/07 22:08:42     27] 
+[03/07 22:08:42     27] **INFO:  MMMC transition support version v31-84 
+[03/07 22:08:42     27] 
+[03/07 22:08:42     27] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[03/07 22:08:42     27] <CMD> suppressMessage ENCEXT-2799
+[03/07 22:09:15     27] <CMD> set init_pwr_net VDD
+[03/07 22:09:15     27] <CMD> set init_gnd_net VSS
+[03/07 22:09:15     27] <CMD> set init_verilog ./aes_cipher_top.v
+[03/07 22:09:15     27] <CMD> set init_design_netlisttype Verilog
+[03/07 22:09:15     27] <CMD> set init_design_settop 1
+[03/07 22:09:15     27] <CMD> set init_top_cell aes_cipher_top
+[03/07 22:09:15     27] <CMD> set init_lef_file /home/linux/ieng6/ee260b/public/data/libraries/techfiles/contest.lef
+[03/07 22:09:15     27] <CMD> create_library_set -name WC_LIB -timing $libworst
+[03/07 22:09:15     27] <CMD> create_library_set -name BC_LIB -timing $libworst
+[03/07 22:09:15     27] <CMD> create_rc_corner -name Cmax -cap_table $captblworst -T 125
+[03/07 22:09:15     27] <CMD> create_rc_corner -name Cmin -cap_table $captblworst -T -40
+[03/07 22:09:15     27] <CMD> create_delay_corner -name WC -library_set WC_LIB -rc_corner Cmax
+[03/07 22:09:15     27] <CMD> create_delay_corner -name BC -library_set BC_LIB -rc_corner Cmin
+[03/07 22:09:15     27] <CMD> create_constraint_mode -name CON -sdc_file [list $sdc]
+[03/07 22:09:15     27] <CMD> create_analysis_view -name WC_VIEW -delay_corner WC -constraint_mode CON
+[03/07 22:09:15     27] <CMD> create_analysis_view -name BC_VIEW -delay_corner BC -constraint_mode CON
+[03/07 22:09:15     27] <CMD> init_design -setup WC_VIEW -hold BC_VIEW
+[03/07 22:09:15     27] 
+[03/07 22:09:15     27] Loading LEF file /home/linux/ieng6/ee260b/public/data/libraries/techfiles/contest.lef ...
+[03/07 22:09:15     28] Set DBUPerIGU to M2 pitch 280.
+[03/07 22:09:15     28] 
+[03/07 22:09:15     28] viaInitial starts at Wed Mar  7 22:09:15 2018
+viaInitial ends at Wed Mar  7 22:09:15 2018
+Reading WC_LIB timing library '/home/linux/ieng6/ee260b/public/data/libraries/lib/contest.lib' ...
+[03/07 22:09:16     30] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'in01s01' is not defined in the library.
+[03/07 22:09:16     30] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'in01s02' is not defined in the library.
+[03/07 22:09:16     30] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'in01s03' is not defined in the library.
+[03/07 22:09:16     30] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'in01s04' is not defined in the library.
+[03/07 22:09:16     30] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'in01s06' is not defined in the library.
+[03/07 22:09:17     30] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'in01s08' is not defined in the library.
+[03/07 22:09:17     30] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'in01s10' is not defined in the library.
+[03/07 22:09:17     30] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'in01s20' is not defined in the library.
+[03/07 22:09:17     30] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'in01s40' is not defined in the library.
+[03/07 22:09:17     30] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'in01s80' is not defined in the library.
+[03/07 22:09:17     30] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'in01m01' is not defined in the library.
+[03/07 22:09:17     30] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'in01m02' is not defined in the library.
+[03/07 22:09:17     30] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'in01m03' is not defined in the library.
+[03/07 22:09:17     30] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'in01m04' is not defined in the library.
+[03/07 22:09:17     30] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'in01m06' is not defined in the library.
+[03/07 22:09:17     30] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'in01m08' is not defined in the library.
+[03/07 22:09:17     30] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'in01m10' is not defined in the library.
+[03/07 22:09:17     30] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'in01m20' is not defined in the library.
+[03/07 22:09:17     30] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'in01m40' is not defined in the library.
+[03/07 22:09:17     30] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'in01m80' is not defined in the library.
+[03/07 22:09:17     30] Message <TECHLIB-436> has exceeded the message display limit of '20'. setMessageLimit/set_message_limit sets the limit. unsetMessageLimit/unset_message_limit can be used to reset this.
+[03/07 22:09:18     32] Read 333 cells in library 'contest' 
+[03/07 22:09:18     32] *** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=0.60min, fe_real=1.12min, fe_mem=415.2M) ***
+[03/07 22:09:18     32] *** Begin netlist parsing (mem=415.2M) ***
+[03/07 22:09:18     32] Created 333 new cells from 1 timing libraries.
+[03/07 22:09:18     32] Reading netlist ...
+[03/07 22:09:18     32] Backslashed names will retain backslash and a trailing blank character.
+[03/07 22:09:18     32] Reading verilog netlist './aes_cipher_top.v'
+[03/07 22:09:18     32] 
+[03/07 22:09:18     32] *** Memory Usage v#1 (Current mem = 420.156M, initial mem = 151.930M) ***
+[03/07 22:09:18     32] *** End netlist parsing (cpu=0:00:00.4, real=0:00:00.0, mem=420.2M) ***
+[03/07 22:09:18     32] Set top cell to aes_cipher_top.
+[03/07 22:09:18     32] Hooked 333 DB cells to tlib cells.
+[03/07 22:09:18     32] ** Removed 2 unused lib cells.
+[03/07 22:09:18     32] Starting recursive module instantiation check.
+[03/07 22:09:18     32] No recursion found.
+[03/07 22:09:18     32] Building hierarchical netlist for Cell aes_cipher_top ...
+[03/07 22:09:18     32] *** Netlist is unique.
+[03/07 22:09:18     32] ** info: there are 333 modules.
+[03/07 22:09:18     32] ** info: there are 14177 stdCell insts.
+[03/07 22:09:18     32] 
+[03/07 22:09:18     32] *** Memory Usage v#1 (Current mem = 456.664M, initial mem = 151.930M) ***
+[03/07 22:09:18     32] **WARN: (IMPFP-3961):	The techSite 'pad' has no related cells in LEF/OA library. Cannot make calculations for this site type unless cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[03/07 22:09:18     32] Type 'man IMPFP-3961' for more detail.
+[03/07 22:09:18     32] **WARN: (IMPFP-3961):	The techSite 'core' has no related cells in LEF/OA library. Cannot make calculations for this site type unless cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[03/07 22:09:18     32] Type 'man IMPFP-3961' for more detail.
+[03/07 22:09:18     32] Generated pitch 0.84 in M8 is different from 0.8 defined in technology file in preferred direction.
+[03/07 22:09:18     32] Generated pitch 0.84 in M7 is different from 0.8 defined in technology file in preferred direction.
+[03/07 22:09:18     32] Set Default Net Delay as 1000 ps.
+[03/07 22:09:18     32] Set Default Net Load as 0.5 pF. 
+[03/07 22:09:18     32] Set Default Input Pin Transition as 0.1 ps.
+[03/07 22:09:19     33] Initializing multi-corner RC extraction with 2 active RC Corners ...
+[03/07 22:09:19     33] Reading Capacitance Table File /home/linux/ieng6/ee260b/public/data/libraries/techfiles/cln65g+_1p08m+alrdl_top2_cworst.captable ...
+[03/07 22:09:19     33] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/07 22:09:19     33] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/07 22:09:19     33] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/07 22:09:19     33] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/07 22:09:19     33] Reading Capacitance Table File /home/linux/ieng6/ee260b/public/data/libraries/techfiles/cln65g+_1p08m+alrdl_top2_cworst.captable ...
+[03/07 22:09:19     33] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/07 22:09:19     33] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/07 22:09:19     33] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/07 22:09:19     33] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/07 22:09:19     33] Importing multi-corner RC tables ... 
+[03/07 22:09:19     33] Summary of Active RC-Corners : 
+[03/07 22:09:19     33]  
+[03/07 22:09:19     33]  Analysis View: WC_VIEW
+[03/07 22:09:19     33]     RC-Corner Name        : Cmax
+[03/07 22:09:19     33]     RC-Corner Index       : 0
+[03/07 22:09:19     33]     RC-Corner Temperature : 125 Celsius
+[03/07 22:09:19     33]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260b/public/data/libraries/techfiles/cln65g+_1p08m+alrdl_top2_cworst.captable'
+[03/07 22:09:19     33]     RC-Corner PreRoute Res Factor         : 1
+[03/07 22:09:19     33]     RC-Corner PreRoute Cap Factor         : 1
+[03/07 22:09:19     33]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/07 22:09:19     33]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/07 22:09:19     33]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/07 22:09:19     33]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/07 22:09:19     33]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/07 22:09:19     33]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/07 22:09:19     33]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/07 22:09:19     33]  
+[03/07 22:09:19     33]  Analysis View: BC_VIEW
+[03/07 22:09:19     33]     RC-Corner Name        : Cmin
+[03/07 22:09:19     33]     RC-Corner Index       : 1
+[03/07 22:09:19     33]     RC-Corner Temperature : -40 Celsius
+[03/07 22:09:19     33]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260b/public/data/libraries/techfiles/cln65g+_1p08m+alrdl_top2_cworst.captable'
+[03/07 22:09:19     33]     RC-Corner PreRoute Res Factor         : 1
+[03/07 22:09:19     33]     RC-Corner PreRoute Cap Factor         : 1
+[03/07 22:09:19     33]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/07 22:09:19     33]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/07 22:09:19     33]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/07 22:09:19     33]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/07 22:09:19     33]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/07 22:09:19     33]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/07 22:09:19     33]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/07 22:09:19     33] *Info: initialize multi-corner CTS.
+[03/07 22:09:21     35] Reading timing constraints file './aes_cipher_top.sdc' ...
+[03/07 22:09:21     35] Current (total cpu=0:00:39.1, real=0:01:10, peak res=235.3M, current mem=577.3M)
+[03/07 22:09:21     35] **WARN: (TCLNL-330):	set_input_delay on clock root 'clk' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File ./aes_cipher_top.sdc, Line 402).
+[03/07 22:09:21     35] 
+[03/07 22:09:21     35] INFO (CTE): Reading of timing constraints file ./aes_cipher_top.sdc completed, with 1 WARNING
+[03/07 22:09:21     35] WARNING (CTE-25): Line: 9 of File ./aes_cipher_top.sdc : Skipped unsupported command: set_max_area
+[03/07 22:09:21     35] 
+[03/07 22:09:21     35] 
+[03/07 22:09:21     35] WARNING (CTE-25): Line: 8 of File ./aes_cipher_top.sdc : Skipped unsupported command: set_units
+[03/07 22:09:21     35] 
+[03/07 22:09:21     35] 
+[03/07 22:09:21     35] Ending "Constraint file reading stats" (total cpu=0:00:00.3, real=0:00:00.0, peak res=252.6M, current mem=592.5M)
+[03/07 22:09:21     35] Current (total cpu=0:00:39.5, real=0:01:10, peak res=252.6M, current mem=592.5M)
+[03/07 22:09:21     35] Summary for sequential cells idenfication: 
+[03/07 22:09:21     35] Identified SBFF number: 1
+[03/07 22:09:21     35] Identified MBFF number: 0
+[03/07 22:09:21     35] Not identified SBFF number: 0
+[03/07 22:09:21     35] Not identified MBFF number: 0
+[03/07 22:09:21     35] Number of sequential cells which are not FFs: 0
+[03/07 22:09:21     35] 
+[03/07 22:09:21     35] Total number of combinational cells: 330
+[03/07 22:09:21     35] Total number of sequential cells: 1
+[03/07 22:09:21     35] Total number of tristate cells: 0
+[03/07 22:09:21     35] Total number of level shifter cells: 0
+[03/07 22:09:21     35] Total number of power gating cells: 0
+[03/07 22:09:21     35] Total number of isolation cells: 0
+[03/07 22:09:21     35] Total number of power switch cells: 0
+[03/07 22:09:21     35] Total number of pulse generator cells: 0
+[03/07 22:09:21     35] Total number of always on buffers: 0
+[03/07 22:09:21     35] Total number of retention cells: 0
+[03/07 22:09:21     35] List of usable buffers:
+[03/07 22:09:21     35] Total number of usable buffers: 0
+[03/07 22:09:21     35] List of unusable buffers:
+[03/07 22:09:21     35] Total number of unusable buffers: 0
+[03/07 22:09:21     35] List of usable inverters: in01s01 in01s02 in01s03 in01s04 in01s06 in01s08 in01s10 in01s20 in01s40 in01s80 in01m01 in01m02 in01m03 in01m04 in01m06 in01m08 in01m10 in01m20 in01m40 in01m80 in01f01 in01f02 in01f03 in01f04 in01f06 in01f08 in01f10 in01f20 in01f40 in01f80
+[03/07 22:09:21     35] Total number of usable inverters: 30
+[03/07 22:09:21     35] List of unusable inverters:
+[03/07 22:09:21     35] Total number of unusable inverters: 0
+[03/07 22:09:21     35] List of identified usable delay cells:
+[03/07 22:09:21     35] Total number of identified usable delay cells: 0
+[03/07 22:09:21     35] List of identified unusable delay cells:
+[03/07 22:09:21     35] Total number of identified unusable delay cells: 0
+[03/07 22:09:21     35] No delay cells were detected in the set of buffers. Buffers will be used to fix hold violations.
+[03/07 22:09:21     35] 
+[03/07 22:09:21     35] *** Summary of all messages that are not suppressed in this session:
+[03/07 22:09:21     35] Severity  ID               Count  Summary                                  
+[03/07 22:09:21     35] WARNING   IMPFP-3961           2  The techSite '%s' has no related cells i...
+[03/07 22:09:21     35] WARNING   IMPEXT-2710          2  Basic Cap table for layer M%d is ignored...
+[03/07 22:09:21     35] WARNING   IMPEXT-2760          2  Layer M%d specified in the cap table is ...
+[03/07 22:09:21     35] WARNING   IMPEXT-2771          2  Via %s specified in the cap table is ign...
+[03/07 22:09:21     35] WARNING   IMPEXT-2801          2  Resistance values are not provided in th...
+[03/07 22:09:21     35] *** Message Summary: 10 warning(s), 0 error(s)
+[03/07 22:09:21     35] 
+[03/07 22:09:21     35] <CMD> set_interactive_constraint_modes {CON}
+[03/07 22:09:21     35] <CMD> setDesignMode -process 65
+[03/07 22:09:21     35] Applying the recommended capacitance filtering threshold values for 65nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+[03/07 22:09:21     35] 	These values will be used by all post-route extraction engines, including tQuantus, IQRC and Quantus QRC extraction.
+[03/07 22:09:21     35] 	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+[03/07 22:09:21     35] 	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+[03/07 22:09:21     35] 	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+[03/07 22:09:21     35] Updating process node dependent CCOpt properties for the 65nm process node.
+[03/07 22:09:21     35] <CMD> defIn aes_cipher_top.def
+[03/07 22:09:21     35] Reading DEF file 'aes_cipher_top.def', current time is Wed Mar  7 22:09:21 2018 ...
+[03/07 22:09:21     35] --- DIVIDERCHAR '/'
+[03/07 22:09:21     35] --- UnitsPerDBU = 1.0000
+[03/07 22:09:21     35] Generated pitch 0.84 in M8 is different from 0.8 defined in technology file in preferred direction.
+[03/07 22:09:21     35] Generated pitch 0.84 in M7 is different from 0.8 defined in technology file in preferred direction.
+[03/07 22:09:21     35] --- DIEAREA (0 0) (362600 357840)
+[03/07 22:09:21     35] defIn read 10000 lines...
+[03/07 22:09:21     35] defIn read 20000 lines...
+[03/07 22:09:21     35] Extracting standard cell pins and blockage ...... 
+[03/07 22:09:22     35] Pin and blockage extraction finished
+[03/07 22:09:22     35] Extracting macro/IO cell pins and blockage ...... 
+[03/07 22:09:22     35] Pin and blockage extraction finished
+[03/07 22:09:22     35] defIn read 30000 lines...
+[03/07 22:09:22     36] defIn read 40000 lines...
+[03/07 22:09:22     36] defIn read 50000 lines...
+[03/07 22:09:22     36] defIn read 60000 lines...
+[03/07 22:09:22     36] defIn read 70000 lines...
+[03/07 22:09:22     36] defIn read 80000 lines...
+[03/07 22:09:23     36] defIn read 90000 lines...
+[03/07 22:09:23     37] defIn read 100000 lines...
+[03/07 22:09:23     37] defIn read 110000 lines...
+[03/07 22:09:23     37] defIn read 120000 lines...
+[03/07 22:09:23     37] defIn read 130000 lines...
+[03/07 22:09:23     37] defIn read 140000 lines...
+[03/07 22:09:24     38] defIn read 150000 lines...
+[03/07 22:09:24     38] defIn read 160000 lines...
+[03/07 22:09:24     38] defIn read 170000 lines...
+[03/07 22:09:24     38] defIn read 180000 lines...
+[03/07 22:09:24     38] defIn read 190000 lines...
+[03/07 22:09:25     38] defIn read 200000 lines...
+[03/07 22:09:25     39] defIn read 210000 lines...
+[03/07 22:09:25     39] defIn read 220000 lines...
+[03/07 22:09:25     39] defIn read 230000 lines...
+[03/07 22:09:25     39] defIn read 240000 lines...
+[03/07 22:09:25     39] defIn read 250000 lines...
+[03/07 22:09:26     40] defIn read 260000 lines...
+[03/07 22:09:26     40] DEF file 'aes_cipher_top.def' is parsed, current time is Wed Mar  7 22:09:26 2018.
+[03/07 22:09:26     40] Updating the floorplan ...
+[03/07 22:09:26     40] <CMD> setAnalysisMode -analysisType onChipVariation -cppr both
+[03/07 22:09:26     40] <CMD> setDelayCalMode -reset
+[03/07 22:09:26     40] <CMD> setDelayCalMode -SIAware true
+[03/07 22:09:26     40] <CMD> setExtractRCMode -coupled true -engine postRoute
+[03/07 22:09:26     40] <CMD> report_timing
+[03/07 22:09:26     40] Starting SI iteration 1 using Infinite Timing Windows
+[03/07 22:09:26     40] #################################################################################
+[03/07 22:09:26     40] # Design Stage: PostRoute
+[03/07 22:09:26     40] # Design Name: aes_cipher_top
+[03/07 22:09:26     40] # Design Mode: 65nm
+[03/07 22:09:26     40] # Analysis Mode: MMMC OCV 
+[03/07 22:09:26     40] # Parasitics Mode: No SPEF/RCDB
+[03/07 22:09:26     40] # Signoff Settings: SI On 
+[03/07 22:09:26     40] #################################################################################
+[03/07 22:09:26     40] **WARN: (IMPEXT-3518):	The lower process node is set (using command 'setDesignMode') but the technology file for TQRC extraction not specified. Therefore, going for postRoute (effortLevel low) extraction instead of recommended extractor 'TQRC' for lower nodes. Use command 'set_analysis_view/update_rc_corner' to specify the technology file for TQRC extraction to take place.
+[03/07 22:09:26     40] Extraction called for design 'aes_cipher_top' of instances=14177 and nets=14443 using extraction engine 'postRoute' at effort level 'low' .
+[03/07 22:09:26     40] PostRoute (effortLevel low) RC Extraction called for design aes_cipher_top.
+[03/07 22:09:26     40] RC Extraction called in multi-corner(2) mode.
+[03/07 22:09:26     40] **WARN: (IMPEXT-3442):	The version of the capacitance table file being used is obsolete and is no longer recommended. For improved accuracy, generate the capacitance table file using the generateCapTbl command.
+[03/07 22:09:26     40] Process corner(s) are loaded.
+[03/07 22:09:26     40]  Corner: Cmax
+[03/07 22:09:26     40]  Corner: Cmin
+[03/07 22:09:26     40] extractDetailRC Option : -outfile /tmp/innovus_temp_19615_ieng6-ece-17.ucsd.edu_shl237_cZfe83/aes_cipher_top_19615_RcCdOv.rcdb.d  -extended
+[03/07 22:09:26     40] RC Mode: PostRoute -effortLevel low [Extended CapTable, LEF Resistances]
+[03/07 22:09:26     40]       RC Corner Indexes            0       1   
+[03/07 22:09:26     40] Capacitance Scaling Factor   : 1.00000 1.00000 
+[03/07 22:09:26     40] Coupling Cap. Scaling Factor : 1.00000 1.00000 
+[03/07 22:09:26     40] Resistance Scaling Factor    : 1.00000 1.00000 
+[03/07 22:09:26     40] Clock Cap. Scaling Factor    : 1.00000 1.00000 
+[03/07 22:09:26     40] Clock Res. Scaling Factor    : 1.00000 1.00000 
+[03/07 22:09:26     40] Shrink Factor                : 1.00000
+[03/07 22:09:26     40] Initializing multi-corner capacitance tables ... 
+[03/07 22:09:26     40] Initializing multi-corner resistance tables ...
+[03/07 22:09:26     40] Checking LVS Completed (CPU Time= 0:00:00.1  MEM= 646.2M)
+[03/07 22:09:27     40] Creating parasitic data file '/tmp/innovus_temp_19615_ieng6-ece-17.ucsd.edu_shl237_cZfe83/aes_cipher_top_19615_RcCdOv.rcdb.d' for storing RC.
+[03/07 22:09:27     41] Extracted 10.0013% (CPU Time= 0:00:00.7  MEM= 717.0M)
+[03/07 22:09:27     41] Extracted 20.0013% (CPU Time= 0:00:00.8  MEM= 722.0M)
+[03/07 22:09:27     41] Extracted 30.0013% (CPU Time= 0:00:01.0  MEM= 724.0M)
+[03/07 22:09:27     41] Extracted 40.0013% (CPU Time= 0:00:01.2  MEM= 725.0M)
+[03/07 22:09:27     41] Extracted 50.0013% (CPU Time= 0:00:01.4  MEM= 728.0M)
+[03/07 22:09:28     42] Extracted 60.0013% (CPU Time= 0:00:01.6  MEM= 731.0M)
+[03/07 22:09:28     42] Extracted 70.0013% (CPU Time= 0:00:01.8  MEM= 733.0M)
+[03/07 22:09:28     42] Extracted 80.0013% (CPU Time= 0:00:02.3  MEM= 738.0M)
+[03/07 22:09:29     43] Extracted 90.0013% (CPU Time= 0:00:02.6  MEM= 739.0M)
+[03/07 22:09:29     43] Extracted 100% (CPU Time= 0:00:03.3  MEM= 741.0M)
+[03/07 22:09:29     43] Number of Extracted Resistors     : 247382
+[03/07 22:09:29     43] Number of Extracted Ground Cap.   : 249529
+[03/07 22:09:29     43] Number of Extracted Coupling Cap. : 394820
+[03/07 22:09:29     43] Opening parasitic data file '/tmp/innovus_temp_19615_ieng6-ece-17.ucsd.edu_shl237_cZfe83/aes_cipher_top_19615_RcCdOv.rcdb.d' for reading.
+[03/07 22:09:29     43] Filtering XCap in 'relativeAndCoupling' mode using values coupling_c_threshold=0.1fF, relative_c_threshold=1, and total_c_threshold=0fF.
+[03/07 22:09:29     43]  Corner: Cmax
+[03/07 22:09:29     43]  Corner: Cmin
+[03/07 22:09:29     43] Checking LVS Completed (CPU Time= 0:00:00.1  MEM= 716.0M)
+[03/07 22:09:29     43] Creating parasitic data file '/tmp/innovus_temp_19615_ieng6-ece-17.ucsd.edu_shl237_cZfe83/aes_cipher_top_19615_RcCdOv.rcdb_Filter.rcdb.d' for storing RC.
+[03/07 22:09:30     44] Closing parasitic data file '/tmp/innovus_temp_19615_ieng6-ece-17.ucsd.edu_shl237_cZfe83/aes_cipher_top_19615_RcCdOv.rcdb.d'. 14436 times net's RC data read were performed.
+[03/07 22:09:30     45] Lumped Parasitic Loading Started (total cpu=0:00:00.0, real=0:00:00.0, current mem=715.953M)
+[03/07 22:09:30     45] Opening parasitic data file '/tmp/innovus_temp_19615_ieng6-ece-17.ucsd.edu_shl237_cZfe83/aes_cipher_top_19615_RcCdOv.rcdb.d' for reading.
+[03/07 22:09:30     45] Lumped Parasitic Loading Completed (total cpu=0:00:00.0, real=0:00:00.0, current mem=715.953M)
+[03/07 22:09:30     45] PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:04.6  Real Time: 0:00:04.0  MEM: 715.953M)
+[03/07 22:09:31     45] Setting infinite Tws ...
+[03/07 22:09:31     45] First Iteration Infinite Tw... 
+[03/07 22:09:31     45] Calculate early delays in OCV mode...
+[03/07 22:09:31     45] Calculate late delays in OCV mode...
+[03/07 22:09:31     46] Topological Sorting (CPU = 0:00:00.0, MEM = 716.0M, InitMEM = 716.0M)
+[03/07 22:09:31     46] Initializing multi-corner capacitance tables ... 
+[03/07 22:09:32     46] Initializing multi-corner resistance tables ...
+[03/07 22:09:34     48] Opening parasitic data file '/tmp/innovus_temp_19615_ieng6-ece-17.ucsd.edu_shl237_cZfe83/aes_cipher_top_19615_RcCdOv.rcdb.d' for reading.
+[03/07 22:09:34     48] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 808.7M)
+[03/07 22:09:34     48] **WARN: (IMPTS-403):	Delay calculation was forced to extrapolate table data outside of the characterized range. In some cases, extrapolation can reduce the accuracy of the delay calculation. You can enable more detailed reporting of these cases by enabling the command 'setDelayCalMode -reportOutBound true'.
+[03/07 22:09:34     48] Type 'man IMPTS-403' for more detail.
+[03/07 22:09:41     55] AAE_INFO-618: Total number of nets in the design is 14443,  100.0 percent of the nets selected for SI analysis
+[03/07 22:09:41     55] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[03/07 22:09:41     55] End delay calculation. (MEM=858.441 CPU=0:00:06.6 REAL=0:00:07.0)
+[03/07 22:09:41     55] Save waveform /tmp/innovus_temp_19615_ieng6-ece-17.ucsd.edu_shl237_cZfe83/.AAE_BOvKXe/.AAE_19615/waveform.data...
+[03/07 22:09:41     55] *** CDM Built up (cpu=0:00:14.8  real=0:00:15.0  mem= 858.4M) ***
+[03/07 22:09:41     55] Loading CTE timing window...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 858.4M)
+[03/07 22:09:41     55] Add other clocks and setupCteToAAEClockMapping during iter 1
+[03/07 22:09:41     55] Loading CTE timing window is completed (CPU = 0:00:00.1, REAL = 0:00:00.0, MEM = 858.4M)
+[03/07 22:09:41     55] Starting SI iteration 2
+[03/07 22:09:41     55] Calculate early delays in OCV mode...
+[03/07 22:09:41     55] Calculate late delays in OCV mode...
+[03/07 22:09:41     56] AAE_INFO-618: Total number of nets in the design is 14443,  0.0 percent of the nets selected for SI analysis
+[03/07 22:09:41     56] End delay calculation. (MEM=885.566 CPU=0:00:00.1 REAL=0:00:00.0)
+[03/07 22:09:41     56] *** CDM Built up (cpu=0:00:00.2  real=0:00:00.0  mem= 885.6M) ***
+[03/07 22:09:42     56] <CMD> setEcoMode -batchMode true
+[03/07 22:09:42     56] **WARN: (IMPOPT-6115):	ECO batchmode has been activated. Set setEcoMode -batchMode to false when done with ECO operations.
+[03/07 22:09:42     56] Type 'man IMPOPT-6115' for more detail.
+[03/07 22:09:42     56] **WARN: (IMPOPT-6103):	Timing updates for ECO operations done now on will happen when exiting batchMode. Set setEcoMode -batchMode to false when done with ECO operations
+[03/07 22:09:42     56] <CMD> setEcoMode -refinePlace true
+[03/07 22:09:42     56] <CMD> ecoChangeCell -inst U268372 -cell no03s06
+[03/07 22:09:42     56] #spOpts: N=65 
+[03/07 22:09:42     56] Core basic site is core
+[03/07 22:09:42     56] **Info: (IMPSP-307): Design contains fractional 18 cells.
+[03/07 22:09:42     56] Estimated cell power/ground rail width = 0.158 um
+[03/07 22:09:42     56] Layer info - lib-1st H=1, V=2.  Cell-FPin=1. Top-pin=2
+[03/07 22:09:42     56] #################################################################################
+[03/07 22:09:42     56] # Design Stage: PostRoute
+[03/07 22:09:42     56] # Design Name: aes_cipher_top
+[03/07 22:09:42     56] # Design Mode: 65nm
+[03/07 22:09:42     56] # Analysis Mode: MMMC OCV 
+[03/07 22:09:42     56] # Parasitics Mode: SPEF/RCDB
+[03/07 22:09:42     56] # Signoff Settings: SI On 
+[03/07 22:09:42     56] #################################################################################
+[03/07 22:09:42     56] Design State:
+[03/07 22:09:42     56]     #signal nets       :  14438
+[03/07 22:09:42     56]     #routed signal nets:  14435
+[03/07 22:09:42     56]     #clock nets        :  1
+[03/07 22:09:42     56]     #routed clock nets :  1
+[03/07 22:09:42     56] #################################################################################
+[03/07 22:09:42     56] # Design Stage: PostRoute
+[03/07 22:09:42     56] # Design Name: aes_cipher_top
+[03/07 22:09:42     56] # Design Mode: 65nm
+[03/07 22:09:42     56] # Analysis Mode: MMMC OCV 
+[03/07 22:09:42     56] # Parasitics Mode: SPEF/RCDB
+[03/07 22:09:42     56] # Signoff Settings: SI On 
+[03/07 22:09:42     56] #################################################################################
+[03/07 22:09:42     56] All-RC-Corners-Per-Net-In-Memory is turned ON...
+[03/07 22:09:42     56] Closing parasitic data file '/tmp/innovus_temp_19615_ieng6-ece-17.ucsd.edu_shl237_cZfe83/aes_cipher_top_19615_RcCdOv.rcdb.d'. 14436 times net's RC data read were performed.
+[03/07 22:09:42     56] Opening parasitic data file '/tmp/innovus_temp_19615_ieng6-ece-17.ucsd.edu_shl237_cZfe83/aes_cipher_top_19615_RcCdOv.rcdb.d' for reading.
+[03/07 22:09:42     56] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 947.4M)
+[03/07 22:09:42     56] **WARN: (IMPOPT-3589):	U268372 is not an instance!
+[03/07 22:09:42     56] 1
+[03/07 22:10:04     56] 
+[03/07 22:10:04     56] *** Memory Usage v#1 (Current mem = 876.855M, initial mem = 151.930M) ***
+[03/07 22:10:04     56] 
+[03/07 22:10:04     56] *** Summary of all messages that are not suppressed in this session:
+[03/07 22:10:04     56] Severity  ID               Count  Summary                                  
+[03/07 22:10:04     56] WARNING   IMPFP-3961           2  The techSite '%s' has no related cells i...
+[03/07 22:10:04     56] WARNING   IMPTS-403            1  Delay calculation was forced to extrapol...
+[03/07 22:10:04     56] WARNING   IMPEXT-2710          2  Basic Cap table for layer M%d is ignored...
+[03/07 22:10:04     56] WARNING   IMPEXT-2760          2  Layer M%d specified in the cap table is ...
+[03/07 22:10:04     56] WARNING   IMPEXT-2771          2  Via %s specified in the cap table is ign...
+[03/07 22:10:04     56] WARNING   IMPEXT-2801          2  Resistance values are not provided in th...
+[03/07 22:10:04     56] WARNING   IMPEXT-3442          1  The version of the capacitance table fil...
+[03/07 22:10:04     56] WARNING   IMPEXT-3518          1  The lower process node is set (using com...
+[03/07 22:10:04     56] WARNING   IMPOPT-3589          1  %s is not an instance!                   
+[03/07 22:10:04     56] WARNING   IMPOPT-6103          1  Timing updates for ECO operations done n...
+[03/07 22:10:04     56] WARNING   IMPOPT-6115          1  ECO batchmode has been activated. Set se...
+[03/07 22:10:04     56] *** Message Summary: 16 warning(s), 0 error(s)
+[03/07 22:10:04     56] 
+[03/07 22:10:04     56] --- Ending "Innovus" (totcpu=0:01:01, real=0:01:53, mem=876.9M) ---

@@ -1,0 +1,13 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v15.23-s045_1, built Fri Apr 22 12:32:52 PDT 2016
+Options:	mpeg2_top_run_eco.tcl 
+Date:		Tue Mar  6 23:42:02 2018
+Host:		ieng6-ece-17.ucsd.edu (x86_64 w/Linux 2.6.32-696.18.7.el6.x86_64) (4cores*8cpus*Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz 20480KB)
+OS:		CentOS release 6.9 (Final)
+
+License:
+**ERROR: (IMPLIC-68):	Unknown argument: mpeg2_top_run_eco.tcl.
+	Run "innovus -help" for valid option/argument.
