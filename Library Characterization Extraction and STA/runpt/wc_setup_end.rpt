@@ -7,7 +7,7 @@ Report : timing
 	-sort_by slack
 Design : aes_cipher_top
 Version: K-2015.06-SP3-1
-Date   : Thu Mar  8 21:08:57 2018
+Date   : Thu Mar  8 21:16:38 2018
 ****************************************
 
 Warning: There are 24 invalid end points for constrained paths. (UITE-416)
@@ -286,7 +286,7 @@ u0/r0/out_reg_25_/D (DFCSNQD1)  1.310283 r     1.490853     0.000000 0.180570
 u0/r0/out_reg_28_/D (DFCSNQD1)  1.308653 r     1.495395     0.000000 0.186742
 text_out_reg_72_/D (DFCSNQD1)   1.365225 f     1.554994     0.000000 0.189768
 text_out_reg_100_/D (DFCSNQD1)  1.346506 r     1.550099     0.000000 0.203593
-text_out_reg_84_/D (DFCSNQD1)   1.298677 r     1.506330     0.000000 0.207653
+text_out_reg_84_/D (DFCSNQD1)   1.298677 r     1.506353     0.000000 0.207676
 text_out_reg_81_/D (DFCSNQD1)   1.277059 f     1.486643     0.000000 0.209584
 text_out_reg_76_/D (DFCSNQD1)   1.273852 f     1.483669     0.000000 0.209817
 text_out_reg_107_/D (DFCSNQD1)  1.282698 r     1.499334     0.000000 0.216636

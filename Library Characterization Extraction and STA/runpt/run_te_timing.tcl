@@ -24,7 +24,7 @@ set report_default_significant_digits 6
 update_timing -full
 
 ### report timing to 10 worst paths
-report_timing -slack_lesser_than 1.0 -nworst 10 -sig 6 -path_type full_clock -transition_time -nets -capacitance > top10_worst_paths.rpt
+report_timing -unique_pins -slack_lesser_than 1.0 -nworst 10 -sig 6 -path_type full_clock -transition_time -nets -capacitance > top10_worst_paths.rpt
 
 ### report end-point timing
 ### end-points in the design are registers of timing paths and outputs

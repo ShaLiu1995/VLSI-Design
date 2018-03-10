@@ -6,13 +6,12 @@ Report : timing
 	-nworst 10
 	-slack_lesser_than 1.000000
 	-max_paths 10
-	-unique_pins
 	-transition_time
 	-capacitance
 	-sort_by slack
 Design : aes_cipher_top
 Version: K-2015.06-SP3-1
-Date   : Thu Mar  8 21:08:57 2018
+Date   : Thu Mar  8 21:16:37 2018
 ****************************************
 
 

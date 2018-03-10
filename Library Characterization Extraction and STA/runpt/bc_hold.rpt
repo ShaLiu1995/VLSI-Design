@@ -1,0 +1,585 @@
+****************************************
+Report : timing
+	-path_type full_clock
+	-delay_type min
+	-nets
+	-nworst 10
+	-slack_lesser_than 1.000000
+	-max_paths 10
+	-transition_time
+	-capacitance
+	-sort_by slack
+Design : aes_cipher_top
+Version: K-2015.06-SP3-1
+Date   : Thu Mar  8 21:22:38 2018
+****************************************
+
+
+  Startpoint: dcnt_reg_0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dcnt_reg_0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: min
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 0.020820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I2/Z (BUFFD16)                      0.025862   0.029805 & 0.050625 r
+  clk__L2_N2 (net)               6 0.073026 
+  clk__L3_I15/Z (BUFFD16)                     0.015222   0.027911 & 0.078537 r
+  clk__L3_N15 (net)             13 0.033313 
+  dcnt_reg_0_/CP (DFCSNQD1)                   0.015381   0.000805 & 0.079341 r
+  dcnt_reg_0_/Q (DFCSNQD1)                    0.028781   0.068154 & 0.147496 r
+  dcnt[0] (net)                  3 0.005555 
+  U2705/ZN (OAI21D0)                          0.039734   0.024582 & 0.172078 f
+  n522 (net)                     1 0.002896 
+  dcnt_reg_0_/D (DFCSNQD1)                    0.039734   0.000017 & 0.172095 f
+  data arrival time                                                 0.172095
+
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 0.020820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I2/Z (BUFFD16)                      0.025862   0.029805 & 0.050625 r
+  clk__L2_N2 (net)               6 0.073026 
+  clk__L3_I15/Z (BUFFD16)                     0.015222   0.027911 & 0.078537 r
+  clk__L3_N15 (net)             13 0.033313 
+  dcnt_reg_0_/CP (DFCSNQD1)                   0.015381   0.000805 & 0.079341 r
+  clock reconvergence pessimism                          0.000000   0.079341
+  library hold time                                      0.018788   0.098129
+  data required time                                                0.098129
+  -----------------------------------------------------------------------------
+  data required time                                                0.098129
+  data arrival time                                                 -0.172095
+  -----------------------------------------------------------------------------
+  slack (MET)                                                       0.073966
+
+
+  Startpoint: dcnt_reg_0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dcnt_reg_0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: min
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 0.020820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I2/Z (BUFFD16)                      0.025862   0.029805 & 0.050625 r
+  clk__L2_N2 (net)               6 0.073026 
+  clk__L3_I15/Z (BUFFD16)                     0.015222   0.027911 & 0.078537 r
+  clk__L3_N15 (net)             13 0.033313 
+  dcnt_reg_0_/CP (DFCSNQD1)                   0.015381   0.000805 & 0.079341 r
+  dcnt_reg_0_/Q (DFCSNQD1)                    0.019431   0.073144 & 0.152486 f
+  dcnt[0] (net)                  3 0.005549 
+  U2705/ZN (OAI21D0)                          0.054945   0.036183 & 0.188669 r
+  n522 (net)                     1 0.002898 
+  dcnt_reg_0_/D (DFCSNQD1)                    0.054945   0.000017 & 0.188686 r
+  data arrival time                                                 0.188686
+
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 0.020820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I2/Z (BUFFD16)                      0.025862   0.029805 & 0.050625 r
+  clk__L2_N2 (net)               6 0.073026 
+  clk__L3_I15/Z (BUFFD16)                     0.015222   0.027911 & 0.078537 r
+  clk__L3_N15 (net)             13 0.033313 
+  dcnt_reg_0_/CP (DFCSNQD1)                   0.015381   0.000805 & 0.079341 r
+  clock reconvergence pessimism                          0.000000   0.079341
+  library hold time                                      0.008864   0.088206
+  data required time                                                0.088206
+  -----------------------------------------------------------------------------
+  data required time                                                0.088206
+  data arrival time                                                 -0.188686
+  -----------------------------------------------------------------------------
+  slack (MET)                                                       0.100480
+
+
+  Startpoint: dcnt_reg_3_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dcnt_reg_0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: min
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 0.020820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I2/Z (BUFFD16)                      0.025862   0.029805 & 0.050625 r
+  clk__L2_N2 (net)               6 0.073026 
+  clk__L3_I15/Z (BUFFD16)                     0.015222   0.027911 & 0.078537 r
+  clk__L3_N15 (net)             13 0.033313 
+  dcnt_reg_3_/CP (DFCSNQD1)                   0.015374   0.000896 & 0.079432 r
+  dcnt_reg_3_/Q (DFCSNQD1)                    0.018441   0.072452 & 0.151885 f
+  dcnt[3] (net)                  3 0.005084 
+  U2142/ZN (OAI21D0)                          0.040280   0.028480 & 0.180364 r
+  n2504 (net)                    1 0.001810 
+  U2141/ZN (NR2D0)                            0.084407   0.025705 & 0.206069 f
+  n2505 (net)                    2 0.004872 
+  U2144/ZN (INVD0)                            0.048943   0.037013 & 0.243082 r
+  n2619 (net)                    2 0.003729 
+  U2705/ZN (OAI21D0)                          0.039734   0.028678 & 0.271760 f
+  n522 (net)                     1 0.002896 
+  dcnt_reg_0_/D (DFCSNQD1)                    0.039734   0.000017 & 0.271777 f
+  data arrival time                                                 0.271777
+
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 0.020820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I2/Z (BUFFD16)                      0.025862   0.029805 & 0.050625 r
+  clk__L2_N2 (net)               6 0.073026 
+  clk__L3_I15/Z (BUFFD16)                     0.015222   0.027911 & 0.078537 r
+  clk__L3_N15 (net)             13 0.033313 
+  dcnt_reg_0_/CP (DFCSNQD1)                   0.015381   0.000805 & 0.079341 r
+  clock reconvergence pessimism                          0.000000   0.079341
+  library hold time                                      0.018788   0.098129
+  data required time                                                0.098129
+  -----------------------------------------------------------------------------
+  data required time                                                0.098129
+  data arrival time                                                 -0.271777
+  -----------------------------------------------------------------------------
+  slack (MET)                                                       0.173648
+
+
+  Startpoint: dcnt_reg_3_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dcnt_reg_0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: min
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 0.020820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I2/Z (BUFFD16)                      0.025862   0.029805 & 0.050625 r
+  clk__L2_N2 (net)               6 0.073026 
+  clk__L3_I15/Z (BUFFD16)                     0.015222   0.027911 & 0.078537 r
+  clk__L3_N15 (net)             13 0.033313 
+  dcnt_reg_3_/CP (DFCSNQD1)                   0.015374   0.000896 & 0.079432 r
+  dcnt_reg_3_/Q (DFCSNQD1)                    0.027067   0.067141 & 0.146573 r
+  dcnt[3] (net)                  3 0.005086 
+  U2142/ZN (OAI21D0)                          0.026806   0.020272 & 0.166845 f
+  n2504 (net)                    1 0.001813 
+  U2141/ZN (NR2D0)                            0.104197   0.050621 & 0.217466 r
+  n2505 (net)                    2 0.004889 
+  U2144/ZN (INVD0)                            0.042747   0.026576 & 0.244042 f
+  n2619 (net)                    2 0.003745 
+  U2705/ZN (OAI21D0)                          0.054945   0.040838 & 0.284881 r
+  n522 (net)                     1 0.002898 
+  dcnt_reg_0_/D (DFCSNQD1)                    0.054945   0.000017 & 0.284898 r
+  data arrival time                                                 0.284898
+
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 0.020820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I2/Z (BUFFD16)                      0.025862   0.029805 & 0.050625 r
+  clk__L2_N2 (net)               6 0.073026 
+  clk__L3_I15/Z (BUFFD16)                     0.015222   0.027911 & 0.078537 r
+  clk__L3_N15 (net)             13 0.033313 
+  dcnt_reg_0_/CP (DFCSNQD1)                   0.015381   0.000805 & 0.079341 r
+  clock reconvergence pessimism                          0.000000   0.079341
+  library hold time                                      0.008864   0.088206
+  data required time                                                0.088206
+  -----------------------------------------------------------------------------
+  data required time                                                0.088206
+  data arrival time                                                 -0.284898
+  -----------------------------------------------------------------------------
+  slack (MET)                                                       0.196692
+
+
+  Startpoint: dcnt_reg_2_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dcnt_reg_0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: min
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 0.020820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I4/Z (BUFFD16)                      0.028028   0.031469 & 0.052289 r
+  clk__L2_N4 (net)               7 0.082749 
+  clk__L3_I24/Z (BUFFD16)                     0.013238   0.026020 & 0.078309 r
+  clk__L3_N24 (net)             13 0.025334 
+  dcnt_reg_2_/CP (DFCSNQD1)                   0.013272   0.000397 & 0.078706 r
+  dcnt_reg_2_/Q (DFCSNQD1)                    0.016539   0.070381 & 0.149088 f
+  dcnt[2] (net)                  3 0.004143 
+  U2143/Z (OR2D0)                             0.027425   0.039995 & 0.189082 f
+  n2620 (net)                    3 0.004527 
+  U2142/ZN (OAI21D0)                          0.040280   0.029953 & 0.219035 r
+  n2504 (net)                    1 0.001810 
+  U2141/ZN (NR2D0)                            0.084407   0.025705 & 0.244740 f
+  n2505 (net)                    2 0.004872 
+  U2144/ZN (INVD0)                            0.048943   0.037013 & 0.281753 r
+  n2619 (net)                    2 0.003729 
+  U2705/ZN (OAI21D0)                          0.039734   0.028678 & 0.310431 f
+  n522 (net)                     1 0.002896 
+  dcnt_reg_0_/D (DFCSNQD1)                    0.039734   0.000017 & 0.310448 f
+  data arrival time                                                 0.310448
+
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 0.020820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I2/Z (BUFFD16)                      0.025862   0.029805 & 0.050625 r
+  clk__L2_N2 (net)               6 0.073026 
+  clk__L3_I15/Z (BUFFD16)                     0.015222   0.027911 & 0.078537 r
+  clk__L3_N15 (net)             13 0.033313 
+  dcnt_reg_0_/CP (DFCSNQD1)                   0.015381   0.000805 & 0.079341 r
+  clock reconvergence pessimism                          0.000000   0.079341
+  library hold time                                      0.018788   0.098129
+  data required time                                                0.098129
+  -----------------------------------------------------------------------------
+  data required time                                                0.098129
+  data arrival time                                                 -0.310448
+  -----------------------------------------------------------------------------
+  slack (MET)                                                       0.212318
+
+
+  Startpoint: dcnt_reg_2_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dcnt_reg_0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: min
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 0.020820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I4/Z (BUFFD16)                      0.028028   0.031469 & 0.052289 r
+  clk__L2_N4 (net)               7 0.082749 
+  clk__L3_I24/Z (BUFFD16)                     0.013238   0.026020 & 0.078309 r
+  clk__L3_N24 (net)             13 0.025334 
+  dcnt_reg_2_/CP (DFCSNQD1)                   0.013272   0.000397 & 0.078706 r
+  dcnt_reg_2_/Q (DFCSNQD1)                    0.023733   0.064446 & 0.143153 r
+  dcnt[2] (net)                  3 0.004135 
+  U2143/Z (OR2D0)                             0.037657   0.034325 & 0.177478 r
+  n2620 (net)                    3 0.004542 
+  U2142/ZN (OAI21D0)                          0.026806   0.021039 & 0.198517 f
+  n2504 (net)                    1 0.001813 
+  U2141/ZN (NR2D0)                            0.104197   0.050621 & 0.249138 r
+  n2505 (net)                    2 0.004889 
+  U2144/ZN (INVD0)                            0.042747   0.026576 & 0.275715 f
+  n2619 (net)                    2 0.003745 
+  U2705/ZN (OAI21D0)                          0.054945   0.040838 & 0.316553 r
+  n522 (net)                     1 0.002898 
+  dcnt_reg_0_/D (DFCSNQD1)                    0.054945   0.000017 & 0.316570 r
+  data arrival time                                                 0.316570
+
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 0.020820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I2/Z (BUFFD16)                      0.025862   0.029805 & 0.050625 r
+  clk__L2_N2 (net)               6 0.073026 
+  clk__L3_I15/Z (BUFFD16)                     0.015222   0.027911 & 0.078537 r
+  clk__L3_N15 (net)             13 0.033313 
+  dcnt_reg_0_/CP (DFCSNQD1)                   0.015381   0.000805 & 0.079341 r
+  clock reconvergence pessimism                          0.000000   0.079341
+  library hold time                                      0.008864   0.088206
+  data required time                                                0.088206
+  -----------------------------------------------------------------------------
+  data required time                                                0.088206
+  data arrival time                                                 -0.316570
+  -----------------------------------------------------------------------------
+  slack (MET)                                                       0.228365
+
+
+  Startpoint: dcnt_reg_1_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dcnt_reg_0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: min
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 0.020820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I4/Z (BUFFD16)                      0.028028   0.031469 & 0.052289 r
+  clk__L2_N4 (net)               7 0.082749 
+  clk__L3_I24/Z (BUFFD16)                     0.013238   0.026020 & 0.078309 r
+  clk__L3_N24 (net)             13 0.025334 
+  dcnt_reg_1_/CP (DFCSNQD1)                   0.013272   0.000396 & 0.078706 r
+  dcnt_reg_1_/Q (DFCSNQD1)                    0.015475   0.069477 & 0.148182 f
+  dcnt[1] (net)                  2 0.003622 
+  U2919/ZN (INVD0)                            0.028522   0.020591 & 0.168773 r
+  n2506 (net)                    2 0.003186 
+  U3379/ZN (ND2D0)                            0.031817   0.024138 & 0.192911 f
+  n2618 (net)                    2 0.003054 
+  U2143/Z (OR2D0)                             0.027425   0.041788 & 0.234699 f
+  n2620 (net)                    3 0.004527 
+  U2142/ZN (OAI21D0)                          0.040280   0.029953 & 0.264651 r
+  n2504 (net)                    1 0.001810 
+  U2141/ZN (NR2D0)                            0.084407   0.025705 & 0.290356 f
+  n2505 (net)                    2 0.004872 
+  U2144/ZN (INVD0)                            0.048943   0.037013 & 0.327369 r
+  n2619 (net)                    2 0.003729 
+  U2705/ZN (OAI21D0)                          0.039734   0.028678 & 0.356047 f
+  n522 (net)                     1 0.002896 
+  dcnt_reg_0_/D (DFCSNQD1)                    0.039734   0.000017 & 0.356064 f
+  data arrival time                                                 0.356064
+
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 0.020820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I2/Z (BUFFD16)                      0.025862   0.029805 & 0.050625 r
+  clk__L2_N2 (net)               6 0.073026 
+  clk__L3_I15/Z (BUFFD16)                     0.015222   0.027911 & 0.078537 r
+  clk__L3_N15 (net)             13 0.033313 
+  dcnt_reg_0_/CP (DFCSNQD1)                   0.015381   0.000805 & 0.079341 r
+  clock reconvergence pessimism                          0.000000   0.079341
+  library hold time                                      0.018788   0.098129
+  data required time                                                0.098129
+  -----------------------------------------------------------------------------
+  data required time                                                0.098129
+  data arrival time                                                 -0.356064
+  -----------------------------------------------------------------------------
+  slack (MET)                                                       0.257935
+
+
+  Startpoint: dcnt_reg_0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dcnt_reg_0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: min
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 0.020820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I2/Z (BUFFD16)                      0.025862   0.029805 & 0.050625 r
+  clk__L2_N2 (net)               6 0.073026 
+  clk__L3_I15/Z (BUFFD16)                     0.015222   0.027911 & 0.078537 r
+  clk__L3_N15 (net)             13 0.033313 
+  dcnt_reg_0_/CP (DFCSNQD1)                   0.015381   0.000805 & 0.079341 r
+  dcnt_reg_0_/Q (DFCSNQD1)                    0.019431   0.073144 & 0.152486 f
+  dcnt[0] (net)                  3 0.005549 
+  U3377/ZN (INVD0)                            0.025635   0.019839 & 0.172324 r
+  n2501 (net)                    2 0.002698 
+  U3379/ZN (ND2D0)                            0.031817   0.024543 & 0.196867 f
+  n2618 (net)                    2 0.003054 
+  U2143/Z (OR2D0)                             0.027425   0.041788 & 0.238655 f
+  n2620 (net)                    3 0.004527 
+  U2142/ZN (OAI21D0)                          0.040280   0.029953 & 0.268607 r
+  n2504 (net)                    1 0.001810 
+  U2141/ZN (NR2D0)                            0.084407   0.025705 & 0.294312 f
+  n2505 (net)                    2 0.004872 
+  U2144/ZN (INVD0)                            0.048943   0.037013 & 0.331325 r
+  n2619 (net)                    2 0.003729 
+  U2705/ZN (OAI21D0)                          0.039734   0.028678 & 0.360003 f
+  n522 (net)                     1 0.002896 
+  dcnt_reg_0_/D (DFCSNQD1)                    0.039734   0.000017 & 0.360020 f
+  data arrival time                                                 0.360020
+
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 0.020820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I2/Z (BUFFD16)                      0.025862   0.029805 & 0.050625 r
+  clk__L2_N2 (net)               6 0.073026 
+  clk__L3_I15/Z (BUFFD16)                     0.015222   0.027911 & 0.078537 r
+  clk__L3_N15 (net)             13 0.033313 
+  dcnt_reg_0_/CP (DFCSNQD1)                   0.015381   0.000805 & 0.079341 r
+  clock reconvergence pessimism                          0.000000   0.079341
+  library hold time                                      0.018788   0.098129
+  data required time                                                0.098129
+  -----------------------------------------------------------------------------
+  data required time                                                0.098129
+  data arrival time                                                 -0.360020
+  -----------------------------------------------------------------------------
+  slack (MET)                                                       0.261891
+
+
+  Startpoint: dcnt_reg_1_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dcnt_reg_0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: min
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 0.020820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I4/Z (BUFFD16)                      0.028028   0.031469 & 0.052289 r
+  clk__L2_N4 (net)               7 0.082749 
+  clk__L3_I24/Z (BUFFD16)                     0.013238   0.026020 & 0.078309 r
+  clk__L3_N24 (net)             13 0.025334 
+  dcnt_reg_1_/CP (DFCSNQD1)                   0.013272   0.000396 & 0.078706 r
+  dcnt_reg_1_/Q (DFCSNQD1)                    0.021975   0.063259 & 0.141965 r
+  dcnt[1] (net)                  2 0.003635 
+  U2919/ZN (INVD0)                            0.019800   0.016407 & 0.158372 f
+  n2506 (net)                    2 0.003189 
+  U3379/ZN (ND2D0)                            0.031093   0.022582 & 0.180953 r
+  n2618 (net)                    2 0.003062 
+  U2143/Z (OR2D0)                             0.037657   0.033838 & 0.214791 r
+  n2620 (net)                    3 0.004542 
+  U2142/ZN (OAI21D0)                          0.026806   0.021039 & 0.235831 f
+  n2504 (net)                    1 0.001813 
+  U2141/ZN (NR2D0)                            0.104197   0.050621 & 0.286451 r
+  n2505 (net)                    2 0.004889 
+  U2144/ZN (INVD0)                            0.042747   0.026576 & 0.313028 f
+  n2619 (net)                    2 0.003745 
+  U2705/ZN (OAI21D0)                          0.054945   0.040838 & 0.353866 r
+  n522 (net)                     1 0.002898 
+  dcnt_reg_0_/D (DFCSNQD1)                    0.054945   0.000017 & 0.353883 r
+  data arrival time                                                 0.353883
+
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 0.020820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I2/Z (BUFFD16)                      0.025862   0.029805 & 0.050625 r
+  clk__L2_N2 (net)               6 0.073026 
+  clk__L3_I15/Z (BUFFD16)                     0.015222   0.027911 & 0.078537 r
+  clk__L3_N15 (net)             13 0.033313 
+  dcnt_reg_0_/CP (DFCSNQD1)                   0.015381   0.000805 & 0.079341 r
+  clock reconvergence pessimism                          0.000000   0.079341
+  library hold time                                      0.008864   0.088206
+  data required time                                                0.088206
+  -----------------------------------------------------------------------------
+  data required time                                                0.088206
+  data arrival time                                                 -0.353883
+  -----------------------------------------------------------------------------
+  slack (MET)                                                       0.265678
+
+
+  Startpoint: dcnt_reg_0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dcnt_reg_0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: min
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 0.020820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I2/Z (BUFFD16)                      0.025862   0.029805 & 0.050625 r
+  clk__L2_N2 (net)               6 0.073026 
+  clk__L3_I15/Z (BUFFD16)                     0.015222   0.027911 & 0.078537 r
+  clk__L3_N15 (net)             13 0.033313 
+  dcnt_reg_0_/CP (DFCSNQD1)                   0.015381   0.000805 & 0.079341 r
+  dcnt_reg_0_/Q (DFCSNQD1)                    0.028781   0.068154 & 0.147496 r
+  dcnt[0] (net)                  3 0.005555 
+  U3377/ZN (INVD0)                            0.019855   0.016355 & 0.163851 f
+  n2501 (net)                    2 0.002700 
+  U3379/ZN (ND2D0)                            0.031093   0.022008 & 0.185859 r
+  n2618 (net)                    2 0.003062 
+  U2143/Z (OR2D0)                             0.037657   0.033838 & 0.219697 r
+  n2620 (net)                    3 0.004542 
+  U2142/ZN (OAI21D0)                          0.026806   0.021039 & 0.240736 f
+  n2504 (net)                    1 0.001813 
+  U2141/ZN (NR2D0)                            0.104197   0.050621 & 0.291357 r
+  n2505 (net)                    2 0.004889 
+  U2144/ZN (INVD0)                            0.042747   0.026576 & 0.317934 f
+  n2619 (net)                    2 0.003745 
+  U2705/ZN (OAI21D0)                          0.054945   0.040838 & 0.358772 r
+  n522 (net)                     1 0.002898 
+  dcnt_reg_0_/D (DFCSNQD1)                    0.054945   0.000017 & 0.358789 r
+  data arrival time                                                 0.358789
+
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 0.020820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I2/Z (BUFFD16)                      0.025862   0.029805 & 0.050625 r
+  clk__L2_N2 (net)               6 0.073026 
+  clk__L3_I15/Z (BUFFD16)                     0.015222   0.027911 & 0.078537 r
+  clk__L3_N15 (net)             13 0.033313 
+  dcnt_reg_0_/CP (DFCSNQD1)                   0.015381   0.000805 & 0.079341 r
+  clock reconvergence pessimism                          0.000000   0.079341
+  library hold time                                      0.008864   0.088206
+  data required time                                                0.088206
+  -----------------------------------------------------------------------------
+  data required time                                                0.088206
+  data arrival time                                                 -0.358789
+  -----------------------------------------------------------------------------
+  slack (MET)                                                       0.270584
+
+Warning: report_timing has satisfied the max_paths criteria. There are 528 further endpoints which have paths of interest with slack less than 1.000000 that were not considered when generating this report. (UITE-502)
+
+1

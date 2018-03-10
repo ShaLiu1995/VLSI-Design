@@ -1,0 +1,860 @@
+****************************************
+Report : timing
+	-path_type full_clock
+	-delay_type max
+	-nets
+	-nworst 10
+	-slack_lesser_than 1.000000
+	-max_paths 10
+	-unique_pins
+	-transition_time
+	-capacitance
+	-sort_by slack
+Design : aes_cipher_top
+Version: K-2015.06-SP3-1
+Date   : Thu Mar  8 21:27:46 2018
+****************************************
+
+
+  Startpoint: sa13_reg_5_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sa12_reg_7_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk__L1_I0/Z
+  Path Group: clk
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014493 
+  clk__L1_I0/Z (BUFFD16)                      0.042848   0.042281 & 0.042281 r
+  clk__L1_N0 (net)               7 0.057804 
+  clk__L2_I4/Z (BUFFD16)                      0.054069   0.064956 & 0.107237 r
+  clk__L2_N4 (net)               7 0.079746 
+  clk__L3_I23/Z (BUFFD16)                     0.025491   0.054446 & 0.161683 r
+  clk__L3_N23 (net)             13 0.025087 
+  sa13_reg_5_/CP (DFCSNQD4)                   0.025491   0.000055 & 0.161738 r
+  sa13_reg_5_/Q (DFCSNQD4)                    0.033753   0.159811 & 0.321549 f
+  sa13[5] (net)                  2 0.014212 
+  us13/U22/ZN (INVD6)                         0.032011   0.029866 & 0.351415 r
+  us13/n24 (net)                 5 0.016909 
+  us13/U284/ZN (NR2D2)                        0.031241   0.022295 & 0.373710 f
+  us13/n579 (net)                1 0.004633 
+  us13/FE_OCP_RBC603_n579/ZN (INVD3)          0.040453   0.033842 & 0.407552 r
+  us13/FE_OCP_RBN603_n579 (net)
+                                 3 0.011677 
+  us13/U285/ZN (NR2D3)                        0.047811   0.040073 & 0.447625 f
+  us13/n112 (net)                8 0.022281 
+  us13/U304/ZN (ND2D1)                        0.183767   0.113823 & 0.561449 r
+  us13/n282 (net)                6 0.020316 
+  us13/U305/ZN (ND2D0)                        0.076714   0.081176 & 0.642624 f
+  us13/n42 (net)                 1 0.001974 
+  us13/U306/ZN (NR2D1)                        0.155967   0.110572 & 0.753196 r
+  us13/n536 (net)                2 0.007932 
+  us13/U26/ZN (ND2D0)                         0.085411   0.081719 & 0.834915 f
+  us13/n50 (net)                 1 0.002215 
+  us13/U314/ZN (NR2D1)                        0.137897   0.102924 & 0.937839 r
+  us13/n51 (net)                 1 0.006827 
+  us13/U18/ZN (ND2D1)                         0.049771   0.055436 & 0.993275 f
+  us13/n75 (net)                 1 0.002057 
+  us13/U10/ZN (AOI21D1)                       0.114224   0.073739 & 1.067014 r
+  us13/n130 (net)                1 0.004598 
+  us13/U17/ZN (ND2D3)                         0.074681   0.069653 & 1.136667 f
+  us13/d[6] (net)                3 0.015356 
+  U2837/ZN (XNR2D4)                           0.038907   0.113629 & 1.250296 r
+  n2831 (net)                    2 0.006612 
+  U1756/Z (XOR2D1)                            0.051600   0.105906 & 1.356202 f
+  n1730 (net)                    2 0.003814 
+  FE_RC_493_0/ZN (ND2D1)                      0.035411   0.034013 & 1.390215 r
+  FE_RN_423_0 (net)              1 0.002101 
+  FE_RC_494_0/ZN (OAI21D1)                    0.049649   0.045266 & 1.435481 f
+  n1729 (net)                    1 0.002529 
+  U2880/ZN (OAI21D1)                          0.100684   0.056919 & 1.492401 r
+  n1728 (net)                    1 0.002689 
+  U2018/ZN (XNR2D1)                           0.058533   0.115453 & 1.607853 f
+  N137 (net)                     1 0.006104 
+  FE_OCPC401_N137/Z (BUFFD6)                  0.025110   0.060894 & 1.668747 f
+  FE_OCPN401_N137 (net)          1 0.012618 
+  sa12_reg_7_/D (DFCSNQD1)                    0.025128   0.000383 & 1.669131 f
+  data arrival time                                                 1.669131
+
+  clock clk (rise edge)                                  1.500000   1.500000
+  clock source latency                                   0.000000   1.500000
+  clk (in)                                    0.000000   0.000000 & 1.500000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 1.520820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I1/Z (BUFFD16)                      0.022940   0.029635 & 1.550456 r
+  clk__L2_N1 (net)               7 0.065073 
+  clk__L3_I8/Z (BUFFD8)                       0.024330   0.027834 & 1.578289 r
+  clk__L3_N8 (net)              13 0.038112 
+  sa12_reg_7_/CP (DFCSNQD1)                   0.024381   0.000318 & 1.578607 r
+  clock reconvergence pessimism                          0.021460   1.600068
+  library setup time                                     -0.077803  1.522265
+  data required time                                                1.522265
+  -----------------------------------------------------------------------------
+  data required time                                                1.522265
+  data arrival time                                                 -1.669131
+  -----------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.146866
+
+
+  Startpoint: sa13_reg_3_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sa12_reg_7_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk__L1_I0/Z
+  Path Group: clk
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014493 
+  clk__L1_I0/Z (BUFFD16)                      0.042848   0.042281 & 0.042281 r
+  clk__L1_N0 (net)               7 0.057804 
+  clk__L2_I2/Z (BUFFD16)                      0.050030   0.061940 & 0.104221 r
+  clk__L2_N2 (net)               6 0.070543 
+  clk__L3_I14/Z (BUFFD16)                     0.028104   0.055661 & 0.159882 r
+  clk__L3_N14 (net)             13 0.029809 
+  sa13_reg_3_/CP (DFCSNQD4)                   0.028222   0.000595 & 0.160477 r
+  sa13_reg_3_/Q (DFCSNQD4)                    0.058441   0.164860 & 0.325336 r
+  sa13[3] (net)                  4 0.021159 
+  us13/FE_OCP_RBC497_sa13_3_/ZN (INVD4)       0.032624   0.033092 & 0.358429 f
+  us13/FE_OCP_RBN497_sa13_3_ (net)
+                                 4 0.015130 
+  us13/U64/ZN (ND2D3)                         0.042388   0.032403 & 0.390831 r
+  us13/n34 (net)                 3 0.009613 
+  us13/U218/ZN (NR2D3)                        0.056941   0.045616 & 0.436447 f
+  us13/n176 (net)                9 0.027576 
+  us13/U303/ZN (ND2D1)                        0.038552   0.037816 & 0.474263 r
+  us13/n628 (net)                1 0.002071 
+  us13/FE_OCPC241_n628/Z (BUFFD2)             0.117421   0.093633 & 0.567896 r
+  us13/FE_OCPN241_n628 (net)     8 0.026253 
+  us13/U305/ZN (ND2D0)                        0.076714   0.069517 & 0.637413 f
+  us13/n42 (net)                 1 0.001974 
+  us13/U306/ZN (NR2D1)                        0.155967   0.110572 & 0.747985 r
+  us13/n536 (net)                2 0.007932 
+  us13/U26/ZN (ND2D0)                         0.085411   0.081719 & 0.829704 f
+  us13/n50 (net)                 1 0.002215 
+  us13/U314/ZN (NR2D1)                        0.137897   0.102924 & 0.932628 r
+  us13/n51 (net)                 1 0.006827 
+  us13/U18/ZN (ND2D1)                         0.049771   0.055436 & 0.988064 f
+  us13/n75 (net)                 1 0.002057 
+  us13/U10/ZN (AOI21D1)                       0.114224   0.073739 & 1.061802 r
+  us13/n130 (net)                1 0.004598 
+  us13/U17/ZN (ND2D3)                         0.074681   0.069653 & 1.131455 f
+  us13/d[6] (net)                3 0.015356 
+  U2837/ZN (XNR2D4)                           0.038907   0.113629 & 1.245084 r
+  n2831 (net)                    2 0.006612 
+  U1756/Z (XOR2D1)                            0.051600   0.105906 & 1.350991 f
+  n1730 (net)                    2 0.003814 
+  FE_RC_493_0/ZN (ND2D1)                      0.035411   0.034013 & 1.385004 r
+  FE_RN_423_0 (net)              1 0.002101 
+  FE_RC_494_0/ZN (OAI21D1)                    0.049649   0.045266 & 1.430270 f
+  n1729 (net)                    1 0.002529 
+  U2880/ZN (OAI21D1)                          0.100684   0.056919 & 1.487190 r
+  n1728 (net)                    1 0.002689 
+  U2018/ZN (XNR2D1)                           0.058533   0.115453 & 1.602642 f
+  N137 (net)                     1 0.006104 
+  FE_OCPC401_N137/Z (BUFFD6)                  0.025110   0.060894 & 1.663536 f
+  FE_OCPN401_N137 (net)          1 0.012618 
+  sa12_reg_7_/D (DFCSNQD1)                    0.025128   0.000383 & 1.663919 f
+  data arrival time                                                 1.663919
+
+  clock clk (rise edge)                                  1.500000   1.500000
+  clock source latency                                   0.000000   1.500000
+  clk (in)                                    0.000000   0.000000 & 1.500000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 1.520820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I1/Z (BUFFD16)                      0.022940   0.029635 & 1.550456 r
+  clk__L2_N1 (net)               7 0.065073 
+  clk__L3_I8/Z (BUFFD8)                       0.024330   0.027834 & 1.578289 r
+  clk__L3_N8 (net)              13 0.038112 
+  sa12_reg_7_/CP (DFCSNQD1)                   0.024381   0.000318 & 1.578607 r
+  clock reconvergence pessimism                          0.021460   1.600068
+  library setup time                                     -0.077803  1.522265
+  data required time                                                1.522265
+  -----------------------------------------------------------------------------
+  data required time                                                1.522265
+  data arrival time                                                 -1.663919
+  -----------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.141655
+
+
+  Startpoint: sa13_reg_4_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sa12_reg_7_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk__L1_I0/Z
+  Path Group: clk
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014493 
+  clk__L1_I0/Z (BUFFD16)                      0.042848   0.042281 & 0.042281 r
+  clk__L1_N0 (net)               7 0.057804 
+  clk__L2_I4/Z (BUFFD16)                      0.054069   0.064956 & 0.107237 r
+  clk__L2_N4 (net)               7 0.079746 
+  clk__L3_I26/Z (BUFFD16)                     0.030100   0.056468 & 0.163705 r
+  clk__L3_N26 (net)             13 0.034065 
+  sa13_reg_4_/CP (DFCSNQD4)                   0.030139   0.000563 & 0.164268 r
+  sa13_reg_4_/Q (DFCSNQD4)                    0.067136   0.170709 & 0.334977 r
+  sa13[4] (net)                  6 0.025759 
+  us13/U284/ZN (NR2D2)                        0.031241   0.032915 & 0.367892 f
+  us13/n579 (net)                1 0.004633 
+  us13/FE_OCP_RBC603_n579/ZN (INVD3)          0.040453   0.033842 & 0.401735 r
+  us13/FE_OCP_RBN603_n579 (net)
+                                 3 0.011677 
+  us13/U285/ZN (NR2D3)                        0.047811   0.040073 & 0.441808 f
+  us13/n112 (net)                8 0.022281 
+  us13/U304/ZN (ND2D1)                        0.183767   0.113823 & 0.555631 r
+  us13/n282 (net)                6 0.020316 
+  us13/U305/ZN (ND2D0)                        0.076714   0.081176 & 0.636807 f
+  us13/n42 (net)                 1 0.001974 
+  us13/U306/ZN (NR2D1)                        0.155967   0.110572 & 0.747378 r
+  us13/n536 (net)                2 0.007932 
+  us13/U26/ZN (ND2D0)                         0.085411   0.081719 & 0.829097 f
+  us13/n50 (net)                 1 0.002215 
+  us13/U314/ZN (NR2D1)                        0.137897   0.102924 & 0.932022 r
+  us13/n51 (net)                 1 0.006827 
+  us13/U18/ZN (ND2D1)                         0.049771   0.055436 & 0.987457 f
+  us13/n75 (net)                 1 0.002057 
+  us13/U10/ZN (AOI21D1)                       0.114224   0.073739 & 1.061196 r
+  us13/n130 (net)                1 0.004598 
+  us13/U17/ZN (ND2D3)                         0.074681   0.069653 & 1.130849 f
+  us13/d[6] (net)                3 0.015356 
+  U2837/ZN (XNR2D4)                           0.038907   0.113629 & 1.244478 r
+  n2831 (net)                    2 0.006612 
+  U1756/Z (XOR2D1)                            0.051600   0.105906 & 1.350385 f
+  n1730 (net)                    2 0.003814 
+  FE_RC_493_0/ZN (ND2D1)                      0.035411   0.034013 & 1.384398 r
+  FE_RN_423_0 (net)              1 0.002101 
+  FE_RC_494_0/ZN (OAI21D1)                    0.049649   0.045266 & 1.429664 f
+  n1729 (net)                    1 0.002529 
+  U2880/ZN (OAI21D1)                          0.100684   0.056919 & 1.486583 r
+  n1728 (net)                    1 0.002689 
+  U2018/ZN (XNR2D1)                           0.058533   0.115453 & 1.602036 f
+  N137 (net)                     1 0.006104 
+  FE_OCPC401_N137/Z (BUFFD6)                  0.025110   0.060894 & 1.662930 f
+  FE_OCPN401_N137 (net)          1 0.012618 
+  sa12_reg_7_/D (DFCSNQD1)                    0.025128   0.000383 & 1.663313 f
+  data arrival time                                                 1.663313
+
+  clock clk (rise edge)                                  1.500000   1.500000
+  clock source latency                                   0.000000   1.500000
+  clk (in)                                    0.000000   0.000000 & 1.500000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 1.520820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I1/Z (BUFFD16)                      0.022940   0.029635 & 1.550456 r
+  clk__L2_N1 (net)               7 0.065073 
+  clk__L3_I8/Z (BUFFD8)                       0.024330   0.027834 & 1.578289 r
+  clk__L3_N8 (net)              13 0.038112 
+  sa12_reg_7_/CP (DFCSNQD1)                   0.024381   0.000318 & 1.578607 r
+  clock reconvergence pessimism                          0.021460   1.600068
+  library setup time                                     -0.077803  1.522265
+  data required time                                                1.522265
+  -----------------------------------------------------------------------------
+  data required time                                                1.522265
+  data arrival time                                                 -1.663313
+  -----------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.141048
+
+
+  Startpoint: sa13_reg_0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sa12_reg_7_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk__L1_I0/Z
+  Path Group: clk
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014493 
+  clk__L1_I0/Z (BUFFD16)                      0.042848   0.042281 & 0.042281 r
+  clk__L1_N0 (net)               7 0.057804 
+  clk__L2_I4/Z (BUFFD16)                      0.054069   0.064956 & 0.107237 r
+  clk__L2_N4 (net)               7 0.079746 
+  clk__L3_I23/Z (BUFFD16)                     0.025491   0.054446 & 0.161683 r
+  clk__L3_N23 (net)             13 0.025087 
+  sa13_reg_0_/CP (DFCSNQD4)                   0.025491   0.000055 & 0.161738 r
+  sa13_reg_0_/Q (DFCSNQD4)                    0.044323   0.167747 & 0.329485 f
+  sa13[0] (net)                 10 0.023119 
+  us13/U258/ZN (INVD2)                        0.056516   0.046796 & 0.376281 r
+  us13/n35 (net)                 3 0.011643 
+  us13/U37/ZN (NR2D3)                         0.061248   0.053367 & 0.429648 f
+  us13/n278 (net)               10 0.028515 
+  us13/U303/ZN (ND2D1)                        0.038552   0.036900 & 0.466548 r
+  us13/n628 (net)                1 0.002071 
+  us13/FE_OCPC241_n628/Z (BUFFD2)             0.117421   0.093633 & 0.560181 r
+  us13/FE_OCPN241_n628 (net)     8 0.026253 
+  us13/U305/ZN (ND2D0)                        0.076714   0.069517 & 0.629698 f
+  us13/n42 (net)                 1 0.001974 
+  us13/U306/ZN (NR2D1)                        0.155967   0.110572 & 0.740269 r
+  us13/n536 (net)                2 0.007932 
+  us13/U26/ZN (ND2D0)                         0.085411   0.081719 & 0.821988 f
+  us13/n50 (net)                 1 0.002215 
+  us13/U314/ZN (NR2D1)                        0.137897   0.102924 & 0.924912 r
+  us13/n51 (net)                 1 0.006827 
+  us13/U18/ZN (ND2D1)                         0.049771   0.055436 & 0.980348 f
+  us13/n75 (net)                 1 0.002057 
+  us13/U10/ZN (AOI21D1)                       0.114224   0.073739 & 1.054087 r
+  us13/n130 (net)                1 0.004598 
+  us13/U17/ZN (ND2D3)                         0.074681   0.069653 & 1.123740 f
+  us13/d[6] (net)                3 0.015356 
+  U2837/ZN (XNR2D4)                           0.038907   0.113629 & 1.237369 r
+  n2831 (net)                    2 0.006612 
+  U1756/Z (XOR2D1)                            0.051600   0.105906 & 1.343275 f
+  n1730 (net)                    2 0.003814 
+  FE_RC_493_0/ZN (ND2D1)                      0.035411   0.034013 & 1.377289 r
+  FE_RN_423_0 (net)              1 0.002101 
+  FE_RC_494_0/ZN (OAI21D1)                    0.049649   0.045266 & 1.422555 f
+  n1729 (net)                    1 0.002529 
+  U2880/ZN (OAI21D1)                          0.100684   0.056919 & 1.479474 r
+  n1728 (net)                    1 0.002689 
+  U2018/ZN (XNR2D1)                           0.058533   0.115453 & 1.594927 f
+  N137 (net)                     1 0.006104 
+  FE_OCPC401_N137/Z (BUFFD6)                  0.025110   0.060894 & 1.655820 f
+  FE_OCPN401_N137 (net)          1 0.012618 
+  sa12_reg_7_/D (DFCSNQD1)                    0.025128   0.000383 & 1.656204 f
+  data arrival time                                                 1.656204
+
+  clock clk (rise edge)                                  1.500000   1.500000
+  clock source latency                                   0.000000   1.500000
+  clk (in)                                    0.000000   0.000000 & 1.500000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 1.520820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I1/Z (BUFFD16)                      0.022940   0.029635 & 1.550456 r
+  clk__L2_N1 (net)               7 0.065073 
+  clk__L3_I8/Z (BUFFD8)                       0.024330   0.027834 & 1.578289 r
+  clk__L3_N8 (net)              13 0.038112 
+  sa12_reg_7_/CP (DFCSNQD1)                   0.024381   0.000318 & 1.578607 r
+  clock reconvergence pessimism                          0.021460   1.600068
+  library setup time                                     -0.077803  1.522265
+  data required time                                                1.522265
+  -----------------------------------------------------------------------------
+  data required time                                                1.522265
+  data arrival time                                                 -1.656204
+  -----------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.133939
+
+
+  Startpoint: sa13_reg_0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sa12_reg_7_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk__L1_I0/Z
+  Path Group: clk
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014493 
+  clk__L1_I0/Z (BUFFD16)                      0.042848   0.042281 & 0.042281 r
+  clk__L1_N0 (net)               7 0.057804 
+  clk__L2_I4/Z (BUFFD16)                      0.054069   0.064956 & 0.107237 r
+  clk__L2_N4 (net)               7 0.079746 
+  clk__L3_I23/Z (BUFFD16)                     0.025491   0.054446 & 0.161683 r
+  clk__L3_N23 (net)             13 0.025087 
+  sa13_reg_0_/CP (DFCSNQD4)                   0.025491   0.000055 & 0.161738 r
+  sa13_reg_0_/Q (DFCSNQD4)                    0.044323   0.167747 & 0.329485 f
+  sa13[0] (net)                 10 0.023119 
+  us13/U258/ZN (INVD2)                        0.056516   0.046796 & 0.376281 r
+  us13/n35 (net)                 3 0.011643 
+  us13/U196/ZN (NR2D3)                        0.056644   0.050581 & 0.426862 f
+  us13/n348 (net)               10 0.025664 
+  us13/U304/ZN (ND2D1)                        0.183767   0.118182 & 0.545044 r
+  us13/n282 (net)                6 0.020316 
+  us13/U305/ZN (ND2D0)                        0.076714   0.081176 & 0.626220 f
+  us13/n42 (net)                 1 0.001974 
+  us13/U306/ZN (NR2D1)                        0.155967   0.110572 & 0.736792 r
+  us13/n536 (net)                2 0.007932 
+  us13/U26/ZN (ND2D0)                         0.085411   0.081719 & 0.818511 f
+  us13/n50 (net)                 1 0.002215 
+  us13/U314/ZN (NR2D1)                        0.137897   0.102924 & 0.921435 r
+  us13/n51 (net)                 1 0.006827 
+  us13/U18/ZN (ND2D1)                         0.049771   0.055436 & 0.976871 f
+  us13/n75 (net)                 1 0.002057 
+  us13/U10/ZN (AOI21D1)                       0.114224   0.073739 & 1.050609 r
+  us13/n130 (net)                1 0.004598 
+  us13/U17/ZN (ND2D3)                         0.074681   0.069653 & 1.120262 f
+  us13/d[6] (net)                3 0.015356 
+  U2837/ZN (XNR2D4)                           0.038907   0.113629 & 1.233891 r
+  n2831 (net)                    2 0.006612 
+  U1756/Z (XOR2D1)                            0.051600   0.105906 & 1.339798 f
+  n1730 (net)                    2 0.003814 
+  FE_RC_493_0/ZN (ND2D1)                      0.035411   0.034013 & 1.373811 r
+  FE_RN_423_0 (net)              1 0.002101 
+  FE_RC_494_0/ZN (OAI21D1)                    0.049649   0.045266 & 1.419077 f
+  n1729 (net)                    1 0.002529 
+  U2880/ZN (OAI21D1)                          0.100684   0.056919 & 1.475997 r
+  n1728 (net)                    1 0.002689 
+  U2018/ZN (XNR2D1)                           0.058533   0.115453 & 1.591449 f
+  N137 (net)                     1 0.006104 
+  FE_OCPC401_N137/Z (BUFFD6)                  0.025110   0.060894 & 1.652343 f
+  FE_OCPN401_N137 (net)          1 0.012618 
+  sa12_reg_7_/D (DFCSNQD1)                    0.025128   0.000383 & 1.652726 f
+  data arrival time                                                 1.652726
+
+  clock clk (rise edge)                                  1.500000   1.500000
+  clock source latency                                   0.000000   1.500000
+  clk (in)                                    0.000000   0.000000 & 1.500000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 1.520820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I1/Z (BUFFD16)                      0.022940   0.029635 & 1.550456 r
+  clk__L2_N1 (net)               7 0.065073 
+  clk__L3_I8/Z (BUFFD8)                       0.024330   0.027834 & 1.578289 r
+  clk__L3_N8 (net)              13 0.038112 
+  sa12_reg_7_/CP (DFCSNQD1)                   0.024381   0.000318 & 1.578607 r
+  clock reconvergence pessimism                          0.021460   1.600068
+  library setup time                                     -0.077803  1.522265
+  data required time                                                1.522265
+  -----------------------------------------------------------------------------
+  data required time                                                1.522265
+  data arrival time                                                 -1.652726
+  -----------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.130462
+
+
+  Startpoint: sa13_reg_2_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sa12_reg_7_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk__L1_I0/Z
+  Path Group: clk
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014493 
+  clk__L1_I0/Z (BUFFD16)                      0.042848   0.042281 & 0.042281 r
+  clk__L1_N0 (net)               7 0.057804 
+  clk__L2_I4/Z (BUFFD16)                      0.054069   0.064956 & 0.107237 r
+  clk__L2_N4 (net)               7 0.079746 
+  clk__L3_I23/Z (BUFFD16)                     0.025491   0.054446 & 0.161683 r
+  clk__L3_N23 (net)             13 0.025087 
+  sa13_reg_2_/CP (DFCSNQD4)                   0.025491   0.000055 & 0.161738 r
+  sa13_reg_2_/Q (DFCSNQD4)                    0.058083   0.164288 & 0.326026 r
+  sa13[2] (net)                  5 0.021584 
+  us13/U47/ZN (INVD6)                         0.027138   0.027930 & 0.353956 f
+  us13/n338 (net)                4 0.014619 
+  us13/U172/ZN (ND2D3)                        0.034118   0.027404 & 0.381359 r
+  us13/n13 (net)                 2 0.007472 
+  us13/U37/ZN (NR2D3)                         0.061248   0.043529 & 0.424888 f
+  us13/n278 (net)               10 0.028515 
+  us13/U303/ZN (ND2D1)                        0.038552   0.036900 & 0.461788 r
+  us13/n628 (net)                1 0.002071 
+  us13/FE_OCPC241_n628/Z (BUFFD2)             0.117421   0.093633 & 0.555421 r
+  us13/FE_OCPN241_n628 (net)     8 0.026253 
+  us13/U305/ZN (ND2D0)                        0.076714   0.069517 & 0.624938 f
+  us13/n42 (net)                 1 0.001974 
+  us13/U306/ZN (NR2D1)                        0.155967   0.110572 & 0.735510 r
+  us13/n536 (net)                2 0.007932 
+  us13/U26/ZN (ND2D0)                         0.085411   0.081719 & 0.817229 f
+  us13/n50 (net)                 1 0.002215 
+  us13/U314/ZN (NR2D1)                        0.137897   0.102924 & 0.920153 r
+  us13/n51 (net)                 1 0.006827 
+  us13/U18/ZN (ND2D1)                         0.049771   0.055436 & 0.975589 f
+  us13/n75 (net)                 1 0.002057 
+  us13/U10/ZN (AOI21D1)                       0.114224   0.073739 & 1.049327 r
+  us13/n130 (net)                1 0.004598 
+  us13/U17/ZN (ND2D3)                         0.074681   0.069653 & 1.118980 f
+  us13/d[6] (net)                3 0.015356 
+  U2837/ZN (XNR2D4)                           0.038907   0.113629 & 1.232609 r
+  n2831 (net)                    2 0.006612 
+  U1756/Z (XOR2D1)                            0.051600   0.105906 & 1.338516 f
+  n1730 (net)                    2 0.003814 
+  FE_RC_493_0/ZN (ND2D1)                      0.035411   0.034013 & 1.372529 r
+  FE_RN_423_0 (net)              1 0.002101 
+  FE_RC_494_0/ZN (OAI21D1)                    0.049649   0.045266 & 1.417795 f
+  n1729 (net)                    1 0.002529 
+  U2880/ZN (OAI21D1)                          0.100684   0.056919 & 1.474714 r
+  n1728 (net)                    1 0.002689 
+  U2018/ZN (XNR2D1)                           0.058533   0.115453 & 1.590167 f
+  N137 (net)                     1 0.006104 
+  FE_OCPC401_N137/Z (BUFFD6)                  0.025110   0.060894 & 1.651061 f
+  FE_OCPN401_N137 (net)          1 0.012618 
+  sa12_reg_7_/D (DFCSNQD1)                    0.025128   0.000383 & 1.651444 f
+  data arrival time                                                 1.651444
+
+  clock clk (rise edge)                                  1.500000   1.500000
+  clock source latency                                   0.000000   1.500000
+  clk (in)                                    0.000000   0.000000 & 1.500000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 1.520820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I1/Z (BUFFD16)                      0.022940   0.029635 & 1.550456 r
+  clk__L2_N1 (net)               7 0.065073 
+  clk__L3_I8/Z (BUFFD8)                       0.024330   0.027834 & 1.578289 r
+  clk__L3_N8 (net)              13 0.038112 
+  sa12_reg_7_/CP (DFCSNQD1)                   0.024381   0.000318 & 1.578607 r
+  clock reconvergence pessimism                          0.021460   1.600068
+  library setup time                                     -0.077803  1.522265
+  data required time                                                1.522265
+  -----------------------------------------------------------------------------
+  data required time                                                1.522265
+  data arrival time                                                 -1.651444
+  -----------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.129180
+
+
+  Startpoint: sa13_reg_1_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sa12_reg_7_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk__L1_I0/Z
+  Path Group: clk
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014493 
+  clk__L1_I0/Z (BUFFD16)                      0.042848   0.042281 & 0.042281 r
+  clk__L1_N0 (net)               7 0.057804 
+  clk__L2_I4/Z (BUFFD16)                      0.054069   0.064956 & 0.107237 r
+  clk__L2_N4 (net)               7 0.079746 
+  clk__L3_I23/Z (BUFFD16)                     0.025491   0.054446 & 0.161683 r
+  clk__L3_N23 (net)             13 0.025087 
+  sa13_reg_1_/CP (DFCSNQD4)                   0.025491   0.000055 & 0.161738 r
+  sa13_reg_1_/Q (DFCSNQD4)                    0.044589   0.155061 & 0.316799 r
+  sa13[1] (net)                  5 0.014015 
+  us13/U23/ZN (INVD2)                         0.030899   0.032138 & 0.348937 f
+  us13/n610 (net)                3 0.008574 
+  us13/U172/ZN (ND2D3)                        0.034118   0.031186 & 0.380123 r
+  us13/n13 (net)                 2 0.007472 
+  us13/U37/ZN (NR2D3)                         0.061248   0.043529 & 0.423652 f
+  us13/n278 (net)               10 0.028515 
+  us13/U303/ZN (ND2D1)                        0.038552   0.036900 & 0.460551 r
+  us13/n628 (net)                1 0.002071 
+  us13/FE_OCPC241_n628/Z (BUFFD2)             0.117421   0.093633 & 0.554184 r
+  us13/FE_OCPN241_n628 (net)     8 0.026253 
+  us13/U305/ZN (ND2D0)                        0.076714   0.069517 & 0.623701 f
+  us13/n42 (net)                 1 0.001974 
+  us13/U306/ZN (NR2D1)                        0.155967   0.110572 & 0.734273 r
+  us13/n536 (net)                2 0.007932 
+  us13/U26/ZN (ND2D0)                         0.085411   0.081719 & 0.815992 f
+  us13/n50 (net)                 1 0.002215 
+  us13/U314/ZN (NR2D1)                        0.137897   0.102924 & 0.918916 r
+  us13/n51 (net)                 1 0.006827 
+  us13/U18/ZN (ND2D1)                         0.049771   0.055436 & 0.974352 f
+  us13/n75 (net)                 1 0.002057 
+  us13/U10/ZN (AOI21D1)                       0.114224   0.073739 & 1.048091 r
+  us13/n130 (net)                1 0.004598 
+  us13/U17/ZN (ND2D3)                         0.074681   0.069653 & 1.117744 f
+  us13/d[6] (net)                3 0.015356 
+  U2837/ZN (XNR2D4)                           0.038907   0.113629 & 1.231373 r
+  n2831 (net)                    2 0.006612 
+  U1756/Z (XOR2D1)                            0.051600   0.105906 & 1.337279 f
+  n1730 (net)                    2 0.003814 
+  FE_RC_493_0/ZN (ND2D1)                      0.035411   0.034013 & 1.371292 r
+  FE_RN_423_0 (net)              1 0.002101 
+  FE_RC_494_0/ZN (OAI21D1)                    0.049649   0.045266 & 1.416558 f
+  n1729 (net)                    1 0.002529 
+  U2880/ZN (OAI21D1)                          0.100684   0.056919 & 1.473478 r
+  n1728 (net)                    1 0.002689 
+  U2018/ZN (XNR2D1)                           0.058533   0.115453 & 1.588931 f
+  N137 (net)                     1 0.006104 
+  FE_OCPC401_N137/Z (BUFFD6)                  0.025110   0.060894 & 1.649824 f
+  FE_OCPN401_N137 (net)          1 0.012618 
+  sa12_reg_7_/D (DFCSNQD1)                    0.025128   0.000383 & 1.650208 f
+  data arrival time                                                 1.650208
+
+  clock clk (rise edge)                                  1.500000   1.500000
+  clock source latency                                   0.000000   1.500000
+  clk (in)                                    0.000000   0.000000 & 1.500000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 1.520820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I1/Z (BUFFD16)                      0.022940   0.029635 & 1.550456 r
+  clk__L2_N1 (net)               7 0.065073 
+  clk__L3_I8/Z (BUFFD8)                       0.024330   0.027834 & 1.578289 r
+  clk__L3_N8 (net)              13 0.038112 
+  sa12_reg_7_/CP (DFCSNQD1)                   0.024381   0.000318 & 1.578607 r
+  clock reconvergence pessimism                          0.021460   1.600068
+  library setup time                                     -0.077803  1.522265
+  data required time                                                1.522265
+  -----------------------------------------------------------------------------
+  data required time                                                1.522265
+  data arrival time                                                 -1.650208
+  -----------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.127943
+
+
+  Startpoint: sa13_reg_4_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sa12_reg_7_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk__L1_I0/Z
+  Path Group: clk
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014493 
+  clk__L1_I0/Z (BUFFD16)                      0.042848   0.042281 & 0.042281 r
+  clk__L1_N0 (net)               7 0.057804 
+  clk__L2_I4/Z (BUFFD16)                      0.054069   0.064956 & 0.107237 r
+  clk__L2_N4 (net)               7 0.079746 
+  clk__L3_I26/Z (BUFFD16)                     0.030100   0.056468 & 0.163705 r
+  clk__L3_N26 (net)             13 0.034065 
+  sa13_reg_4_/CP (DFCSNQD4)                   0.030139   0.000563 & 0.164268 r
+  sa13_reg_4_/Q (DFCSNQD4)                    0.047072   0.171433 & 0.335701 f
+  sa13[4] (net)                  6 0.025693 
+  us13/U64/ZN (ND2D3)                         0.042388   0.039796 & 0.375497 r
+  us13/n34 (net)                 3 0.009613 
+  us13/U218/ZN (NR2D3)                        0.056941   0.045616 & 0.421113 f
+  us13/n176 (net)                9 0.027576 
+  us13/U303/ZN (ND2D1)                        0.038552   0.037816 & 0.458929 r
+  us13/n628 (net)                1 0.002071 
+  us13/FE_OCPC241_n628/Z (BUFFD2)             0.117421   0.093633 & 0.552562 r
+  us13/FE_OCPN241_n628 (net)     8 0.026253 
+  us13/U305/ZN (ND2D0)                        0.076714   0.069517 & 0.622079 f
+  us13/n42 (net)                 1 0.001974 
+  us13/U306/ZN (NR2D1)                        0.155967   0.110572 & 0.732651 r
+  us13/n536 (net)                2 0.007932 
+  us13/U26/ZN (ND2D0)                         0.085411   0.081719 & 0.814369 f
+  us13/n50 (net)                 1 0.002215 
+  us13/U314/ZN (NR2D1)                        0.137897   0.102924 & 0.917294 r
+  us13/n51 (net)                 1 0.006827 
+  us13/U18/ZN (ND2D1)                         0.049771   0.055436 & 0.972729 f
+  us13/n75 (net)                 1 0.002057 
+  us13/U10/ZN (AOI21D1)                       0.114224   0.073739 & 1.046468 r
+  us13/n130 (net)                1 0.004598 
+  us13/U17/ZN (ND2D3)                         0.074681   0.069653 & 1.116121 f
+  us13/d[6] (net)                3 0.015356 
+  U2837/ZN (XNR2D4)                           0.038907   0.113629 & 1.229750 r
+  n2831 (net)                    2 0.006612 
+  U1756/Z (XOR2D1)                            0.051600   0.105906 & 1.335657 f
+  n1730 (net)                    2 0.003814 
+  FE_RC_493_0/ZN (ND2D1)                      0.035411   0.034013 & 1.369670 r
+  FE_RN_423_0 (net)              1 0.002101 
+  FE_RC_494_0/ZN (OAI21D1)                    0.049649   0.045266 & 1.414936 f
+  n1729 (net)                    1 0.002529 
+  U2880/ZN (OAI21D1)                          0.100684   0.056919 & 1.471855 r
+  n1728 (net)                    1 0.002689 
+  U2018/ZN (XNR2D1)                           0.058533   0.115453 & 1.587308 f
+  N137 (net)                     1 0.006104 
+  FE_OCPC401_N137/Z (BUFFD6)                  0.025110   0.060894 & 1.648202 f
+  FE_OCPN401_N137 (net)          1 0.012618 
+  sa12_reg_7_/D (DFCSNQD1)                    0.025128   0.000383 & 1.648585 f
+  data arrival time                                                 1.648585
+
+  clock clk (rise edge)                                  1.500000   1.500000
+  clock source latency                                   0.000000   1.500000
+  clk (in)                                    0.000000   0.000000 & 1.500000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 1.520820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I1/Z (BUFFD16)                      0.022940   0.029635 & 1.550456 r
+  clk__L2_N1 (net)               7 0.065073 
+  clk__L3_I8/Z (BUFFD8)                       0.024330   0.027834 & 1.578289 r
+  clk__L3_N8 (net)              13 0.038112 
+  sa12_reg_7_/CP (DFCSNQD1)                   0.024381   0.000318 & 1.578607 r
+  clock reconvergence pessimism                          0.021460   1.600068
+  library setup time                                     -0.077803  1.522265
+  data required time                                                1.522265
+  -----------------------------------------------------------------------------
+  data required time                                                1.522265
+  data arrival time                                                 -1.648585
+  -----------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.126320
+
+
+  Startpoint: sa13_reg_3_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sa12_reg_7_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk__L1_I0/Z
+  Path Group: clk
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014493 
+  clk__L1_I0/Z (BUFFD16)                      0.042848   0.042281 & 0.042281 r
+  clk__L1_N0 (net)               7 0.057804 
+  clk__L2_I2/Z (BUFFD16)                      0.050030   0.061940 & 0.104221 r
+  clk__L2_N2 (net)               6 0.070543 
+  clk__L3_I14/Z (BUFFD16)                     0.028104   0.055661 & 0.159882 r
+  clk__L3_N14 (net)             13 0.029809 
+  sa13_reg_3_/CP (DFCSNQD4)                   0.028222   0.000595 & 0.160477 r
+  sa13_reg_3_/Q (DFCSNQD4)                    0.042083   0.167121 & 0.327597 f
+  sa13[3] (net)                  4 0.021143 
+  us13/FE_OCP_RBC497_sa13_3_/ZN (INVD4)       0.040429   0.036878 & 0.364476 r
+  us13/FE_OCP_RBN497_sa13_3_ (net)
+                                 4 0.015121 
+  us13/U64/ZN (ND2D3)                         0.046678   0.039521 & 0.403996 f
+  us13/n34 (net)                 3 0.009570 
+  us13/U297/ZN (NR2D2)                        0.247220   0.150616 & 0.554612 r
+  us13/n166 (net)               10 0.027598 
+  us13/U29/ZN (ND2D1)                         0.144725   0.131878 & 0.686490 f
+  us13/n390 (net)                4 0.009495 
+  us13/U391/ZN (ND2D1)                        0.134347   0.115803 & 0.802293 r
+  us13/n602 (net)                4 0.012961 
+  us13/U392/ZN (INVD1)                        0.038339   0.032190 & 0.834483 f
+  us13/n121 (net)                1 0.001288 
+  us13/U393/ZN (ND2D0)                        0.058231   0.045940 & 0.880424 r
+  us13/n123 (net)                1 0.002474 
+  us13/U395/ZN (NR2D1)                        0.038205   0.027772 & 0.908196 f
+  us13/n124 (net)                1 0.001937 
+  us13/U255/ZN (ND2D0)                        0.050006   0.042641 & 0.950837 r
+  us13/n125 (net)                1 0.001954 
+  us13/U396/ZN (OAI21D1)                      0.107841   0.043082 & 0.993919 f
+  us13/n127 (net)                1 0.002429 
+  us13/U397/Z (AN2XD1)                        0.033302   0.066914 & 1.060834 f
+  us13/n129 (net)                1 0.004237 
+  us13/U17/ZN (ND2D3)                         0.058889   0.043293 & 1.104127 r
+  us13/d[6] (net)                3 0.015368 
+  U2837/ZN (XNR2D4)                           0.042843   0.119237 & 1.223364 f
+  n2831 (net)                    2 0.006599 
+  U1756/Z (XOR2D1)                            0.051600   0.107076 & 1.330440 f
+  n1730 (net)                    2 0.003814 
+  FE_RC_493_0/ZN (ND2D1)                      0.035411   0.034013 & 1.364453 r
+  FE_RN_423_0 (net)              1 0.002101 
+  FE_RC_494_0/ZN (OAI21D1)                    0.049649   0.045266 & 1.409720 f
+  n1729 (net)                    1 0.002529 
+  U2880/ZN (OAI21D1)                          0.100684   0.056919 & 1.466639 r
+  n1728 (net)                    1 0.002689 
+  U2018/ZN (XNR2D1)                           0.058533   0.115453 & 1.582092 f
+  N137 (net)                     1 0.006104 
+  FE_OCPC401_N137/Z (BUFFD6)                  0.025110   0.060894 & 1.642985 f
+  FE_OCPN401_N137 (net)          1 0.012618 
+  sa12_reg_7_/D (DFCSNQD1)                    0.025128   0.000383 & 1.643369 f
+  data arrival time                                                 1.643369
+
+  clock clk (rise edge)                                  1.500000   1.500000
+  clock source latency                                   0.000000   1.500000
+  clk (in)                                    0.000000   0.000000 & 1.500000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 1.520820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I1/Z (BUFFD16)                      0.022940   0.029635 & 1.550456 r
+  clk__L2_N1 (net)               7 0.065073 
+  clk__L3_I8/Z (BUFFD8)                       0.024330   0.027834 & 1.578289 r
+  clk__L3_N8 (net)              13 0.038112 
+  sa12_reg_7_/CP (DFCSNQD1)                   0.024381   0.000318 & 1.578607 r
+  clock reconvergence pessimism                          0.021460   1.600068
+  library setup time                                     -0.077803  1.522265
+  data required time                                                1.522265
+  -----------------------------------------------------------------------------
+  data required time                                                1.522265
+  data arrival time                                                 -1.643369
+  -----------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.121104
+
+
+  Startpoint: sa13_reg_2_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sa12_reg_7_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk__L1_I0/Z
+  Path Group: clk
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000000   0.000000
+  clock source latency                                   0.000000   0.000000
+  clk (in)                                    0.000000   0.000000 & 0.000000 r
+  clk (net)                      1 0.014493 
+  clk__L1_I0/Z (BUFFD16)                      0.042848   0.042281 & 0.042281 r
+  clk__L1_N0 (net)               7 0.057804 
+  clk__L2_I4/Z (BUFFD16)                      0.054069   0.064956 & 0.107237 r
+  clk__L2_N4 (net)               7 0.079746 
+  clk__L3_I23/Z (BUFFD16)                     0.025491   0.054446 & 0.161683 r
+  clk__L3_N23 (net)             13 0.025087 
+  sa13_reg_2_/CP (DFCSNQD4)                   0.025491   0.000055 & 0.161738 r
+  sa13_reg_2_/Q (DFCSNQD4)                    0.041416   0.166401 & 0.328139 f
+  sa13[2] (net)                  5 0.021564 
+  us13/U280/ZN (ND2D2)                        0.047671   0.040356 & 0.368494 r
+  us13/n36 (net)                 2 0.008626 
+  us13/U196/ZN (NR2D3)                        0.056644   0.045543 & 0.414038 f
+  us13/n348 (net)               10 0.025664 
+  us13/U304/ZN (ND2D1)                        0.183767   0.118182 & 0.532220 r
+  us13/n282 (net)                6 0.020316 
+  us13/U305/ZN (ND2D0)                        0.076714   0.081176 & 0.613396 f
+  us13/n42 (net)                 1 0.001974 
+  us13/U306/ZN (NR2D1)                        0.155967   0.110572 & 0.723967 r
+  us13/n536 (net)                2 0.007932 
+  us13/U26/ZN (ND2D0)                         0.085411   0.081719 & 0.805686 f
+  us13/n50 (net)                 1 0.002215 
+  us13/U314/ZN (NR2D1)                        0.137897   0.102924 & 0.908610 r
+  us13/n51 (net)                 1 0.006827 
+  us13/U18/ZN (ND2D1)                         0.049771   0.055436 & 0.964046 f
+  us13/n75 (net)                 1 0.002057 
+  us13/U10/ZN (AOI21D1)                       0.114224   0.073739 & 1.037785 r
+  us13/n130 (net)                1 0.004598 
+  us13/U17/ZN (ND2D3)                         0.074681   0.069653 & 1.107438 f
+  us13/d[6] (net)                3 0.015356 
+  U2837/ZN (XNR2D4)                           0.038907   0.113629 & 1.221067 r
+  n2831 (net)                    2 0.006612 
+  U1756/Z (XOR2D1)                            0.051600   0.105906 & 1.326973 f
+  n1730 (net)                    2 0.003814 
+  FE_RC_493_0/ZN (ND2D1)                      0.035411   0.034013 & 1.360986 r
+  FE_RN_423_0 (net)              1 0.002101 
+  FE_RC_494_0/ZN (OAI21D1)                    0.049649   0.045266 & 1.406253 f
+  n1729 (net)                    1 0.002529 
+  U2880/ZN (OAI21D1)                          0.100684   0.056919 & 1.463172 r
+  n1728 (net)                    1 0.002689 
+  U2018/ZN (XNR2D1)                           0.058533   0.115453 & 1.578625 f
+  N137 (net)                     1 0.006104 
+  FE_OCPC401_N137/Z (BUFFD6)                  0.025110   0.060894 & 1.639518 f
+  FE_OCPN401_N137 (net)          1 0.012618 
+  sa12_reg_7_/D (DFCSNQD1)                    0.025128   0.000383 & 1.639902 f
+  data arrival time                                                 1.639902
+
+  clock clk (rise edge)                                  1.500000   1.500000
+  clock source latency                                   0.000000   1.500000
+  clk (in)                                    0.000000   0.000000 & 1.500000 r
+  clk (net)                      1 0.014922 
+  clk__L1_I0/Z (BUFFD16)                      0.022270   0.020820 & 1.520820 r
+  clk__L1_N0 (net)               7 0.060716 
+  clk__L2_I1/Z (BUFFD16)                      0.022940   0.029635 & 1.550456 r
+  clk__L2_N1 (net)               7 0.065073 
+  clk__L3_I8/Z (BUFFD8)                       0.024330   0.027834 & 1.578289 r
+  clk__L3_N8 (net)              13 0.038112 
+  sa12_reg_7_/CP (DFCSNQD1)                   0.024381   0.000318 & 1.578607 r
+  clock reconvergence pessimism                          0.021460   1.600068
+  library setup time                                     -0.077803  1.522265
+  data required time                                                1.522265
+  -----------------------------------------------------------------------------
+  data required time                                                1.522265
+  data arrival time                                                 -1.639902
+  -----------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.117637
+
+Warning: report_timing has satisfied the max_paths criteria. There are 507 further endpoints which have paths of interest with slack less than 1.000000 that were not considered when generating this report. (UITE-502)
+
+1

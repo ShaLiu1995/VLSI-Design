@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running pt_shell Version K-2015.06-SP3-1 for linux64 -- Dec 11, 2015
-#@ # Date:   Thu Mar  8 17:03:36 2018
+#@ # Date:   Thu Mar  8 21:27:43 2018
 #@ # Run by: shl237@ieng6-ece-17.ucsd.edu
 #@ 
 
@@ -953,40 +953,46 @@ source /acsnfs3/software/Synopsys-primetime-2015.06-SP3/admin/setup/.synopsys_pt
 #@ }
 #@ # -- End source /acsnfs3/software/Synopsys-primetime-2015.06-SP3/auxx/tcllib/lib/itcl3.4/itcl.tcl
 
-source -echo -verbose run_te_timing.tcl
-#@ # -- Starting source run_te_timing.tcl
+source -echo -verbose run_ocv.tcl
+#@ # -- Starting source run_ocv.tcl
 
 #@ ### read all timing libraries
 #@ 
 #@ read_lib ./tsmc65wc.lib
 #@ read_lib ./tsmc65bc.lib
+#@ set link_path [ list * tsmc65wc]
 #@ 
-#@ set link_path [ list * tsmc65wc tsmc65bc ]
-#@ 
-#@ ### read verilog
 #@ read_verilog aes_cipher_top.v
+#@ link_design aes_cipher_top
 #@ 
-#@ ### link design --> this step associates liberty models to cells in the design 
-#@ link_design aes_cipher_top 
+#@ set_operating_conditions -analysis_type on_chip_variation -max_library tsmc65wc -min_library tsmc65bc -max WCCOM -min BCCOM
+#@ set_min_library tsmc65wc -min_version tsmc65bc
 #@ 
-#@ ### read timing constraints
 #@ read_sdc aes_cipher_top.sdc
 #@ set_propagated_clock clk
 #@ 
-#@ ### read SPEF 
 #@ read_parasitics ./aes_cipher_top.spef
 #@ 
-#@ ### set the precision in measurements
 #@ set report_default_significant_digits 6
 #@ 
 #@ update_timing -full
 #@ 
+#@ # max_delay
+#@ report_timing -slack_lesser_than 1.0 -nworst 10 -sig 6 -path_type full_clock -transition_time -nets -capacitance > ocv_setup.rpt
+#@ set endpoints [add_to_collection [all_registers -data_pins] [all_outputs]]
+#@ report_timing -slack_lesser_than 1.0 -to $endpoints -max_paths [sizeof_collection $endpoints] -path_type end -nosplit > ocv_setup_end.rpt
+#@ 
+#@ # min_delay
+#@ report_timing -slack_lesser_than 1.0 -delay min -nworst 10 -sig 6 -path_type full_clock -transition_time -nets -capacitance > ocv_hold.rpt
+#@ set endpoints [add_to_collection [all_registers -data_pins] [all_outputs]]
+#@ report_timing -slack_lesser_than 1.0 -delay min -to $endpoints -max_paths [sizeof_collection $endpoints] -path_type end -nosplit > ocv_hold_end.rpt
+#@ 
 #@ ### report timing to 10 worst paths
-#@ report_timing -slack_lesser_than 1.0 -nworst 10 -sig 6 -path_type full_clock -transition_time -nets -capacitance > top10_worst_paths.rpt
+#@ report_timing -unique_pins -slack_lesser_than 1.0 -nworst 10 -sig 6 -path_type full_clock -transition_time -nets -capacitance > top10_worst_paths_ocv.rpt
 #@ 
 #@ ### report end-point timing
 #@ ### end-points in the design are registers of timing paths and outputs
 #@ set endpoints [add_to_collection [all_registers -data_pins] [all_outputs]]
-#@ report_timing -slack_lesser_than 1.0 -to $endpoints -max_paths [sizeof_collection $endpoints] -path_type end -nosplit > end_point_timing.rpt
+#@ report_timing -slack_lesser_than 1.0 -to $endpoints -max_paths [sizeof_collection $endpoints] -path_type end -nosplit > end_point_timing_ocv.rpt
 #@ 
 #@ exit
