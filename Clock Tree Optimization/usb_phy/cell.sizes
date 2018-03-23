@@ -1,0 +1,29 @@
+###############################################################################
+# Change list, formatted for PrimeTime
+###############################################################################
+current_instance
+insert_buffer [get_pins {i_tx_phy_append_eop_sync1_reg/CP}] bf01f01 -new_net_names {eco_net_0} -new_cell_names {eco_cell_0}
+insert_buffer [get_pins {i_tx_phy_append_eop_sync4_reg/CP}] bf01f01 -new_net_names {eco_net_1} -new_cell_names {eco_cell_1}
+insert_buffer [get_pins {i_tx_phy_txoe_r2_reg/CP}] bf01f01 -new_net_names {eco_net_2} -new_cell_names {eco_cell_2}
+insert_buffer [get_pins {i_tx_phy_txoe_reg/CP}] bf01f01 -new_net_names {eco_net_3} -new_cell_names {eco_cell_3}
+insert_buffer [get_pins {i_rx_phy_shift_en_reg/CP}] bf01f01 -new_net_names {eco_net_4} -new_cell_names {eco_cell_4}
+insert_buffer [get_pins {i_rx_phy_one_cnt_reg_2_/CP}] bf01f01 -new_net_names {eco_net_5} -new_cell_names {eco_cell_5}
+insert_buffer [get_pins {i_tx_phy_sd_bs_o_reg/CP}] bf01f01 -new_net_names {eco_net_6} -new_cell_names {eco_cell_6}
+insert_buffer [get_pins {i_tx_phy_sd_nrzi_o_reg/CP}] bf01f01 -new_net_names {eco_net_7} -new_cell_names {eco_cell_7}
+insert_buffer [get_pins {rst_cnt_reg_3_/CP}] bf01f01 -new_net_names {eco_net_8} -new_cell_names {eco_cell_8}
+insert_buffer [get_pins {i_rx_phy_rx_valid1_reg/CP}] bf01f01 -new_net_names {eco_net_9} -new_cell_names {eco_cell_9}
+insert_buffer [get_pins {rst_cnt_reg_2_/CP}] bf01f01 -new_net_names {eco_net_10} -new_cell_names {eco_cell_10}
+insert_buffer [get_pins {rst_cnt_reg_4_/CP}] bf01f01 -new_net_names {eco_net_11} -new_cell_names {eco_cell_11}
+insert_buffer [get_pins {i_rx_phy_dpll_state_reg_0_/CP}] bf01f01 -new_net_names {eco_net_12} -new_cell_names {eco_cell_12}
+insert_buffer [get_pins {i_rx_phy_bit_cnt_reg_2_/CP}] bf01f01 -new_net_names {eco_net_13} -new_cell_names {eco_cell_13}
+insert_buffer [get_pins {i_tx_phy_append_eop_sync3_reg/CP}] bf01f01 -new_net_names {eco_net_14} -new_cell_names {eco_cell_14}
+insert_buffer [get_pins {i_rx_phy_sd_nrzi_reg/CP}] bf01f01 -new_net_names {eco_net_15} -new_cell_names {eco_cell_15}
+insert_buffer [get_pins {rst_cnt_reg_0_/CP}] bf01f01 -new_net_names {eco_net_16} -new_cell_names {eco_cell_16}
+insert_buffer [get_pins {i_rx_phy_hold_reg_reg_7_/CP}] bf01f01 -new_net_names {eco_net_17} -new_cell_names {eco_cell_17}
+insert_buffer [get_pins {i_rx_phy_hold_reg_reg_2_/CP}] bf01f01 -new_net_names {eco_net_18} -new_cell_names {eco_cell_18}
+insert_buffer [get_pins {i_rx_phy_hold_reg_reg_4_/CP}] bf01f01 -new_net_names {eco_net_19} -new_cell_names {eco_cell_19}
+insert_buffer [get_pins {i_rx_phy_hold_reg_reg_5_/CP}] bf01f01 -new_net_names {eco_net_20} -new_cell_names {eco_cell_20}
+insert_buffer [get_pins {i_rx_phy_hold_reg_reg_6_/CP}] bf01f01 -new_net_names {eco_net_21} -new_cell_names {eco_cell_21}
+insert_buffer [get_pins {i_rx_phy_hold_reg_reg_3_/CP}] bf01f01 -new_net_names {eco_net_22} -new_cell_names {eco_cell_22}
+insert_buffer [get_pins {i_rx_phy_hold_reg_reg_1_/CP}] bf01f01 -new_net_names {eco_net_23} -new_cell_names {eco_cell_23}
+insert_buffer [get_pins {i_rx_phy_hold_reg_reg_0_/CP}] bf01f01 -new_net_names {eco_net_24} -new_cell_names {eco_cell_24}
